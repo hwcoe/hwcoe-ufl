@@ -1,0 +1,31 @@
+{
+  "name": "ufclas-ufl-2015",
+  "version": "0.9.3",
+  "description": "UFCLAS UFL 2015",
+  "main": "index.php",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ufclas/ufclas-ufl-2015.git"
+  },
+  "keywords": [
+    "sass",
+    "grunt",
+    "wordpress"
+  ],
+  "author": "priscillamc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ufclas/ufclas-ufl-2015/issues"
+  },
+  "homepage": "https://github.com/ufclas/ufclas-ufl-2015#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "*2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0"
+  }
+}
