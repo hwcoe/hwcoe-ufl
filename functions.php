@@ -1,6 +1,6 @@
 <?php
 /**
- * UF CLAS 160over90 2015 functions and definitions.
+ * UF HWCOE 2018 WordPress theme functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
