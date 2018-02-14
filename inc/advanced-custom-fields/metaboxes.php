@@ -4,7 +4,7 @@
  *
  * @since 0.2.5
  */
-define( 'ACF_LITE', true );
+// define( 'ACF_LITE', true );
 
 /**
  * Enqueue admin scripts and styles.
