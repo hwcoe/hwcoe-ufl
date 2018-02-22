@@ -165,21 +165,36 @@ if ( !class_exists('wp_bootstrap_navwalker') ) {
 }
 
 // The Events Calendar
-if ( class_exists('Tribe__Events__Main') ) {
-	require get_stylesheet_directory() . '/inc/the-events-calendar.php';
-}
+// if ( class_exists('Tribe__Events__Main') ) {
+// 	require get_stylesheet_directory() . '/inc/the-events-calendar.php';
+// }
 
 // Shortcake Shortcode UI
-if( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
-	require get_stylesheet_directory() . '/inc/shortcake/shortcodes-ui.php';
-}
+// if( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+// 	require get_stylesheet_directory() . '/inc/shortcake/shortcodes-ui.php';
+// }
 
 // IssueM newsletter
-if ( class_exists( 'IssueM' ) ) {
-	require get_stylesheet_directory() . '/inc/issuem/issuem.php';
-}
+// if ( class_exists( 'IssueM' ) ) {
+// 	require get_stylesheet_directory() . '/inc/issuem/issuem.php';
+// }
 
 // Advanced custom fields
 if( function_exists( 'register_field_group' )){
 	require get_stylesheet_directory() . '/inc/advanced-custom-fields/metaboxes.php';
+}
+
+/*
+ * ACF functionality within the theme
+ * All additional functionality should be defined here
+ */
+
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page(array(
+    'page_title' => 'Theme Options',
+    'menu_title'=> 'Theme Options',
+    'menu_slug' => 'theme-options',
+    'capability'=> 'edit_posts',
+    'redirect'  => false
+  ));
 }

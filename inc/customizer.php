@@ -127,7 +127,6 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'max_main_menu_items', array( 'default' => 7, 'sanitize_callback' => 'absint' ));
 	$wp_customize->add_setting( 'mega_menu', array( 'default' => 1, 'sanitize_callback' => 'absint' ));
 	$wp_customize->add_setting( 'collapse_sidebar_nav', array( 'default' => 1, 'sanitize_callback' => 'absint' ));
-	$wp_customize->add_setting( 'shibboleth_protocol', array( 'default' => (is_ssl())? 'https':'http', 'sanitize_callback' => 'ufclas_ufl_2015_sanitize_choices' ));
 	
 	$wp_customize->add_control( 'parent_colleges_institutes', array(
 		'label' => __('Parent College / Institute', 'ufclas-ufl-2015'),
@@ -164,16 +163,6 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 		'section' => 'theme_options_general',
 		'type' => 'checkbox',
 	));
-	$wp_customize->add_control( 'shibboleth_protocol', array(
-		'label' => __('Shibboleth Protocol', 'ufclas-ufl-2015'),
-		'description' => __('Select the protocol you have Shibboleth enabled on.', 'ufclas-ufl-2015'),
-		'section' => 'theme_options_general',
-		'type' => 'select',
-		'choices' => array(
-			'http' => 'http',
-			'https' => 'https',
-		),
-	));
 
 		
 	// Homepage
@@ -186,12 +175,10 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'homepage_layout', array( 'default' => '2c-bias', 'sanitize_callback' => 'sanitize_key' ));
 	$wp_customize->add_setting( 'homepage_layout_color', array( 'default' => 'faf8f1', 'transport' => 'postMessage', 'sanitize_callback' => 'sanitize_hex_color' ));
 	$wp_customize->add_setting( 'featured_category', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
-	$wp_customize->add_setting( 'story_stacker', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
 	$wp_customize->add_setting( 'number_of_posts_to_show', array( 'default' => 3, 'sanitize_callback' => 'absint' ));
 	$wp_customize->add_setting( 'featured_style', array( 'default' => 'slider-dark', 'sanitize_callback' => 'sanitize_key' ));
 	$wp_customize->add_setting( 'featured_speed', array( 'default' => 7, 'sanitize_callback' => 'absint' ));
 	$wp_customize->add_setting( 'featured_disable_link', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
-	$wp_customize->add_setting( 'story_stacker_disable_dates', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
 	
 	$wp_customize->add_control( 'homepage_layout', array(
 		'label' => __('Homepage Layout for Widgets', 'ufclas-ufl-2015'),
@@ -225,7 +212,7 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_control( 'number_of_posts_to_show', array(
 		'label' => __('Number of Posts to Display in Slider', 'ufclas-ufl-2015'),
-		'description' => __('Number of posts to display in your slider (Story Stacker is fixed at 3)', 'ufclas-ufl-2015'),
+		'description' => __('Number of posts to display in your slider', 'ufclas-ufl-2015'),
 		'section' => 'theme_options_homepage',
 		'type' => 'select',
 		'choices' => ufclas_ufl_2015_customize_range( 1, 15 ),
@@ -241,20 +228,6 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'featured_disable_link', array(
 		'label' => __('Disable Slider Links', 'ufclas-ufl-2015'),
 		'description' => __('Disable links from being created on the homepage slider.', 'ufclas-ufl-2015'),
-		'section' => 'theme_options_homepage',
-		'type' => 'checkbox',
-	));
-	
-	$wp_customize->add_control( 'story_stacker', array(
-		'label' => __('Story Stacker', 'ufclas-ufl-2015'),
-		'description' => __('Change the slider to a large image with three smaller stories', 'ufclas-ufl-2015'),
-		'section' => 'theme_options_homepage',
-		'type' => 'checkbox',
-	));
-	
-	$wp_customize->add_control( 'story_stacker_disable_dates', array(
-		'label' => __('Story Stacker - Disable Dates', 'ufclas-ufl-2015'),
-		'description' => __('Disable dates from appearing underneath your post titles.', 'ufclas-ufl-2015'),
 		'section' => 'theme_options_homepage',
 		'type' => 'checkbox',
 	));

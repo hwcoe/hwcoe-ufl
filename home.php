@@ -11,14 +11,8 @@ get_header();
 ?>
 
 <?php 
-	if ( get_theme_mod('story_stacker', 0) ){
-		// Display Featured Story Stacker
-		get_template_part( 'template-parts/featured', 'story-stacker' );
-	}
-	else {
-		// Display Featuared Carousel
-		get_template_part( 'template-parts/featured', 'carousel' );	
-	}
+	// Display Featured Carousel
+	get_template_part( 'template-parts/featured', 'carousel' );	
 ?>
 
 <div id="main" class="container-fluid main-content" role="main">

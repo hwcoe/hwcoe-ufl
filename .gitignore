@@ -36,12 +36,6 @@ wp-content/wp-cache-config.php
 /readme.html
 /license.txt
 
-#misc
-*.bak
-cgi-bin/
-sftp-config.json
-phpinfo.php
-
 # OS generated files 
 .DS_Store
 .DS_Store?
@@ -59,3 +53,8 @@ _notes
 node_modules
 .npm-debug.log
 tmp
+*.bak
+cgi-bin/
+sftp-config.json
+phpinfo.php
+*sublime*
