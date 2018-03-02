@@ -1,4 +1,5 @@
 .landing-page-hero {
+	
 	overflow: hidden;
 	padding-bottom: 80px;
 	@include breakFirst(medium){
@@ -18,6 +19,8 @@
 		@include breakFirst(large){
 			height: 620px;
 		}
+
+		
 	}
 	.col-sm-9 {
 		@include break(medium){

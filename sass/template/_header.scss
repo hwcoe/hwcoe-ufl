@@ -60,7 +60,7 @@
 				display: block;
 			}
 		}
-		.logo-herbert {
+		.logo-unit {
 			display: block;
 			top: 0px;
 			height: 60px;
@@ -83,19 +83,20 @@
 			padding-left: 220px;
 		}
 
-		.logo-herbert {
+		.logo-unit {
 			color: $white;
 			display: none;
 
 			@include breakFirst(large){
-				height: 58px;
+				height: 100px;
 				width: 240px;
 				position: absolute;
 				margin-left: 30px;
-				top: 22px;
+				top: 0px;
 				left: 0px;
 				display: block;
-				color: $blue;
+				// color: $blue;
+				color: $white;
 			}
 
 			@media screen and (min-width: 991px) and (max-width : 1250px) {
@@ -335,7 +336,8 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 }
 .main-menu-wrap {
 	@extend .cf;
-	background: $white;
+	// background: $white;
+	background: $blue;
 	display: none;
 	position: relative;
 	@include breakFirst(large){
@@ -375,6 +377,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		&:hover {
 			a {
 				background: $beige;
+				color: $blue;
 			}
 			.no-js & .dropdown {
 				@include breakFirst(large){
@@ -384,7 +387,8 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		}
 	}
 	.main-menu-link {
-		color: $blue;
+		// color: $blue;
+		color: $white;
 		display: block;
 		font-size: 18px;
 		font-weight: 700;
@@ -403,7 +407,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		}
 		@include breakFirst(wide){
 			font-size: 18px;
-			padding: 37px 0;
+			padding: 37px 10px;
 			text-align: center;
 		}
 		span {
@@ -461,7 +465,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		top: -100px;
 	}
 	ul {
-		@include breakFirst(wode){
+		@include breakFirst(wide){
 			display: inline-block;
 			vertical-align: top;
 		}

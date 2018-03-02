@@ -23,7 +23,7 @@
       <h1 class="screen-reader-title">
       <a href="<?php echo site_url('/'); ?>" class="logo mobile">
       	<span class="screen-reader-text"><?php echo bloginfo('name'); ?></span>
-        <span class="icon-svg logo-herbert"><svg><use xlink:href="<?php echo ufclas_ufl_2015_get_custom_logo(); ?>#Layer_1"></use></svg></span>
+        <span class="icon-svg logo-unit"><svg><use xlink:href="<?php echo ufclas_ufl_2015_get_custom_logo(); ?>#Layer_1"></use></svg></span>
       </a>
       </h1>
   <?php endif; ?>
@@ -33,7 +33,7 @@
   		<h1 class="screen-reader-title">
         <a href="<?php echo site_url('/'); ?>">
             <span class="screen-reader-text"><?php echo bloginfo('name'); ?></span>
-            <span class="icon-svg logo-herbert"><svg><use xlink:href="<?php echo ufclas_ufl_2015_get_custom_logo(); ?>#Layer_1"></use></svg></span>
+            <span class="icon-svg logo-unit"><svg><use xlink:href="<?php echo ufclas_ufl_2015_get_custom_logo(); ?>#Layer_1"></use></svg></span>
         </a>
         </h1>
   		<nav role="navigation" aria-label="<?php _e( 'Main Menu', 'ufclas-ufl-2015' ); ?>">
