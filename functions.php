@@ -160,6 +160,7 @@ require get_stylesheet_directory() . '/inc/template-tags.php';
 require get_stylesheet_directory() . '/inc/navigation.php';
 
 // Add Bootstrap compatible walker
+// TO DELETE?
 if ( !class_exists('wp_bootstrap_navwalker') ) {
 	require_once get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
 }
@@ -178,6 +179,13 @@ if ( !class_exists('wp_bootstrap_navwalker') ) {
 // if ( class_exists( 'IssueM' ) ) {
 // 	require get_stylesheet_directory() . '/inc/issuem/issuem.php';
 // }
+
+/*
+ * Theme variable definitions
+ */
+
+define( "HWCOE_UFL_IMG_DIR", get_template_directory_uri() . "/img" );
+define( "HWCOE_UFL_INC_DIR", get_template_directory() . "/inc/modules" );
 
 // Advanced custom fields
 if( function_exists( 'register_field_group' )){

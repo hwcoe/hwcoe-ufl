@@ -9,7 +9,7 @@
 function ufclas_ufl_2015_body_classes( $classes ) {
 	$classes[] = 'loading';
 	
-	if ( is_page_template('page-templates/homepage.php') ) {
+	if ( is_page_template('page-templates/home-page.php') ) {
 		$classes[] = 'homepage';
 	}
 	if ( get_theme_mod('disable_global_elements', 0) ){

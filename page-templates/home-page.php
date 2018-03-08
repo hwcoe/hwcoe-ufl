@@ -5,39 +5,67 @@
  * @package UFCLAS_UFL_2015
  *
  */
-get_header(); ?>
-<?php 
-	if ( has_post_thumbnail() ):
-		$custom_meta = get_post_meta( get_the_ID() );
-		$custom_meta_image_height = ( isset( $custom_meta['custom_meta_image_height']) )? $custom_meta['custom_meta_image_height'][0] : '';
-		$shortcode = sprintf( '[ufl-landing-page-hero headline="%s" image="%d" image_height="%s"]%s[/ufl-landing-page-hero]', 
-			get_the_title(),
-			get_post_thumbnail_id(),
-            $custom_meta_image_height,
-			''
-		);
-		echo do_shortcode( $shortcode );
-	endif;
+get_header(); 
 ?>
-<div id="main" class="container main-content">
-    <div class="row">
-        <div class="col-sm-12">
-            <?php 
-				if ( ! has_post_thumbnail() ): 
-					the_title( '<h1 class="entry-title">', '</h1>' );
-				endif;
-			?>
-			
-			<?php while ( have_posts() ) : the_post(); ?>
-	
-				<?php get_template_part( 'template-parts/content', 'landing' ); ?>
-        
-        	<?php endwhile; // End of the loop. ?>
+	<?php while ( have_posts() ) : the_post(); ?>
+	<div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
+		<div class="home-section">
+			<div class="page-wrapper">
+				<?php if( have_rows('page_modules') ): ?>
+					<?php while ( have_rows('page_modules') ) : the_row(); ?>
+						<?php
+						  /*
+						   * Featured Story Module
+						   * Returns up to three featured stories
+						   * with hero graphic
+						   */
+						?>
+						<?php if( get_row_layout() == 'featured_stories' ): ?>
+							<?php include( HWCOE_UFL_INC_DIR . '/ufl-featured-story.php' ); ?>
+						<?php endif // featured_story ?>
+						<?php
+						  /*
+						   * Statistics Module
+						   * Currently linked with features story module
+						   * return up to 4 statistics
+						   */
+						  ?>
+						<?php if( get_row_layout() == 'statistics_module' ): ?>
+							<?php include( HWCOE_UFL_INC_DIR . '/ufl-statistics.php' ); ?>
+						<?php endif // statistics_module ?>
+						<?php
+						  /*
+						   * Statistics Module Standalone
+						   * return up to 4 statistics
+						   */
+						  ?>
+						<?php if( get_row_layout() == 'statistics_module' ): ?>
+							<?php include( HWCOE_UFL_INC_DIR . '/ufl-statistics-standalone.php' ); ?>
+						<?php endif // statistics_module ?>
 
-        </div>
-    </div>
-    
-</div>
-<?php get_sidebar('page_sections'); ?>
+						<?php
+						  /*
+						   * Secondary Module
+						   * Modular- can be used multiple times
+						   */
+						  ?>
+						<?php if( get_row_layout() == 'secondary_module' ): ?>
+							<?php include( HWCOE_UFL_INC_DIR . '/ufl-secondary.php' ); ?>
+						<?php endif // secondary_module ?>
+						<?php
+						  /*
+						   * Profile module 
+						   */
+						  ?>
+						<?php if( get_row_layout() == 'profile_module' ): ?>
+							<?php include( HWCOE_UFL_INC_DIR . '/ufl-profile.php' ); ?>
+						<?php endif // profile_module ?>
+					<?php endwhile //page_modules ?>
+				<?php endif // page_modules ?>
+			</div> <!-- page-wrapper -->
+		</div><!-- home-section -->
+	</div>
+
+<?php endwhile //the_post ?>
 
 <?php get_footer(); ?>

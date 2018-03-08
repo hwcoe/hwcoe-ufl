@@ -1,6 +1,7 @@
 /*!
  * UFL Theme scripts
  */
+
 jQuery(function($){
 	/*!
 	 * UFL Audience Cookies
@@ -364,11 +365,39 @@ jQuery(function($){
 		}
 	});
 
-	// Footer mobile accordian
+	// Footer mobile accordion
 	$('.footer-menu h2').on('click',function(){
 		if($(window).width() <= 767){
 			$(this).closest('.footer-menu').toggleClass('open');
 		}
+	});
+
+	//// Homepage featured story
+	// Featured story carousel
+	$('.featured-story-img-wrap').slick({
+	  arrows: false,
+	  draggable: false,
+	  infinite: false,
+	  fade: true,
+	  slide: '.featured-story-img',
+	  speed: 400,
+	  swipe: false,
+	  touchMove: false
+	});
+
+	// Switching to a new featured story
+	$('.featured-story:not(.active)').on('click',function(){
+		$this = $(this);
+
+		// Changed featured carousel
+		$('.featured-story-img-wrap').slick('slickGoTo',$this.find('h2').attr('data-index') - 1);
+
+		$storyNew = $this.html();
+		$storyOld = $('.featured-story.active').html();
+
+		$('.featured-story.active').html($storyNew);
+
+		$this.html($storyOld);
 	});
 	
 	// Homepage feature bio wrap
@@ -708,7 +737,7 @@ jQuery(function($){
 	$('.entry-content a[href$=".png"]').has('img').prop('rel', 'prettyPhoto');
 	$('.entry-content a[href$=".gif"]').has('img').prop('rel', 'prettyPhoto');
 	
-	// Iniitialize prettyPhoto
+	// Initialize prettyPhoto
 	$('a[rel^="prettyPhoto"]').prettyPhoto();
 	
 	$('.entry-content a img').click(function (){
