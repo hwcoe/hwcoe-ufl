@@ -19,7 +19,7 @@ require get_stylesheet_directory() . '/inc/widgets/widget-image-right-quote.php'
  * @since 0.3.0
  * @link https://generatewp.com/snippet/2V0V0gy/
  */
-function ufclas_ufl_2015_sidebar_widget_classes( $sidebar_id ){
+function hwcoe_ufl_sidebar_widget_classes( $sidebar_id ){
     global $_wp_sidebars_widgets;
 	
 	/** 
@@ -45,7 +45,7 @@ function ufclas_ufl_2015_sidebar_widget_classes( $sidebar_id ){
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function ufclas_ufl_2015_widgets_init() {
+function hwcoe_ufl_widgets_init() {
 	
 	$homepage_layout = get_theme_mod('homepage_layout', '2c-bias');
 	$disabled_global_elements = false;
@@ -109,7 +109,7 @@ function ufclas_ufl_2015_widgets_init() {
 		'name'          => esc_html__( 'Footer Left', 'ufclas-ufl-2015' ),
 		'id'            => 'site_footer',
 		'description'   => 'Content that replaces the institutional links in the footer.',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s ' . ufclas_ufl_2015_sidebar_widget_classes('site_footer') . '">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s ' . hwcoe_ufl_sidebar_widget_classes('site_footer') . '">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -183,8 +183,30 @@ function ufclas_ufl_2015_widgets_init() {
 	register_widget( 'UFL_2015_Content_Image_Right' );
 	register_widget( 'UFL_2015_Image_Right_Quote' );
 	// register_widget( 'UFL_2015_Submenu' );
+
+	// Unregister unwanted default WP widgets
+	unregister_widget('WP_Widget_Media_Audio');
+	unregister_widget('WP_Widget_Media_Image');
+	unregister_widget('WP_Widget_Media_Video');
+	unregister_widget('WP_Widget_Custom_HTML');
+	unregister_widget('WP_Widget_Pages');
+	unregister_widget('WP_Widget_Calendar');
+	unregister_widget('WP_Widget_Meta');
+	unregister_widget('WP_Widget_Search');
+	unregister_widget('WP_Widget_Recent_Posts');
+	unregister_widget('WP_Widget_Categories');
+	unregister_widget('WP_Widget_Recent_Comments');
+	
+	// unregister_widget('WP_Widget_RSS');
+ 	// unregister_widget('WP_Widget_Archives');
+ 	// unregister_widget('WP_Widget_Links');
+ 	//	unregister_widget('WP_Widget_Text'); 	//kept active because some subsites are using it
+ 	// unregister_widget('WP_Widget_Categories');
+ 	// unregister_widget('WP_Widget_Recent_Comments');
+ 	//unregister_widget('WP_Nav_Menu_Widget');
+ 	// unregister_widget('WP_Widget_Tag_Cloud');
 }
-add_action( 'widgets_init', 'ufclas_ufl_2015_widgets_init' );
+add_action( 'widgets_init', 'hwcoe_ufl_widgets_init' );
 
 /**
  * Homepage Secondary Area (Widgets)
@@ -272,7 +294,7 @@ function ufandshands_secondary_widget_area() {
  * @link https://wpshed.com/wordpress/image-upload-widget/
  * @since 0.4.0
  */
-function ufclas_ufl_2015_image_upload_scripts() {
+function hwcoe_ufl_image_upload_scripts() {
 	global $pagenow, $wp_customize;
 
 	if ( 'widgets.php' === $pagenow || isset( $wp_customize ) ) {
@@ -283,4 +305,4 @@ function ufclas_ufl_2015_image_upload_scripts() {
 
 	}
 }
-add_action( 'admin_enqueue_scripts', 'ufclas_ufl_2015_image_upload_scripts' );
+add_action( 'admin_enqueue_scripts', 'hwcoe_ufl_image_upload_scripts' );
