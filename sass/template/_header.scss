@@ -358,7 +358,8 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 			border: none;
 		}
 		&:nth-child(even){
-			background: $beigeLight;
+			// background: $beigeLight;
+			background: $blueDark;
 			@include breakFirst(large){
 				background: none;
 			}

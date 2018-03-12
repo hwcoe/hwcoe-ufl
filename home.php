@@ -15,7 +15,8 @@ get_header();
 	get_template_part( 'template-parts/featured', 'carousel' );	
 ?>
 
-<div id="main" class="container-fluid main-content" role="main">
+<!-- <div id="main" class="container-fluid main-content" role="main"> -->
+<div id="main" role="main">
 <div class="container">
   <div class="row">
   	
