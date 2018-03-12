@@ -19,8 +19,15 @@
 }
 
 .widget {
+	background: $blueLight;
+	color: $white;
 	margin-bottom: $grid-gutter-width;
 	
+	a {
+		color: $white;
+		text-decoration: underline;
+	}
+
 	ul {
 		margin-left: 0;
 		
