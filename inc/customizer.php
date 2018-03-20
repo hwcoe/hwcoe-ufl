@@ -123,13 +123,13 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'collapse_sidebar_nav', array( 'default' => 1, 'sanitize_callback' => 'absint' ));
 	
 	$wp_customize->add_control( 'parent_colleges_institutes', array(
-		'label' => __('Parent College / Institute', 'ufclas-ufl-2015'),
+		'label' => __('Parent Organization', 'ufclas-ufl-2015'),
 		'description' => __('Select your parent organization.', 'ufclas-ufl-2015'),
 		'section' => 'theme_options_general',
 		'type' => 'select',
 		'choices' => array(
 			'University of Florida|http://ufl.edu' => __('University of Florida', 'ufclas-ufl-2015'),
-			'College of Liberal Arts and Sciences|http://clas.ufl.edu/' => __('CLAS', 'ufclas-ufl-2015'),
+			'Herbert Wertheim College of Engineering|https://www.eng.ufl.edu/' => __('Herbert Wertheim College of Engineering', 'ufclas-ufl-2015'),
 			'None' => __('None', 'ufclas-ufl-2015'),
 		),
 	));
@@ -335,8 +335,10 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'facebook_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	$wp_customize->add_setting( 'twitter_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	$wp_customize->add_setting( 'youtube_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'siteblog_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'linkedin_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	$wp_customize->add_setting( 'instagram_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'flickr_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'siteblog_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	
 	$wp_customize->add_control( 'facebook_url', array(
 		'label' => __('Facebook URL', 'ufclas-ufl-2015'),
@@ -356,14 +358,26 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 		'section' => 'theme_options_social',
 		'type' => 'text',
 	));
-	$wp_customize->add_control( 'siteblog_url', array(
-		'label' => __('Blog or Feed URL', 'ufclas-ufl-2015'),
+	$wp_customize->add_control( 'linkedin_url', array(
+		'label' => __('LinkedIn URL', 'ufclas-ufl-2015'),
 		'description' => __("", 'ufclas-ufl-2015'),
 		'section' => 'theme_options_social',
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'instagram_url', array(
 		'label' => __('Instagram URL', 'ufclas-ufl-2015'),
+		'description' => __("", 'ufclas-ufl-2015'),
+		'section' => 'theme_options_social',
+		'type' => 'text',
+	));
+	$wp_customize->add_control( 'flickr_url', array(
+		'label' => __('Flickr URL', 'ufclas-ufl-2015'),
+		'description' => __("", 'ufclas-ufl-2015'),
+		'section' => 'theme_options_social',
+		'type' => 'text',
+	));
+	$wp_customize->add_control( 'siteblog_url', array(
+		'label' => __('Blog or Feed URL', 'ufclas-ufl-2015'),
 		'description' => __("", 'ufclas-ufl-2015'),
 		'section' => 'theme_options_social',
 		'type' => 'text',

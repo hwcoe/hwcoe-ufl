@@ -19,7 +19,7 @@ function ufclas_ufl_2015_get_custom_logo() {
 		  $custom_logo = preg_replace("/(.+)src=\"([^\"]*)\"(.+)/", "$2", $custom_logo);
 		}
 		else {
-		 $custom_logo = get_stylesheet_directory_uri() . '/svg/clas-logo.svg';
+		 $custom_logo = get_stylesheet_directory_uri() . '/svg/logo-herbert.svg';
 		}	
    }
    return $custom_logo;
@@ -168,7 +168,9 @@ function ufclas_ufl_2015_socialnetworks() {
 		'facebook' => 'Facebook',
 		'twitter' => 'Twitter',
 		'youtube' => 'YouTube',
+		'linkedin' => 'LinkedIn',
 		'instagram' => 'Instagram',
+		'flickr' => 'Flickr',
 		'siteblog' => 'Blog',
 	);
 	
