@@ -19,14 +19,7 @@
 }
 
 .widget {
-	background: $blueLight;
-	color: $white;
 	margin-bottom: $grid-gutter-width;
-	
-	a {
-		color: $white;
-		text-decoration: underline;
-	}
 
 	ul {
 		margin-left: 0;
@@ -50,6 +43,40 @@
 		text-transform: none;
 		font: 500 24px/32px $serifFontFamily; 
 		color: $blue;
+		@at-root .home #secondary & {
+			text-transform: uppercase;
+			border: 5px solid $white;
+			background: $cyan;
+			color: $blue;
+			display: block;
+			font: 700 14px/14px $fontFamily;
+			letter-spacing: 2px;
+			padding: 9px 14px;
+			position: relative;
+			top: -45px;
+			left: -45px;
+			&a:hover {
+				background: $white;
+				color: $blue;
+			}
+			&.orange {
+			  background: $orange;
+			  color: $white;
+			}
+		}
+	}
+	@at-root .home #secondary & {
+		background: $blueLight;
+		color: $white;
+		padding: $grid-gutter-width;
+		a {
+			color: $white;
+			text-decoration: underline;
+			.widget-title & {
+				background: $cyan;
+				color: $blue;
+			}
+		}
 	}
 }
 

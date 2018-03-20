@@ -20,10 +20,4 @@
 		} );
 	} );
 	
-	wp.customize( 'homepage_layout_color', function( value ) {
-		value.bind( function( newval ) {
-			$('.home #main.main-content').css('background-color', newval );
-		} );
-	} );
-	
 } )( jQuery );

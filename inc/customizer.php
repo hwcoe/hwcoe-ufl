@@ -53,7 +53,6 @@ function ufclas_ufl_2015_customize_css() {
 	$theme_mods = get_theme_mods();
 	$background_color = ( isset($theme_mods['background_color']) )? $theme_mods['background_color'] : false;
 	$content_color = ( isset($theme_mods['content_color']) )? $theme_mods['content_color'] : false;
-	$homepage_layout_color = ( isset($theme_mods['homepage_layout_color']) )? $theme_mods['homepage_layout_color'] : false;
 	$collapse_sidebar_nav = ( isset($theme_mods['collapse_sidebar_nav']) )? $theme_mods['collapse_sidebar_nav'] : 1;
 	
 	// Custom background color
@@ -64,11 +63,6 @@ function ufclas_ufl_2015_customize_css() {
 	// Custom content color
 	if ( !empty($content_color) ) {
 		$custom_css .=  "#main.main-content { background-color: {$content_color}; } ";
-  	}
-	
-	// Custom homepage widget area color
-	if ( !empty($homepage_layout_color) ) {
-		$custom_css .=  ".home #main.main-content { background-color: {$homepage_layout_color}; } ";
   	}
 	
 	// Custom css for sidenav
@@ -173,7 +167,6 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	));
 	
 	$wp_customize->add_setting( 'homepage_layout', array( 'default' => '2c-bias', 'sanitize_callback' => 'sanitize_key' ));
-	$wp_customize->add_setting( 'homepage_layout_color', array( 'default' => 'faf8f1', 'transport' => 'postMessage', 'sanitize_callback' => 'sanitize_hex_color' ));
 	$wp_customize->add_setting( 'featured_category', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
 	$wp_customize->add_setting( 'number_of_posts_to_show', array( 'default' => 3, 'sanitize_callback' => 'absint' ));
 	$wp_customize->add_setting( 'featured_style', array( 'default' => 'slider-dark', 'sanitize_callback' => 'sanitize_key' ));
@@ -193,13 +186,6 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 			'1c-100' => __('One Column', 'ufclas-ufl-2015'),
 			'1c-100-2c-half' => __('One Column w/ Two Columns', 'ufclas-ufl-2015')
 		),
-	));
-	$wp_customize->add_control( 
-		new WP_Customize_Color_Control( $wp_customize, 'homepage_layout_color', array(
-			'label' => __('Homepage Widgets Background Color', 'ufclas-ufl-2015'),
-			'section' => 'theme_options_homepage',
-			'settings' => 'homepage_layout_color',
-		)
 	));
 	
 	$wp_customize->add_control( 'featured_category', array(

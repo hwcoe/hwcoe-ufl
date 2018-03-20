@@ -16,7 +16,7 @@ get_header();
 ?>
 
 <!-- <div id="main" class="container-fluid main-content" role="main"> -->
-<div id="main" role="main">
+<div id="main" class="container-fluid" role="main">
 <div class="container">
   <div class="row">
   	
