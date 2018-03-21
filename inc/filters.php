@@ -12,9 +12,9 @@ function ufclas_ufl_2015_body_classes( $classes ) {
 	if ( is_page_template('page-templates/home-page.php') ) {
 		$classes[] = 'homepage';
 	}
-	if ( get_theme_mod('disable_global_elements', 0) ){
-		$classes[] = 'disable-global';
-	}
+	// if ( get_theme_mod('disable_global_elements', 0) ){
+	// 	$classes[] = 'disable-global';
+	// }
 	if ( $header_type = get_theme_mod('header_type', 'logo') ){
 		$classes[] = 'header-type-' . $header_type;
 	}

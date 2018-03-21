@@ -13,11 +13,6 @@
 <header>
 <a href="#main" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
 <div class="header unit">
-  <?php 
-  	// @todo Add support for disabling global header/footer elements
-	// $disable_global_elements = get_theme_mod('disable_global_elements', 0);
-	// if ( !$disable_global_elements ): 
-  ?>
       <a href="http://ufl.edu/" class="logo">
 		<span class="icon-svg logo-uf"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-uf.svg#Layer_1"></use></svg></span>
       </a>
@@ -28,7 +23,6 @@
 		  </a>
 		  </h1>	
 	</div>
-  <?php //endif; ?>
 	
   <div class="menu-wrap">
   	<div class="main-menu-wrap">
@@ -44,7 +38,6 @@
 		?>
 		</nav>
   	</div>
-    <?php //if ( !$disable_global_elements ): ?>
   	<div class="aux-menu-wrap">
   		<ul class="aux-nav">
 	  		<?php 
@@ -95,7 +88,6 @@
 	    </span>
 	  </a>
       <?php ufclas_get_search_form( 'menu' ); ?>
-      <?php //endif; ?>
   </div>
 
   <div class="mobile-dropdown-wrap"></div>

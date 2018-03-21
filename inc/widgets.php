@@ -48,7 +48,7 @@ function hwcoe_ufl_sidebar_widget_classes( $sidebar_id ){
 function hwcoe_ufl_widgets_init() {
 	
 	$homepage_layout = get_theme_mod('homepage_layout', '2c-bias');
-	$disabled_global_elements = false;
+	// $disabled_global_elements = false;
 	
 	// Legacy Sidebars
 	register_sidebar( array(
@@ -124,17 +124,17 @@ function hwcoe_ufl_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	
-	if ( $disabled_global_elements ){
-	register_sidebar( array(
-		'name'          => esc_html__( 'Site Custom Footer', 'ufclas-ufl-2015' ),
-		'id'            => 'site_footer_custom',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	}
+	// if ( $disabled_global_elements ){
+	// register_sidebar( array(
+	// 	'name'          => esc_html__( 'Site Custom Footer', 'ufclas-ufl-2015' ),
+	// 	'id'            => 'site_footer_custom',
+	// 	'description'   => '',
+	// 	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</aside>',
+	// 	'before_title'  => '<h2 class="widget-title">',
+	// 	'after_title'   => '</h2>',
+	// ) );
+	// }
 	register_sidebar( array(
 		'name'          => esc_html__( 'Home Featured Right', 'ufclas-ufl-2015' ),
 		'id'            => 'home_featured_right',

@@ -236,14 +236,6 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 		),
 	));
 	
-	$wp_customize->add_setting( 'disable_global_elements', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
-	$wp_customize->add_control( 'disable_global_elements', array(
-		'label' => __('Disable Global Elements', 'ufclas-ufl-2015'),
-		'description' => __('Disable the global header, footer, and social media icons from appearing', 'ufclas-ufl-2015'),
-		'section' => 'theme_options_header',
-		'type' => 'checkbox',
-	));
-	
 	// Footer
 	$wp_customize->add_section( 'theme_options_footer', array(
 		'title' => __('Footer', 'ufclas-ufl-2015'),

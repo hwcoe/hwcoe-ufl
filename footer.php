@@ -1,9 +1,5 @@
 <!-- START FOOTER -->
 <footer class="footer-wrap">
-<?php 
-  	$disable_global_elements = get_theme_mod('disable_global_elements', 0);
-	if ( !$disable_global_elements ): 
-?>
 	<div class="footer-bottom">
 		<div class="container">
 			<div class="row">
@@ -21,8 +17,6 @@
 			</div><!-- .row -->
 		</div><!-- .container --> 
 	</div><!-- .footer-bottom -->
-    
-<?php endif; ?>
 </footer><!-- .footer-wrap -->
 <?php wp_footer(); ?>
 </body>
