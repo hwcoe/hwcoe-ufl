@@ -54,6 +54,7 @@
 		right: 15px;
 		top: 50%;
 		transform: translateY(-50%);
+		text-decoration: underline;
 		@include breakFirst(large){
 			float: right;
 			margin: 0 33px 0 0;

@@ -1,0 +1,59 @@
+ul.social-nav {
+	margin: 10px 0 30px 10px;
+	position:absolute;
+	@include break(medium){
+		margin: 10px 0 20px 10px;
+	}
+	li {
+		display: inline-block;
+		margin: 0 10px 0 0;
+		border: none;
+		@include break(medium){
+			margin: 0 5px 0 0;
+		}
+		&:before {
+			display: none;
+		}
+	}
+	a {
+		border-color: $white;
+		background: $white;
+		color: $orange;
+		&:hover {
+			border-color: $white;
+			background: $orange;
+			color: $white;
+		}
+	}
+	.icon-facebook {
+		svg{
+			height: 19px;
+			width: 11px;
+		}
+	}
+	.icon-twitter {
+		svg{
+			height: 17px;
+			width: 20px;
+		}
+	}
+	.icon-instagram {
+		svg{
+			height: 18px;
+			width: 18px;
+		}
+	}
+	.icon-youtube {
+		svg{
+			height: 16px;
+			width: 22px;
+		}
+	}
+}
+// .aux-menu-wrap {
+// 	.social-nav {
+// 		li {
+// 			border:none;
+// 		}
+// 	}
+// }

@@ -22,8 +22,6 @@
 	font-weight: 400;
 }
 
-
-
 /* Bring first link in global nav closer to the UF logo */
 .aux-menu-wrap .aux-nav li.global-menu-title a {
 	font-size: 14px;
@@ -43,6 +41,7 @@
 		position: absolute;
       	top: 0;
 	}
+	
 	.audience-nav-wrap { 
         background-color: $orangeDark;
         
@@ -65,8 +64,6 @@
         }
     }
 }
-
-
 
 .subnav {
 	border:none;

@@ -57,6 +57,7 @@
 				
 			?>
   		</ul>
+		<!-- TODO: social links here -->
   		<div class="audience-nav-wrap">
 			<?php 
             if ( has_nav_menu( 'audience_nav' ) ): ?>

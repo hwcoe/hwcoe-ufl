@@ -26,24 +26,12 @@ get_header();
 						<?php
 						  /*
 						   * Statistics Module
-						   * Currently linked with features story module
 						   * return up to 4 statistics
 						   */
 						  ?>
 						<?php if( get_row_layout() == 'statistics_module' ): ?>
 							<?php include( HWCOE_UFL_INC_DIR . '/ufl-statistics.php' ); ?>
 						<?php endif // statistics_module ?>
-						<?php
-						  /*
-						   * Statistics Module Standalone
-						   * return up to 4 statistics
-						   * TODO: Create
-						   */
-						  ?>
-						<?php if( get_row_layout() == 'statistics_module' ): ?>
-							<?php include( HWCOE_UFL_INC_DIR . '/ufl-statistics-standalone.php' ); ?>
-						<?php endif // statistics_module ?>
-
 						<?php
 						  /*
 						   * Secondary Module

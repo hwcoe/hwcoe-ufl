@@ -282,8 +282,8 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	));
 	
 	// Call to Action
-	$wp_customize->add_section( 'theme_options_action', array(
-		'title' => __('Call to Action', 'ufclas-ufl-2015'),
+	$wp_customize->add_section( 'theme_options_alert', array(
+		'title' => __('Announcement or Alert', 'ufclas-ufl-2015'),
 		'panel' => 'theme_options',
 	));
 	
@@ -293,27 +293,27 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'actionitem_altcolor', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
 	
 	$wp_customize->add_control( 'actionitem_text', array(
-		'label' => __('Call to Action Text', 'ufclas-ufl-2015'),
-		'description' => __('The Call to Action text is an alert message below your main menu. Leave it blank to remove it.', 'ufclas-ufl-2015'),
-		'section' => 'theme_options_action',
+		'label' => __('Announcement/Alert Text', 'ufclas-ufl-2015'),
+		'description' => __('The Announcement/Alert text is an alert message below your main menu. Leave it blank to remove it.', 'ufclas-ufl-2015'),
+		'section' => 'theme_options_alert',
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'actionitem_url', array(
-		'label' => __('Call to Action URL', 'ufclas-ufl-2015'),
-		'description' => __("Where visitors are taken when they click on your Header Action Item", 'ufclas-ufl-2015'),
-		'section' => 'theme_options_action',
+		'label' => __('Announcement/Alert URL', 'ufclas-ufl-2015'),
+		'description' => __("Where visitors are taken when they click on your Announcement/Alert link", 'ufclas-ufl-2015'),
+		'section' => 'theme_options_alert',
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'actionitem_heading', array(
-		'label' => __('Call to Action Heading', 'ufclas-ufl-2015'),
-		'description' => __('The Call to Action heading is above the alert message (optional)', 'ufclas-ufl-2015'),
-		'section' => 'theme_options_action',
+		'label' => __('Announcement/Alert Heading', 'ufclas-ufl-2015'),
+		'description' => __('The Announcement/Alert heading is above the alert message (optional)', 'ufclas-ufl-2015'),
+		'section' => 'theme_options_alert',
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'actionitem_altcolor', array(
-		'label' => __('Call to Action Alternate Color', 'ufclas-ufl-2015'),
+		'label' => __('Announcement/Alert Alternate Color', 'ufclas-ufl-2015'),
 		'description' => __('This is an alternate color (red) used for warnings and emergency alerts.', 'ufclas-ufl-2015'),
-		'section' => 'theme_options_action',
+		'section' => 'theme_options_alert',
 		'type' => 'checkbox',
 	));
 	

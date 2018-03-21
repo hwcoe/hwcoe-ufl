@@ -23,6 +23,7 @@
 		padding: 0;
 	}
 }
+// TODO: DETERMINE USE CASE OR DELETE
 .footer-audience-nav {
 	margin: 0;
 	li {
@@ -83,51 +84,53 @@
 		width: 323px;
 	}
 }
-.social-nav {
-	margin: 0 0 30px 0;
-	@include break(medium){
-		margin: 0 0 20px 0;
-	}
-	li {
-		display: inline-block;
-		margin: 0 10px 0 0;
+footer {
+	ul.social-nav {
+		margin: 0 0 30px 0;
 		@include break(medium){
-			margin: 0 5px 0 0;
+			margin: 0 0 20px 0;
 		}
-		&:before {
-			display: none;
+		// li {
+		// 	display: inline-block;
+		// 	margin: 0 10px 0 0;
+		// 	@include break(medium){
+		// 		margin: 0 5px 0 0;
+		// 	}
+		// 	&:before {
+		// 		display: none;
+		// 	}
+		// }
+		a {
+			border-color: $orange;
+			&:hover {
+				background: $orange;
+				color: $white;
+			}
 		}
-	}
-	a {
-		border-color: $orange;
-		&:hover {
-			background: $orange;
-			color: $white;
-		}
-	}
-	.icon-facebook {
-		svg{
-			height: 19px;
-			width: 11px;
-		}
-	}
-	.icon-twitter {
-		svg{
-			height: 17px;
-			width: 20px;
-		}
-	}
-	.icon-instagram {
-		svg{
-			height: 18px;
-			width: 18px;
-		}
-	}
-	.icon-youtube {
-		svg{
-			height: 16px;
-			width: 22px;
-		}
+		// .icon-facebook {
+		// 	svg{
+		// 		height: 19px;
+		// 		width: 11px;
+		// 	}
+		// }
+		// .icon-twitter {
+		// 	svg{
+		// 		height: 17px;
+		// 		width: 20px;
+		// 	}
+		// }
+		// .icon-instagram {
+		// 	svg{
+		// 		height: 18px;
+		// 		width: 18px;
+		// 	}
+		// }
+		// .icon-youtube {
+		// 	svg{
+		// 		height: 16px;
+		// 		width: 22px;
+		// 	}
+		// }
 	}
 }
 .footer-bottom {
