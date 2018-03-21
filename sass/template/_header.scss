@@ -336,7 +336,6 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 }
 .main-menu-wrap {
 	@extend .cf;
-	// background: $white;
 	background: $blue;
 	display: none;
 	position: relative;
@@ -358,7 +357,6 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 			border: none;
 		}
 		&:nth-child(even){
-			// background: $beigeLight;
 			background: $blueDark;
 			@include breakFirst(large){
 				background: none;
@@ -388,7 +386,6 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		}
 	}
 	.main-menu-link {
-		// color: $blue;
 		color: $white;
 		display: block;
 		font-size: 18px;
