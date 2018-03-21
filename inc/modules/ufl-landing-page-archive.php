@@ -55,7 +55,7 @@
       </div>
     <?php endwhile // the_post ?>
     <?php if( get_sub_field( 'read_more' ) ): ?>
-      <a href="<?php the_sub_field( 'read_more' ); ?>" class="btn btn--blue">Keep reading <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo UFL_ATHENA_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
+      <a href="<?php the_sub_field( 'read_more' ); ?>" class="btn btn--blue">Keep reading <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
     <?php endif // read_more ?>
   <?php endif // have_posts ?>
 <?php wp_reset_postdata(); ?>

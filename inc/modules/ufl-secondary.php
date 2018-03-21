@@ -12,7 +12,7 @@
           </span>
           <?php else: ?>
           <span class="icon-circle">
-            <span class="icon-svg"><svg><use xlink:href="<?php echo UFL_ATHENA_IMG_DIR ?>/spritemap.svg#icon-pencil"></use></svg></span>
+            <span class="icon-svg"><svg><use xlink:href="<?php echo HWCOE_UFL_IMG_DIR ?>/spritemap.svg#icon-pencil"></use></svg></span>
           <?php endif // custom_graphic ?>
         <?php endif // include_circle_graphic ?>
         </span>
@@ -23,7 +23,7 @@
             <?php 
               $button_link = (get_sub_field( 'internal_or_external_link' ) == 'internal' ? get_sub_field( 'internal_link' ) : get_sub_field( 'external_url' ) );
             ?>
-              <a href="<?php echo $button_link; ?>" class="btn btn--white"><?php the_sub_field( 'button_text' ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo UFL_ATHENA_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
+              <a href="<?php echo $button_link; ?>" class="btn btn--white"><?php the_sub_field( 'button_text' ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
           <?php endwhile // have_rows ?>
         <?php endif // have_rows ?>
       </div>

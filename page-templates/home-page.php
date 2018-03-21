@@ -37,6 +37,7 @@ get_header();
 						  /*
 						   * Statistics Module Standalone
 						   * return up to 4 statistics
+						   * TODO: Create
 						   */
 						  ?>
 						<?php if( get_row_layout() == 'statistics_module' ): ?>

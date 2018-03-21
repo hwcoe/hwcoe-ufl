@@ -14,7 +14,7 @@
         <?php if( get_sub_field( 'include_button' ) ): ?>
           <?php if( have_rows ( 'buttons' ) ): ?>
             <?php while( have_rows( 'buttons' ) ) : the_row(); ?>
-              <a href="<?php the_sub_field( 'button_url' ); ?>" class="btn"><?php the_sub_field( 'button_text' ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo UFL_ATHENA_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
+              <a href="<?php the_sub_field( 'button_url' ); ?>" class="btn"><?php the_sub_field( 'button_text' ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
             <?php endwhile // have_rows buttons ?>
           <?php endif // have_rows buttons ?>
         <?php endif // include_button ?>

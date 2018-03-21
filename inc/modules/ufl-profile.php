@@ -15,10 +15,10 @@
      $featured_bio_copy .=   '<h3>' . get_sub_field( 'title' ) . '</h3>';
      $featured_bio_copy .=   '<p>' .  get_sub_field( 'description' ) . '</p>';
      if( get_sub_field( 'include_button' ) ){
-      $featured_bio_copy .= '<a href="' . get_sub_field( 'button_url' ) . '" class="btn btn--white">' . get_sub_field( 'button_text' ) . '<span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' . UFL_ATHENA_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span></a>';
+      $featured_bio_copy .= '<a href="' . get_sub_field( 'button_url' ) . '" class="btn btn--white">' . get_sub_field( 'button_text' ) . '<span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' . HWCOE_UFL_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span></a>';
      }
      $featured_bio_copy .=   '<span class="category-tag orange">' . get_sub_field( 'profile_type' ) . '</span>';
-     $featured_bio_copy .=   '<span class="btn-circle arw-right icon-svg"><svg><use xlink:href="' . UFL_ATHENA_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span>';
+     $featured_bio_copy .=   '<span class="btn-circle arw-right icon-svg"><svg><use xlink:href="' . HWCOE_UFL_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span>';
      $featured_bio_copy .= '</div>';
       } // profile_count ?>
       <?php
@@ -31,10 +31,10 @@
           <h3><?php the_sub_field( 'title' ); ?></h3>
           <p><?php the_sub_field( 'description' ); ?></p>
           <?php if( get_sub_field( 'include_button' ) ): ?>
-          <a href="<?php the_sub_field( 'button_url' ); ?>" class="btn btn--white"><?php the_sub_field( 'button_text' ); ?> <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo UFL_ATHENA_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
+          <a href="<?php the_sub_field( 'button_url' ); ?>" class="btn btn--white"><?php the_sub_field( 'button_text' ); ?> <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
           <?php endif // include_button ?>
           <span class="category-tag orange"><?php the_sub_field( 'profile_type' ); ?></span>
-          <span class="btn-circle arw-right icon-svg"><svg><use xlink:href="<?php echo UFL_ATHENA_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span>
+          <span class="btn-circle arw-right icon-svg"><svg><use xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span>
         </div>
       </div>
 

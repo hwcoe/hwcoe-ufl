@@ -68,7 +68,7 @@ foreach( $pages as $page ): ?>
               <h3>Related</h3>
               <ul class="big-list">
               <?php foreach( $subpages as $subpage ): ?>
-              <li><a href="<?php echo get_permalink( $subpage->ID ); ?>"><?php echo $subpage->post_title; ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo UFL_ATHENA_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a></li> 
+              <li><a href="<?php echo get_permalink( $subpage->ID ); ?>"><?php echo $subpage->post_title; ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a></li> 
               <?php endforeach // subpage ?>
               </ul>
             </div>
