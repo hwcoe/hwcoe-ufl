@@ -171,13 +171,14 @@ function ufclas_ufl_2015_socialnetworks() {
 		'linkedin' => 'LinkedIn',
 		'instagram' => 'Instagram',
 		'flickr' => 'Flickr',
-		'siteblog' => 'Blog',
+		'feed' => 'News Feed',
+		// 'siteblog' => 'Blog',
 	);
 	
 	foreach( $social_networks as $name => $title ){
 		$link = esc_url( get_theme_mod("{$name}_url") );
 		$icon = get_stylesheet_directory_uri();
-		$icon .= ( 'siteblog' != $name )? "/img/spritemap.svg#{$name}" : '/svg/menu.svg#Layer_1';
+		$icon .= "/img/spritemap.svg#{$name}";
 		if( !empty($link) ){
 			printf('<li><a href="%s" class="btn-circle icon-svg icon-%s"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%s"></use></svg><span class="visuallyhidden">%s</span></a></li>', $link, $name, $icon, $title );
 		}

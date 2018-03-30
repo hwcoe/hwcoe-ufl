@@ -330,6 +330,7 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'linkedin_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	$wp_customize->add_setting( 'instagram_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	$wp_customize->add_setting( 'flickr_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'feed_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	$wp_customize->add_setting( 'siteblog_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	
 	$wp_customize->add_control( 'facebook_url', array(
@@ -368,8 +369,8 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 		'section' => 'theme_options_social',
 		'type' => 'text',
 	));
-	$wp_customize->add_control( 'siteblog_url', array(
-		'label' => __('Blog or Feed URL', 'ufclas-ufl-2015'),
+	$wp_customize->add_control( 'feed_url', array(
+		'label' => __('News Feed URL', 'ufclas-ufl-2015'),
 		'description' => __("", 'ufclas-ufl-2015'),
 		'section' => 'theme_options_social',
 		'type' => 'text',
