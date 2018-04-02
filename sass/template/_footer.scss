@@ -1,5 +1,8 @@
 .footer-wrap {
 	margin-top: 80px;
+	a {
+		text-decoration:underline;
+	}
 }
 .homepage .footer-wrap {
 	margin: 0 ;
@@ -86,8 +89,9 @@
 }
 footer {
 	ul.social-nav {
-		margin: 0 0 30px 0;
-		@include break(medium){
+		margin: 0 0 20px 0;
+		position: relative;
+		@include breakFirst(medium){
 			margin: 0 0 20px 0;
 		}
 		// li {
@@ -135,11 +139,16 @@ footer {
 }
 .footer-bottom {
 	background: $white;
+
 	@include breakFirst(medium){
 		padding: 75px 0;
 	}
-	.address {
+	address, .address {
 		font: 100 16px/22px $fontFamily;
+	}
+	h2 {
+		font: 500 16px/22px $fontFamily;
+		color: $orange;
 	}
 }
 .footer-menu {

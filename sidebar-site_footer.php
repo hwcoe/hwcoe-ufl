@@ -11,7 +11,7 @@ if ( ! is_active_sidebar( 'site_footer' ) ) : ?>
 
 <div id="site-footer" class="row">
     <div class="col-md-4 col-sm-4 footer-menu">
-        <h2>Resources <span class="icon-svg icon-caret"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#caret"></use></svg></span></h2>
+        <h2>UF Resources <span class="icon-svg icon-caret"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#caret"></use></svg></span></h2>
         <ul>
             <li><a href="http://news.ufl.edu/">UF News</a></li>
             <li><a href="http://calendar.ufl.edu/">UF Calendar</a></li>
@@ -33,10 +33,10 @@ if ( ! is_active_sidebar( 'site_footer' ) ) : ?>
     <div class="col-md-4 col-sm-4 footer-menu">
         <h2>Website <span class="icon-svg icon-caret"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#caret"></use></svg></span></h2>
         <ul>
-            <li><a href="http://www.clas.ufl.edu/">CLAS</a></li>
-            <li><a href="http://www.ufl.edu/websites/">Website Listing</a></li>
+            <li><a href="http://www.ufl.edu/websites/">UF Website Listing</a></li>
             <li><a href="http://accessibility.ufl.edu/">Accessibility</a></li>
-            <li><a href="http://privacy.ufl.edu/privacystatement.html">Privacy Policy</a></li>
+            <li><a href="http://assistive.usablenet.com/tt/<?php if (is_home()) { echo esc_url(home_url()); } else { echo esc_url(get_permalink( $post->ID )); } ?>" accesskey="t">Text-Only Version</a></li>
+            <li><a href="http://privacy.ufl.edu/privacy-policies-and-procedures/onlineinternet-privacy-statement/">Privacy Policy</a></li>
             <li><a href="http://regulations.ufl.edu/">Regulations</a></li>
         </ul>
     </div>

@@ -534,7 +534,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		}
 		li:last-child a {
 			@include breakFirst(wide){
-				padding-right: 30px;
+				padding-right: 20px;
 			}
 		}
 	}
@@ -573,7 +573,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 			position: relative;
 			width: 37px;
 			@include breakFirst(wide){
-				width: 50px;
+				width: 37px;
 			}
 			svg {
 				@extend %centerVert;
@@ -614,7 +614,8 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 			letter-spacing: 2px;
 			padding: 15px 10px;
 			@include breakFirst(wide){
-				padding: 15px 20px;
+				// padding: 15px 20px;
+				padding: 15px 5px 15px 10px;
 			}
 		}
 		.cur-audience {

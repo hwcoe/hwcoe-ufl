@@ -34,7 +34,7 @@ body {
 }
 a {
   color: $linkColor;
-  text-decoration: none;
+  // text-decoration: none;
   &:hover {
     color: $linkColorHover;
   }
@@ -221,9 +221,9 @@ img {
 .btn-circle {
   border: 2px solid $white;
   border-radius: 50%;
-  height: 46px;
+  height: 40px;
   position: relative;
-  width: 46px;
+  width: 40px;
   svg {
     @extend %centerVertAll;
   }

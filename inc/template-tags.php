@@ -172,7 +172,6 @@ function ufclas_ufl_2015_socialnetworks() {
 		'instagram' => 'Instagram',
 		'flickr' => 'Flickr',
 		'feed' => 'News Feed',
-		// 'siteblog' => 'Blog',
 	);
 	
 	foreach( $social_networks as $name => $title ){

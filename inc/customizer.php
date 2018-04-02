@@ -236,52 +236,7 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 		),
 	));
 	
-	// Footer
-	$wp_customize->add_section( 'theme_options_footer', array(
-		'title' => __('Footer', 'ufclas-ufl-2015'),
-		'description' => __('', 'ufclas-ufl-2015'),
-		'panel' => 'theme_options',
-	));
-	
-	$wp_customize->add_setting( 'webmaster_email', array( 'default' => '', 'sanitize_callback' => 'sanitize_text_field' ));
-	$wp_customize->add_setting( 'intranet_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'makeagift_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'footer_widgets_visibility', array( 'default' => 'all_pages', 'sanitize_callback' => 'ufclas_ufl_2015_sanitize_choices' ));
-	
-	/*$wp_customize->add_control( 'webmaster_email', array(
-		'label' => __('Webmaster Email or URL', 'ufclas-ufl-2015'),
-		'description' => __("Enter the email address or contact page URL for webmaster contact requests (e.g. webmaster@yourdomain.edu OR http://yourdomain.edu/contact)", 'ufclas-ufl-2015'),
-		'section' => 'theme_options_footer',
-		'type' => 'text',
-	));
-	
-	$wp_customize->add_control( 'intranet_url', array(
-		'label' => __('Intranet URL', 'ufclas-ufl-2015'),
-		'description' => __("Enter the URL to your unit's intranet. This will place a link at the bottom of the footer titled 'Intranet'", 'ufclas-ufl-2015'),
-		'section' => 'theme_options_footer',
-		'type' => 'text',
-	));
-	
-	$wp_customize->add_control( 'makeagift_url', array(
-		'label' => __('Make a Gift URL', 'ufclas-ufl-2015'),
-		'description' => __("Enter the URL to your unit's specific fund/giving page at the UF Foundation. Find available online funds at the <a href='https://www.uff.ufl.edu/OnlineGiving/Advanced.asp' target='_blank'>UF Foundation</a>", 'ufclas-ufl-2015'),
-		'section' => 'theme_options_footer',
-		'type' => 'text',
-	));*/
-	
-	$wp_customize->add_control( 'footer_widgets_visibility', array(
-		'label' => __('Footer Widget Visibility', 'ufclas-ufl-2015'),
-		'description' => __("Select where to show the Footer Widgets", 'ufclas-ufl-2015'),
-		'section' => 'theme_options_footer',
-		'type' => 'radio',
-		'choices' => array(
-			'all_pages' => __('All Pages (including homepage)', 'ufclas-ufl-2015'),
-			'homepage_only' => __('Homepage Only', 'ufclas-ufl-2015'),
-			'subpages_only' => __('Subpages Only', 'ufclas-ufl-2015'),
-		),
-	));
-	
-	// Call to Action
+	// Announcement/Alert
 	$wp_customize->add_section( 'theme_options_alert', array(
 		'title' => __('Announcement or Alert', 'ufclas-ufl-2015'),
 		'panel' => 'theme_options',
@@ -320,7 +275,7 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	// Social 
 	$wp_customize->add_section( 'theme_options_social', array(
 		'title' => __('Social Media', 'ufclas-ufl-2015'),
-		'description' => __("Enter your organization's social media URLs (e.g. https://...). Social media icons are displayed in the footer", 'ufclas-ufl-2015'),
+		'description' => __("Enter your organization's social media URLs (e.g. https://...). Social media icons are displayed in the header and footer", 'ufclas-ufl-2015'),
 		'panel' => 'theme_options',
 	));
 	
@@ -331,7 +286,6 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'instagram_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	$wp_customize->add_setting( 'flickr_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	$wp_customize->add_setting( 'feed_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'siteblog_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	
 	$wp_customize->add_control( 'facebook_url', array(
 		'label' => __('Facebook URL', 'ufclas-ufl-2015'),

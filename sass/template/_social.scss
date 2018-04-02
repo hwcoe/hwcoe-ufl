@@ -1,19 +1,30 @@
 ul.social-nav {
-	margin: 10px 0 30px 10px;
+	margin: 5px 10px;
 	position:absolute;
 	@include break(medium){
 		margin: 10px 0 20px 10px;
+		// right:200px;
+	}
+	@include breakFirst(large){
+		right: 100px;
+	}
+	@include breakFirst(wide){
+		position: relative;
+		left:0;
 	}
 	li {
 		display: inline-block;
-		margin: 0 10px 0 0;
+		margin: 0 5px 0 0;
 		border: none;
 		@include break(medium){
-			margin: 0 5px 0 0;
+			margin: 0 10px 0 0;
 		}
 		&:before {
 			display: none;
 		}
+	}
+	li:last-of-type {
+		padding-bottom: $grid-gutter-width/2;	
 	}
 	a {
 		border-color: $white;
@@ -25,10 +36,19 @@ ul.social-nav {
 			color: $white;
 		}
 	}
+	.icon-svg svg {
+		top: 10px;
+		left: 9px;
+		transform: translate(0%, 0%);
+		width: 19px;
+		height: 19px;
+	}
 	.icon-facebook {
 		svg{
 			height: 19px;
 			width: 11px;
+			left: 12px;
+			top: 9px;
 		}
 	}
 	.icon-twitter {
@@ -37,23 +57,39 @@ ul.social-nav {
 			width: 20px;
 		}
 	}
+	.icon-youtube {
+		svg{
+			height: 17px;
+			width: 23px;
+			left: 7px;
+		}
+	}
+	.icon-linkedin {
+		svg{
+			height: 19px;
+			width: 20px;
+			top: 8px;
+			left: 9px;
+		}
+	}
 	.icon-instagram {
 		svg{
 			height: 18px;
 			width: 18px;
 		}
 	}
-	.icon-youtube {
+	.icon-flickr {
 		svg{
-			height: 16px;
-			width: 22px;
+			height: 18px;
+			width: 18px;
 		}
 	}
+	.icon-feed {
+		svg{
+			height: 16px;
+			width: 16px;
+			left: 11px;
+		}
+	}
+
 }
-// .aux-menu-wrap {
-// 	.social-nav {
-// 		li {
-// 			border:none;
-// 		}
-// 	}
-// }
