@@ -18,17 +18,28 @@ if ( !function_exists('is_uf_email') ) {
 	}
 }
 
-// Check if a vaild REMOTE_USER is set.
+// Check if a valid REMOTE_USER is set.
 function ufl_shibboleth_valid_user() {
 
-	$user = ufclas_check_server_auth_value('REMOTE_USER');
+	$user = ufl_check_server_auth_value('REMOTE_USER');
 		
 	if ( is_uf_email( $user ) ) {
+		return true;
+	} elseif ( is_uf_email($_SERVER['REDIRECT_UFShib_eppn']) ) {
 		return true;
 	} else {
 		return false;
 	}
 }
+
+// Check if a vaild REMOTE_USER is set.
+// function ufl_shibboleth_valid_user() {
+// 	if ( is_uf_email($_SERVER['REMOTE_USER']) ) {
+// 		return true;
+// 	} elseif ( is_uf_email($_SERVER['REDIRECT_UFShib_eppn']) ) {
+// 		return true;
+// 	}
+// }
 
 // Get current protocol from options, fallback to server variable.
 function ufl_get_protocol() {
@@ -56,7 +67,7 @@ function ufl_check_shibboleth_auth() {
 }
 
 // Check if authed with Shib.
-function ufclas_check_shibboleth_group_auth( $postid ) {
+function ufl_check_shibboleth_group_auth( $postid ) {
 	
 	if ( !ufl_shibboleth_valid_user() ) {
 		return false;
@@ -64,7 +75,7 @@ function ufclas_check_shibboleth_group_auth( $postid ) {
 		// Valid GatorLink User
 		$group_meta = get_post_meta( $postid, 'custom_meta_visitor_auth_groups', true );
 		
-		$user_groups = ufclas_check_server_auth_value('UFADGroupsDN');
+		$user_groups = ufl_check_server_auth_value('UFADGroupsDN');
 
 		if( empty($group_meta) || empty($user_groups) ){
 			return false;
@@ -133,7 +144,7 @@ function ufl_check_authorized_user($postid) {
 			}
 			break;
 		case '3':
-			if ( ufclas_check_shibboleth_group_auth($postid) ) {
+			if ( ufl_check_shibboleth_group_auth($postid) ) {
 				//define( 'DONOTCACHEPAGE', 1 );
 				return true;
 			} else {
@@ -149,7 +160,7 @@ function ufl_check_authorized_user($postid) {
 /**
  * Check the server values for authenticated users in both the variable and REDIRECT_ variable.
  */
-function ufclas_check_server_auth_value( $var ){
+function ufl_check_server_auth_value( $var ){
 	if( isset($_SERVER[$var]) ){
 		return $_SERVER[$var];
 	}
