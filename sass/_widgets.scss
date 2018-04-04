@@ -9,6 +9,8 @@
 	
 	.home & {
 		padding-top: $grid-gutter-width;
+		margin-bottom: $grid-gutter-width;
+		overflow: hidden;
 	}
     .home &#page-sections{
         padding-top: 0;
@@ -30,6 +32,7 @@
 		li {
 			margin-bottom: $grid-gutter-width;
 			font-size: 16px;
+			text-transform:none;
 		}
 		a {
 			font-weight: 400;
@@ -48,15 +51,21 @@
 			border: 5px solid $white;
 			background: $cyan;
 			color: $blue;
-			display: block;
+			display: inline-block;
 			font: 700 14px/14px $fontFamily;
 			letter-spacing: 2px;
 			padding: 9px 14px;
 			position: relative;
-			top: -45px;
-			left: -45px;
-			&a:hover {
+			// top: -45px;
+			left: -30px;
+			& a {
+				color: $blue;
+				text-decoration: none;
+			}
+			&:hover {
 				background: $white;
+			}
+			&:hover a {
 				color: $blue;
 			}
 			&.orange {
@@ -68,14 +77,15 @@
 	@at-root .home #secondary & {
 		background: $blueLight;
 		color: $white;
-		padding: $grid-gutter-width;
+		padding: $grid-gutter-width/2;
+
+		// make home page widget height look consistent - may not be necessary with design. 
+		// padding-bottom: 500em;
+		// margin-bottom: -500em;
+		
 		a {
 			color: $white;
 			text-decoration: underline;
-			.widget-title & {
-				background: $cyan;
-				color: $blue;
-			}
 		}
 	}
 }

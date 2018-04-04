@@ -377,8 +377,9 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		}
 		&:hover {
 			a {
-				background: $beige;
-				color: $blue;
+				// background: $beige;
+				background: $blueDark;
+				// color: $blue;
 			}
 			.no-js & .dropdown {
 				@include breakFirst(large){
@@ -625,7 +626,8 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 }
 
 .dropdown {
-	background: $beige;
+	// background: $beige;
+	background: $blueDark;
 	display: none;
 	left: 0;
 	overflow: hidden;
@@ -660,7 +662,8 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		}
 	}
 	a {
-		color: $blue;
+		// color: $blue;
+		color: $white;
 		border-top: 1px solid $beigeDark;
 		display: block;
 		font: 500 18px/26px $serifFontFamily;
@@ -668,7 +671,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		text-align: left;
 		text-transform: none;
 		&:hover {
-			color: $orange;
+			// color: $orange;
 		}
 	}
 	.aux-dropdown {
