@@ -57,7 +57,9 @@
 				
 			?>
   		</ul>
-		<!-- TODO: social links here -->
+		<ul class="social-nav">
+			<?php hwcoe_ufl_socialnetworks(); ?>
+		</ul>
   		<div class="audience-nav-wrap">
 			<?php 
             if ( has_nav_menu( 'audience_nav' ) ): ?>
