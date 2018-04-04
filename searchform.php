@@ -1,8 +1,8 @@
 <form action="https://search.ufl.edu/search" method="get" class="search-form" role="search">
-<label for="query" class="visuallyhidden sr-only"><?php esc_html_e('Search', 'ufclas-ufl-2015'); ?></label>
-<input type="text" id="query" name="query" placeholder="<?php esc_attr_e('Search', 'ufclas-ufl-2015'); ?>" />
+<label for="query" class="visuallyhidden sr-only"><?php esc_html_e('Search', 'hwcoe-ufl'); ?></label>
+<input type="text" id="query" name="query" placeholder="<?php esc_attr_e('Search', 'hwcoe-ufl'); ?>" />
 <button type="submit" class="btn-search">
-    <span class="sr-only"><?php esc_html_e('Search', 'ufclas-ufl-2015'); ?></span>
+    <span class="sr-only"><?php esc_html_e('Search', 'hwcoe-ufl'); ?></span>
     <span class="icon-svg">
     <svg>
         <use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#search"></use>

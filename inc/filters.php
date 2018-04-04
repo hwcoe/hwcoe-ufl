@@ -31,11 +31,11 @@ add_filter( 'body_class', 'ufclas_ufl_2015_body_classes' );
 function ufclas_ufl_2015_archive_title( $title ){
 	if ( is_category() ) {
         $queried_obj = get_queried_object();
-		$title = sprintf( __( '%s', 'ufclas-ufl-2015' ), single_cat_title( '', false ) );
+		$title = sprintf( __( '%s', 'hwcoe-ufl' ), single_cat_title( '', false ) );
 		$title .= sprintf('<a href="%s"><i class="mdi mdi-rss"></i></a>', get_category_feed_link( $queried_obj->term_id ) );
     }
 	else {
-		$title = str_replace( __('Archives: ', 'ufclas-ufl-2015'), '', $title);
+		$title = str_replace( __('Archives: ', 'hwcoe-ufl'), '', $title);
 	}
 	return $title;
 }
@@ -47,7 +47,7 @@ add_filter( 'get_the_archive_title', 'ufclas_ufl_2015_archive_title' );
 function ufclas_ufl_2015_excerpt_more( $more ){
 	$custom_meta = get_post_custom( get_the_ID() );
 	$custom_button_text = ( isset($custom_meta['custom_meta_featured_content_button_text']) )? $custom_meta['custom_meta_featured_content_button_text'][0]:'';
-	$label = ( empty($custom_button_text) )? __('Read&nbsp;More', 'ufclas-ufl-2015'):$custom_button_text;
+	$label = ( empty($custom_button_text) )? __('Read&nbsp;More', 'hwcoe-ufl'):$custom_button_text;
 	return '&hellip; <a href="'. get_permalink() . '" title="'. get_the_title() . '" class="read-more">' . $label . '</a>';
 }
 add_filter('excerpt_more', 'ufclas_ufl_2015_excerpt_more');

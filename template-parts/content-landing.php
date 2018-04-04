@@ -17,13 +17,13 @@
     <footer class="entry-footer container">
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ufclas-ufl-2015' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hwcoe-ufl' ),
 				'after'  => '</div>',
 			) );
 			
 			edit_post_link(
 				sprintf(
-					esc_html__( 'Edit %s', 'ufclas-ufl-2015' ),
+					esc_html__( 'Edit %s', 'hwcoe-ufl' ),
 					the_title( '<span class="sr-only">"', '"</span>', false )
 				),
 				'<span class="edit-link">',

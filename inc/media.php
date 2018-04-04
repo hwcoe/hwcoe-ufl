@@ -37,11 +37,11 @@ add_action( 'after_setup_theme', 'ufclas_ufl_2015_image_sizes' );
  */
 function ufclas_ufl_2015_show_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-		'full-width-thumb' => __( 'Full Width Thumbnail', 'ufclas-ufl-2015' ),
-		'half-width-thumb' => __( 'Half Width Thumbnail', 'ufclas-ufl-2015' ),
-		'page_header' => __( 'Page Header', 'ufclas-ufl-2015' ),
-		'ufl_post_thumb' => __( 'Post Thumbnail', 'ufclas-ufl-2015' ),
-		'medium-cropped' => __( 'Medium (cropped)', 'ufclas-ufl-2015' ),
+		'full-width-thumb' => __( 'Full Width Thumbnail', 'hwcoe-ufl' ),
+		'half-width-thumb' => __( 'Half Width Thumbnail', 'hwcoe-ufl' ),
+		'page_header' => __( 'Page Header', 'hwcoe-ufl' ),
+		'ufl_post_thumb' => __( 'Post Thumbnail', 'hwcoe-ufl' ),
+		'medium-cropped' => __( 'Medium (cropped)', 'hwcoe-ufl' ),
     ) );
 }
 add_filter( 'image_size_names_choose', 'ufclas_ufl_2015_show_custom_sizes' );

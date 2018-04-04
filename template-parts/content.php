@@ -24,7 +24,7 @@
 	<?php else: ?>
 		<?php if ( has_post_thumbnail() ): ?>
             <header class="entry-header">
-          		<?php echo ufclas_ufl_2015_post_featured_image(); ?>	
+          		<?php echo hwcoe_ufl_post_featured_image(); ?>	
             </header>
     	<?php endif; ?>
         
@@ -46,13 +46,13 @@
     <footer class="entry-footer">
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ufclas-ufl-2015' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hwcoe-ufl' ),
 				'after'  => '</div>',
 			) );
 			
 			edit_post_link(
 				sprintf(
-					esc_html__( 'Edit %s', 'ufclas-ufl-2015' ),
+					esc_html__( 'Edit %s', 'hwcoe-ufl' ),
 					the_title( '<span class="sr-only">"', '"</span>', false )
 				),
 				'<span class="edit-link">',

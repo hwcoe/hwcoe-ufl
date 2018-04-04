@@ -10,7 +10,7 @@
  * 
  * @since 0.0.0
  */
-function ufclas_ufl_2015_breadcrumbs() {
+function hwcoe_ufl_breadcrumbs() {
   	global $post;
 
 	$breadcrumb = '<ul class="breadcrumb-wrap">';
@@ -37,7 +37,7 @@ function ufclas_ufl_2015_breadcrumbs() {
  * @return string List of page links
  * @since 0.1.0
  */
-function ufclas_ufl_2015_sidebar_navigation() {
+function hwcoe_ufl_sidebar_navigation() {
 	global $post;
 	
 	$post_ancestors = get_post_ancestors( $post );

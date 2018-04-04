@@ -8,37 +8,37 @@ function ufclas_ufl_2015_register_landing_double() {
 	// Define the UI for attributes of the shortcode. 
 	$shortcode_ui_fields = array(
 		array(
-			'label'		=> esc_html__( 'Headline', 'ufclas-ufl-2015' ),
-			'description' 	=> esc_html__('Heading to display above the content, optional', 'ufclas-ufl-2015'),
+			'label'		=> esc_html__( 'Headline', 'hwcoe-ufl' ),
+			'description' 	=> esc_html__('Heading to display above the content, optional', 'hwcoe-ufl'),
 			'attr' 		=> 'headline',
 			'type' 		=> 'text',
 		),
 		array(
-			'label'		=> esc_html__( 'Primary Image', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Primary Image', 'hwcoe-ufl' ),
 			'attr' 		=> 'image1',
 			'type' 		=> 'attachment',
 			'libraryType' 	=> array( 'Image' ),
-			'addButton'		=> esc_html__( 'Select Image', 'ufclas-ufl-2015' ),
-			'frameTitle'	=> esc_html__( 'Select Primary Image', 'ufclas-ufl-2015' ),
+			'addButton'		=> esc_html__( 'Select Image', 'hwcoe-ufl' ),
+			'frameTitle'	=> esc_html__( 'Select Primary Image', 'hwcoe-ufl' ),
 		),
 		array(
-			'label'		=> esc_html__( 'Secondary Image', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Secondary Image', 'hwcoe-ufl' ),
 			'attr' 		=> 'image2',
 			'type' 		=> 'attachment',
 			'libraryType' 	=> array( 'Image' ),
-			'addButton'		=> esc_html__( 'Select Image', 'ufclas-ufl-2015' ),
-			'frameTitle'	=> esc_html__( 'Select Secondary Image', 'ufclas-ufl-2015' ),
+			'addButton'		=> esc_html__( 'Select Image', 'hwcoe-ufl' ),
+			'frameTitle'	=> esc_html__( 'Select Secondary Image', 'hwcoe-ufl' ),
 		),
 	);
 	
 	// Define the Shortcode UI arguments
 	$shortcode_ui_args = array(
-		'label' 			=> esc_html__('UFL Landing Page Double Image', 'ufclas-ufl-2015'),
+		'label' 			=> esc_html__('UFL Landing Page Double Image', 'hwcoe-ufl'),
 		'listItemImage' 	=> 'dashicons-format-image',
 		'post_type' 		=> array('page'),
 		'inner_content' 	=> array(
-			'label' 		=> esc_html__('Content', 'ufclas-ufl-2015'),
-			'description' 	=> esc_html__('Include text to display within the Landing Page Double Image', 'ufclas-ufl-2015'),
+			'label' 		=> esc_html__('Content', 'hwcoe-ufl'),
+			'description' 	=> esc_html__('Include text to display within the Landing Page Double Image', 'hwcoe-ufl'),
 		),
 		'attrs' 			=> $shortcode_ui_fields,
 	);
@@ -56,54 +56,54 @@ function ufclas_ufl_2015_register_landing_hero() {
 	// Define the UI for attributes of the shortcode. 
 	$shortcode_ui_fields = array(
 		array(
-			'label'		=> esc_html__( 'Headline', 'ufclas-ufl-2015' ),
-			'description' 	=> esc_html__('Heading to display over the background image', 'ufclas-ufl-2015'),
+			'label'		=> esc_html__( 'Headline', 'hwcoe-ufl' ),
+			'description' 	=> esc_html__('Heading to display over the background image', 'hwcoe-ufl'),
 			'attr' 		=> 'headline',
 			'type' 		=> 'text',
 		),
 		array(
-			'label'		=> esc_html__( 'Background Image', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Background Image', 'hwcoe-ufl' ),
 			'attr' 		=> 'image',
 			'type' 		=> 'attachment',
 			'libraryType' 	=> array( 'Image' ),
-			'addButton'		=> esc_html__( 'Select Image', 'ufclas-ufl-2015' ),
-			'frameTitle'	=> esc_html__( 'Select Background Image', 'ufclas-ufl-2015' ),
+			'addButton'		=> esc_html__( 'Select Image', 'hwcoe-ufl' ),
+			'frameTitle'	=> esc_html__( 'Select Background Image', 'hwcoe-ufl' ),
 		),
 		array(
-			'label'		=> esc_html__( 'Background Image Height', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Background Image Height', 'hwcoe-ufl' ),
 			'attr' 		=> 'image_height',
 			'type' 		=> 'select',
 			'options' 	=> array(
-							'large' => esc_html__( 'Large', 'ufclas-ufl-2015' ),
-							'medium' => esc_html__( 'Medium', 'ufclas-ufl-2015' ),
-							'half' => esc_html__( 'Small', 'ufclas-ufl-2015' ),
+							'large' => esc_html__( 'Large', 'hwcoe-ufl' ),
+							'medium' => esc_html__( 'Medium', 'hwcoe-ufl' ),
+							'half' => esc_html__( 'Small', 'hwcoe-ufl' ),
 			),
 		),
 		array(
-			'label'		=> esc_html__( 'Button Text', 'ufclas-ufl-2015' ),
-			'description' 	=> esc_html__('Displayed within the button', 'ufclas-ufl-2015'),
+			'label'		=> esc_html__( 'Button Text', 'hwcoe-ufl' ),
+			'description' 	=> esc_html__('Displayed within the button', 'hwcoe-ufl'),
 			'attr' 		=> 'button_text',
 			'type' 		=> 'text',
 		),
 		array(
-			'label'		=> esc_html__( 'Button Link', 'ufclas-ufl-2015' ),
-			'description' 	=> esc_html__('URL to visit when button is clicked.', 'ufclas-ufl-2015'),
+			'label'		=> esc_html__( 'Button Link', 'hwcoe-ufl' ),
+			'description' 	=> esc_html__('URL to visit when button is clicked.', 'hwcoe-ufl'),
 			'attr' 		=> 'button_link',
 			'type' 		=> 'url',
 			'meta' 		=> array(
-							'placeholder' => esc_html__( 'http:// or https://', 'ufclas-ufl-2015' ),
+							'placeholder' => esc_html__( 'http:// or https://', 'hwcoe-ufl' ),
 			),
 		),
 	);
 	
 	// Define the Shortcode UI arguments
 	$shortcode_ui_args = array(
-		'label' 			=> esc_html__('UFL Landing Page Hero Image', 'ufclas-ufl-2015'),
+		'label' 			=> esc_html__('UFL Landing Page Hero Image', 'hwcoe-ufl'),
 		'listItemImage' 	=> 'dashicons-format-image',
 		'post_type' 		=> array('page'),
 		'inner_content' 	=> array(
-			'label' 		=> esc_html__('Content', 'ufclas-ufl-2015'),
-			'description' 	=> esc_html__('Include text to display below the Landing Page Hero Image', 'ufclas-ufl-2015'),
+			'label' 		=> esc_html__('Content', 'hwcoe-ufl'),
+			'description' 	=> esc_html__('Include text to display below the Landing Page Hero Image', 'hwcoe-ufl'),
 		),
 		'attrs' 			=> $shortcode_ui_fields,
 	);
@@ -121,49 +121,49 @@ function ufclas_ufl_2015_register_breaker() {
 	// Define the UI for attributes of the shortcode. 
 	$shortcode_ui_fields = array(
 		array(
-			'label'		=> esc_html__( 'Headline', 'ufclas-ufl-2015' ),
-			'description' 	=> esc_html__('Heading to display over the background image', 'ufclas-ufl-2015'),
+			'label'		=> esc_html__( 'Headline', 'hwcoe-ufl' ),
+			'description' 	=> esc_html__('Heading to display over the background image', 'hwcoe-ufl'),
 			'attr' 		=> 'headline',
 			'type' 		=> 'text',
 		),
 		array(
-			'label'		=> esc_html__( 'Background Image', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Background Image', 'hwcoe-ufl' ),
 			'attr' 		=> 'image',
 			'type' 		=> 'attachment',
 			'libraryType' 	=> array( 'Image' ),
-			'addButton'		=> esc_html__( 'Select Image', 'ufclas-ufl-2015' ),
-			'frameTitle'	=> esc_html__( 'Select Background Image', 'ufclas-ufl-2015' ),
+			'addButton'		=> esc_html__( 'Select Image', 'hwcoe-ufl' ),
+			'frameTitle'	=> esc_html__( 'Select Background Image', 'hwcoe-ufl' ),
 		),
 		array(
-			'label'		=> esc_html__( 'Hide Button', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Hide Button', 'hwcoe-ufl' ),
 			'attr' 		=> 'hide_button',
 			'type' 		=> 'checkbox',
 		),
 		array(
-			'label'		=> esc_html__( 'Button Text', 'ufclas-ufl-2015' ),
-			'description' 	=> esc_html__('Displayed within the button', 'ufclas-ufl-2015'),
+			'label'		=> esc_html__( 'Button Text', 'hwcoe-ufl' ),
+			'description' 	=> esc_html__('Displayed within the button', 'hwcoe-ufl'),
 			'attr' 		=> 'button_text',
 			'type' 		=> 'text',
 		),
 		array(
-			'label'		=> esc_html__( 'Button Link', 'ufclas-ufl-2015' ),
-			'description' 	=> esc_html__('URL to visit when button is clicked.', 'ufclas-ufl-2015'),
+			'label'		=> esc_html__( 'Button Link', 'hwcoe-ufl' ),
+			'description' 	=> esc_html__('URL to visit when button is clicked.', 'hwcoe-ufl'),
 			'attr' 		=> 'button_link',
 			'type' 		=> 'url',
 			'meta' 		=> array(
-							'placeholder' => esc_html__( 'http:// or https://', 'ufclas-ufl-2015' ),
+							'placeholder' => esc_html__( 'http:// or https://', 'hwcoe-ufl' ),
 			),
 		),
 	);
 	
 	// Define the Shortcode UI arguments
 	$shortcode_ui_args = array(
-		'label' 			=> esc_html__('UFL Breaker', 'ufclas-ufl-2015'),
+		'label' 			=> esc_html__('UFL Breaker', 'hwcoe-ufl'),
 		'listItemImage' 	=> 'dashicons-format-image',
 		'post_type' 		=> array('page'),
 		'inner_content' 	=> array(
-			'label' 		=> esc_html__('Content', 'ufclas-ufl-2015'),
-			'description' 	=> esc_html__('full width background image with a headline, text, and butto', 'ufclas-ufl-2015'),
+			'label' 		=> esc_html__('Content', 'hwcoe-ufl'),
+			'description' 	=> esc_html__('full width background image with a headline, text, and butto', 'hwcoe-ufl'),
 		),
 		'attrs' 			=> $shortcode_ui_fields,
 	);
@@ -182,22 +182,22 @@ function ufclas_ufl_2015_register_content_image_left() {
 	// Define the UI for attributes of the shortcode. 
 	$shortcode_ui_fields = array(
 		array(
-			'label'		=> esc_html__( 'Headline', 'ufclas-ufl-2015' ),
-			'description' 	=> esc_html__('Heading to display over the background image', 'ufclas-ufl-2015'),
+			'label'		=> esc_html__( 'Headline', 'hwcoe-ufl' ),
+			'description' 	=> esc_html__('Heading to display over the background image', 'hwcoe-ufl'),
 			'attr' 		=> 'headline',
 			'type' 		=> 'text',
 		),
 		array(
-			'label'		=> esc_html__( 'Image', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Image', 'hwcoe-ufl' ),
 			'attr' 		=> 'image',
 			'type' 		=> 'attachment',
 			'libraryType' 	=> array( 'Image' ),
-			'addButton'		=> esc_html__( 'Select Image', 'ufclas-ufl-2015' ),
-			'frameTitle'	=> esc_html__( 'Select Image', 'ufclas-ufl-2015' ),
+			'addButton'		=> esc_html__( 'Select Image', 'hwcoe-ufl' ),
+			'frameTitle'	=> esc_html__( 'Select Image', 'hwcoe-ufl' ),
 		),
 		array(
-			'label'		=> esc_html__( 'Image Caption', 'ufclas-ufl-2015' ),
-			'description' 	=> esc_html__('A caption to overlay the image, optional', 'ufclas-ufl-2015'),
+			'label'		=> esc_html__( 'Image Caption', 'hwcoe-ufl' ),
+			'description' 	=> esc_html__('A caption to overlay the image, optional', 'hwcoe-ufl'),
 			'attr' 		=> 'caption',
 			'type' 		=> 'textarea',
 		),
@@ -205,12 +205,12 @@ function ufclas_ufl_2015_register_content_image_left() {
 	
 	// Define the Shortcode UI arguments
 	$shortcode_ui_args = array(
-		'label' 			=> esc_html__('UFL Content Image Left', 'ufclas-ufl-2015'),
+		'label' 			=> esc_html__('UFL Content Image Left', 'hwcoe-ufl'),
 		'listItemImage' 	=> 'dashicons-format-image',
 		'post_type' 		=> array('page'),
 		'inner_content' 	=> array(
-			'label' 		=> esc_html__('Content', 'ufclas-ufl-2015'),
-			'description' 	=> esc_html__('Content with List and Left Image with Caption', 'ufclas-ufl-2015'),
+			'label' 		=> esc_html__('Content', 'hwcoe-ufl'),
+			'description' 	=> esc_html__('Content with List and Left Image with Caption', 'hwcoe-ufl'),
 		),
 		'attrs' 			=> $shortcode_ui_fields,
 	);
@@ -229,22 +229,22 @@ function ufclas_ufl_2015_register_content_image_right() {
 	// Define the UI for attributes of the shortcode. 
 	$shortcode_ui_fields = array(
 		array(
-			'label'		=> esc_html__( 'Headline', 'ufclas-ufl-2015' ),
-			'description' 	=> esc_html__('Heading for the section, optional', 'ufclas-ufl-2015'),
+			'label'		=> esc_html__( 'Headline', 'hwcoe-ufl' ),
+			'description' 	=> esc_html__('Heading for the section, optional', 'hwcoe-ufl'),
 			'attr' 		=> 'headline',
 			'type' 		=> 'text',
 		),
 		array(
-			'label'		=> esc_html__( 'Image', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Image', 'hwcoe-ufl' ),
 			'attr' 		=> 'image',
 			'type' 		=> 'attachment',
 			'libraryType' 	=> array( 'Image' ),
-			'addButton'		=> esc_html__( 'Select Image', 'ufclas-ufl-2015' ),
-			'frameTitle'	=> esc_html__( 'Select Image', 'ufclas-ufl-2015' ),
+			'addButton'		=> esc_html__( 'Select Image', 'hwcoe-ufl' ),
+			'frameTitle'	=> esc_html__( 'Select Image', 'hwcoe-ufl' ),
 		),
 		array(
-			'label'		=> esc_html__( 'Label', 'ufclas-ufl-2015' ),
-			'description' 	=> esc_html__('Category title for the content section, optional', 'ufclas-ufl-2015'),
+			'label'		=> esc_html__( 'Label', 'hwcoe-ufl' ),
+			'description' 	=> esc_html__('Category title for the content section, optional', 'hwcoe-ufl'),
 			'attr' 		=> 'label',
 			'type' 		=> 'text',
 		),
@@ -252,12 +252,12 @@ function ufclas_ufl_2015_register_content_image_right() {
 	
 	// Define the Shortcode UI arguments
 	$shortcode_ui_args = array(
-		'label' 			=> esc_html__('UFL Content Image Right', 'ufclas-ufl-2015'),
+		'label' 			=> esc_html__('UFL Content Image Right', 'hwcoe-ufl'),
 		'listItemImage' 	=> 'dashicons-format-image',
 		'post_type' 		=> array('page'),
 		'inner_content' 	=> array(
-			'label' 		=> esc_html__('Content', 'ufclas-ufl-2015'),
-			'description' 	=> esc_html__('Content with Right Image and Category', 'ufclas-ufl-2015'),
+			'label' 		=> esc_html__('Content', 'hwcoe-ufl'),
+			'description' 	=> esc_html__('Content with Right Image and Category', 'hwcoe-ufl'),
 		),
 		'attrs' 			=> $shortcode_ui_fields,
 	);
@@ -287,26 +287,26 @@ function ufclas_ufl_2015_register_breaker_cards() {
 	// Define the UI for attributes of the shortcode.
 	$shortcode_ui_fields = array(
 		array(
-			'label'		=> esc_html__( 'Background Image', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Background Image', 'hwcoe-ufl' ),
 			'attr' 		=> 'image',
 			'type' 		=> 'attachment',
 			'libraryType' 	=> array( 'Image' ),
-			'addButton'		=> esc_html__( 'Select Image', 'ufclas-ufl-2015' ),
-			'frameTitle'	=> esc_html__( 'Select Background Image', 'ufclas-ufl-2015' ),
+			'addButton'		=> esc_html__( 'Select Image', 'hwcoe-ufl' ),
+			'frameTitle'	=> esc_html__( 'Select Background Image', 'hwcoe-ufl' ),
 		),
 		array(
-			'label'		=> esc_html__( 'Post Category', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Post Category', 'hwcoe-ufl' ),
 			'attr' 		=> 'category',
 			'type' 		=> 'select',
 			'options'	=> $category_options,
 		),
 		array(
-			'label'		=> esc_html__( 'Hide Excerpt', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Hide Excerpt', 'hwcoe-ufl' ),
 			'attr' 		=> 'hide_excerpt',
 			'type' 		=> 'checkbox',
 		),
 		array(
-			'label'		=> esc_html__( 'Show Image and Title Links', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Show Image and Title Links', 'hwcoe-ufl' ),
 			'attr' 		=> 'show_links',
 			'type' 		=> 'checkbox',
 		),
@@ -314,7 +314,7 @@ function ufclas_ufl_2015_register_breaker_cards() {
 	
 	// Define the Shortcode UI arguments
 	$shortcode_ui_args = array(
-		'label' 			=> esc_html__('UFL Breaker with Cards', 'ufclas-ufl-2015'),
+		'label' 			=> esc_html__('UFL Breaker with Cards', 'hwcoe-ufl'),
 		'listItemImage' 	=> 'dashicons-format-image',
 		'post_type' 		=> array('page'),
 		'attrs' 			=> $shortcode_ui_fields,
@@ -329,23 +329,23 @@ function ufclas_ufl_2015_register_image_right_quote() {
 	// Define the UI for attributes of the shortcode. 
 	$shortcode_ui_fields = array(
 		array(
-			'label'		=> esc_html__( 'Image', 'ufclas-ufl-2015' ),
+			'label'		=> esc_html__( 'Image', 'hwcoe-ufl' ),
 			'attr' 		=> 'image',
 			'type' 		=> 'attachment',
 			'libraryType' 	=> array( 'Image' ),
-			'addButton'		=> esc_html__( 'Select Image', 'ufclas-ufl-2015' ),
-			'frameTitle'	=> esc_html__( 'Select Image', 'ufclas-ufl-2015' ),
+			'addButton'		=> esc_html__( 'Select Image', 'hwcoe-ufl' ),
+			'frameTitle'	=> esc_html__( 'Select Image', 'hwcoe-ufl' ),
 		),
 	);
 	
 	// Define the Shortcode UI arguments
 	$shortcode_ui_args = array(
-		'label' 			=> esc_html__('UFL Image Right Quote', 'ufclas-ufl-2015'),
+		'label' 			=> esc_html__('UFL Image Right Quote', 'hwcoe-ufl'),
 		'listItemImage' 	=> 'dashicons-format-image',
 		'post_type' 		=> array('post','page'),
 		'inner_content' 	=> array(
-			'label' 		=> esc_html__('Quote', 'ufclas-ufl-2015'),
-			'description' 	=> esc_html__('Quote that appears to the right of the image', 'ufclas-ufl-2015'),
+			'label' 		=> esc_html__('Quote', 'hwcoe-ufl'),
+			'description' 	=> esc_html__('Quote that appears to the right of the image', 'hwcoe-ufl'),
 		),
 		'attrs' 			=> $shortcode_ui_fields,
 	);

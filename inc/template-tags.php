@@ -7,9 +7,8 @@
  
 /**
  * Custom logo backwards compatibility with WordPress versions older than 4.5
- * @since 0.2.3
  */
-function ufclas_ufl_2015_get_custom_logo() {
+function hwcoe_ufl_get_custom_logo() {
 	$custom_logo = '';
 	
 	if ( function_exists( 'the_custom_logo' ) ) {
@@ -29,9 +28,8 @@ function ufclas_ufl_2015_get_custom_logo() {
  * Get featured image html
  *
  * @return string Figure tag or empty string.
- * @since 0.2.8
  */
-function ufclas_ufl_2015_post_featured_image(){
+function hwcoe_ufl_post_featured_image(){
 	global $post;
 	$html = '';
 	$details = array(
@@ -70,7 +68,7 @@ function ufclas_ufl_2015_post_featured_image(){
  * @return string Classes used on main content column
  * @since 0.3.2
  */
- function ufclas_page_column_class(){
+ function hwcoe_ufl_page_column_class(){
 	$classes = array();
 	$columns = 12;
 	
@@ -83,7 +81,7 @@ function ufclas_ufl_2015_post_featured_image(){
 	else {
 		
 		// Default page template
-		$sidebar_nav = ufclas_ufl_2015_sidebar_navigation();
+		$sidebar_nav = hwcoe_ufl_sidebar_navigation();
 		$has_sidebar_nav = !empty( $sidebar_nav );
 		$has_page_sidebar = is_active_sidebar( 'page_sidebar' );
 		$has_page_right = is_active_sidebar( 'page_right' );
@@ -105,10 +103,8 @@ function ufclas_ufl_2015_post_featured_image(){
  
 /**
  * Display a custom version of the search form based on location
- *
- * @since 0.3.2
  */
- function ufclas_get_search_form( $location = '' ){
+ function hwcoe_ufl_get_search_form( $location = '' ){
 	 $form = get_search_form( false );
 	 
 	 if ( 'mobile' == $location ){
@@ -127,9 +123,8 @@ function ufclas_ufl_2015_post_featured_image(){
  *
  * @param string $location Nav menu location
  * @return string Nav menu name or empty string
- * @since 0.3.3
  */
-function ufclas_nav_menu_name_by_location( $location ){
+function hwcoe_ufl_nav_menu_name_by_location( $location ){
 	$menu_locations = get_nav_menu_locations();
 	
 	if ( !isset( $menu_locations[$location] ) ){
@@ -145,9 +140,8 @@ function ufclas_nav_menu_name_by_location( $location ){
 /**
  * Displays a parent organization menu link
  *
- * @since 0.3.3
  */
-function ufclas_global_parent_organization(){
+function hwcoe_ufl_global_parent_organization(){
 	$parent_organization = get_theme_mod( 'parent_colleges_institutes', 'None' );
 	
 	if ( 'None' != $parent_organization ){
@@ -161,7 +155,6 @@ function ufclas_global_parent_organization(){
 
 /**
  * Template tag to display list of social network links only if they are set in the Customizer theme options
- * @since 0.0.0
  */
 function hwcoe_ufl_socialnetworks() {
 	$social_networks = array(

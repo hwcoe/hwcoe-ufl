@@ -10,7 +10,7 @@ get_header(); ?>
 <div id="main" class="container main-content">
 <div class="row">
   <div class="col-sm-12">
-    <?php ufclas_ufl_2015_breadcrumbs(); ?>
+    <?php hwcoe_ufl_breadcrumbs(); ?>
     <header class="entry-header">
       <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
     </header>
@@ -19,7 +19,7 @@ get_header(); ?>
 </div>
 <div class="row">
   
-  <div class="<?php echo ufclas_page_column_class(); ?>">
+  <div class="<?php echo hwcoe_ufl_page_column_class(); ?>">
     <?php 
 		while ( have_posts() ) : the_post();
 			get_template_part( 'template-parts/content', 'page' );

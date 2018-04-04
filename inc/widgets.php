@@ -52,7 +52,7 @@ function hwcoe_ufl_widgets_init() {
 	
 	// Legacy Sidebars
 	register_sidebar( array(
-		'name'          => esc_html__( 'Home Left', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Home Left', 'hwcoe-ufl' ),
 		'id'            => 'home_left',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="widget home-left %2$s">',
@@ -61,7 +61,7 @@ function hwcoe_ufl_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Home Middle', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Home Middle', 'hwcoe-ufl' ),
 		'id'            => 'home_middle',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="widget home-middle %2$s">',
@@ -70,7 +70,7 @@ function hwcoe_ufl_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Home Right', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Home Right', 'hwcoe-ufl' ),
 		'id'            => 'home_right',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="widget home-right %2$s">',
@@ -79,7 +79,7 @@ function hwcoe_ufl_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Page Left Sidebar', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Page Left Sidebar', 'hwcoe-ufl' ),
 		'id'            => 'page_sidebar',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -88,7 +88,7 @@ function hwcoe_ufl_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Page Right Sidebar', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Page Right Sidebar', 'hwcoe-ufl' ),
 		'id'            => 'page_right',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -97,7 +97,7 @@ function hwcoe_ufl_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Post Sidebar', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Post Sidebar', 'hwcoe-ufl' ),
 		'id'            => 'post_sidebar',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -106,7 +106,7 @@ function hwcoe_ufl_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Left', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Footer Left', 'hwcoe-ufl' ),
 		'id'            => 'site_footer',
 		'description'   => 'Content that replaces the institutional links in the footer.',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s ' . hwcoe_ufl_sidebar_widget_classes('site_footer') . '">',
@@ -115,7 +115,7 @@ function hwcoe_ufl_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Right', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Footer Right', 'hwcoe-ufl' ),
 		'id'            => 'footer_right',
 		'description'   => 'Content that appears below the logo and social links in the footer.',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -126,7 +126,7 @@ function hwcoe_ufl_widgets_init() {
 	
 	// if ( $disabled_global_elements ){
 	// register_sidebar( array(
-	// 	'name'          => esc_html__( 'Site Custom Footer', 'ufclas-ufl-2015' ),
+	// 	'name'          => esc_html__( 'Site Custom Footer', 'hwcoe-ufl' ),
 	// 	'id'            => 'site_footer_custom',
 	// 	'description'   => '',
 	// 	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -136,7 +136,7 @@ function hwcoe_ufl_widgets_init() {
 	// ) );
 	// }
 	register_sidebar( array(
-		'name'          => esc_html__( 'Home Featured Right', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Home Featured Right', 'hwcoe-ufl' ),
 		'id'            => 'home_featured_right',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -145,7 +145,7 @@ function hwcoe_ufl_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Home Page Sections', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Home Page Sections', 'hwcoe-ufl' ),
 		'id'            => 'home_page_sections',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -154,7 +154,7 @@ function hwcoe_ufl_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Page Sections', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Page Sections', 'hwcoe-ufl' ),
 		'id'            => 'page_sections',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -164,7 +164,7 @@ function hwcoe_ufl_widgets_init() {
 	) );
     /*
 	register_sidebar( array(
-		'name'          => esc_html__( 'Page Submenu', 'ufclas-ufl-2015' ),
+		'name'          => esc_html__( 'Page Submenu', 'hwcoe-ufl' ),
 		'id'            => 'page_submenu',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',

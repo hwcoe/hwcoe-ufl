@@ -142,7 +142,7 @@ jQuery(function($){
 	
 	function mainMenuItemWidth() {
 		var menuItems = $('.main-menu-wrap>nav>ul>li').length;
-		var maxItems = ufclas_ufl_2015_sitedata.max_main_menu_items; // Get max main menu items theme option
+		var maxItems = hwcoe_ufl_sitedata.max_main_menu_items; // Get max main menu items theme option
 		var items = ( menuItems < maxItems )? menuItems : maxItems;
 		
 		// Add a new 'More' menu item after the maxItem on wide screens
@@ -164,8 +164,8 @@ jQuery(function($){
 	}
 	
 	function autoMainMenuHelper() {
-		var showMenuItemColumns = ufclas_ufl_2015_sitedata.mega_menu; // Get mega menu theme option
-		$('.main-menu-wrap>nav>ul>li>a').addClass('main-menu-link').wrapInner('<span></span>').append('<span class="icon-svg icon-caret"><svg><use xlink:href="'+ufclas_ufl_2015_sitedata.theme_url+'/img/spritemap.svg#caret"></use></svg></span>');
+		var showMenuItemColumns = hwcoe_ufl_sitedata.mega_menu; // Get mega menu theme option
+		$('.main-menu-wrap>nav>ul>li>a').addClass('main-menu-link').wrapInner('<span></span>').append('<span class="icon-svg icon-caret"><svg><use xlink:href="'+hwcoe_ufl_sitedata.theme_url+'/img/spritemap.svg#caret"></use></svg></span>');
 		
 		mainMenuItemWidth();
 		
@@ -191,8 +191,8 @@ jQuery(function($){
 				var alertDate = new Date(lastAlert.date);
 				var alertTime = alertDate.getTime();
 				if (alertTime > timeThreshold) {
-					alertContainer.addClass("ufalert").removeClass('big-stat-img').css('background-image','url('+ufclas_ufl_2015_sitedata.theme_url+'/img/bg-big-stat-alert.jpg)');
-					alertContainer.children(".category-tag").html('<span class="icon-svg icon-alert"><svg><use xlink:href="'+ufclas_ufl_2015_sitedata.theme_url+'/img/spritemap.svg#alert"></use></svg></span> '+lastAlert.title.rendered);
+					alertContainer.addClass("ufalert").removeClass('big-stat-img').css('background-image','url('+hwcoe_ufl_sitedata.theme_url+'/img/bg-big-stat-alert.jpg)');
+					alertContainer.children(".category-tag").html('<span class="icon-svg icon-alert"><svg><use xlink:href="'+hwcoe_ufl_sitedata.theme_url+'/img/spritemap.svg#alert"></use></svg></span> '+lastAlert.title.rendered);
 					alertContainer.children(".big-stat-copy").find("a").attr("href", lastAlert.link).first().text(lastAlert.title.rendered);
 				}
 			});
@@ -599,9 +599,9 @@ jQuery(function($){
 
 	// Audience nav wrap arrow hover
 	$('.audience-nav-wrap').hover(function(){
-		$(this).find('svg use').attr('xlink:href', ufclas_ufl_2015_sitedata.theme_url + '/img/spritemap.svg#arw-up');
+		$(this).find('svg use').attr('xlink:href', hwcoe_ufl_sitedata.theme_url + '/img/spritemap.svg#arw-up');
 	},function(){
-		$(this).find('svg use').attr('xlink:href', ufclas_ufl_2015_sitedata.theme_url + '/img/spritemap.svg#arw-down');
+		$(this).find('svg use').attr('xlink:href', hwcoe_ufl_sitedata.theme_url + '/img/spritemap.svg#arw-down');
 	});
 
 	// Debounced window resize listener
@@ -633,7 +633,7 @@ jQuery(function($){
 		$this = $(this);
 
 		// Make new HTML select box
-		var $styledSelect = $('<div class="styled-select" data-select="select'+i+'" tabindex="0"><div class="selected">Standard Dropdown</div><ul></ul><span class="arw-right icon-svg"><svg><use xlink:href="'+ufclas_ufl_2015_sitedata.theme_url+'/img/spritemap.svg#arw-down"></use></svg></span></div>');
+		var $styledSelect = $('<div class="styled-select" data-select="select'+i+'" tabindex="0"><div class="selected">Standard Dropdown</div><ul></ul><span class="arw-right icon-svg"><svg><use xlink:href="'+hwcoe_ufl_sitedata.theme_url+'/img/spritemap.svg#arw-down"></use></svg></span></div>');
 		$this.before($styledSelect);
 
 		// Get all options from this select box
@@ -653,7 +653,7 @@ jQuery(function($){
 		$select.find('.selected').text($this.text()).addClass('changed');
 
 		// Hide the dropdown
-		$('.styled-select').removeClass('hover').find('svg use').attr('xlink:href', ufclas_ufl_2015_sitedata.theme_url + '/img/spritemap.svg#arw-down');
+		$('.styled-select').removeClass('hover').find('svg use').attr('xlink:href', hwcoe_ufl_sitedata.theme_url + '/img/spritemap.svg#arw-down');
 
 		$('select[data-select="'+$select.attr('data-select')+'"]').val($(this).attr('data-value'));
 
@@ -666,19 +666,19 @@ jQuery(function($){
 
 		// Change the arrow icon
 		if($select.hasClass('hover')){
-			$select.find('svg use').attr('xlink:href', ufclas_ufl_2015_sitedata.theme_url + '/img/spritemap.svg#arw-up');
+			$select.find('svg use').attr('xlink:href', hwcoe_ufl_sitedata.theme_url + '/img/spritemap.svg#arw-up');
 		} else {
-			$select.find('svg use').attr('xlink:href', ufclas_ufl_2015_sitedata.theme_url + '/img/spritemap.svg#arw-down');
+			$select.find('svg use').attr('xlink:href', hwcoe_ufl_sitedata.theme_url + '/img/spritemap.svg#arw-down');
 		}
 		// Change the arrow icon
-		$('.styled-select').not($select).find('svg use').attr('xlink:href', ufclas_ufl_2015_sitedata.theme_url + '/img/spritemap.svg#arw-down');
+		$('.styled-select').not($select).find('svg use').attr('xlink:href', hwcoe_ufl_sitedata.theme_url + '/img/spritemap.svg#arw-down');
 
 		// Close the select on blur
 		window.setTimeout(function(){
 			$(document).one('click.closeSelect',function(e){
 				if(!$(e.target).closest('.styled-select').length){
 					$select.removeClass('hover');
-					$select.find('svg use').attr('xlink:href',ufclas_ufl_2015_sitedata.theme_url + '/img/spritemap.svg#arw-down');
+					$select.find('svg use').attr('xlink:href',hwcoe_ufl_sitedata.theme_url + '/img/spritemap.svg#arw-down');
 				}
 			});
 		},0);
@@ -705,7 +705,7 @@ jQuery(function($){
 
 	// Custom checkboxes
 	$('.uf-check input[type="checkbox"]').each(function(){
-		$(this).after('<div><span class="icon-svg"><svg><use xlink:href="'+ufclas_ufl_2015_sitedata.theme_url+'/img/spritemap.svg#close"></use></svg></span></div>');
+		$(this).after('<div><span class="icon-svg"><svg><use xlink:href="'+hwcoe_ufl_sitedata.theme_url+'/img/spritemap.svg#close"></use></svg></span></div>');
 	});
 	// Custom radio buttons
 	$('.uf-check input[type="radio"]').each(function(){
@@ -730,7 +730,7 @@ jQuery(function($){
 	}
 	
 	// Add arrows to big lists
-	$('.big-list li a').append('<span class="arw-right icon-svg"><svg><use xlink:href="'+ufclas_ufl_2015_sitedata.theme_url+'/img/spritemap.svg#arw-right"></use></svg></span>');
+	$('.big-list li a').append('<span class="arw-right icon-svg"><svg><use xlink:href="'+hwcoe_ufl_sitedata.theme_url+'/img/spritemap.svg#arw-right"></use></svg></span>');
 	
 	// Add prettyPhoto for image links
 	$('.entry-content a[href$=".jpg"]').has('img').prop('rel', 'prettyPhoto');

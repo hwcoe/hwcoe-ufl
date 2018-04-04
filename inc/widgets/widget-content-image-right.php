@@ -13,12 +13,12 @@ class UFL_2015_Content_Image_Right extends WP_Widget {
 	public function __construct() {
 		$widget_ops = array( 
 			'classname' => 'widget-ufl-content-image-right',
-			'description' => __('Full width background image with a headline, text, and button', 'ufclas-ufl-2015'),
+			'description' => __('Full width background image with a headline, text, and button', 'hwcoe-ufl'),
 			'customize_selective_refresh' => true,
 		);
 		//$control_ops = array( 'width' => 400, 'height' => 350 );
 		$control_ops = array();
-		parent::__construct( 'ufl-content-image-right', __('UFL Content Image Right', 'ufclas-ufl-2015'), $widget_ops, $control_ops );
+		parent::__construct( 'ufl-content-image-right', __('UFL Content Image Right', 'hwcoe-ufl'), $widget_ops, $control_ops );
 	}
 
 	/**
@@ -63,30 +63,30 @@ class UFL_2015_Content_Image_Right extends WP_Widget {
 		$label = sanitize_text_field( $instance['label'] );
 		
 		?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Headline:', 'ufclas-ufl-2015'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Headline:', 'hwcoe-ufl'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php _e( 'Content:', 'ufclas-ufl-2015' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php _e( 'Content:', 'hwcoe-ufl' ); ?></label>
 		<textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo esc_textarea( $instance['text'] ); ?></textarea></p>
 		
         <p>
-        <label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image', 'ufclas-ufl-2015' ); ?>:</label>
+        <label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image', 'hwcoe-ufl' ); ?>:</label>
         <div class="wpshed-media-container">
             <div class="wpshed-media-inner">
                 <?php $img_style = ( $instance[ 'image' ] != '' ) ? '' : 'style="display:none;"'; ?>
                 <img id="<?php echo $this->get_field_id( 'image' ); ?>-preview" src="<?php echo esc_attr( $instance['image'] ); ?>" <?php echo $img_style; ?> />
                 <?php $no_img_style = ( $instance[ 'image' ] != '' ) ? 'style="display:none;"' : ''; ?>
-                <span class="wpshed-no-image" id="<?php echo $this->get_field_id( 'image' ); ?>-noimg" <?php echo $no_img_style; ?>><?php _e( 'No image selected', 'ufclas-ufl-2015' ); ?></span>
+                <span class="wpshed-no-image" id="<?php echo $this->get_field_id( 'image' ); ?>-noimg" <?php echo $no_img_style; ?>><?php _e( 'No image selected', 'hwcoe-ufl' ); ?></span>
             </div>
         <input type="text" id="<?php echo $this->get_field_id( 'image' ); ?>" name="<?php echo $this->get_field_name( 'image' ); ?>" value="<?php echo esc_attr( $instance['image'] ); ?>" class="wpshed-media-url" />
-		<input type="button" value="<?php echo _e( 'Remove', 'ufclas-ufl-2015' ); ?>" class="button wpshed-media-remove" id="<?php echo $this->get_field_id( 'image' ); ?>-remove" <?php echo $img_style; ?> />
-		<?php $image_button_text = ( $instance[ 'image' ] != '' ) ? __( 'Change Image', 'ufclas-ufl-2015' ) : __( 'Select Image', 'ufclas-ufl-2015' ); ?>
+		<input type="button" value="<?php echo _e( 'Remove', 'hwcoe-ufl' ); ?>" class="button wpshed-media-remove" id="<?php echo $this->get_field_id( 'image' ); ?>-remove" <?php echo $img_style; ?> />
+		<?php $image_button_text = ( $instance[ 'image' ] != '' ) ? __( 'Change Image', 'hwcoe-ufl' ) : __( 'Select Image', 'hwcoe-ufl' ); ?>
         <input type="button" value="<?php echo $image_button_text; ?>" class="button wpshed-media-upload" id="<?php echo $this->get_field_id( 'image' ); ?>-button" />
         <br class="clear">
         </div>
         </p>
 
-        <p><label for="<?php echo $this->get_field_id('label'); ?>"><?php _e('Label Text:', 'ufclas-ufl-2015'); ?></label>
+        <p><label for="<?php echo $this->get_field_id('label'); ?>"><?php _e('Label Text:', 'hwcoe-ufl'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('label'); ?>" name="<?php echo $this->get_field_name('label'); ?>" type="text" value="<?php echo esc_attr($label); ?>" /></p>
 
 	<?php

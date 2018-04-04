@@ -26,7 +26,7 @@
 		$site_admin = ( empty($webmaster_email) )? "site administrator" : "<a href=\"mailto:{$webmaster_email}\">site administrator</a>";
 		?>
         <header class="entry-header">
-			<h1 class="entry-title"><?php esc_html_e( 'Access Denied', 'ufclas-ufl-2015' ); ?></h1>
+			<h1 class="entry-title"><?php esc_html_e( 'Access Denied', 'hwcoe-ufl' ); ?></h1>
 		</header><!-- .page-header -->
 		<div class="entry-content">
         	<p>Sorry, you do not have permission to view this page.Please contact the <?php echo $site_admin; ?> if you have questions about accessing this content.</p>
@@ -42,7 +42,7 @@
 	else {
 		// WordPress login
 		?>
-		<p><a href="<?php echo wp_login_url( get_permalink() ); ?>" class="btn btn-lg" title="Login"><?php esc_html_e( 'WordPress Login', 'ufclas-ufl-2015' ); ?></a></p>
+		<p><a href="<?php echo wp_login_url( get_permalink() ); ?>" class="btn btn-lg" title="Login"><?php esc_html_e( 'WordPress Login', 'hwcoe-ufl' ); ?></a></p>
         <?php
 	}
 }

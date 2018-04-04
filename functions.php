@@ -7,12 +7,12 @@
  * @package HWCOE_UFL
  */
 
-if ( ! function_exists( 'ufclas_ufl_2015_setup' ) ) :
+if ( ! function_exists( 'hwcoe_ufl_setup' ) ) :
 
 // Sets up theme defaults and registers support for various WordPress features.
-function ufclas_ufl_2015_setup() {
+function hwcoe_ufl_setup() {
 	// Make theme available for translation.
-	load_theme_textdomain( 'ufclas-ufl-2015', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'hwcoe-ufl', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -39,17 +39,17 @@ function ufclas_ufl_2015_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'ufclas_ufl_2015_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'hwcoe_ufl_custom_background_args', array(
 		'default-color' => 'faf8f1',
 		'default-image' => '',
 	) ) );
 	
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'main_menu' => esc_html__( 'Main Menu', 'ufclas-ufl-2015' ),
-        'global_menu' => esc_html__( 'Global Menu', 'ufclas-ufl-2015' ),
-		'rolebased_nav' => esc_html__( 'Role-Based Navigation', 'ufclas-ufl-2015' ),
-		'audience_nav' => esc_html__( 'Audience Navigation', 'ufclas-ufl-2015' ),
+		'main_menu' => esc_html__( 'Main Menu', 'hwcoe-ufl' ),
+        'global_menu' => esc_html__( 'Global Menu', 'hwcoe-ufl' ),
+		'rolebased_nav' => esc_html__( 'Role-Based Navigation', 'hwcoe-ufl' ),
+		'audience_nav' => esc_html__( 'Audience Navigation', 'hwcoe-ufl' ),
 	) );
 	
 	// Add support for custom logos in the Customizer, use flex-width/height to skip cropping
@@ -60,8 +60,8 @@ function ufclas_ufl_2015_setup() {
 		'flex-height' => true,
 	) );
 }
-endif; // ufclas_ufl_2015_setup
-add_action( 'after_setup_theme', 'ufclas_ufl_2015_setup' );
+endif; // hwcoe_ufl_setup
+add_action( 'after_setup_theme', 'hwcoe_ufl_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -70,15 +70,15 @@ add_action( 'after_setup_theme', 'ufclas_ufl_2015_setup' );
  *
  * @global int $content_width
  */
-function ufclas_ufl_2015_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'ufclas_ufl_2015_content_width', 960 );
+function hwcoe_ufl_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'hwcoe_ufl_content_width', 960 );
 }
-add_action( 'after_setup_theme', 'ufclas_ufl_2015_content_width', 0 );
+add_action( 'after_setup_theme', 'hwcoe_ufl_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
  */
-function ufclas_ufl_2015_scripts() {
+function hwcoe_ufl_scripts() {
 	// Bootstrap
 	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/inc/bootstrap/css/bootstrap.min.css', array(), null);
 	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/inc/bootstrap/js/bootstrap.min.js', array('jquery'), null, true);
@@ -97,8 +97,8 @@ function ufclas_ufl_2015_scripts() {
 	
 	// Theme
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), null );
-	wp_enqueue_script('ufclas-ufl-2015-plugins', get_stylesheet_directory_uri() . '/js/plugins.min.js', array('jquery'), null, true);
-	wp_enqueue_script('ufclas-ufl-2015-scripts', get_stylesheet_directory_uri() . '/js/scripts.min.js', array(), null, true);
+	wp_enqueue_script('hwcoe-ufl-plugins', get_stylesheet_directory_uri() . '/js/plugins.min.js', array('jquery'), null, true);
+	wp_enqueue_script('hwcoe-ufl-scripts', get_stylesheet_directory_uri() . '/js/scripts.min.js', array(), null, true);
 	
 	// Pass site data to Javascript
 	$site_data = array(
@@ -107,15 +107,14 @@ function ufclas_ufl_2015_scripts() {
 		'max_main_menu_items' => get_theme_mod('max_main_menu_items', 7),
 		'mega_menu' => get_theme_mod('mega_menu', 1),
 	);
-	wp_localize_script( 'ufclas-ufl-2015-plugins', 'ufclas_ufl_2015_sitedata', $site_data );
+	wp_localize_script( 'hwcoe-ufl-plugins', 'hwcoe_ufl_sitedata', $site_data );
 }
-add_action( 'wp_enqueue_scripts', 'ufclas_ufl_2015_scripts' );
+add_action( 'wp_enqueue_scripts', 'hwcoe_ufl_scripts' );
 
 /**
- * Enqueue inline styles.
- * @since 0.3.0
+ * Enqueue inline styles
  */
-function ufclas_ufl_2015_inline_styles() {
+function hwcoe_ufl_2015_inline_styles() {
 	$custom_css = '';
 	
 	// Adjust main menu width
@@ -136,15 +135,15 @@ function ufclas_ufl_2015_inline_styles() {
 	
 	wp_add_inline_style('style', $custom_css);
 }
-add_action('wp_enqueue_scripts', 'ufclas_ufl_2015_inline_styles');
+add_action('wp_enqueue_scripts', 'hwcoe_ufl_2015_inline_styles');
 
 /**
  * Registers an editor stylesheet for the theme
  */
-function ufclas_ufl_2015_editor_styles() {
+function hwcoe_ufl_editor_styles() {
 	add_editor_style('editor-style.css');
 }
-add_action( 'admin_init', 'ufclas_ufl_2015_editor_styles' );
+add_action( 'admin_init', 'hwcoe_ufl_editor_styles' );
 
 /**
  * Load custom theme files 

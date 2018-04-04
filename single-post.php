@@ -16,7 +16,7 @@ get_header(); ?>
 <div id="main" class="container main-content">
 <div class="row">
   <div class="col-sm-12">
-    <?php ufclas_ufl_2015_breadcrumbs(); ?>
+    <?php hwcoe_ufl_breadcrumbs(); ?>
     <header class="entry-header">
       <?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
     </header>
@@ -31,11 +31,11 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		
 		the_post_navigation( array(
-			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'ufclas-ufl-2015' ) . '</span> ' .
-				'<span class="screen-reader-text">' . __( 'Next post:', 'ufclas-ufl-2015' ) . '</span> ' .
+			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'hwcoe-ufl' ) . '</span> ' .
+				'<span class="screen-reader-text">' . __( 'Next post:', 'hwcoe-ufl' ) . '</span> ' .
 				'<span class="post-title">%title</span>',
-			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'ufclas-ufl-2015' ) . '</span> ' .
-				'<span class="screen-reader-text">' . __( 'Previous post:', 'ufclas-ufl-2015' ) . '</span> ' .
+			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'hwcoe-ufl' ) . '</span> ' .
+				'<span class="screen-reader-text">' . __( 'Previous post:', 'hwcoe-ufl' ) . '</span> ' .
 				'<span class="post-title">%title</span>',
 		) );
 	?>

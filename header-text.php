@@ -26,14 +26,14 @@
 	
   <div class="menu-wrap">
   	<div class="main-menu-wrap">
-  		<nav role="navigation" aria-label="<?php _e( 'Main Menu', 'ufclas-ufl-2015' ); ?>">
+  		<nav role="navigation" aria-label="<?php _e( 'Main Menu', 'hwcoe-ufl' ); ?>">
 		<?php 
 			wp_nav_menu( array( 
 				'theme_location' => 'main_menu',
 				'container' => '',
 				'depth' => 2, 
-				'walker' => new ufclas_ufl_2015_main_nav_menu(),
-				'fallback_cb' => 'ufclas_ufl_2015_main_nav_menu::fallback',
+				'walker' => new hwcoe_ufl_main_nav_menu(),
+				'fallback_cb' => 'hwcoe_ufl_main_nav_menu::fallback',
 			));
 		?>
 		</nav>
@@ -53,7 +53,7 @@
 				endif;
 				
 				// Display parent organization link
-				ufclas_global_parent_organization();
+				hwcoe_ufl_global_parent_organization();
 				
 			?>
   		</ul>
@@ -63,7 +63,7 @@
   		<div class="audience-nav-wrap">
 			<?php 
             if ( has_nav_menu( 'audience_nav' ) ): ?>
-                <a href="#" class="cur-audience"><?php echo ufclas_nav_menu_name_by_location( 'audience_nav' ); ?></a>
+                <a href="#" class="cur-audience"><?php echo hwcoe_ufl_nav_menu_name_by_location( 'audience_nav' ); ?></a>
                 <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#arw-down"></use></svg></span>
             <?php 
                 wp_nav_menu( array( 
@@ -90,14 +90,14 @@
 	    	</svg>
 	    </span>
 	  </a>
-      <?php ufclas_get_search_form( 'menu' ); ?>
+      <?php hwcoe_ufl_get_search_form( 'menu' ); ?>
   </div>
 
   <div class="mobile-dropdown-wrap"></div>
   
   <?php get_template_part( 'template-parts/content', 'alert-small' );  ?>
   
-  <?php ufclas_get_search_form( 'mobile' ); ?>
+  <?php hwcoe_ufl_get_search_form( 'mobile' ); ?>
   
   <a href="#" class="btn-menu" role="button" aria-haspopup="true" aria-expanded="false">
 		<span class="icon-svg icon-menu">
