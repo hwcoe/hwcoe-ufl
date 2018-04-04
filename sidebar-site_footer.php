@@ -2,7 +2,7 @@
 /**
  * The template for the site_footer widget area.
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  * @since 0.3.0
  */
 

@@ -70,9 +70,8 @@
 				)); 
 			?>
 			</ul>
-						<!-- TODO: social links here -->
 			<ul class="social-nav">
-				<?php ufclas_ufl_2015_socialnetworks(); ?>
+				<?php hwcoe_ufl_socialnetworks(); ?>
 			</ul>
 
 			<div class="audience-nav-wrap">

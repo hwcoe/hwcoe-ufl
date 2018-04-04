@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  */
 get_header(); 
 
@@ -21,7 +21,7 @@ get_header();
   <div class="row">
   	
 	<div id="secondary" class="widget-area" role="complementary">
-		<?php ufandshands_secondary_widget_area(); ?>
+		<?php hwcoe_ufl_secondary_widget_area(); ?>
     </div><!-- .widget-area -->
     
   </div>

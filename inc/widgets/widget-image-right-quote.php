@@ -2,7 +2,7 @@
 /**
  * Image Right Quote Widget
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  * @since 0.4.0
  */
 class UFL_2015_Image_Right_Quote extends WP_Widget {

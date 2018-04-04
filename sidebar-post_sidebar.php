@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  */
 
 if ( ! is_active_sidebar( 'post_sidebar' ) ): ?>

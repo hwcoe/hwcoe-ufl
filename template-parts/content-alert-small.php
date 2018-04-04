@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  */
 
 /**

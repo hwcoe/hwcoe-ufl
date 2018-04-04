@@ -2,7 +2,7 @@
 /**
  * Template Name: Full Width Page (no sidebars or widgets)
  * 
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  *
  */
 get_header(); ?>

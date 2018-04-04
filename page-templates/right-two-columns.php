@@ -2,7 +2,7 @@
 /**
  * Template Name: Right Sidebar, No Left Navigation
  * 
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  *
  */
 get_header(); ?>

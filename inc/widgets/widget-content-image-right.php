@@ -2,7 +2,7 @@
 /**
  * Breaker Widget
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  * @since 0.4.0
  */
 class UFL_2015_Content_Image_Right extends WP_Widget {

@@ -210,10 +210,8 @@ add_action( 'widgets_init', 'hwcoe_ufl_widgets_init' );
 
 /**
  * Homepage Secondary Area (Widgets)
- * 
- * @since 0.2.5
  */
-function ufandshands_secondary_widget_area() {
+function hwcoe_ufl_secondary_widget_area() {
 	$homepage_layout = get_theme_mod('homepage_layout', '2c-bias');
 	
 	switch($homepage_layout) {

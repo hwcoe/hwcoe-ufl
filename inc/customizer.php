@@ -162,7 +162,7 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	// Homepage
 	$wp_customize->add_section( 'theme_options_homepage', array(
 		'title' => __('Homepage', 'ufclas-ufl-2015'),
-		'description' => __('The options below edit the homepage featured slider.', 'ufclas-ufl-2015'),
+		'description' => __('The options below edit the homepage featured slider and widgets.', 'ufclas-ufl-2015'),
 		'panel' => 'theme_options',
 	));
 	

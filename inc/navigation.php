@@ -2,7 +2,7 @@
 /**
  * Navigation functions
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  */
  
 /**

@@ -2,7 +2,7 @@
 /**
  * Functions used in theme pages
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  */
  
 /**
@@ -161,9 +161,9 @@ function ufclas_global_parent_organization(){
 
 /**
  * Template tag to display list of social network links only if they are set in the Customizer theme options
- * @since 0.3.0
+ * @since 0.0.0
  */
-function ufclas_ufl_2015_socialnetworks() {
+function hwcoe_ufl_socialnetworks() {
 	$social_networks = array(
 		'facebook' => 'Facebook',
 		'twitter' => 'Twitter',

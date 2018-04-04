@@ -2,7 +2,7 @@
 /**
  * Breaker with Cards Widget
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  * @since 0.4.0
  */
 class UFL_2015_Breaker_Cards extends WP_Widget {

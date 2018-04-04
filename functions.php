@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  */
 
 if ( ! function_exists( 'ufclas_ufl_2015_setup' ) ) :

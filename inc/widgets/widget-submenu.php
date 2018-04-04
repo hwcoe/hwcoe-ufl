@@ -2,7 +2,7 @@
 /**
  * Submenu Widget
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  * @since 0.7.0
  */
 class UFL_2015_Submenu extends WP_Nav_Menu_Widget {

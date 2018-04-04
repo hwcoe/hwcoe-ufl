@@ -10,7 +10,7 @@
  *	[ufl-icon]
  *	[ufl-image-right-quote][/ufl-image-right-quote]
  *
- * @package UFCLAS_UFL_2015
+ * @package HWCOE_UFL
  */
  
  /**
