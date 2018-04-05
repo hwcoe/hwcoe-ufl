@@ -6,7 +6,7 @@
  * @return array
  * @since 0.0.0
  */
-function ufclas_ufl_2015_body_classes( $classes ) {
+function hwcoe_ufl_body_classes( $classes ) {
 	$classes[] = 'loading';
 	
 	if ( is_page_template('page-templates/home-page.php') ) {
@@ -21,25 +21,27 @@ function ufclas_ufl_2015_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'ufclas_ufl_2015_body_classes' );
+add_filter( 'body_class', 'hwcoe_ufl_body_classes' );
 
 /**
  * Adds feed link to category title
  * 
- * @since 0.1.0
+ * @since 0.0.0
  */
-function ufclas_ufl_2015_archive_title( $title ){
+function hwcoe_ufl_archive_title( $title ){
 	if ( is_category() ) {
         $queried_obj = get_queried_object();
+		$icon = get_stylesheet_directory_uri();
+		$icon .= "/img/spritemap.svg#feed";
 		$title = sprintf( __( '%s', 'hwcoe-ufl' ), single_cat_title( '', false ) );
-		$title .= sprintf('<a href="%s"><i class="mdi mdi-rss"></i></a>', get_category_feed_link( $queried_obj->term_id ) );
+		$title .= sprintf('<a href="%s" class="icon-svg icon-feed"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%s"></use></svg></a>', get_category_feed_link( $queried_obj->term_id ), $icon );
     }
 	else {
 		$title = str_replace( __('Archives: ', 'hwcoe-ufl'), '', $title);
 	}
 	return $title;
 }
-add_filter( 'get_the_archive_title', 'ufclas_ufl_2015_archive_title' );
+add_filter( 'get_the_archive_title', 'hwcoe_ufl_archive_title' );
 
 /**
  * Change the Read More Text from the default (legacy)
