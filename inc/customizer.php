@@ -6,9 +6,8 @@
 
 /**
  * Get category list for a customizer select
- * @since 0.2.5
  */
-function ufclas_ufl_2015_customize_categories() {
+function hwcoe_ufl_customize_categories() {
 	$args = array('fields' => 'id=>name');
 	return get_categories( $args );
 }
@@ -16,7 +15,7 @@ function ufclas_ufl_2015_customize_categories() {
  * Get range of values for customizer select
  * @since 0.2.5
  */
-function ufclas_ufl_2015_customize_range( $min = 0, $max = 10 ) {
+function hwcoe_ufl_customize_range( $min = 0, $max = 10 ) {
 	$range = array();
 	for ($i=$min; $i<=$max; $i++){
 		$range[$i] = $i;
@@ -28,10 +27,9 @@ function ufclas_ufl_2015_customize_range( $min = 0, $max = 10 ) {
  * Sanitize radio and select boxes using choices
  *
  * @return string Valid input or the default value for the setting 
- * @since 0.3.0
  * @see http://cachingandburning.com/wordpress-theme-customizer-sanitizing-radio-buttons-and-select-lists/
  */
-function ufclas_ufl_2015_sanitize_choices( $input, $setting ) {
+function hwcoe_ufl_sanitize_choices( $input, $setting ) {
 	global $wp_customize;
 	
 	$control = $wp_customize->get_control( $setting->id );
@@ -48,7 +46,7 @@ function ufclas_ufl_2015_sanitize_choices( $input, $setting ) {
  * Add Customizer CSS
  * @since 0.2.5
  */
-function ufclas_ufl_2015_customize_css() {
+function hwcoe_ufl_customize_css() {
 	$custom_css = '';
 	$theme_mods = get_theme_mods();
 	$background_color = ( isset($theme_mods['background_color']) )? $theme_mods['background_color'] : false;
@@ -72,22 +70,22 @@ function ufclas_ufl_2015_customize_css() {
 	
     wp_add_inline_style( 'style', $custom_css );
 }
-add_action('wp_enqueue_scripts', 'ufclas_ufl_2015_customize_css');
+add_action('wp_enqueue_scripts', 'hwcoe_ufl_customize_css');
 
 /**
  * Add Customizer Preview script
  * @since 0.4.0
  */
-function ufclas_ufl_2015_customize_script() {
+function hwcoe_ufl_customize_script() {
 	wp_enqueue_script( 'ufl-2015-themecustomizer',	get_template_directory_uri() . '/js/customizer.min.js', array( 'jquery','customize-preview' ), null, true	);
 }
-add_action('customize_preview_init', 'ufclas_ufl_2015_customize_script');
+add_action('customize_preview_init', 'hwcoe_ufl_customize_script');
  
 /**
  * Add custom theme mods to the Customizer
  * @since 0.2.5
  */
-function ufclas_ufl_2015_customize_register( $wp_customize ) {
+function hwcoe_ufl_customize_register( $wp_customize ) {
 	// Colors section
 	$default_colors = array( 'beige' => 'faf8f1' );
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
@@ -116,7 +114,7 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 		'panel' => 'theme_options',
 	));
 	
-	$wp_customize->add_setting( 'parent_colleges_institutes', array( 'default' => 'None', 'sanitize_callback' => 'ufclas_ufl_2015_sanitize_choices' ));
+	$wp_customize->add_setting( 'parent_colleges_institutes', array( 'default' => 'None', 'sanitize_callback' => 'hwcoe_ufl_sanitize_choices' ));
 	$wp_customize->add_setting( 'analytics_acct', array( 'default' => '', 'sanitize_callback' => 'sanitize_text_field' ));
 	$wp_customize->add_setting( 'max_main_menu_items', array( 'default' => 7, 'sanitize_callback' => 'absint' ));
 	$wp_customize->add_setting( 'mega_menu', array( 'default' => 1, 'sanitize_callback' => 'absint' ));
@@ -193,7 +191,7 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 		'description' => __('Choose a category for the featured post slider.', 'hwcoe-ufl'),
 		'section' => 'theme_options_homepage',
 		'type' => 'select',
-		'choices' => ufclas_ufl_2015_customize_categories(),
+		'choices' => hwcoe_ufl_customize_categories(),
 	));
 	
 	$wp_customize->add_control( 'number_of_posts_to_show', array(
@@ -201,7 +199,7 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 		'description' => __('Number of posts to display in your slider', 'hwcoe-ufl'),
 		'section' => 'theme_options_homepage',
 		'type' => 'select',
-		'choices' => ufclas_ufl_2015_customize_range( 1, 15 ),
+		'choices' => hwcoe_ufl_customize_range( 1, 15 ),
 	));
 	
 	$wp_customize->add_control( 'featured_speed', array(
@@ -224,7 +222,7 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 		'panel' => 'theme_options',
 	));
 	
-	$wp_customize->add_setting( 'header_type', array( 'default' => 'icon', 'sanitize_callback' => 'ufclas_ufl_2015_sanitize_choices' ));
+	$wp_customize->add_setting( 'header_type', array( 'default' => 'icon', 'sanitize_callback' => 'hwcoe_ufl_sanitize_choices' ));
 	$wp_customize->add_control( 'header_type', array(
 		'label' => __('Header Type', 'hwcoe-ufl'),
 		'description' => __("Select the type of header to display on all pages", 'hwcoe-ufl'),
@@ -333,5 +331,5 @@ function ufclas_ufl_2015_customize_register( $wp_customize ) {
 	// Custom Attributes
 		
 }
-add_action('customize_register','ufclas_ufl_2015_customize_register');
+add_action('customize_register','hwcoe_ufl_customize_register');
 

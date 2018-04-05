@@ -35,7 +35,7 @@ function hwcoe_ufl_breadcrumbs() {
  * Page Menu Navigation
  *
  * @return string List of page links
- * @since 0.1.0
+ *
  */
 function hwcoe_ufl_sidebar_navigation() {
 	global $post;
@@ -62,15 +62,15 @@ function hwcoe_ufl_sidebar_navigation() {
  * Filter the CSS class for the menu list items <li>
  *
  * @return array Menu item classes
- * @since 0.0.0
+ *
  */
-function ufclas_ufl_2015_nav_classes( $classes, $item, $args ) {
+function hwcoe_ufl_nav_classes( $classes, $item, $args ) {
 	if ( 'audience_nav' == $args->theme_location ){
 		$classes[] = 'audience-link';
 	}
 	return $classes;
 }
-add_filter( 'nav_menu_css_class', 'ufclas_ufl_2015_nav_classes', 10, 3 );
+add_filter( 'nav_menu_css_class', 'hwcoe_ufl_nav_classes', 10, 3 );
 
 
 
@@ -78,12 +78,12 @@ add_filter( 'nav_menu_css_class', 'ufclas_ufl_2015_nav_classes', 10, 3 );
  * Ensure that submenus use the correct classes
  *
  * @return array Menu item classes
- * @since 0.7.0
+ *
  */
-function ufclas_ufl_2015_submenu_args( $args ) {
+function hwcoe_ufl_submenu_args( $args ) {
     $sidebars_widgets = get_option( 'sidebars_widgets' );
     
 	return $args;
 }
-add_filter( 'wp_nav_menu_args', 'ufclas_ufl_2015_submenu_args' );
+add_filter( 'wp_nav_menu_args', 'hwcoe_ufl_submenu_args' );
 

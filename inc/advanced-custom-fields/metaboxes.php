@@ -2,22 +2,19 @@
 /**
  * Hide the ACF dashboard menu from end users - disable during development
  *
- * @since 0.2.5
  */
 // define( 'ACF_LITE', true );
 
 /**
  * Enqueue admin scripts and styles.
- * 
- * @since 0.5.1
  */
-function ufclas_ufl_2015_metabox_styles_scripts( $hook ) {
+function hwcoe_ufl_metabox_styles_scripts( $hook ) {
 	if ( 'post.php' != $hook ) {
         return;
     }
 	wp_enqueue_style('metaboxes', get_template_directory_uri() . '/inc/advanced-custom-fields/metaboxes.css', array(), null);
 }
-add_action( 'admin_enqueue_scripts', 'ufclas_ufl_2015_metabox_styles_scripts' );
+add_action( 'admin_enqueue_scripts', 'hwcoe_ufl_metabox_styles_scripts' );
 
 /**
  * Add the ACF exported metaboxes - cannot be edited in dashboard
@@ -26,7 +23,6 @@ add_action( 'admin_enqueue_scripts', 'ufclas_ufl_2015_metabox_styles_scripts' );
 /**
  * Page Options
  *
- * @since 0.2.5
  */
 register_field_group(array (
 	'id' => 'acf_page-options',
@@ -83,7 +79,6 @@ register_field_group(array (
 /**
  * Page Visibility Options
  *
- * @since 0.2.5
  */
 register_field_group(array (
 	'id' => 'acf_page-visibility-options',
@@ -160,8 +155,6 @@ register_field_group(array (
 
 /**
  * Post Featured Content Slider Options
- *
- * @since 0.2.5
  */
 register_field_group(array (
 	'id' => 'acf_post-featured-content-slider-options',
@@ -226,8 +219,6 @@ register_field_group(array (
 
 /**
  * Post Options
- *
- * @since 0.2.5
  */
 register_field_group(array (
 	'id' => 'acf_post-options',
@@ -295,8 +286,6 @@ register_field_group(array (
 
 /**
  * Landing Page Options 
- *
- * @since 0.6.0
  */
 register_field_group(array (
 	'id' => 'acf_landing-page-options',

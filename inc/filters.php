@@ -34,7 +34,7 @@ function hwcoe_ufl_archive_title( $title ){
 		$icon = get_stylesheet_directory_uri();
 		$icon .= "/img/spritemap.svg#feed";
 		$title = sprintf( __( '%s', 'hwcoe-ufl' ), single_cat_title( '', false ) );
-		$title .= sprintf('<a href="%s" class="icon-svg icon-feed"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%s"></use></svg></a>', get_category_feed_link( $queried_obj->term_id ), $icon );
+		$title .= sprintf('<a href="%s" class="icon-svg icon-feed"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%s"></use></svg></a>', get_category_feed_link( $queried_obj->term_id ), $icon, $title );
     }
 	else {
 		$title = str_replace( __('Archives: ', 'hwcoe-ufl'), '', $title);
@@ -46,19 +46,19 @@ add_filter( 'get_the_archive_title', 'hwcoe_ufl_archive_title' );
 /**
  * Change the Read More Text from the default (legacy)
  */
-function ufclas_ufl_2015_excerpt_more( $more ){
+function hwcoe_ufl_excerpt_more( $more ){
 	$custom_meta = get_post_custom( get_the_ID() );
 	$custom_button_text = ( isset($custom_meta['custom_meta_featured_content_button_text']) )? $custom_meta['custom_meta_featured_content_button_text'][0]:'';
 	$label = ( empty($custom_button_text) )? __('Read&nbsp;More', 'hwcoe-ufl'):$custom_button_text;
 	return '&hellip; <a href="'. get_permalink() . '" title="'. get_the_title() . '" class="read-more">' . $label . '</a>';
 }
-add_filter('excerpt_more', 'ufclas_ufl_2015_excerpt_more');
-add_filter('the_content_more_link', 'ufclas_ufl_2015_excerpt_more');
+add_filter('excerpt_more', 'hwcoe_ufl_excerpt_more');
+add_filter('the_content_more_link', 'hwcoe_ufl_excerpt_more');
 
 /**
  * Show either the_content or the_excerpt based on whether post contains the <!--more--> tag (legacy)
  */
-function ufclas_ufl_2015_teaser_excerpt( $excerpt ){
+function hwcoe_ufl_teaser_excerpt( $excerpt ){
 	
 	global $post;
 	$has_teaser = (strpos($post->post_content, '<!--more') !== false);
@@ -70,18 +70,18 @@ function ufclas_ufl_2015_teaser_excerpt( $excerpt ){
 		return $excerpt;
 	}
 }
-add_filter( 'get_the_excerpt', 'ufclas_ufl_2015_teaser_excerpt', 9, 1);
+add_filter( 'get_the_excerpt', 'hwcoe_ufl_teaser_excerpt', 9, 1);
 
 /**
- * Change the default excerpt length of 55 words
+ * Change the default excerpt length from 55 to 40 words
  *
  * @param int $length Excerpt length.
- * @return int (Maybe) modified excerpt length.
+ * @return int - modified excerpt length.
  */
-function ufclas_ufl_2015_excerpt_length( $length ) {
+function hwcoe_ufl_excerpt_length( $length ) {
     return 40;
 }
-add_filter( 'excerpt_length', 'ufclas_ufl_2015_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'hwcoe_ufl_excerpt_length', 999 );
 
 /**
  * Adds support for the title override metabox on pages
@@ -90,13 +90,16 @@ add_filter( 'excerpt_length', 'ufclas_ufl_2015_excerpt_length', 999 );
  * @param  integer $id  Post ID
  * @return string  Post title
  */
-function ufclas_ufl_2015_title( $title, $id ) {
+function hwcoe_ufl_title( $title, $id ) {
     
     if ( is_page() ){
       $title_override = get_post_meta( $id, 'custom_meta_page_title_override', true );
       $title = ( !empty($title_override) )? $title_override : $title;
+    } else if ( is_single() ) {
+    	$title_override = get_post_meta( $id, 'custom_meta_post_title_override', true );
+		$title = ( !empty($title_override) )? $title_override : $title;
     }
   
     return $title;
 }
-add_filter( 'the_title', 'ufclas_ufl_2015_title', 10, 2 );
+add_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
