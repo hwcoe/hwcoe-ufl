@@ -21,7 +21,7 @@
  * @param  string [$content = ''] Content between shortcode tags
  * @return string Shortcode output
  */
-function ufclas_ufl_2015_landing_double_image($atts, $content = NULL ) {
+function hwcoe_ufl_landing_double_image($atts, $content = NULL ) {
 	
 	extract( shortcode_atts( 
 		array(
@@ -59,7 +59,7 @@ function ufclas_ufl_2015_landing_double_image($atts, $content = NULL ) {
     <?php 
 	return ob_get_clean();
 }
-add_shortcode('ufl-landing-page-double-image', 'ufclas_ufl_2015_landing_double_image');
+add_shortcode('ufl-landing-page-double-image', 'hwcoe_ufl_landing_double_image');
 
  /**
  * Add Landing Page Hero Full Shortcode
@@ -69,7 +69,7 @@ add_shortcode('ufl-landing-page-double-image', 'ufclas_ufl_2015_landing_double_i
  * @param  string [$content = ''] Content between shortcode tags
  * @return string Shortcode output
  */
-function ufclas_ufl_2015_landing_hero($atts, $content = NULL ) {
+function hwcoe_ufl_landing_hero($atts, $content = NULL ) {
 	
 	extract( shortcode_atts( 
 		array(
@@ -140,7 +140,7 @@ function ufclas_ufl_2015_landing_hero($atts, $content = NULL ) {
     <?php 
 	return ob_get_clean();
 }
-add_shortcode('ufl-landing-page-hero', 'ufclas_ufl_2015_landing_hero');
+add_shortcode('ufl-landing-page-hero', 'hwcoe_ufl_landing_hero');
 
 /**
  * Add Breaker Shortcode
