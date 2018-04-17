@@ -5,6 +5,7 @@
 		float: left;
 	  margin: 0 20px;
 	  position: relative;
+	  text-transform: none;
 	  &:before {
 	  	background-color: $orange;
 	  	border-radius: 50%;
@@ -26,9 +27,11 @@
 		}
 	}
 	a {
-		color: #304657;
+		// color: #304657;
+		color: $blueDark;
 		font: 100 14px/14px $fontFamily;
 		letter-spacing: 1px;
+		text-decoration: underline;
 		&:hover {
 			color: $orange;
 		}

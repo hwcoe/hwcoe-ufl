@@ -14,18 +14,29 @@ function hwcoe_ufl_breadcrumbs() {
   	global $post;
 
 	$breadcrumb = '<ul class="breadcrumb-wrap">';
+
+	// Link to home page
+	$breadcrumb .= '<li class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="Home">Home</a></li>';
 	
 	$post_ancestors = get_post_ancestors($post);
-	
-	if ( !$post_ancestors ) {
-		$breadcrumb .= '<li>&nbsp;</li>';
-	}
-	else {
+
+	if ( $post_ancestors) {
 		$post_ancestors = array_reverse($post_ancestors);
 		foreach ( $post_ancestors as $crumb_id ){
 			$breadcrumb .= '<li><a href="' . get_permalink( $crumb_id ) . '">' . get_the_title( $crumb_id ) . '</a></li>';
 		}
 	}
+	
+	// if ( !$post_ancestors ) {
+	// 	$breadcrumb .= '<li class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="Home">Home</a></li>';
+	// }
+	// else {
+	// 	$post_ancestors = array_reverse($post_ancestors);
+	// 	foreach ( $post_ancestors as $crumb_id ){
+	// 		$breadcrumb .= '<li><a href="' . get_permalink( $crumb_id ) . '">' . get_the_title( $crumb_id ) . '</a></li>';
+	// 	}
+	// }
+	$breadcrumb .= '<li class="item-current item-' . $post->ID . '"><strong>' . get_the_title() . '</strong></li>';
 	$breadcrumb .= "</ul>";
 	
 	echo $breadcrumb;
