@@ -19,8 +19,6 @@
 		@include breakFirst(large){
 			height: 620px;
 		}
-
-		
 	}
 	.col-sm-9 {
 		@include break(medium){
@@ -190,7 +188,7 @@
 	}
 	h2 {
 	  font-size: 24px;
-	  line-height: 36px;
+	  line-height: 28px;
 	}
 	p {
 		font-size: 18px;

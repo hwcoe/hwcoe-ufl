@@ -50,10 +50,12 @@ a:focus, a:hover {
 		font-weight: 500;
 	}
 	h2 {
-		margin-top: $grid-gutter-width*2;
+		// margin-top: $grid-gutter-width*2;
+		margin-top: $grid-gutter-width;
 		
 		&:first-child {
-			margin-top: $grid-gutter-width;	
+			// margin-top: $grid-gutter-width;
+			margin-top: 0;	
 		}
 	}
 	h5 {

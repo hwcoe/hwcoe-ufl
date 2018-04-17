@@ -28,6 +28,7 @@ function hwcoe_ufl_image_sizes(){
 	
 	// UFL sizes
 	add_image_size('medium-cropped', 310, 275, array('center', 'top'));
+	add_image_size('card-thumb', 310, 275, array('right', 'top'));
 }
 add_action( 'after_setup_theme', 'hwcoe_ufl_image_sizes' );
 

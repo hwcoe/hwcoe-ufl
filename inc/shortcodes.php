@@ -150,7 +150,7 @@ add_shortcode('ufl-landing-page-hero', 'hwcoe_ufl_landing_hero');
  * @param  string [$content = ''] Content between shortcode tags
  * @return string Shortcode output
  */
-function ufclas_ufl_2015_breaker($atts, $content = NULL ) {
+function hwcoe_ufl_breaker($atts, $content = NULL ) {
 	
 	extract( shortcode_atts( 
 		array(
@@ -185,7 +185,7 @@ function ufclas_ufl_2015_breaker($atts, $content = NULL ) {
     <?php 
 	return ob_get_clean();
 }
-add_shortcode('ufl-breaker', 'ufclas_ufl_2015_breaker');
+add_shortcode('ufl-breaker', 'hwcoe_ufl_breaker');
 
 /**
  * Add Content with Left Image and Caption
@@ -195,7 +195,7 @@ add_shortcode('ufl-breaker', 'ufclas_ufl_2015_breaker');
  * @param  string [$content = ''] Content between shortcode tags
  * @return string Shortcode output
  */
-function ufclas_ufl_2015_content_image_left($atts, $content = NULL ) {
+function hwcoe_ufl_content_image_left($atts, $content = NULL ) {
 	
 	extract( shortcode_atts( 
 		array(
@@ -219,11 +219,15 @@ function ufclas_ufl_2015_content_image_left($atts, $content = NULL ) {
 		  			<div class="gal-img temp-img" style="background-image:url('<?php echo esc_url( $image[0] ); ?>');">
 		  				<img src="<?php echo esc_url( $image[0] ); ?>" alt="" class="visuallyhidden">
 	  				</div>
-	  				<div class="caption"><?php echo esc_html( $caption ); ?></div>
+	  				<?php if (!empty( $caption )){ ?>
+						<div class="caption"><?php echo esc_html( $caption ); ?></div>
+					<?php } ?>
 	  			</div>
 	  		</div>
 	  		<div class="col-md-6 gal-img-content">
-	  			<h2><?php echo esc_html( $headline ); ?></h2>
+	  			<?php if (!empty( $headline )){ ?>
+					<h2><?php echo esc_html( $headline ); ?></h2>
+				<?php } ?>
                 <?php echo wpautop( wp_kses_post( $content ) ); ?>
 	  		</div>
 	  	</div>
@@ -232,7 +236,7 @@ function ufclas_ufl_2015_content_image_left($atts, $content = NULL ) {
     <?php 
 	return ob_get_clean();
 }
-add_shortcode('ufl-content-image-left', 'ufclas_ufl_2015_content_image_left');
+add_shortcode('ufl-content-image-left', 'hwcoe_ufl_content_image_left');
 
 /**
  * Add Content with Right Image
@@ -242,7 +246,7 @@ add_shortcode('ufl-content-image-left', 'ufclas_ufl_2015_content_image_left');
  * @param  string [$content = ''] Content between shortcode tags
  * @return string Shortcode output
  */
-function ufclas_ufl_2015_content_image_right($atts, $content = NULL ) {
+function hwcoe_ufl_content_image_right($atts, $content = NULL ) {
 	
 	extract( shortcode_atts( 
 		array(
@@ -279,8 +283,47 @@ function ufclas_ufl_2015_content_image_right($atts, $content = NULL ) {
     <?php 
 	return ob_get_clean();
 }
-add_shortcode('ufl-content-image-right', 'ufclas_ufl_2015_content_image_right');
+add_shortcode('ufl-content-image-right', 'hwcoe_ufl_content_image_right');
 
+/**
+ * Add Left Image with Right Quote and Caption
+ * 
+ * Example [ufl-image-right-quote][/ufl-image-right-quote]
+ * @param  array $atts Shortcode attributes
+ * @param  string [$content = ''] Content between shortcode tags
+ * @return string Shortcode output
+ */
+function hwcoe_ufl_image_right_quote($atts, $content = NULL ) {
+	
+	extract( shortcode_atts( 
+		array(
+			'image' => get_stylesheet_directory_uri() . '/img/ImgResponsive_Placeholder.png',
+		), $atts )
+	);
+	
+	// Support either image ID or image url
+	$image = ( is_numeric( $image ) )? wp_get_attachment_image_src( $image, 'large' ) : array($image);
+	$image_alt = ( is_numeric( $image ) )? get_post($image)->post_excerpt : '';
+	
+	// Shortcode callbacks must return content, so use output buffering
+	ob_start();
+	?>
+    <div class="container image-right-quote">
+    <div class="row">
+    <div class="col-md-6">
+    	<img class="center-block img-responsive pic" src="<?php echo esc_url( $image[0] ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>">
+    </div>
+ 	<div class="col-md-6">
+    	<div class="quote">
+        	<h3><?php echo esc_html( $content ); ?></h3>
+        </div>
+	</div>
+    </div>
+    </div>
+    <?php 
+	return ob_get_clean();
+}
+add_shortcode('ufl-image-right-quote', 'hwcoe_ufl_image_right_quote');
 
 /**
  * Add Breaker with Cards
@@ -290,7 +333,7 @@ add_shortcode('ufl-content-image-right', 'ufclas_ufl_2015_content_image_right');
  * @param  string [$content = ''] Content between shortcode tags
  * @return string Shortcode output
  */
-function ufclas_ufl_2015_breaker_cards($atts, $content = NULL ) {
+function hwcoe_ufl_breaker_cards($atts, $content = NULL ) {
 	
 	extract( shortcode_atts( 
 		array(
@@ -352,7 +395,7 @@ function ufclas_ufl_2015_breaker_cards($atts, $content = NULL ) {
     <?php 
 	return ob_get_clean();
 }
-add_shortcode('ufl-breaker-cards', 'ufclas_ufl_2015_breaker_cards');
+add_shortcode('ufl-breaker-cards', 'hwcoe_ufl_breaker_cards');
 
  /**
  * Add Icon Shortcode
@@ -362,61 +405,22 @@ add_shortcode('ufl-breaker-cards', 'ufclas_ufl_2015_breaker_cards');
  * @param  string [$content = ''] Content between shortcode tags
  * @return string Shortcode output
  */
-function ufclas_ufl_2015_icon($atts, $content = NULL ) {
+// function ufclas_ufl_2015_icon($atts, $content = NULL ) {
 	
-	extract( shortcode_atts( 
-		array(
-			'name' => 'file',
-			'icon_class' => ''
-		), $atts )
-	);
+// 	extract( shortcode_atts( 
+// 		array(
+// 			'name' => 'file',
+// 			'icon_class' => ''
+// 		), $atts )
+// 	);
 	
-	$classes = array( 'img-icon glyphicon glyphicon-' . esc_attr( $name ) );
+// 	$classes = array( 'img-icon glyphicon glyphicon-' . esc_attr( $name ) );
 	
-	if ( !empty( $icon_class ) ){
-		$classes[] = esc_attr( $icon_class );
-	}
+// 	if ( !empty( $icon_class ) ){
+// 		$classes[] = esc_attr( $icon_class );
+// 	}
 	 
-	return '<div class="img-icon-wrap"><span class="' . join(' ', $classes) . '"></span></div>';
-}
-add_shortcode('ufl-icon', 'ufclas_ufl_2015_icon');
+// 	return '<div class="img-icon-wrap"><span class="' . join(' ', $classes) . '"></span></div>';
+// }
+// add_shortcode('ufl-icon', 'ufclas_ufl_2015_icon');
 
-/**
- * Add Left Image with Right Quote and Caption
- * 
- * Example [ufl-image-right-quote][/ufl-image-right-quote]
- * @param  array $atts Shortcode attributes
- * @param  string [$content = ''] Content between shortcode tags
- * @return string Shortcode output
- */
-function ufclas_ufl_2015_image_right_quote($atts, $content = NULL ) {
-	
-	extract( shortcode_atts( 
-		array(
-			'image' => get_stylesheet_directory_uri() . '/img/ImgResponsive_Placeholder.png',
-		), $atts )
-	);
-	
-	// Support either image ID or image url
-	$image = ( is_numeric( $image ) )? wp_get_attachment_image_src( $image, 'large' ) : array($image);
-	$image_alt = ( is_numeric( $image ) )? get_post($image)->post_excerpt : '';
-	
-	// Shortcode callbacks must return content, so use output buffering
-	ob_start();
-	?>
-    <div class="container image-right-quote">
-    <div class="row">
-    <div class="col-md-6">
-    	<img class="center-block img-responsive pic" src="<?php echo esc_url( $image[0] ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>">
-    </div>
- 	<div class="col-md-6">
-    	<div class="quote">
-        	<h3><?php echo esc_html( $content ); ?></h3>
-        </div>
-	</div>
-    </div>
-    </div>
-    <?php 
-	return ob_get_clean();
-}
-add_shortcode('ufl-image-right-quote', 'ufclas_ufl_2015_image_right_quote');

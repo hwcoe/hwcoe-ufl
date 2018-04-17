@@ -32,16 +32,16 @@
 				</a>
 				</h1>
 			<nav role="navigation" aria-label="<?php _e( 'Main Menu', 'hwcoe-ufl' ); ?>">
-		<?php 
-			wp_nav_menu( array( 
-				'theme_location' => 'main_menu',
-				'container' => '',
-				'depth' => 2, 
-				'walker' => new hwcoe_ufl_main_nav_menu(),
-				'fallback_cb' => 'hwcoe_ufl_main_nav_menu::fallback',
-			)); 
-		?>
-		</nav>
+			<?php 
+				wp_nav_menu( array( 
+					'theme_location' => 'main_menu',
+					'container' => '',
+					'depth' => 2, 
+					'walker' => new hwcoe_ufl_main_nav_menu(),
+					'fallback_cb' => 'hwcoe_ufl_main_nav_menu::fallback',
+				)); 
+			?>
+			</nav>
 		</div>
 		<div class="aux-menu-wrap">
 			<ul class="aux-nav">

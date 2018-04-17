@@ -10,8 +10,8 @@
 .header {
 	.admin-bar & {
 		top: 46px;
-		position: absolute; 
-		
+		// position: absolute; 
+
 		@include breakFirst(783px){
 			top: 32px; 
 		}
