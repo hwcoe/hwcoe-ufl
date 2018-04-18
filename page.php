@@ -15,7 +15,8 @@ get_header(); ?>
 
 <div id="main" class="container main-content">
 <div class="row">
-  <div class="col-sm-8 col-md-offset-3">
+  <!-- <div class="col-sm-8 col-md-offset-3"> -->
+  <div class="col-sm-12">
     <?php hwcoe_ufl_breadcrumbs(); ?>
     <header class="entry-header">
       <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
