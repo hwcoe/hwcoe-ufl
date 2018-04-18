@@ -7,7 +7,7 @@
  * @package HWCOE_UFL
  */
 
-$hwcoe_ufl_sidebar_nav = hwcoe_ufl_sidebar_navigation();
+$hwcoe_ufl_sidebar_nav = hwcoe_ufl_sidebar_navigation($post);
 
 // Display only if a page menu or Page Left sidebar exists
 if ( empty( $hwcoe_ufl_sidebar_nav ) && !is_active_sidebar( 'page_sidebar' ) ){

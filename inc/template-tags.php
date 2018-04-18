@@ -69,6 +69,7 @@ function hwcoe_ufl_post_featured_image(){
  * @since 0.3.2
  */
  function hwcoe_ufl_page_column_class(){
+	global $post;
 	$classes = array();
 	$columns = 12;
 	
@@ -81,7 +82,7 @@ function hwcoe_ufl_post_featured_image(){
 	else {
 		
 		// Default page template
-		$sidebar_nav = hwcoe_ufl_sidebar_navigation();
+		$sidebar_nav = hwcoe_ufl_sidebar_navigation($post);
 		$has_sidebar_nav = !empty( $sidebar_nav );
 		$has_page_sidebar = is_active_sidebar( 'page_sidebar' );
 		$has_page_right = is_active_sidebar( 'page_right' );

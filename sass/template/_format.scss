@@ -310,9 +310,6 @@ img {
 		@include breakFirst(medium){
 			display: block;
 		}
-		// &:not(.btn-mobile-toggle):nth-child(odd) a {
-		//   background: $beige;
-		// }
 		&:before {
 			display: none;
 		}
@@ -331,6 +328,10 @@ img {
 		position: relative;
 		@include breakFirst(medium){
 			padding-left: 34px;
+		}
+		&:hover {
+			background: $orange;
+			color: $white;
 		}
 	}
 	.no-touch & a:hover {
