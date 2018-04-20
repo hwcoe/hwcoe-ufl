@@ -4,11 +4,13 @@
  *
  *	[ufl-landing-page-double-image][/ufl-landing-page-double-image]
  *	[ufl-landing-page-hero][/ufl-landing-page-hero]
+ *	[ufl-breaker][/ufl-breaker]
  *	[ufl-content-image-left][/ufl-content-image-left]
  *	[ufl-content-image-right][/ufl-content-image-right]
+ *	[ufl-content-block][/ufl-content-block]
+ *	[ufl-image-right-quote][/ufl-image-right-quote]
  *	[ufl-breaker-cards][/ufl-breaker-cards]
  *	[ufl-icon]
- *	[ufl-image-right-quote][/ufl-image-right-quote]
  *
  * @package HWCOE_UFL
  */
@@ -284,6 +286,30 @@ function hwcoe_ufl_content_image_right($atts, $content = NULL ) {
 	return ob_get_clean();
 }
 add_shortcode('ufl-content-image-right', 'hwcoe_ufl_content_image_right');
+
+/**
+ * Add General Content
+ * 
+ * Example [ufl-content-block][/ufl-content-block]
+ * @param  array $atts Shortcode attributes
+ * @param  string [$content = ''] Content between shortcode tags
+ * @return string Shortcode output
+ */
+
+function hwcoe_ufl_content_block( $atts, $content = null ) {
+	ob_start();
+	?>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 content-block">
+				<?php echo wpautop( wp_kses_post( do_shortcode( $content ) ) ); ?>
+			</div>
+		</div>
+	</div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode( 'ufl-content-block', 'hwcoe_ufl_content_block' );
 
 /**
  * Add Left Image with Right Quote and Caption
