@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Landing Page Full Width
+ * Template Name: Container | Landing Page 
  * 
  * @package HWCOE_UFL
  *
@@ -19,15 +19,23 @@ get_header(); ?>
 		echo do_shortcode( $shortcode );
 	endif;
 ?>
-<div id="main" class="full-width-content">
-    
-     <?php while ( have_posts() ) : the_post(); ?>
-
-		<?php get_template_part( 'template-parts/content', 'landing' ); ?>
-    
-    <?php endwhile; // End of the loop. ?>
-    
+<div id="main" class="container main-content">
+    <div class="row">
+        <div class="col-sm-12">
+            <?php 
+				if ( ! has_post_thumbnail() ): 
+					the_title( '<h1 class="entry-title">', '</h1>' );
+				endif;
+			?>
+			
+			<?php while ( have_posts() ) : the_post(); ?>
 	
+				<?php get_template_part( 'template-parts/content', 'landing' ); ?>
+        
+        	<?php endwhile; // End of the loop. ?>
+
+        </div>
+    </div>
     
 </div>
 <?php get_sidebar('page_sections'); ?>

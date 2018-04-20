@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home Page
+ * Template Name: No Container | Home Page
  * 
  * @package HWCOE_UFL
  *

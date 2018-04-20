@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full Width Page (no sidebars or widgets)
+ * Template Name: Container | No Sidebars or Widgets
  * 
  * @package HWCOE_UFL
  *

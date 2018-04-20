@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name:  Members Only Page
+ * Template Name:  Container | Members Only Page
  * 
  * @package HWCOE_UFL
  *

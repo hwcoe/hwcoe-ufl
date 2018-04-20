@@ -73,10 +73,10 @@ function hwcoe_ufl_post_featured_image(){
 	$classes = array();
 	$columns = 12;
 	
-	if ( is_page_template('page-templates/right-two-columns.php') ){
+	if ( is_page_template('page-templates/container-right-sidebar.php') ){
 		$columns -= 3;
 	}
-	elseif ( is_page_template('page-templates/full-width.php') ) {
+	elseif ( is_page_template('page-templates/container-no-sidebar.php') ) {
 		$columns = 12;
 	}
 	else {

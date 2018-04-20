@@ -4,7 +4,7 @@
 		margin-bottom: $grid-gutter-width*2;
 	}
 	@include breakFirst(wide){
-		margin-top: 0px;
+		// margin-top: 0px;
 	}
 	.hero-img {
 		h1 {

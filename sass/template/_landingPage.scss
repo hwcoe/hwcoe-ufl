@@ -64,7 +64,7 @@
 }
 .landing-page-hero-full {
 	text-align: center;
-	margin-top: -30px;
+	margin-top: -$grid-gutter-width*2;	
 	@include breakFirst(large){
 		margin: -95px 0 100px;
 	}

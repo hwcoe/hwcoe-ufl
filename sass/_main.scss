@@ -20,7 +20,7 @@
 	&.full-width-content {
 		padding: 0;
 		@include breakFirst(wide){
-			padding-top: 50px;
+			// padding-top: 50px;
 		}
 		.footer-wrap {
 			margin-top: 0;	
