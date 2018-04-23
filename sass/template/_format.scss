@@ -21,6 +21,10 @@ body {
 			padding-top: 150px;
 		}
 	}
+	&.page-template-blank {
+		padding-top:0;
+		background:none;
+	}
 }
 
 .bg-texture {
