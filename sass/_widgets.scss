@@ -1,20 +1,20 @@
 .widget-area {
 	&#page-sidebar {
-		display: none;
+		// display: none;
 		
 		@include breakFirst(medium){
-			display: block; 
+			// display: block; 
 		}
 	}
-	
+
 	.home & {
 		padding-top: $grid-gutter-width;
 		margin-bottom: $grid-gutter-width;
 		overflow: hidden;
 	}
-    .home &#page-sections{
-        padding-top: 0;
-    }
+	.home &#page-sections{
+		padding-top: 0;
+	}
 	.home .footer-bottom & {
 		padding-top: 0;
 	}
@@ -22,6 +22,11 @@
 
 .widget {
 	margin-bottom: $grid-gutter-width;
+
+	#page-sidebar &, #page-right & {
+		border:2px solid $beigeDark;
+		padding: 13px 20px;
+	}
 
 	ul {
 		margin-left: 0;
@@ -44,7 +49,7 @@
 	}
 	.widgettitle, .widget-title {
 		text-transform: none;
-		font: 500 24px/32px $serifFontFamily; 
+		font: 500 20px/28px $serifFontFamily; 
 		color: $blue;
 		@at-root .home #secondary & {
 			text-transform: uppercase;
@@ -91,15 +96,15 @@
 }
 
 .widget-ufl-content-image-right {
-    ul {
-        margin-left: $grid-gutter-width;
-        
-        li {
-            font-size: 100%;
-            text-transform: none;
-            margin-bottom: $grid-gutter-width/2;
-        }
-    }
+	ul {
+		margin-left: $grid-gutter-width;
+		
+		li {
+			font-size: 100%;
+			text-transform: none;
+			margin-bottom: $grid-gutter-width/2;
+		}
+	}
 }
 
 .widget_archive, .widget_categories {
