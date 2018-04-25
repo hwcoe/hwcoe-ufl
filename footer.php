@@ -1,5 +1,25 @@
 <!-- START FOOTER -->
 <footer class="footer-wrap">
+	<?php if( have_rows( 'footer_buttons', 'option' ) ): ?>
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ul class="footer-audience-nav">
+								<?php while ( have_rows( 'footer_buttons', 'option' ) ) : the_row(); ?>
+								<?php $button_link = ( 'internal' == get_sub_field( 'internal_or_external_link' ) ? get_sub_field( 'internal_link' ) : get_sub_field( 'external_url' ) ); ?>
+								<li><a href="<?php echo $button_link; ?>"><?php the_sub_field( 'button_text' ); ?></a></li>
+
+								<?php endwhile // the_row ?>
+						</ul>
+
+					</div>
+				</div>
+			</div><!-- .container -->
+		
+		</div><!-- .footer-top -->
+	<?php endif // have_rows ?>
+	
 	<div class="footer-bottom">
 		<div class="container">
 			<div class="row">

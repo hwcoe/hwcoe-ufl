@@ -1,8 +1,5 @@
 .footer-wrap {
 	margin-top: 80px;
-	a {
-		text-decoration:underline;
-	}
 }
 .homepage .footer-wrap {
 	margin: 0 ;
@@ -26,7 +23,7 @@
 		padding: 0;
 	}
 }
-// TODO: DETERMINE USE CASE OR DELETE
+// buttons
 .footer-audience-nav {
 	margin: 0;
 	li {
@@ -91,6 +88,7 @@ footer {
 	ul.social-nav {
 		margin: 0 0 20px 0;
 		position: relative;
+		right:0;
 		@include breakFirst(medium){
 			margin: 0 0 20px 0;
 		}
@@ -112,6 +110,9 @@ footer {
 	}
 	address, .address {
 		font: 100 16px/22px $fontFamily;
+	}
+	a {
+		text-decoration:underline;
 	}
 	h2 {
 		font: 500 16px/22px $fontFamily;
