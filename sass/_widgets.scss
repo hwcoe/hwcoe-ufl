@@ -23,7 +23,7 @@
 .widget {
 	margin-bottom: $grid-gutter-width;
 
-	#page-sidebar &, #page-right & {
+	#page-sidebar &, #page-right &, #post-sidebar & {
 		border:2px solid $beigeDark;
 		padding: 13px 20px;
 	}
@@ -83,10 +83,6 @@
 		background: $blueLight;
 		color: $white;
 		padding: $grid-gutter-width/2;
-
-		// make home page widget height look consistent - may not be necessary with design. 
-		// padding-bottom: 500em;
-		// margin-bottom: -500em;
 		
 		a {
 			color: $white;

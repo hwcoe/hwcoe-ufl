@@ -57,4 +57,5 @@ get_header();
 
 <?php endwhile //the_post ?>
 
+<?php get_sidebar('page_sections'); ?>
 <?php get_footer(); ?>

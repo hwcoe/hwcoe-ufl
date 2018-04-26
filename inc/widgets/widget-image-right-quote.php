@@ -27,8 +27,6 @@ class UFL_2015_Image_Right_Quote extends WP_Widget {
 	 * @param array $instance
 	 */
 	public function widget( $args, $instance ) {
-		$title = ( !empty( $instance['title'] ) )? $instance['title'] : ''; 
-		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 		$text = ( !empty( $instance['text'] ) )? $instance['text'] : '';
 		$text = apply_filters( 'widget_text', $text, $instance, $this );
 		$image = ( !empty( $instance['image'] ) )? $instance['image'] : '';
@@ -51,16 +49,12 @@ class UFL_2015_Image_Right_Quote extends WP_Widget {
 	 */
 	public function form( $instance ) {
 		$instance = wp_parse_args( (array) $instance, array( 
-			'title' => '', 
 			'text' => '', 
 			'image' => '',
 		) );
 		
-		$title = sanitize_text_field( $instance['title'] );
 		$image = ( isset( $instance['image'] ) )? $instance['image'] : '';
 		?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'hwcoe-ufl'); ?></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 
 		<p><label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php _e( 'Quote:', 'hwcoe-ufl' ); ?></label>
 		<textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo esc_textarea( $instance['text'] ); ?></textarea></p>
@@ -93,7 +87,6 @@ class UFL_2015_Image_Right_Quote extends WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
-		$instance['title'] = sanitize_text_field( $new_instance['title'] );
 		if ( current_user_can( 'unfiltered_html' ) ) {
 			$instance['text'] = $new_instance['text'];
 		} else {
