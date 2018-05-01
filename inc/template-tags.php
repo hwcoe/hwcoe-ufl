@@ -18,7 +18,7 @@ function hwcoe_ufl_get_custom_logo() {
 		  $custom_logo = preg_replace("/(.+)src=\"([^\"]*)\"(.+)/", "$2", $custom_logo);
 		}
 		else {
-		 $custom_logo = get_stylesheet_directory_uri() . '/svg/logo-herbert.svg';
+		 $custom_logo = get_template_directory_uri() . '/svg/logo-herbert.svg';
 		}	
    }
    return $custom_logo;
@@ -170,7 +170,7 @@ function hwcoe_ufl_socialnetworks() {
 	
 	foreach( $social_networks as $name => $title ){
 		$link = esc_url( get_theme_mod("{$name}_url") );
-		$icon = get_stylesheet_directory_uri();
+		$icon = get_template_directory_uri();
 		$icon .= "/img/spritemap.svg#{$name}";
 		if( !empty($link) ){
 			printf('<li><a href="%s" class="btn-circle icon-svg icon-%s"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%s"></use></svg><span class="visuallyhidden">%s</span></a></li>', $link, $name, $icon, $title );

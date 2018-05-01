@@ -8,13 +8,13 @@
 </head>
 
 <body <?php body_class('loading'); // Enable JS transitions ?>>
-<?php include get_stylesheet_directory() . '/inc/google-analytics.php'; ?>
+<?php include get_template_directory() . '/inc/google-analytics.php'; ?>
 
 <header>
 <a href="#main" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
 <div class="header unit">
 			<a href="http://ufl.edu/" class="logo">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-uf.svg" alt="University of Florida">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/logo-uf.svg" alt="University of Florida">
 			</a>
 			<h1 class="screen-reader-title">
 			<a href="<?php echo site_url('/'); ?>" class="logo mobile">
@@ -78,7 +78,7 @@
 			<?php 
 						if ( has_nav_menu( 'audience_nav' ) ): ?>
 								<a href="#" class="cur-audience"><?php echo hwcoe_ufl_nav_menu_name_by_location( 'audience_nav' ); ?></a>
-								<span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#arw-down"></use></svg></span>
+								<span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-down"></use></svg></span>
 						<?php 
 								wp_nav_menu( array( 
 										'theme_location' => 'audience_nav',
@@ -97,12 +97,12 @@
 		<a href="#" class="btn-show-aux">
 			<span class="icon-svg icon-menu">
 				<svg>
-					<use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#menu"></use>
+					<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#menu"></use>
 				</svg>
 			</span>
 			<span class="icon-svg icon-close">
 				<svg>
-					<use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#close"></use>
+					<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#close"></use>
 				</svg>
 			</span>
 		</a>
@@ -118,12 +118,12 @@
 	<a href="#" class="btn-menu" role="button" aria-haspopup="true" aria-expanded="false">
 		<span class="icon-svg icon-menu">
 			<svg>
-				<use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#menu"></use>
+				<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#menu"></use>
 			</svg>
 		</span>
 		<span class="icon-svg icon-close" role="button">
 			<svg>
-				<use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#close"></use>
+				<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#close"></use>
 			</svg>
 		</span>
 	</a>

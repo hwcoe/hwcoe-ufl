@@ -61,7 +61,7 @@ add_filter( 'image_size_names_choose', 'hwcoe_ufl_show_custom_sizes' );
  */
 function hwcoe_ufl_icon_url( $url, $size, $blog_id ){
 	if ( empty($url) ){
-		$url = get_stylesheet_directory_uri() . '/favicon.png';
+		$url = get_template_directory_uri() . '/favicon.png';
 	}
 	return $url;
 }

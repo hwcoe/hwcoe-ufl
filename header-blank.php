@@ -8,4 +8,4 @@
 </head>
 
 <body <?php body_class('loading'); // Enable JS transitions ?>>
-<?php include get_stylesheet_directory() . '/inc/google-analytics.php'; ?>
+<?php include get_template_directory() . '/inc/google-analytics.php'; ?>

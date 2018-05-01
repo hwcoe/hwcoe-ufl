@@ -148,20 +148,22 @@ add_action( 'admin_init', 'hwcoe_ufl_editor_styles' );
 /**
  * Load custom theme files 
  */
-require get_stylesheet_directory() . '/inc/filters.php';
-require get_stylesheet_directory() . '/inc/media.php';
-require get_stylesheet_directory() . '/inc/shortcodes.php';
-require get_stylesheet_directory() . '/inc/walkers.php';
-require get_stylesheet_directory() . '/inc/widgets.php';
-require get_stylesheet_directory() . '/inc/shibboleth.php';
-require get_stylesheet_directory() . '/inc/customizer.php';
-require get_stylesheet_directory() . '/inc/template-tags.php';
-require get_stylesheet_directory() . '/inc/navigation.php';
+
+require get_template_directory() . '/inc/filters.php';
+require get_template_directory() . '/inc/media.php';
+require get_template_directory() . '/inc/shortcodes.php';
+require get_template_directory() . '/inc/walkers.php';
+require get_template_directory() . '/inc/widgets.php';
+require get_template_directory() . '/inc/shibboleth.php';
+require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/inc/navigation.php';
 
 // Add Bootstrap compatible walker
 // TO DELETE?
 if ( !class_exists('wp_bootstrap_navwalker') ) {
-	require_once get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
+	// require_once get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
+	require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 }
 
 // The Events Calendar
@@ -188,7 +190,8 @@ define( "HWCOE_UFL_INC_DIR", get_template_directory() . "/inc/modules" );
 
 // Advanced custom fields
 if( function_exists( 'register_field_group' )){
-	require get_stylesheet_directory() . '/inc/advanced-custom-fields/metaboxes.php';
+	// require get_stylesheet_directory() . '/inc/advanced-custom-fields/metaboxes.php';
+	require get_template_directory() . '/inc/advanced-custom-fields/metaboxes.php';
 }
 
 /*

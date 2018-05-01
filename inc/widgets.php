@@ -1,15 +1,22 @@
 <?php 
 
 // Include theme widgets
-require get_stylesheet_directory() . '/inc/widgets/widget-landing-page-hero.php';
-require get_stylesheet_directory() . '/inc/widgets/widget-landing-page-double.php';
-require get_stylesheet_directory() . '/inc/widgets/widget-breaker.php';
-require get_stylesheet_directory() . '/inc/widgets/widget-breaker-cards.php';
-require get_stylesheet_directory() . '/inc/widgets/widget-content-image-left.php';
-require get_stylesheet_directory() . '/inc/widgets/widget-content-image-right.php';
-require get_stylesheet_directory() . '/inc/widgets/widget-image-right-quote.php';
+// require get_stylesheet_directory() . '/inc/widgets/widget-landing-page-hero.php';
+// require get_stylesheet_directory() . '/inc/widgets/widget-landing-page-double.php';
+// require get_stylesheet_directory() . '/inc/widgets/widget-breaker.php';
+// require get_stylesheet_directory() . '/inc/widgets/widget-breaker-cards.php';
+// require get_stylesheet_directory() . '/inc/widgets/widget-content-image-left.php';
+// require get_stylesheet_directory() . '/inc/widgets/widget-content-image-right.php';
+// require get_stylesheet_directory() . '/inc/widgets/widget-image-right-quote.php';
 //require get_stylesheet_directory() . '/inc/widgets/widget-submenu.php';
 
+require get_template_directory() . '/inc/widgets/widget-landing-page-hero.php';
+require get_template_directory() . '/inc/widgets/widget-landing-page-double.php';
+require get_template_directory() . '/inc/widgets/widget-breaker.php';
+require get_template_directory() . '/inc/widgets/widget-breaker-cards.php';
+require get_template_directory() . '/inc/widgets/widget-content-image-left.php';
+require get_template_directory() . '/inc/widgets/widget-content-image-right.php';
+require get_template_directory() . '/inc/widgets/widget-image-right-quote.php';
 
 /**
  * Get the number of widget in a specific sidebar
@@ -298,8 +305,8 @@ function hwcoe_ufl_image_upload_scripts() {
 	if ( 'widgets.php' === $pagenow || isset( $wp_customize ) ) {
 
 		wp_enqueue_media();
-		wp_enqueue_script( 'wpshed-image-upload', get_stylesheet_directory_uri() . '/inc/image-upload/upload.js', array( 'jquery' ) );
-		wp_enqueue_style( 'wpshed-image-upload',  get_stylesheet_directory_uri() . '/inc/image-upload/upload.css' );
+		wp_enqueue_script( 'wpshed-image-upload', get_template_directory_uri() . '/inc/image-upload/upload.js', array( 'jquery' ) );
+		wp_enqueue_style( 'wpshed-image-upload',  get_template_directory_uri() . '/inc/image-upload/upload.css' );
 
 	}
 }

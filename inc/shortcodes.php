@@ -28,8 +28,8 @@ function hwcoe_ufl_landing_double_image($atts, $content = NULL ) {
 	extract( shortcode_atts( 
 		array(
 			'headline' => '',
-			'image1' => get_stylesheet_directory_uri() . '/img/_temp-landing-a-1.jpg',
-			'image2' => get_stylesheet_directory_uri() . '/img/_temp-landing-a-2.jpg',
+			'image1' => get_template_directory_uri() . '/img/_temp-landing-a-1.jpg',
+			'image2' => get_template_directory_uri() . '/img/_temp-landing-a-2.jpg',
 		), $atts )
 	);
 	
@@ -77,7 +77,7 @@ function hwcoe_ufl_landing_hero($atts, $content = NULL ) {
 		array(
 			'headline' => '',
 			'subtitle' => '',
-			'image' => get_stylesheet_directory_uri() . '/img/_temp2.jpg',
+			'image' => get_template_directory_uri() . '/img/_temp2.jpg',
 			'image_height' => 'large',
 			'hide_button' => 1,
 			'button_text' => '',
@@ -132,7 +132,7 @@ function hwcoe_ufl_landing_hero($atts, $content = NULL ) {
                     <?php echo wpautop( wp_kses_post( $content ) ); ?>
                     
                     <?php if ( !empty($button_text) ){ ?>
-                    <a href="<?php echo esc_url( $button_link ); ?>" class="btn"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
+                    <a href="<?php echo esc_url( $button_link ); ?>" class="btn"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
                     <?php } ?>
                 </div>
             </div>
@@ -157,7 +157,7 @@ function hwcoe_ufl_breaker($atts, $content = NULL ) {
 	extract( shortcode_atts( 
 		array(
 			'headline' => '',
-			'image' => get_stylesheet_directory_uri() . '/img/bg-breaker.jpg',
+			'image' => get_template_directory_uri() . '/img/bg-breaker.jpg',
 			'hide_button' => 1,
 			'button_text' => '',
 			'button_link' => '#',
@@ -178,7 +178,7 @@ function hwcoe_ufl_breaker($atts, $content = NULL ) {
                     <?php echo wpautop( wp_kses_post( $content ) ); ?>
                     
                     <?php if ( !$hide_button || !empty( $button_text ) ){ ?>
-                    <a href="<?php echo esc_url( $button_link ); ?>" class="btn btn-white"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
+                    <a href="<?php echo esc_url( $button_link ); ?>" class="btn btn-white"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
                     <?php } ?>
                 </div>
             </div>
@@ -202,7 +202,7 @@ function hwcoe_ufl_content_image_left($atts, $content = NULL ) {
 	extract( shortcode_atts( 
 		array(
 			'headline' => '',
-			'image' => get_stylesheet_directory_uri() . '/img/_temp-landing-a-1.jpg',
+			'image' => get_template_directory_uri() . '/img/_temp-landing-a-1.jpg',
 			'caption' => '',
 		), $atts )
 	);
@@ -253,7 +253,7 @@ function hwcoe_ufl_content_image_right($atts, $content = NULL ) {
 	extract( shortcode_atts( 
 		array(
 			'headline' => '',
-			'image' => get_stylesheet_directory_uri() . '/img/_temp-landing-a-1.jpg',
+			'image' => get_template_directory_uri() . '/img/_temp-landing-a-1.jpg',
 			'label' => '',
 		), $atts )
 	);
@@ -323,7 +323,7 @@ function hwcoe_ufl_image_right_quote($atts, $content = NULL ) {
 	
 	extract( shortcode_atts( 
 		array(
-			'image' => get_stylesheet_directory_uri() . '/img/ImgResponsive_Placeholder.png',
+			'image' => get_template_directory_uri() . '/img/ImgResponsive_Placeholder.png',
 		), $atts )
 	);
 	
@@ -363,7 +363,7 @@ function hwcoe_ufl_breaker_cards($atts, $content = NULL ) {
 	
 	extract( shortcode_atts( 
 		array(
-			'image' => get_stylesheet_directory_uri() . '/img/bg-breaker.jpg',
+			'image' => get_template_directory_uri() . '/img/bg-breaker.jpg',
 			'category' => 1,
 			'hide_excerpt' => 0,
 			'show_links' => 0,
