@@ -18,7 +18,7 @@ get_header(); ?>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-9">
     <?php 
 		while ( have_posts() ) : the_post();
 			get_template_part( 'template-parts/content', get_post_type() );
@@ -27,6 +27,11 @@ get_header(); ?>
 		// Previous/next page navigation.
 		the_posts_pagination();
 	?>
+  </div>
+  <div class="col-md-3">
+    <div id="post-sidebar" class="widget-area" role="complementary">
+      <?php the_widget( 'WP_Widget_Archives', array('title' => __('News Archive', 'hwcoe-ufl'), 'dropdown' => 1) ); ?>
+   </div><!-- post_sidebar -->
   </div>
 </div>
 </div>
