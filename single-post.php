@@ -11,15 +11,15 @@ get_header(); ?>
 <div id="main" class="container main-content">
 <div class="row">
   <div class="col-sm-12">
-    <header class="entry-header">
-      <?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-    </header>
-    <!-- .entry-header --> 
+	<header class="entry-header">
+		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+	</header>
+	<!-- .entry-header --> 
   </div>
 </div>
 <div class="row">
   <div class="col-md-9">
-    <?php 
+	<?php 
 		while ( have_posts() ) : the_post();
 			get_template_part( 'template-parts/content', get_post_type() );
 		endwhile; // End of the loop.
@@ -35,7 +35,7 @@ get_header(); ?>
 	?>
   </div>
   <div class="col-md-3">
-    <?php get_sidebar('post_sidebar'); ?>
+	<?php get_sidebar('post_sidebar'); ?>
   </div>
 </div>
 </div>

@@ -11,82 +11,47 @@ figcaption {
 	font-size: 14px;
 	font-style: italic;
 	line-height: 125%;
-	color: #000;
 	margin-top: 10px;
-}/*
+}
 .single-post {
-	.entry-content, .entry-header {
-		.container-fluid {
-			max-width: none;
-			padding-left: 0;
-			padding-right: 0;
-			
-			@media screen and (min-width: 991px) {
-				margin-left: -120px;
-				margin-right: -120px;
-			}
-		}
-		.container {
-			max-width: 100%;
-			padding-left: 0;
-			padding-right: 0;
-		}
-		.row {
-			padding-top: 35px;
-			padding-bottom: 35px;
+	.page-title {
+		margin-bottom: 20px;
+	}
+
+	
+}
+.entry-meta {
+	p {
+		font-size: 80%;
+		font-style: italic;
+	}
+	a[rel="tag"] {
+		@extend .category-tag;
+		border: none;
+		display: inline-block;
+		left: 0;
+		position: relative;
+		top: 0;
+		margin-bottom: 4px;
+		font-size: 12px;
+		line-height: 12px;
+		padding: 9px 12px;
+		
+		&:before {
+			color: $blueLight;
+			content: "\f323";
+			font-family: dashicons;
+			font-size: 12px;
+			padding-right: 2px;
 		}
 	}
 }
 
-.entry-header {
-	figure {
-		padding-bottom: 25px;
-	}
-	figcaption {
-		
-		@media screen and (min-width: 991px) {
-			//margin-left: 120px;
-			//margin-right: 120px;
-		}
-	}
-}
-.entry-title {
-	.single-post & {
-		font-family: $fontFamily;
-		font-weight: 800;
-		font-size: 36px;
-		line-height: 36px;
-		color: #F04E23;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-		margin-top: 20px;
-		margin-bottom: 10px;
-	}
-}
+
+// to delete?
+/*
+
 .entry-content {
-	.lead {
-		@extend h2;
-		margin-top: 20px;
-		margin-bottom: 10px;
-	}
-	.byline {
-		font-size: 16px;
-		font-weight: 500;
-		font-style: italic;
-		line-height: 125%;
-		margin: 10px 0;
-		padding: 15px 0px;
-		color: #F04E23;
-		text-transform: none;
-	}
-	ul, li {
-		font-size: 17px;
-		line-height: 150%;
-	}
-	li {
-		margin: 1em;
-		margin-left: 2em;
-	}
 	.image {
 		max-width: 1240px;
 		margin:auto;

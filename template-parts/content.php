@@ -9,41 +9,48 @@
 ?>
 <!-- content -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php if ( is_archive() ): ?>
-        
-        <header class="entry-header">
-            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-        </header><!-- .entry-header -->
+	<?php if ( is_archive() ): ?>
+		
+		<header class="entry-header">
+			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		</header><!-- .entry-header -->
 		
 		<?php if ( has_post_thumbnail() ): ?>
-            <div class="entry-thumbnail">
-                <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) ); ?>
-            </div>
-    	<?php endif; ?>
-        
+			<div class="entry-thumbnail">
+				<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) ); ?>
+			</div>
+		<?php endif; ?>
+		
 	<?php else: ?>
 		<?php if ( has_post_thumbnail() ): ?>
-            <header class="entry-header">
-          		<?php echo hwcoe_ufl_post_featured_image(); ?>	
-            </header>
-    	<?php endif; ?>
-        
-        <div class="entry-meta">
-			<?php //ufclas_ufl_2015_posted_on(); ?>
+			<header class="entry-header">
+				<?php echo hwcoe_ufl_post_featured_image(); ?>	
+			</header>
+		<?php endif; ?>
+		
+		<div class="entry-meta">
+			<p><?php the_time('F j, Y'); ?> in <?php the_category(', '); ?></p>
 		</div><!-- .entry-meta -->
 	<?php endif; ?>
-    
-    <div class="entry-content">
-        <?php
+	
+	<div class="entry-content">
+		<?php
 			if ( is_singular() ):
 				the_content();
-			else:
-				the_excerpt();
+			else: 
+		?>
+			<div class="entry-meta">
+				<p><?php the_time('F j, Y'); ?> in <?php the_category(', '); ?></p>
+			</div><!-- .entry-meta -->
+		<?php	the_excerpt();
 			endif;
 		?>
 	</div><!-- .entry-content -->
-    
-    <footer class="entry-footer">
+	<div class="entry-meta">
+		<?php the_tags('<p class="tag">', ' ','</p>'); ?>
+	</div>
+	
+	<footer class="entry-footer">
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hwcoe-ufl' ),
@@ -60,5 +67,10 @@
 			);
 		?>
 	</footer><!-- .entry-footer -->
-    
+	<?php if ( comments_open() ): ?>
+		<div id="comment-container">
+			<?php comments_template(); ?>
+		</div> 
+	<?php endif; ?> 
+	
 </article><!-- #post-## -->
