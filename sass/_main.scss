@@ -368,12 +368,12 @@ strong {
 
 .article-post-title {
 	font-family: $fontFamily;
-	// font-size: 24px;
-	// line-height: 30px;
+	color: $white;
 	font-size: 18px;
 	line-height: 24px;
 	letter-spacing: 0;
-	margin-bottom: $grid-gutter-width/2;
+	// margin-bottom: $grid-gutter-width/2;
+	margin-bottom: 0;
 	text-transform: uppercase;
 	a {
 		font-weight: 500;
@@ -387,7 +387,7 @@ strong {
 .article-post-excerpt {
 	font-size: 16px;
 	line-height: 26px;	
-	
+	font-weight:100;
 	.read-more {
 		@extend .article-post-more;
 	}

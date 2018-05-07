@@ -1,9 +1,7 @@
 .widget_listcategorypostswidget {
 	li {
-		text-transform: none;
 		clear: both;
 		overflow: auto;
-		margin-bottom: $grid-gutter-width/2;
 	}
 	
 	img {
@@ -13,14 +11,36 @@
 	.lcp_post {
 		@extend .widget-post-title;
 	}
+	.lcp_post_info {
+		height: 160px;
+		position: absolute;
+		bottom: 15px;
+		padding: $grid-gutter-width/2;
+	}
 	.lcp_date {
-		font-style: italic;
-		font-weight: 500;
-		font-size: 13px;
-		color: $grayLight;
-		margin-bottom: $grid-gutter-width/4;
+		@extend .rss-date;
 	}
 	.lcp_excerpt {
 		@extend .widget-post-excerpt;
+	}
+	// TODO: CROSS BROWSER/SIZE TESTING
+	.lcp_img_bg {
+		// margin: -$grid-gutter-width;
+		// position: absolute;
+		// top:0;
+		// left:0;
+		padding-top: 160px;
+		.widget-post-thumbnail {
+			height: 250px;
+			width: calc(100% - 30px);
+			margin-left: 15px;
+			position: absolute;
+			top:0;	
+			left: 0;
+			// background-position: calc(100% + 15px) top;
+			// position: relative;
+			// top: 0;
+			// margin-left: $grid-gutter-width;
+		}
 	}
 }
