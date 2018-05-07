@@ -45,7 +45,6 @@ function hwcoe_ufl_show_custom_sizes( $sizes ) {
 		'page_header' => __( 'Subpage Header', 'hwcoe-ufl' ),
 		'ufl_post_thumb' => __( 'Post Thumbnail', 'hwcoe-ufl' ),
 		'medium-cropped' => __( 'Medium (cropped)', 'hwcoe-ufl' ),
-		'test-full-width' => __( 'Test Full Width', 'hwcoe-ufl' ),
     ) );
 }
 add_filter( 'image_size_names_choose', 'hwcoe_ufl_show_custom_sizes' );

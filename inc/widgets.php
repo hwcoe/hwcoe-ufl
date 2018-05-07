@@ -1,15 +1,6 @@
 <?php 
 
 // Include theme widgets
-// require get_stylesheet_directory() . '/inc/widgets/widget-landing-page-hero.php';
-// require get_stylesheet_directory() . '/inc/widgets/widget-landing-page-double.php';
-// require get_stylesheet_directory() . '/inc/widgets/widget-breaker.php';
-// require get_stylesheet_directory() . '/inc/widgets/widget-breaker-cards.php';
-// require get_stylesheet_directory() . '/inc/widgets/widget-content-image-left.php';
-// require get_stylesheet_directory() . '/inc/widgets/widget-content-image-right.php';
-// require get_stylesheet_directory() . '/inc/widgets/widget-image-right-quote.php';
-//require get_stylesheet_directory() . '/inc/widgets/widget-submenu.php';
-
 require get_template_directory() . '/inc/widgets/widget-landing-page-hero.php';
 require get_template_directory() . '/inc/widgets/widget-landing-page-double.php';
 require get_template_directory() . '/inc/widgets/widget-breaker.php';
@@ -17,7 +8,6 @@ require get_template_directory() . '/inc/widgets/widget-breaker-cards.php';
 require get_template_directory() . '/inc/widgets/widget-content-image-left.php';
 require get_template_directory() . '/inc/widgets/widget-content-image-right.php';
 require get_template_directory() . '/inc/widgets/widget-image-right-quote.php';
-
 /**
  * Get the number of widget in a specific sidebar
  * 
@@ -189,7 +179,6 @@ function hwcoe_ufl_widgets_init() {
 	register_widget( 'UFL_2015_Content_Image_Left' );
 	register_widget( 'UFL_2015_Content_Image_Right' );
 	register_widget( 'UFL_2015_Image_Right_Quote' );
-	// register_widget( 'UFL_2015_Submenu' );
 
 	// Unregister unwanted default WP widgets
 	unregister_widget('WP_Widget_Media_Audio');
@@ -204,9 +193,7 @@ function hwcoe_ufl_widgets_init() {
 	unregister_widget('WP_Widget_Categories');
 	unregister_widget('WP_Widget_Recent_Comments');
 	
-	// unregister_widget('WP_Widget_RSS');
- 	// unregister_widget('WP_Widget_Archives');
- 	// unregister_widget('WP_Widget_Links');
+ 	unregister_widget('WP_Widget_Links');
  	//	unregister_widget('WP_Widget_Text'); 	//kept active because some subsites are using it
  	// unregister_widget('WP_Widget_Categories');
  	// unregister_widget('WP_Widget_Recent_Comments');
