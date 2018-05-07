@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: List Category Posts - Template "Recent News"
+Plugin Name: List Category Posts - Template "Single Post with Image"
 Description: Template file for List Category Post Plugin for Wordpress which is used by plugin by argument template=value.php
 Version: 0.9
 */
@@ -21,7 +21,7 @@ $lcp_display_output .= $this->get_category_link('strong');
 $lcp_display_output .= $this->get_conditional_title();
 
 //Add 'starting' tag. Here, I'm using an unordered list (ul) as an example:
-$lcp_display_output .= '<ul class="lcp_catlist">';
+$lcp_display_output .= '<div class="lcp_img_bg">';
 
 /* Posts Loop
  *
@@ -39,33 +39,34 @@ global $post;
 
 ob_start();
 while ( have_posts() ) : the_post();
+
+	$post_info = '';
+	$post_info .= '<div class="lcp_post_info">';
+	$post_info .= '<h3 class="lcp_post">' . get_the_title() . '</h3>';
+	$post_info .= '<p class="lcp_date">' . get_the_date() . '</p>';
+	$post_info .= '<div class="lcp_excerpt">' . get_the_excerpt() . '</div>';
+	$post_info .= '</div>';
  	
 	/**
 	 * Display posts, this doesn't change when widget options change
 	 */
-  	echo '<li>';
-	echo '<a href="' . esc_url( get_permalink() ) . '">';
-	if ( has_post_thumbnail() ):
-  		echo '<div class="widget-post-thumbnail" style="background-image:url(' . get_the_post_thumbnail_url() . ');"></div>';
-  	endif;
-
-	echo '<h3 class="lcp_post">';
-	echo the_title();
-	echo '</h3>'; 
+  	echo '<a href="' . esc_url( get_permalink() ) . '">';
+  	if ( has_post_thumbnail() ) {
+  		echo '<div class="widget-post-thumbnail" style="background-image:url(' . get_the_post_thumbnail_url() . ');">';
+  		echo $post_info;
+  		
+  	} else {
+  		echo '<div class="widget-post-thumbnail">';
+  		echo $post_info; 
+  	}
+  	echo '</div>';
 	echo '</a>';
   	
-	the_date('', '<p class="lcp_date">', '</p>');
-	
-	echo '<div class="lcp_excerpt">';
-		the_excerpt();
-	echo '</div>';
-	echo '</li>';
-	
 endwhile;
  $lcp_display_output .= ob_get_clean();
  
 // Close the wrapper I opened at the beginning:
-$lcp_display_output .= '</ul>';
+$lcp_display_output .= '</div>';
 
 // If there's a "more link", show it:
 $lcp_display_output .= $this->get_morelink();
