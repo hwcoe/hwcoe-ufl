@@ -154,7 +154,7 @@
 	background-repeat: no-repeat;
 	margin-bottom: $grid-gutter-width/2;
 	
-	@include break( mediumPort ){
+	@include break( mediumPort ) {
 		margin-right: $grid-gutter-width;
 		margin-bottom: $grid-gutter-width;
 		float:left;

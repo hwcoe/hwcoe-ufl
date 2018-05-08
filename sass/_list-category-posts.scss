@@ -11,11 +11,12 @@
 	.lcp_post {
 		@extend .widget-post-title;
 	}
-	.lcp_post_info {
-		height: 160px;
-		position: absolute;
-		bottom: 15px;
-		padding: $grid-gutter-width/2;
+	.lcp_post_alt {
+		@extend .widget-title;
+		font: 500 20px/26px $serifFontFamily; 
+		margin-bottom: 0;
+		color:$white;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.85);
 	}
 	.lcp_date {
 		@extend .rss-date;
@@ -23,24 +24,47 @@
 	.lcp_excerpt {
 		@extend .widget-post-excerpt;
 	}
+	.lcp_readmore {
+		@extend .article-post-more;
+		text-decoration: underline;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: $orange;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.85);
+		margin-bottom: 0;
+	}
+	.lcp_post_info {
+		position: absolute;
+		bottom: 0;
+		// background: rgba(0,0,0, 0.4);
+		padding: $grid-gutter-width/2;
+		// padding-top: 75px;
+	}
 	// TODO: CROSS BROWSER/SIZE TESTING
 	.lcp_img_bg {
 		// margin: -$grid-gutter-width;
 		// position: absolute;
 		// top:0;
 		// left:0;
-		padding-top: 160px;
+		// padding-top: 160px;
+		min-height: 205px;
+		.gradient-bg:after {
+			height:80%;
+			background: linear-gradient( to top, rgba(0,0,0,.7), rgba(0,0,0,0) );
+		}
 		.widget-post-thumbnail {
-			height: 250px;
+			min-height: 290px;
 			width: calc(100% - 30px);
 			margin-left: 15px;
 			position: absolute;
 			top:0;	
 			left: 0;
-			// background-position: calc(100% + 15px) top;
-			// position: relative;
-			// top: 0;
-			// margin-left: $grid-gutter-width;
+			@include break( mediumPort ) {
+				// min-height: 270px;
+			}
+			@include breakTo ( medium ) {
+				min-height: 270px;
+			}
 		}
 	}
 }
