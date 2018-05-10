@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: No Container | Home Page
+ * Template Name: Home Page - No Container
  * 
  * @package HWCOE_UFL
  *
@@ -57,5 +57,7 @@ get_header();
 
 <?php endwhile //the_post ?>
 
-<?php get_sidebar('page_sections'); ?>
+<?php if ( is_front_page() ) {
+	get_sidebar('page_sections'); 
+} ?>
 <?php get_footer(); ?>

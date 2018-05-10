@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blank | No Header or Footer
+ * Template Name: Blank - No Header or Footer
  * 
  * @package HWCOE_UFL
  *

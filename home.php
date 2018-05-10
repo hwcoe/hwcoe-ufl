@@ -27,6 +27,7 @@ get_header();
   </div>
 </div>
 </div>
+
 <?php get_sidebar('page_sections'); ?>
 
 <?php get_footer(); ?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Container | Right Sidebar, No Left Navigation
+ * Template Name: Right Sidebar, No Left Navigation - Container
  * 
  * @package HWCOE_UFL
  *

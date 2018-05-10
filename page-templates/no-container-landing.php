@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: No Container | Landing Page
+ * Template Name: Landing Page - No Container
  * 
  * @package HWCOE_UFL
  *
