@@ -38,7 +38,7 @@
           $recent_posts = get_posts( $args );
           $stat_story = $recent_posts[0];
           wp_reset_postdata();
-          $excerpt = ( $stat_story->post_excerpt ? $stat_story->post_excerpt : ufl_athena_trim_content( $stat_story->post_content, 135, '...' ));
+          $excerpt = ( $stat_story->post_excerpt ? $stat_story->post_excerpt : hwcoe_ufl_trim_content( $stat_story->post_content, 135, '...' ));
         ?>
         <?php $story_background = (get_sub_field( 'story_background_image') ? get_sub_field( 'story_background_image' ) : wp_get_attachment_url( get_post_thumbnail_id( $stat_story->ID ) ) ); ?>
         <div class="big-stat-wrap <?php if( get_sub_field('background_gradient') ){ echo "gradient-bg"; } ?>" <?php if( $story_background ){ echo "style='background-image:url(" . $story_background . ")'"; } ?>>
@@ -97,7 +97,7 @@
           $recent_posts = get_posts( $args );
           $stat_story = $recent_posts[0];
           wp_reset_postdata();
-          $excerpt = ( $stat_story->post_excerpt ? $stat_story->post_excerpt : ufl_athena_trim_content( $stat_story->post_content, 135, '...' ));
+          $excerpt = ( $stat_story->post_excerpt ? $stat_story->post_excerpt : hwcoe_ufl_trim_content( $stat_story->post_content, 135, '...' ));
         ?>
         <?php $story_background = (get_sub_field( 'story_background_image') ? get_sub_field( 'story_background_image' ) : wp_get_attachment_url( get_post_thumbnail_id( $stat_story->ID ) ) ); ?>
         <div class="big-stat-wrap big-stat-img two <?php if( get_sub_field('background_gradient') ){ echo "gradient-bg"; } ?>" <?php if( $story_background ){ echo "style='background-image:url(" . $story_background . ")'"; } ?>>
@@ -145,7 +145,7 @@
           $recent_posts = get_posts( $args );
           $stat_story = $recent_posts[0];
           wp_reset_postdata();
-          $excerpt = ( $stat_story->post_excerpt ? $stat_story->post_excerpt : ufl_athena_trim_content( $stat_story->post_content, 135, '...' ));
+          $excerpt = ( $stat_story->post_excerpt ? $stat_story->post_excerpt : hwcoe_ufl_trim_content( $stat_story->post_content, 135, '...' ));
         ?>
         <?php $story_background = (get_sub_field( 'story_background_image') ? get_sub_field( 'story_background_image' ) : wp_get_attachment_url( get_post_thumbnail_id( $stat_story->ID ) ) ); ?>
         <div class="big-stat-wrap three <?php if( get_sub_field('background_gradient') ){ echo "gradient-bg"; } ?>" <?php if( $story_background ){ echo "style='background-image:url(" . $story_background . ")'"; } ?>>

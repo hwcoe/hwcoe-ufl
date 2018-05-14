@@ -11,8 +11,8 @@ get_header();
 	<div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
 		<div class="home-section">
 			<div class="page-wrapper">
-				<?php if( have_rows('page_modules') ): ?>
-					<?php while ( have_rows('page_modules') ) : the_row(); ?>
+				<?php if( have_rows('home_page_modules') ): ?>
+					<?php while ( have_rows('home_page_modules') ) : the_row(); ?>
 						<?php
 						  /*
 						   * Featured Story Module
@@ -23,6 +23,15 @@ get_header();
 						<?php if( get_row_layout() == 'featured_stories' ): ?>
 							<?php include( HWCOE_UFL_INC_DIR . '/ufl-featured-story.php' ); ?>
 						<?php endif // featured_story ?>
+						<?php
+						  /*
+						   * Secondary Featured Stories/Widgets Module
+						   * return up to 3 secondary feature stories or widgets
+						   */
+						  ?>
+						<?php if( get_row_layout() == 'secondary_featured_content' ): ?>
+							<?php include( HWCOE_UFL_INC_DIR . '/ufl-secondary-featured.php' ); ?>
+						<?php endif // secondary_featured_module ?>
 						<?php
 						  /*
 						   * Statistics Module
@@ -49,8 +58,8 @@ get_header();
 						<?php if( get_row_layout() == 'profile_module' ): ?>
 							<?php include( HWCOE_UFL_INC_DIR . '/ufl-profile.php' ); ?>
 						<?php endif // profile_module ?>
-					<?php endwhile //page_modules ?>
-				<?php endif // page_modules ?>
+					<?php endwhile //home_page_modules ?>
+				<?php endif // home_page_modules ?>
 			</div> <!-- page-wrapper -->
 		</div><!-- home-section -->
 	</div>

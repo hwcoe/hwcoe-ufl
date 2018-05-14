@@ -209,3 +209,18 @@ if( function_exists('acf_add_options_page') ) {
     'redirect'  => false
   ));
 }
+
+/*
+ * Trim content
+ * Useful for generating exceprt like snippets of content
+ */
+
+function hwcoe_ufl_trim_content( $content, $length, $after_content ){
+
+  if( strlen( $content ) > $length ){
+    $trimmed_content = substr( strip_tags( $content ), 0,  $length  ) . $after_content;
+    return $trimmed_content; 
+  } else{
+    return $content;
+  }
+}

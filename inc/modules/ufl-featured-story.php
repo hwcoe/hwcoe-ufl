@@ -15,7 +15,7 @@ $stories = array();
         $featured_image   = '';
         $title            = get_sub_field( 'story_title' );
         $category         = get_sub_field( 'primary_category' );
-        $tagline          = trim( get_sub_field( 'read_more_tagline' ) );
+        $tagline          = trim( get_sub_field( 'link_text' ) );
 
         if( $internal ){
           $page   = get_sub_field( 'internal_link' ); 
