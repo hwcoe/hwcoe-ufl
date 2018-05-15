@@ -226,21 +226,23 @@
 	.stat-wrap {
 		position: relative;
 		@include breakFirst(medium){
-			float: left;
+			// float: left;
+			float: right;
 		}
 		@include breakFirst(large){
-			margin-top: 200px;
+			// margin-top: 200px;
 		}
 		@include breakFirst(wide){
-			margin-top: 300px;
+			// margin-top: 300px;
 		}
 		&.one {
 			@include breakFirst(large){
 				float: right;
-				margin: -200px 13% 0 0;
+				margin: -200px 0 0 0;
+				// margin: -200px 13% 0 0;
 			}
 			@include breakFirst(wide){
-				margin: -200px 18.5% 0 0;
+				// margin: -200px 18.5% 0 0;
 			}
 		}
 	}
@@ -261,149 +263,20 @@
     background-size: cover;
   }
 	@include breakFirst(large){
-		width: 270px;
+		// width: 270px;
+		width: percentage((5 / $grid-columns));
 	}
 	&.in-bottom {
-		.stat {
-	  	@include breakFirst(large){
-				background-image: url(img/_temp-bg-stat-in-vert.jpg);
-				background-position: center top;
-			}
-		}
-		&:hover {
-	    .info {
-	      transform: perspective(800px) rotate3d(1, 0, 0, 0);
-	    }
-	  }
-	  .info {
-	  	@include breakFirst(large){
-				background-image: url(img/_temp-bg-stat-in-vert.jpg);
-		  	background-position: center bottom;
-	   		bottom: -100%;
-		    transform-origin: top center;
-		    transform: perspective(800px) rotate3d(1, 0, 0, -90deg);
-		  }
-	  }
-	}
-	&.in-top {
-		.stat {
-	  	@include breakFirst(large){
-				background-image: url(img/_temp-bg-stat-in-vert.jpg);
-				background-position: center bottom;
-			}
-		}
-		&:hover {
-	    .info {
-	      transform: perspective(800px) rotate3d(1, 0, 0, 0);
-	    }
-	  }
-	  .info {
-	  	@include breakFirst(large){
-				background-image: url(img/_temp-bg-stat-in-vert.jpg);
-		  	background-position: center top;
-	   		top: -100%;
-		    transform-origin: bottom center;
-		    transform: perspective(800px) rotate3d(1, 0, 0, 90deg);
-		  }
-	  }
+		
 	}
 	&.in-left {
-		.stat {
-			background-position: center right;
-		}
-		&:hover {
-	    .info {
-	    transform: perspective(800px) rotate3d(1, 0, 0, 0) rotateY(0);
-	    }
-	  }
-	  .info {
-	  	background-position: center left;
-	  	@include breakFirst(large){
-		  	left: -100%;
-		    transform-origin: right center;
-		    transform: perspective(800px) rotate3d(1, 0, 0, 0) rotateY(-90deg);
-		  	top: 0;
-		  }
-	  }
+		
+		
 	}
 	&.in-right {
-		.stat {
-			background-position: center left;
-		}
-		&:hover {
-	    .info {
-	    transform: perspective(800px) rotate3d(1, 0, 0, 0) rotateY(0);
-	    }
-	  }
-	  .info {
-	  	background-position: center right;
-	  	@include breakFirst(large){
-		  	right: -100%;
-		    transform-origin: left center;
-		    transform: perspective(800px) rotate3d(1, 0, 0, 0) rotateY(90deg);
-		  	top: 0;
-		  }
-	  }
+		
 	}
-	.stat {
-		min-height: 150px;
-    position: relative;
-    text-align: center;
-    width: 100%;
-    @media (min-width: 450px){
-    	height: 100%;
-    	width: 50%;
-    }
-    @include breakFirst(large){
-	    background-image: url(img/_temp-bg-stat-hor.jpg);
-	    background-repeat: no-repeat;
-	    background-size: cover;
-    	width: 100%;
-    }
-    h2 {
-    	@extend %centerVertAll;
-    }
-  }
-  .info {
-    backface-visibility: visible !important;
-    letter-spacing: 2px;
-    min-height: 150px;
-    width: 100%;
-    @media (min-width: 450px){
-    	height: 100%;
-    	width: 50%;
-    }
-    @include breakFirst(large){
-	    background-image: url(img/_temp-bg-stat.jpg);
-	    background-repeat: no-repeat;
-	    background-size: cover;
-    	position: absolute;
-    	width: 100%;
-    }
-    &:after {
-    	@include breakFirst(large){
-	    	background: $orange;
-	    	background: transparentize($orange, .25);
-	    	content: '';
-	    	display: block;
-	    	height: 100%;
-	    	left: 0;
-	    	position: absolute;
-	    	top: 0;
-	    	width: 100%;
-	    	z-index: 1;
-	    }
-    }
-  }
-  .no-csstransforms3d & .info {
-  	display: none;
-  }
-  .no-csstransforms3d &:hover .info {
-  	display: block;
-  }
-  .info-copy {
-  	@extend %centerVertAll;
-  }
+
 }
 .big-stat-wrap, .tweet-block {
 	background: $blue url(img/bg-big-stat.png) no-repeat center center;
@@ -422,25 +295,30 @@
 	}
 	@include breakFirst(large){
 		clear: left;
-		height: 400px;
 		margin: 0;
 		padding: 0;
-		width: 400px;
+		height: 400px;
+		// width: 400px;
 	}
 	&.two,&.three {
 		@include breakFirst(large){
 		  clear: none;
-		  float: right;
+		  // float: right;
 		  position: relative;
 		}
 	}
 	&.two {
 		background-image: url(img/bg-big-stat-alert.jpg);
+		@include breakFirst(large){
+			margin-right: percentage((1 / $grid-columns));
+		}
 	}
 	&.three {
 		@include breakFirst(large){
 		  float: right;
-		  margin-right: 100px;
+		  width: percentage((5 / $grid-columns));
+		  margin-top: -50px;
+		  // margin-right: 100px;
 		}
 	}
 	&.four {
@@ -583,5 +461,11 @@
 		@include breakFirst(large){
 			left: -25px;
 		}
+	}
+}
+.standalone {
+	margin: 0 0 80px;
+	.homepage-stat-wrap .stat-wrap.one {
+		margin:-50px 0 0 0;
 	}
 }
