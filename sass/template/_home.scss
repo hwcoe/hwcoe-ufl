@@ -245,6 +245,12 @@
 				// margin: -200px 18.5% 0 0;
 			}
 		}
+		&.two {
+			@include breakFirst(large){
+				// margin-right: percentage((1 / $grid-columns));
+				width: 50%;
+			}
+		}
 	}
 }
 .stat-wrap {
@@ -254,7 +260,7 @@
 		min-height: 350px;
 		width: 50%;
 	}
-	@media (min-width: 450px){
+	@include breakFirst(large){
 		height: 270px;
 	}
 	@include breakTo(large){
@@ -270,7 +276,6 @@
 		
 	}
 	&.in-left {
-		
 		
 	}
 	&.in-right {
@@ -308,10 +313,11 @@
 		}
 	}
 	&.two {
-		background-image: url(img/bg-big-stat-alert.jpg);
-		@include breakFirst(large){
-			margin-right: percentage((1 / $grid-columns));
-		}
+		// background-image: url(img/bg-big-stat-alert.jpg);
+		// @include breakFirst(large){
+		// 	margin-right: percentage((1 / $grid-columns));
+		// 	width: 50%;
+		// }
 	}
 	&.three {
 		@include breakFirst(large){

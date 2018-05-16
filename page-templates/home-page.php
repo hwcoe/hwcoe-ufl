@@ -26,20 +26,11 @@ get_header();
 						<?php
 						  /*
 						   * Secondary Featured Stories/Widgets Module
-						   * return up to 3 secondary feature stories or widgets
+						   * return 3 secondary feature stories or content blocks
 						   */
 						  ?>
-						<?php if( get_row_layout() == 'secondary_featured_content' ): ?>
+						<?php if( get_row_layout() == 'secondary_featured' ): ?>
 							<?php include( HWCOE_UFL_INC_DIR . '/ufl-secondary-featured.php' ); ?>
-						<?php endif // secondary_featured_module ?>
-						<?php
-						  /*
-						   * Statistics Module
-						   * return up to 4 statistics
-						   */
-						  ?>
-						<?php if( get_row_layout() == 'statistics_module' ): ?>
-							<?php include( HWCOE_UFL_INC_DIR . '/ufl-statistics.php' ); ?>
 						<?php endif // statistics_module ?>
 						<?php
 						  /*
