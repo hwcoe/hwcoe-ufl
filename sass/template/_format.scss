@@ -426,11 +426,11 @@ img {
 
 .gradient-bg {
 	&:after {
-		background: linear-gradient( to top, rgba(0,0,0,.5), rgba(0,0,0,0) );
+		background: linear-gradient( to top, rgba(0,0,0,.7), rgba(0,0,0,0) );
 		bottom: 0;
 		content: '';
 		display: block;
-		height: 60%;
+		height: 80%;
 		left: 0;
 		pointer-events: none;
 		position: absolute;

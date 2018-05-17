@@ -9,7 +9,7 @@
 		}
 	}
 }
-.stat-wrap, .stat-block-wrap {
+.stat-block-wrap {
 	margin-bottom: 20px;
 	@include breakFirst(medium){
 		margin: 0;
@@ -103,11 +103,6 @@
 		}
 	}
 }
-.stat-wrap {
-	.info {
-		transition: transform .2s ease-out;
-	}
-}
 .stat-block-wrap {
 	background: none no-repeat center center;
 	background-size: cover;
@@ -146,9 +141,4 @@
 	@extend %centerVertAll;
 	padding: 0 15px;
 	width: 100%;
-}
-.stat-wrap {
-	.stat-block {
-		@extend %centerVert;
-	}
 }

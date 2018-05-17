@@ -46,7 +46,7 @@ $stories = array();
   </div><!-- ./featured-story-img-wrap -->
 </div><!-- ./featured-story-wrap -->
 
-<div class="homepage-stat-wrap">
+<div class="homepage-secondary-featured-wrap">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">

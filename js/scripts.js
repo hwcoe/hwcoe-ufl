@@ -71,7 +71,7 @@ jQuery(function($){
 				statIndex++;
 			});
 		});
-		$(".homepage-stat-wrap").find(".stat-wrap.randomized").each(function(  ){
+		$(".homepage-secondary-featured-wrap").find(".stat-wrap.randomized").each(function(  ){
 			if (statIndex >= stats.length) { statIndex = 0; }
 			var position = $(this).data("position");
 			$(this).find(".stat h2").html(stats[statIndex].stat);
@@ -92,7 +92,7 @@ jQuery(function($){
 			statBreakerPopulator( shuffledUFStats );
 		}).always(function(){
 			statLengthClassifier( '.stat-block .stat', 4 );
-			statLengthClassifier( '.homepage-stat-wrap .stat', 3 );
+			statLengthClassifier( '.homepage-secondary-featured-wrap .stat', 3 );
 		});
 	}
 	
@@ -183,7 +183,7 @@ jQuery(function($){
 	}
 	
 	function displayUFAlert() {
-		var alertContainer = $(".homepage-stat-wrap .big-stat-wrap.two");
+		var alertContainer = $(".homepage-secondary-featured-wrap .secondary-featured-story.two");
 		if (alertContainer) {
 			$.getJSON('http://ufalert.ufl.edu/wp-json/wp/v2/posts/?filter[cat]=22').done(function(json){
 				var timeThreshold = Math.floor((new Date().getTime() ) - 10800000); // milliseconds
@@ -191,9 +191,9 @@ jQuery(function($){
 				var alertDate = new Date(lastAlert.date);
 				var alertTime = alertDate.getTime();
 				if (alertTime > timeThreshold) {
-					alertContainer.addClass("ufalert").removeClass('big-stat-img').css('background-image','url('+hwcoe_ufl_sitedata.theme_url+'/img/bg-big-stat-alert.jpg)');
+					alertContainer.addClass("ufalert").css('background-image','url('+hwcoe_ufl_sitedata.theme_url+'/img/bg-big-stat-alert.jpg)');
 					alertContainer.children(".category-tag").html('<span class="icon-svg icon-alert"><svg><use xlink:href="'+hwcoe_ufl_sitedata.theme_url+'/img/spritemap.svg#alert"></use></svg></span> '+lastAlert.title.rendered);
-					alertContainer.children(".big-stat-copy").find("a").attr("href", lastAlert.link).first().text(lastAlert.title.rendered);
+					alertContainer.children(".secondary-featured-copy").find("a").attr("href", lastAlert.link).first().text(lastAlert.title.rendered);
 				}
 			});
 		}

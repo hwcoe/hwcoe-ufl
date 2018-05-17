@@ -191,7 +191,7 @@
 	  color: $white;
 	}
 }
-.homepage-stat-wrap {
+.homepage-secondary-featured-wrap {
 	margin: -100px 0 30px;
 	position: relative;
 	z-index: 2;
@@ -199,7 +199,7 @@
 		margin: -211px 0 80px;
 	}
 }
-.homepage-stat-wrap.bottom {
+.homepage-secondary-featured-wrap.bottom {
 	margin: 0;
 	@include breakFirst(medium){
 		margin: 0 0 100px;
@@ -222,8 +222,8 @@
 		}
 	}
 }
-.homepage-stat-wrap,.homepage-stat-wrap-two {
-	.stat-wrap {
+.homepage-secondary-featured-wrap {
+	.secondary-featured-block {
 		position: relative;
 		@include breakFirst(medium){
 			// float: left;
@@ -237,9 +237,10 @@
 		}
 		&.one {
 			@include breakFirst(large){
-				float: right;
-				margin: -200px 0 0 0;
-				// margin: -200px 13% 0 0;
+				// float: right;
+				margin-top: -120px;
+				width: 39%;
+				margin-left: 2.6%;
 			}
 			@include breakFirst(wide){
 				// margin: -200px 18.5% 0 0;
@@ -247,13 +248,13 @@
 		}
 		&.two {
 			@include breakFirst(large){
-				// margin-right: percentage((1 / $grid-columns));
 				width: 50%;
+				margin-top: 20px;
 			}
 		}
 	}
 }
-.stat-wrap {
+.secondary-featured-block {
 	width: 100%;
 	@include break(medium){
 		margin: 0;
@@ -270,7 +271,7 @@
   }
 	@include breakFirst(large){
 		// width: 270px;
-		width: percentage((5 / $grid-columns));
+		// width: percentage((5 / $grid-columns));
 	}
 	&.in-bottom {
 		
@@ -283,7 +284,7 @@
 	}
 
 }
-.big-stat-wrap, .tweet-block {
+.secondary-featured-story, .tweet-block {
 	background: $blue url(img/bg-big-stat.png) no-repeat center center;
 	background-size: cover;
 	margin-bottom: 20px;
@@ -293,7 +294,7 @@
 	width: 100%;
 	@include break(medium){
 		margin: 0;
-		width: 50%;
+		// width: 50%;
 	}
 	@include breakFirst(medium){
 		float: left;
@@ -303,7 +304,20 @@
 		margin: 0;
 		padding: 0;
 		height: 400px;
+		// width: 50%;
 		// width: 400px;
+	}
+}
+.secondary-featured-story {
+	h2 {
+		font: 500 24px/32px $serifFontFamily;
+		text-transform: none;
+	}
+	.one & {
+		@include breakFirst(large){
+			min-height: 260px;
+			height: 260px;
+		}
 	}
 	&.two,&.three {
 		@include breakFirst(large){
@@ -320,31 +334,31 @@
 		// }
 	}
 	&.three {
+		margin-top: -90px;
 		@include breakFirst(large){
 		  float: right;
-		  width: percentage((5 / $grid-columns));
-		  margin-top: -50px;
-		  // margin-right: 100px;
+		  width: 39%;
+		  // margin-top: 15px;
+		  margin-top: -130px;
 		}
-	}
-	&.four {
-		background-image: url(img/_temp3.jpg);
-		@include breakFirst(large){
-		  float: left;
-			margin-left: 290px;
-		}
-		@include breakFirst(wide){
-		  margin-left: 100px;
+		@include break(medium){
+			margin-top: -65px;
 		}
 	}
 	.category-tag {
-		left: auto;
-		top: 22px;
-		right: 15px;
+		right: auto;
+		top: 15px;
+		left: 15px;
 		@include breakFirst(large){
-			top: 45px;
-			right: -25px;
+			left: -15px;
 		}
+		// commented out - right align category tag on right aligned blocks
+		// .one &, .three & {
+		// 	@include breakFirst(large){
+		// 		left: auto;
+		// 		right: -15px;
+		// 	}
+		// }	
 	}
 	&.alert {
 		.category-tag {
@@ -352,16 +366,13 @@
 			color: $white;
 			left: 15px;
 			right: auto;
-
 			@include breakFirst(large){
 				left: -15px;
 			}
-
 			&:hover {
 				color: $red;
 				background: $white;
 			}
-
 			.icon-alert {
 				height: 15px;
 				width: 15px;
@@ -419,18 +430,21 @@
 		}
 	}
 }
-.big-stat-copy {
+// .big-stat-copy {
+.secondary-featured-copy {
 	color: $white;
 	font-size: 16px;
 	font-weight: 100;
 	line-height: 24px;
 	padding: 0 30px 30px;
 	width: 100%;
-	z-index: 2;
+	bottom: 0;
+	left: 0;
+	position: absolute;
 	@include breakFirst(medium){
-		bottom: 0;
-		left: 0;
-		position: absolute;
+		// bottom: 0;
+		// left: 0;
+		// position: absolute;
 	}
 	@include breakFirst(large){
 		padding: 40px;
@@ -456,22 +470,9 @@
 		margin-bottom: 20px;
 	}
 }
-.big-stat-img {
-	h2 {
-		font: 500 24px/32px $serifFontFamily;
-		text-transform: none;
-	}
-	.category-tag {
-		right: auto;
-		left: 15px;
-		@include breakFirst(large){
-			left: -25px;
-		}
-	}
-}
 .standalone {
 	margin: 0 0 80px;
-	.homepage-stat-wrap .stat-wrap.one {
+	.homepage-secondary-featured-wrap .secondary-featured-block.one {
 		margin:-50px 0 0 0;
 	}
 }
