@@ -238,7 +238,7 @@
 		&.one {
 			@include breakFirst(large){
 				// float: right;
-				margin-top: -120px;
+				margin-top: -200px;
 				width: 39%;
 				margin-left: 2.6%;
 			}
@@ -250,7 +250,17 @@
 			@include breakFirst(large){
 				width: 50%;
 				margin-top: 20px;
+			  	clear: none;
+				position: relative;
 			}
+		}
+		&.three {
+			width: 100%;
+			margin-top: 0;
+			@include breakFirst(large){
+				margin-top: -80px;
+			}
+			
 		}
 	}
 }
@@ -309,17 +319,14 @@
 	}
 }
 .secondary-featured-story {
-	h2 {
-		font: 500 24px/32px $serifFontFamily;
-		text-transform: none;
-	}
 	.one & {
 		@include breakFirst(large){
-			min-height: 260px;
-			height: 260px;
+			min-height: 300px;
+			height: 300px;
 		}
 	}
-	&.two,&.three {
+	.two &, .three & {
+	// &.two,&.three {
 		@include breakFirst(large){
 		  clear: none;
 		  // float: right;
@@ -333,16 +340,13 @@
 		// 	width: 50%;
 		// }
 	}
-	&.three {
+	// &.three {
+	.three & {
 		margin-top: -90px;
 		@include breakFirst(large){
 		  float: right;
 		  width: 39%;
-		  // margin-top: 15px;
-		  margin-top: -130px;
-		}
-		@include break(medium){
-			margin-top: -65px;
+		  // margin-top: -170px;
 		}
 	}
 	.category-tag {
@@ -384,6 +388,10 @@
 }
 .tweet-block {
 	background: $blueLight;
+	// 	@include break(medium){
+	// 		padding: 0;
+	// 		height: 350px;
+	// }
 }
 .tweet-copy {
 	color: $white;
@@ -436,7 +444,7 @@
 	font-size: 16px;
 	font-weight: 100;
 	line-height: 24px;
-	padding: 0 30px 30px;
+	padding: 0 30px 15px;
 	width: 100%;
 	bottom: 0;
 	left: 0;
@@ -447,13 +455,13 @@
 		// position: absolute;
 	}
 	@include breakFirst(large){
-		padding: 40px;
+		padding: 15px 20px;
 	}
 	h2 {
 		color: $white;
-		font: 700 24px/30px $fontFamily;
-		margin-bottom: 20px;
-		text-transform: uppercase;
+		margin-bottom: 10px;
+		font: 500 24px/28px $serifFontFamily;
+		text-transform: none;
 		@include breakFirst(large){
 			font-size: 28px;
 			line-height: 32px;
@@ -467,12 +475,7 @@
 		}
 	}
 	p {
-		margin-bottom: 20px;
-	}
-}
-.standalone {
-	margin: 0 0 80px;
-	.homepage-secondary-featured-wrap .secondary-featured-block.one {
-		margin:-50px 0 0 0;
+		margin-bottom: 10px;
+		line-height: 20px;
 	}
 }
