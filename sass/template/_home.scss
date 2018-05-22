@@ -256,7 +256,8 @@
 		}
 		&.three {
 			width: 100%;
-			margin-top: 0;
+			// margin-top: 0;
+			margin-top: 20px;
 			@include breakFirst(large){
 				margin-top: -80px;
 			}
@@ -294,59 +295,12 @@
 	}
 
 }
-.secondary-featured-story, .tweet-block {
-	background: $blue url(img/bg-big-stat.png) no-repeat center center;
-	background-size: cover;
-	margin-bottom: 20px;
-	min-height: 350px;
-	padding-top: 87px;
-	position: relative;
-	width: 100%;
-	@include break(medium){
-		margin: 0;
-		// width: 50%;
-	}
-	@include breakFirst(medium){
-		float: left;
-	}
-	@include breakFirst(large){
-		clear: left;
-		margin: 0;
-		padding: 0;
-		height: 400px;
-		// width: 50%;
-		// width: 400px;
-	}
-}
 .secondary-featured-story {
+	padding-top: 87px;
 	.one & {
 		@include breakFirst(large){
 			min-height: 300px;
 			height: 300px;
-		}
-	}
-	.two &, .three & {
-	// &.two,&.three {
-		@include breakFirst(large){
-		  clear: none;
-		  // float: right;
-		  position: relative;
-		}
-	}
-	&.two {
-		// background-image: url(img/bg-big-stat-alert.jpg);
-		// @include breakFirst(large){
-		// 	margin-right: percentage((1 / $grid-columns));
-		// 	width: 50%;
-		// }
-	}
-	// &.three {
-	.three & {
-		margin-top: -90px;
-		@include breakFirst(large){
-		  float: right;
-		  width: 39%;
-		  // margin-top: -170px;
 		}
 	}
 	.category-tag {
@@ -383,6 +337,47 @@
 				vertical-align: bottom;
 				margin-right: 5px;
 			}
+		}
+	}
+}
+.secondary-featured-story, .tweet-block {
+	background: $blue url(img/bg-big-stat.png) no-repeat center center;
+	background-size: cover;
+	margin-bottom: 20px;
+	min-height: 350px;
+	// padding-top: 87px;
+	position: relative;
+	width: 100%;
+	@include break(medium){
+		margin: 0;
+	}
+	@include breakFirst(medium){
+		float: left;
+	}
+	@include breakFirst(large){
+		clear: left;
+		margin: 0;
+		padding: 0;
+		height: 400px;
+	}
+	.two &, .three & {
+	// &.two,&.three {
+		@include breakFirst(large){
+		  clear: none;
+		  // float: right;
+		  position: relative;
+		}
+	}
+	.two & {
+		@include breakFirst(large){
+			height: 460px;
+		}
+	}
+	.three & {
+		@include breakFirst(large){
+			float: right;
+			width: 39%;
+			margin-top: -90px;
 		}
 	}
 }
@@ -469,6 +464,7 @@
 		a {
 			color: $white;
 			display: block;
+			text-decoration: underline;
 			&:hover {
 				color: $orange;
 			}
@@ -477,5 +473,23 @@
 	p {
 		margin-bottom: 10px;
 		line-height: 20px;
+	}
+	ul.lcp_catlist {
+		margin:0;
+		h2 {
+			font: 500 18px/22px $fontFamily;
+			text-transform: uppercase;
+			margin:5px 0;
+			@include breakFirst(large){
+				font: 500 24px/28px $fontFamily;
+			}
+		}
+
+		li {
+			text-transform: none;
+			&:before {
+				content:none;
+			}
+		}
 	}
 }
