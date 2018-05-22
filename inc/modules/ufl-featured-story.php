@@ -68,8 +68,11 @@ $stories = array();
 <?php endforeach //stories ?>
 			 </div>
 		  </div><!-- ./featured-story-content-wrap -->
+		<?php if ( get_sub_field('no_secondary_featured_content') ): ?>
+
 		<!-- TODO: close secondary-featured-wrap divs if no secondary featured content module -->
-<!--       </div>
+      </div>
 	 </div>
   </div>
-</div> -->
+</div>
+<?php endif ?>

@@ -20,8 +20,10 @@ get_header();
 						   * with hero graphic
 						   */
 						?>
+
 						<?php if( get_row_layout() == 'featured_stories' ): ?>
-							<?php include( HWCOE_UFL_INC_DIR . '/ufl-featured-story.php' ); ?>
+							<?php include( HWCOE_UFL_INC_DIR . '/ufl-featured-story.php' ); ?>	
+							
 						<?php endif // featured_story ?>
 						<?php
 						  /*
@@ -29,9 +31,11 @@ get_header();
 						   * return 3 secondary feature stories or content blocks
 						   */
 						  ?>
+
 						<?php if( get_row_layout() == 'secondary_featured' ): ?>
 							<?php include( HWCOE_UFL_INC_DIR . '/ufl-secondary-featured.php' ); ?>
-						<?php endif // statistics_module ?>
+						<?php endif // secondary_featured ?>
+	
 						<?php
 						  /*
 						   * Secondary Module

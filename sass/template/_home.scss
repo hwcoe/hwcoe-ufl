@@ -297,6 +297,9 @@
 }
 .secondary-featured-story {
 	padding-top: 87px;
+	* {
+		z-index: 2;
+	}
 	.one & {
 		@include breakFirst(large){
 			min-height: 300px;
@@ -481,7 +484,7 @@
 			text-transform: uppercase;
 			margin:5px 0;
 			@include breakFirst(large){
-				font: 500 24px/28px $fontFamily;
+				font: 500 22px/28px $fontFamily;
 			}
 		}
 
