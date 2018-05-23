@@ -1,112 +1,131 @@
 .stat-breaker {
 	background: $blueDark url(img/bg-texture-dark.png);
-	height: 460px;
+	height: 480px;
 	margin-bottom: 100px;
 	position: relative;
-	.stat {
-		@include break(medium){
-			float: none !important;
-		}
+	h2 {
+		position: absolute;
+		top: 50px;
+		z-index: 2;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		color:$white;
+    	text-shadow: 3px 3px 1px $orange;
+    	font: 700 52px/1 $fontFamily;
 	}
+	// .stat {
+	// 	@include break(medium){
+	// 		float: none !important;
+	// 	}
+	// }
 }
 .stat-block-wrap {
 	margin-bottom: 20px;
+	background: none no-repeat center center;
+	background-size: cover;
+	height: 480px;
+	
 	@include breakFirst(medium){
 		margin: 0;
 	}
-	.stat {
-    text-align: center;
-		@media (min-width: 450px){
-    	height: 100%;
-			float: left;
+	h3 {
+		color: $orange;
+		font: 700 64px/1 $fontFamily;
+		margin: 0;
+		padding: 0 15px;
+		text-shadow: 3px 3px 1px $white;
+		width: 100%;
+		word-wrap: break-word;
+		@include breakTo(large){
+			font-size: 100px;
 		}
-    @include breakFirst(large){
-    	float: none;
-    	width: 100%;
-    }
-    &.large {
-    	h2 {
-    		font-size: 80px;
-	    	@include breakFirst(large){
-	    		font-size: 100px;
-	    	}
-    	}
-    }
-    &.larger {
-    	h2 {
-    		font-size: 70px;
-	    	@include breakFirst(large){
-	    		font-size: 85px;
-	    	}
-    	}
-    }
-    h2 {
-    	color: $white;
-    	font: 700 110px/1 $fontFamily;
-    	margin: 0;
-    	padding: 0 15px;
-    	text-shadow: 5px 5px 2px $orange;
-    	width: 100%;
-    	word-wrap: break-word;
-    	@include breakFirst(medium){
-    		font-size: 80px
-    	}
-    	@include breakFirst(large){
-    		font-size: 150px;
-    		padding: 0 30px;
-    	}
-    }
-  }
-  .info {
-    color: #fef2d2;
-    font: 700 16px/24px $fontFamily;
-    letter-spacing: 2px;
+	}
+	.info {
+		color: #fef2d2;
+		font: 700 16px/24px $fontFamily;
+		letter-spacing: 2px;
 		position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-    z-index: 10;
-		@media (min-width: 450px){
-			float: left;
-    	width: 50%;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+		z-index: 10;
+		p {
+			margin: 0;
 		}
 		.no-touch & {
-	    @include breakFirst(large){
-	    	float: none;
-	    	position: absolute;
-	    	width: 100%;
-	    }
-	  }
-    p {
-    	margin: 0;
-    }
-  }
-	.info-copy {
-	  padding: 0 15px 0;
-	  width: 100%;
-	  z-index: 2;
-		@include breakFirst(large){
-		  padding: 30px 30px 0;
-		}
-		&:before {
 			@include breakFirst(large){
-				background: $blue;
-				content: '';
-				display: block;
-				height: 5px;
-				left: 50%;
-				margin-left: -60px;
+				float: none;
 				position: absolute;
-				top: 0;
-				width: 120px;
+				width: 100%;
+			}
+		}
+
+		@media (min-width: 450px){
+			float: left;
+			width: 50%;
+		}
+	}
+
+}
+.stat-block {
+	@extend %centerVertAll;
+	padding: 0 15px;
+	width: 100%;
+}
+.stat {
+	text-align: center;
+	&.large {
+		h3 {
+			font-size: 80px;
+			@include breakFirst(large){
+				font-size: 100px;
 			}
 		}
 	}
+	&.larger {
+		h3 {
+			font-size: 70px;
+			@include breakFirst(large){
+				font-size: 85px;
+			}
+		}
+	}
+	@media (min-width: 450px){
+		height: 100%;
+		width: 100%;
+		float: left;
+	}
+	@include break(medium){
+		float: none !important;
+	}
+	@include breakFirst(large){
+		float: none;
+	}
+}
+.info-copy {
+	padding: 0 15px 0;
+	width: 100%;
+	z-index: 2;
+	@include breakFirst(large){
+		padding: 30px 30px 0;
+	}
+	&:before {
+		@include breakFirst(large){
+			// background: $blue;
+			content: '';
+			display: block;
+			height: 5px;
+			left: 50%;
+			margin-left: -60px;
+			position: absolute;
+			top: 0;
+			width: 120px;
+		}
+		background: $orange;
+	}
 }
 .stat-block-wrap {
-	background: none no-repeat center center;
-	background-size: cover;
-	height: 460px;
 	&:hover, .touch & {
 		background-image: url(img/_temp-duotone.jpg);
 		.info {
@@ -134,11 +153,6 @@
 		}
 	}
 	.info-copy:before {
-		background: $orange;
+		// background: $orange;
 	}
-}
-.stat-block {
-	@extend %centerVertAll;
-	padding: 0 15px;
-	width: 100%;
 }

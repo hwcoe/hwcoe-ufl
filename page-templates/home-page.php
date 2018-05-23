@@ -33,15 +33,17 @@ get_header();
 						<?php if( get_row_layout() == 'secondary_featured' ): ?>
 							<?php include( HWCOE_UFL_INC_DIR . '/ufl-secondary-featured.php' ); ?>
 						<?php endif // secondary_featured ?>
+						
+
 						<?php
-						  /*
-						   * Secondary Featured Content Module
-						   * return 3 secondary feature stories or content blocks
-						   */
-						 ?>
-						<?php if( get_row_layout() == 'statistics' ): ?>
+						/*
+						* Statistics Module
+						* Up to 6 statistics, depending on row count 
+						*/
+						?>
+						<?php if( get_row_layout() == 'statistics_module' ): ?>
 							<?php include( HWCOE_UFL_INC_DIR . '/ufl-statistics.php' ); ?>
-						<?php endif // statistics ?>
+						<?php endif // statistics_module ?>
 
 						<?php
 						  /*
