@@ -198,27 +198,25 @@
 	@include breakFirst(large){
 		margin: -211px 0 80px;
 	}
-}
-.homepage-secondary-featured-wrap.bottom {
-	margin: 0;
-	@include breakFirst(medium){
-		margin: 0 0 100px;
-	}
-	.featured-story-content-wrap{
-		background: $white;
-		padding: 20px 25px;
+	&.bottom {
+		// appears below hero image, with category tag inside container. To delete?
+		margin: 0;
 		@include breakFirst(large){
-			padding: 35px 40px;
+			margin: 0 0 80px;
 		}
-		h2 {
-			font: 700 34px/38px $fontFamily;
-			letter-spacing: 1px;
-			margin: 0;
-			text-transform: uppercase;
+		.featured-story-content-wrap{
+			background: $white;
+			padding: 20px 25px;
+			width: 100%;
 			@include breakFirst(large){
-				font-size: 60px;
-				line-height: 66px;
+				padding: 35px 40px;
+				width: 80%;
 			}
+		}
+	}
+	&.standalone {
+		@include breakFirst(large){
+			padding-bottom: 60px;
 		}
 	}
 }

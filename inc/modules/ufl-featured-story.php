@@ -10,12 +10,12 @@ $stories = array();
 <?php if( have_rows( 'featured_story' ) ): ?>
   <?php while ( have_rows( 'featured_story' ) ) : the_row(); ?>
 		<?php 
-		  $internal         = ( get_sub_field( 'internal_or_external_link' ) == 'internal' ? true : false ); 
-		  $link             = '';
-		  $featured_image   = '';
-		  $title            = get_sub_field( 'story_title' );
-		  $category         = get_sub_field( 'primary_category' );
-		  $tagline          = trim( get_sub_field( 'link_text' ) );
+		  $internal         	= ( get_sub_field( 'internal_or_external_link' ) == 'internal' ? true : false ); 
+		  $link             	= '';
+		  $featured_image   	= '';
+		  $title            	= get_sub_field( 'story_title' );
+		  $category         	= get_sub_field( 'primary_category' );
+		  $tagline         	= trim( get_sub_field( 'link_text' ) );
 
 		  if( $internal ){
 			 $page   = get_sub_field( 'internal_link' ); 
@@ -45,8 +45,7 @@ $stories = array();
 <?php endif // have_rows ?>
   </div><!-- ./featured-story-img-wrap -->
 </div><!-- ./featured-story-wrap -->
-
-<div class="homepage-secondary-featured-wrap">
+<div class="homepage-secondary-featured-wrap<?php if( get_sub_field('standalone') ){echo ' standalone';} ?><?php if( get_sub_field('alternate_format') ){echo ' bottom';} ?>">
   <div class="container">
 	 <div class="row">
 		<div class="col-sm-12">
@@ -56,22 +55,21 @@ $stories = array();
 				<?php if( 1 === $story_count ): ?>
 				  <div class="featured-story active">
 					 <h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> <a href="<?php echo $story['link']; ?>" class="read-more"><?php echo $story['tagline']; ?></a></h2>
-					 <a href="<?php echo get_category_link( $story['category'][0] ); ?>" class="category-tag"><?php echo get_cat_name( $story['category'][0] ); ?></a>
+					
+					 <a href="<?php echo get_category_link( $story['category'] ); ?>" class="category-tag"><?php echo get_cat_name( $story['category'] ); ?></a>
 				  </div>
 				<?php else:  // story_count ?>
 				  <div data-number="<?php echo $story_count; ?>" class="featured-story">
 					 <h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> <a href="<?php echo $story['link']; ?>" class="read-more"><?php echo $story['tagline']; ?></a></h2>
-					 <a href="<?php echo get_category_link( $story['category'][0] ); ?>" class="category-tag"><?php echo get_cat_name( $story['category'][0] ); ?></a>
+					 <a href="<?php echo get_category_link( $story['category']); ?>" class="category-tag"><?php echo get_cat_name( $story['category'] ); ?></a>
 				  </div>
 				<?php endif // story_count ?>
 			 <?php $story_count++; ?>
 <?php endforeach //stories ?>
 			 </div>
 		  </div><!-- ./featured-story-content-wrap -->
-		<?php if ( get_sub_field('no_secondary_featured_content') ): ?>
-
-		<!-- TODO: close secondary-featured-wrap divs if no secondary featured content module -->
-      </div>
+		<?php if ( get_sub_field('standalone') ): ?>
+		</div>
 	 </div>
   </div>
 </div>

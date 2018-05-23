@@ -20,22 +20,29 @@ get_header();
 						   * with hero graphic
 						   */
 						?>
-
 						<?php if( get_row_layout() == 'featured_stories' ): ?>
-							<?php include( HWCOE_UFL_INC_DIR . '/ufl-featured-story.php' ); ?>	
-							
+							<?php include( HWCOE_UFL_INC_DIR . '/ufl-featured-story.php' ); ?>				
 						<?php endif // featured_story ?>
+					
 						<?php
 						  /*
-						   * Secondary Featured Stories/Widgets Module
+						   * Secondary Featured Content Module
 						   * return 3 secondary feature stories or content blocks
 						   */
-						  ?>
-
+						 ?>
 						<?php if( get_row_layout() == 'secondary_featured' ): ?>
 							<?php include( HWCOE_UFL_INC_DIR . '/ufl-secondary-featured.php' ); ?>
 						<?php endif // secondary_featured ?>
-	
+						<?php
+						  /*
+						   * Secondary Featured Content Module
+						   * return 3 secondary feature stories or content blocks
+						   */
+						 ?>
+						<?php if( get_row_layout() == 'statistics' ): ?>
+							<?php include( HWCOE_UFL_INC_DIR . '/ufl-statistics.php' ); ?>
+						<?php endif // statistics ?>
+
 						<?php
 						  /*
 						   * Secondary Module
@@ -58,7 +65,6 @@ get_header();
 			</div> <!-- page-wrapper -->
 		</div><!-- home-section -->
 	</div>
-
 <?php endwhile //the_post ?>
 
 <?php if ( is_front_page() ) {
