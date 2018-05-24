@@ -50,8 +50,9 @@
 		text-transform: uppercase;
 		width: 100%;
 		z-index: 10;
-		p {
-			margin: 0;
+		@media (min-width: 450px){
+			// float: left;
+			// width: 50%;
 		}
 		.no-touch & {
 			@include breakFirst(large){
@@ -60,13 +61,11 @@
 				width: 100%;
 			}
 		}
-
-		@media (min-width: 450px){
-			float: left;
-			width: 50%;
+		p {
+			margin: 0;
 		}
-	}
 
+	}
 }
 .stat-block {
 	@extend %centerVertAll;
@@ -142,17 +141,5 @@
 			transform: translateY(-50%);
 			z-index: 5;
 		}
-	}
-	.info {
-		width: 100%;
-		.no-touch & {
-			@include breakFirst(large){
-				opacity: 0;
-				z-index: 1
-			}
-		}
-	}
-	.info-copy:before {
-		// background: $orange;
 	}
 }

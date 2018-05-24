@@ -1,18 +1,18 @@
 .breaker {
 	background: url(img/bg-breaker.jpg) no-repeat center center;
 	background-size: cover;
-  margin-bottom: 50px;
-  overflow: hidden;
-  padding: 100px 0;
-  position: relative;
-  text-align: center;
+	margin-bottom: 50px;
+	overflow: hidden;
+	padding: 100px 0;
+	position: relative;
+	text-align: center;
 	@include breakFirst(medium){
-  	margin-bottom: 100px;
-  	padding: 144px 0;
+		margin-bottom: 100px;
+		padding: 144px 0;
 	}
-  &.last {
-    margin: 0;
-  }
+	&.last {
+		margin: 0;
+	}
 	&.home-section.last {
 		background-image: url(img/bg-breaker2.jpg);
 	}
@@ -21,10 +21,10 @@
 		font: 500 20px/30px $serifFontFamily;
 		margin-bottom: 25px;
 		text-shadow: 2px 2px 1px #606060;
-  	@include breakFirst(medium){
-  		font-size: 22px;
-  		line-height: 38px;
-  	}
+		@include breakFirst(medium){
+			font-size: 22px;
+			line-height: 38px;
+		}
 	}
 	h2 {
 		color: $white;
@@ -32,11 +32,16 @@
 		letter-spacing: 1px;
 		margin-bottom: 25px;
 		text-transform: uppercase;
-  	text-shadow: 2px 3px 2px $orange;
-  	@include breakFirst(medium){
-  		font-size: 52px;
-  		line-height: 56px;
-  	}
+		text-shadow: 2px 3px 2px $orange;
+		@include breakFirst(medium){
+			font-size: 52px;
+			line-height: 56px;
+		}
+	}
+	.btn {
+		&:nth-child(even){
+			margin: 8px;
+		}
 	}
 	.icon-circle {
 		margin-bottom: 25px;
