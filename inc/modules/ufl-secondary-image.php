@@ -20,7 +20,7 @@
           </div>
         <?php endif // image_side ?>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 gal-img-content">
         <?php if( 'left' == $image_side ): ?>
         <h2><?php the_sub_field( 'headline' ); ?></h2>
           <div>

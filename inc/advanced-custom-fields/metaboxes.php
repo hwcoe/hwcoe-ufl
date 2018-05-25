@@ -1,9 +1,13 @@
 <?php
 /**
- * Hide the ACF dashboard menu from end users - disable during development
+ * Hide the ACF dashboard menu from users who are not site administrators (single site) or network admins (multisite)
  *
  */
-// define( 'ACF_LITE', true );
+
+// if (!current_user_can('update_plugins')) {
+// 	define( 'ACF_LITE', true ); 
+// }
+define( 'ACF_LITE', true );
 
 /**
  * Enqueue admin scripts and styles.
@@ -18,6 +22,7 @@ add_action( 'admin_enqueue_scripts', 'hwcoe_ufl_metabox_styles_scripts' );
 
 /**
  * Add the ACF exported metaboxes - cannot be edited in dashboard
+ // TODO: add to UI as we want conditional logic to determine whether these appear based on template/post type/etc.
  */
  
 /**
@@ -28,19 +33,20 @@ register_field_group(array (
 	'id' => 'acf_page-options',
 	'title' => 'Page Options',
 	'fields' => array (
-		array (
-			'key' => 'field_57a905164b0d2',
-			'label' => 'Subtitle Text',
-			'name' => 'custom_meta_page_subtitle',
-			'type' => 'text',
-			'instructions' => 'Enter the text that will appear as a secondary title',
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'formatting' => 'none',
-			'maxlength' => '',
-		),
+		// commented out until we put it in the template
+		// array (
+		// 	'key' => 'field_57a905164b0d2',
+		// 	'label' => 'Subtitle Text',
+		// 	'name' => 'custom_meta_page_subtitle',
+		// 	'type' => 'text',
+		// 	'instructions' => 'Enter the text that will appear as a secondary title',
+		// 	'default_value' => '',
+		// 	'placeholder' => '',
+		// 	'prepend' => '',
+		// 	'append' => '',
+		// 	'formatting' => 'none',
+		// 	'maxlength' => '',
+		// ),
 		array (
 			'key' => 'field_57a905164badf',
 			'label' => 'Title Override Text',

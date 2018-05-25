@@ -85,14 +85,14 @@
 			margin-top: 0;
 		}
 	}
-	.gal-img-content {
-		@include breakFirst(medium){
-			padding: $grid-gutter-width;
-			
-		}
-		h2 {
-			margin-top: 0;
-		}
+}
+.gal-img-content {
+	@include breakFirst(medium){
+		padding: $grid-gutter-width;
+		
+	}
+	h2 {
+		margin-top: 0;
 	}
 }
 .img-callout-wrapper {
