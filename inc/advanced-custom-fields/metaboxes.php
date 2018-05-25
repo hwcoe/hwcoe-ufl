@@ -4,10 +4,10 @@
  *
  */
 
-// if (!current_user_can('update_plugins')) {
-// 	define( 'ACF_LITE', true ); 
-// }
-define( 'ACF_LITE', true );
+if (!current_user_can('update_plugins')) {
+	define( 'ACF_LITE', true ); 
+}
+// define( 'ACF_LITE', true );
 
 /**
  * Enqueue admin scripts and styles.
