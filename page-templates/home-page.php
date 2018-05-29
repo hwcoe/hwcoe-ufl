@@ -33,8 +33,6 @@ get_header();
 						<?php if( get_row_layout() == 'secondary_featured' ): ?>
 							<?php include( HWCOE_UFL_INC_DIR . '/ufl-secondary-featured.php' ); ?>
 						<?php endif // secondary_featured ?>
-						
-
 						<?php
 						/*
 						* Statistics Module

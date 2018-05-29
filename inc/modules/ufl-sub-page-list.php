@@ -15,7 +15,7 @@ $args = array(
 $pages = get_pages($args); 
 $show_thumb     = get_sub_field( 'show_thumbnail' );
 $show_excerpt   = get_sub_field( 'show_excerpt' );
-$list_children  = get_sub_field( 'list_sub_child_children' );
+$list_children  = get_sub_field( 'list_sub_children' );
 
 foreach( $pages as $page ): ?>
 <?php 
@@ -44,7 +44,7 @@ foreach( $pages as $page ): ?>
         <?php endif // show_thumb ?>
         <h2><a href="<?php echo $link; ?>"><?php echo $title; ?></a></h2>
         <div class="normal"><?php echo $content; ?>
-          <a class="read-more" href="<?php echo $link; ?>">Learn More</a>
+          <a class="read-more" href="<?php echo $link; ?>">Read More</a>
         </div>
         <?php if( $list_children ): ?>
         <?php 
