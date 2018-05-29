@@ -76,11 +76,15 @@
 	.item.half-image-feature, .item.full-image-feature {
 		width: 100%;
 		height: $size__carousel_height;
+		.btn--white:hover {
+			color: $orange !important;	
+		}
 		
 		@media screen and (min-width: $screen-lg){
 			width: $size__carousel_width_md;
 			height: $size__carousel_height_md;
 		}
+
 	}
 	.item.full-image-feature img {
 		width: auto;
@@ -197,11 +201,6 @@
 				top: 0;
 				height: 100%;
 				width: 50%;
-				//padding: $grid-gutter-width*1.5 $grid-gutter-width/2 0 $grid-gutter-width;
-				//left: initial;
-				//top: initial;
-				//right: 0;
-				//bottom: 0;
 			}
 			@media screen and (min-width: $screen-lg){
 				padding: $grid-gutter-width $grid-gutter-width*1.167 0 $grid-gutter-width*1.83;

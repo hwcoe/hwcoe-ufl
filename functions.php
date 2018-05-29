@@ -190,7 +190,6 @@ define( "HWCOE_UFL_INC_DIR", get_template_directory() . "/inc/modules" );
 
 // Advanced custom fields
 if( function_exists( 'register_field_group' )){
-	// require get_stylesheet_directory() . '/inc/advanced-custom-fields/metaboxes.php';
 	require get_template_directory() . '/inc/advanced-custom-fields/metaboxes.php';
 }
 

@@ -221,6 +221,7 @@ img {
 		&:hover {
 			background: $white;
 			color: $orange;
+			transition: all 0.3s ease;
 		}
 	}
 	.arw-right {

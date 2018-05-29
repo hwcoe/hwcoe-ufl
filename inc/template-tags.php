@@ -47,12 +47,12 @@ function hwcoe_ufl_post_featured_image(){
 	
 	// Get custom field values
 	$custom_meta = get_post_custom( $post->ID );
-	$img_full_width = ( isset($custom_meta['custom_meta_image_type']) )? $custom_meta['custom_meta_image_type'][0]:NULL;
-	$post_remove_featured = ( isset($custom_meta['custom_meta_post_remove_featured']) )? $custom_meta['custom_meta_post_remove_featured'][0]:false;
+	$img_full_width = ( isset($custom_meta['full_width_featured_image']) )? $custom_meta['full_width_featured_image'][0]:NULL;
+	$post_hide_featured = ( isset($custom_meta['hide_featured_image']) )? $custom_meta['hide_featured_image'][0]:false;
 	$details['size'] = ( $img_full_width )? 'full_width_thumb':'half-width-thumb';
 	$details['classes'] = ( $img_full_width )? array('full-width','img-responsive'):array('alignleft');
 	
-	if ( !$post_remove_featured ) {
+	if ( !$post_hide_featured ) {
 		$html .= get_the_post_thumbnail( $post->ID, $details['size'] );
 		$html .= sprintf( '<figcaption>%s</figcaption>', $details['caption'] );
 		$html = sprintf( '<figure class="%s">%s</figure>', implode(' ', $details['classes']), $html );

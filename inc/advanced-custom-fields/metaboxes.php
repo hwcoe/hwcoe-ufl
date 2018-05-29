@@ -21,7 +21,6 @@ add_action( 'admin_enqueue_scripts', 'hwcoe_ufl_metabox_styles_scripts' );
 
 /**
  * Add the ACF exported metaboxes - cannot be edited in dashboard
- // TODO: add to UI as we want conditional logic to determine whether these appear based on template/post type/etc.
  */
  
 /**
@@ -194,122 +193,72 @@ register_field_group(array (
 			0 => 'custom_fields',
 		),
 	),
-	'menu_order' => 5,
-));
-
-/**
- * Post Options
- */
-register_field_group(array (
-	'id' => 'acf_post-options',
-	'title' => 'Post Options',
-	'fields' => array (
-		array (
-			'key' => 'field_57a8f7e32ec9e',
-			'label' => 'Title Override Text',
-			'name' => 'custom_meta_post_title_override',
-			'type' => 'text',
-			'instructions' => 'Enter the text that will appear as the page title shown at the top of the content section of the page template',
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'formatting' => 'none',
-			'maxlength' => '',
-		),
-		array (
-			'key' => 'field_57a8fbede675d',
-			'label' => 'Hide Featured Image',
-			'name' => 'custom_meta_post_remove_featured',
-			'type' => 'checkbox',
-			'choices' => array (
-				1 => 'Hide the featured image from single post view',
-			),
-			'default_value' => 0,
-			'layout' => 'vertical',
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'post',
-				'order_no' => 0,
-				'group_no' => 0,
-			),
-		),
-	),
-	'options' => array (
-		'position' => 'normal',
-		'layout' => 'default',
-		'hide_on_screen' => array (
-			0 => 'custom_fields',
-		),
-	),
 	'menu_order' => 0,
 ));
 
 /**
- * Post Featured Content Slider Options
+ * Latest Posts Slider Options
  */
-register_field_group(array (
-	'id' => 'acf_post-featured-content-slider-options',
-	'title' => 'Post Featured Content Slider Options',
-	'fields' => array (
-		array (
-			'key' => 'field_57a8f72dd5615',
-			'label' => 'Button Text',
-			'name' => 'custom_meta_featured_content_button_text',
-			'type' => 'text',
-			'instructions' => 'Enter the text that will appear as a button',
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'formatting' => 'none',
-			'maxlength' => '',
-		),
-		array (
-			'key' => 'field_57a8f790d5617',
-			'label' => 'Full Width Image',
-			'name' => 'custom_meta_image_type',
-			'type' => 'checkbox',
-			'choices' => array (
-				1 => 'Image will use 100% of the allowed width. Recommended size is 1140px x 399px',
-			),
-			'default_value' => 0,
-			'layout' => 'vertical',
-		),
-		array (
-			'key' => 'field_57a8f7a8d5618',
-			'label' => 'Disable Image Captions',
-			'name' => 'custom_meta_featured_content_disable_captions',
-			'type' => 'checkbox',
-			'choices' => array (
-				1 => 'Disable the caption box from appearing on <em>full width images</em> (contains title, excerpt)',
-			),
-			'default_value' => 0,
-			'layout' => 'vertical',
-		),
-	),
-	'location' => array (
-		array (
+
+if ( 'posts' == get_option( 'show_on_front' ) ) {
+	register_field_group(array (
+		'id' => 'acf_latest-posts-slider-options',
+		'title' => 'Latest Posts Slider Options',
+		'fields' => array (
 			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'post',
-				'order_no' => 0,
-				'group_no' => 0,
+				'key' => 'field_57a8f72dd5615',
+				'label' => 'Button Text',
+				'name' => 'custom_meta_button_text',
+				'type' => 'text',
+				'instructions' => 'Enter the text that will appear as a button',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (	
+				'key' => 'field_57a8f790d5617',
+				'label' => 'Full Width Image',
+				'name' => 'custom_meta_image_type',
+				'type' => 'checkbox',
+				'choices' => array (
+					1 => 'Image will use 100% of the allowed width in the slider. Recommended size is 1140px x 399px',
+				),
+				'default_value' => 1,
+				'layout' => 'vertical',
+			),
+			array (
+				'key' => 'field_57a8f7a8d5618',
+				'label' => 'Disable Image Caption',
+				'name' => 'custom_meta_slider_disable_caption',
+				'type' => 'checkbox',
+				'choices' => array (
+					1 => 'Disable the caption box from appearing on <em>full width images</em> (contains title, excerpt)',
+				),
+				'default_value' => 0,
+				'layout' => 'vertical',
 			),
 		),
-	),
-	'options' => array (
-		'position' => 'normal',
-		'layout' => 'default',
-		'hide_on_screen' => array (
-			0 => 'custom_fields',
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
 		),
-	),
-	'menu_order' => 0,
-));
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'custom_fields',
+			),
+		),
+		'menu_order' => 0,
+	));
+}
