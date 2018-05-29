@@ -1,13 +1,12 @@
 <?php
 /**
- * Hide the ACF dashboard menu from users who are not site administrators (single site) or network admins (multisite)
+ * Hide the ACF Custom Fields dashboard menu from users who are not site administrators (single site) or network admins (multisite)
  *
  */
 
 if (!current_user_can('update_plugins')) {
 	define( 'ACF_LITE', true ); 
 }
-// define( 'ACF_LITE', true );
 
 /**
  * Enqueue admin scripts and styles.
@@ -33,20 +32,6 @@ register_field_group(array (
 	'id' => 'acf_page-options',
 	'title' => 'Page Options',
 	'fields' => array (
-		// commented out until we put it in the template
-		// array (
-		// 	'key' => 'field_57a905164b0d2',
-		// 	'label' => 'Subtitle Text',
-		// 	'name' => 'custom_meta_page_subtitle',
-		// 	'type' => 'text',
-		// 	'instructions' => 'Enter the text that will appear as a secondary title',
-		// 	'default_value' => '',
-		// 	'placeholder' => '',
-		// 	'prepend' => '',
-		// 	'append' => '',
-		// 	'formatting' => 'none',
-		// 	'maxlength' => '',
-		// ),
 		array (
 			'key' => 'field_57a905164badf',
 			'label' => 'Title Override Text',
@@ -160,6 +145,112 @@ register_field_group(array (
 ));
 
 /**
+ * Landing Page Options 
+ */
+register_field_group(array (
+	'id' => 'acf_landing-page-options',
+	'title' => 'Landing Page Options',
+	'fields' => array (
+		array (
+			'key' => 'field_582cc265f8a2c',
+			'label' => 'Background Image Height',
+			'name' => 'custom_meta_image_height',
+			'type' => 'select',
+			'instructions' => 'If the page has a Featured Image, this sets the height of the hero image.',
+			'choices' => array (
+				'large' => 'Large',
+				'medium' => 'Medium',
+				'half' => 'Small',
+			),
+			'default_value' => 'large',
+			'allow_null' => 0,
+			'multiple' => 0,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-templates/container-landing.php',
+				'order_no' => 0,
+				'group_no' => 0,
+			),
+		),
+		array (
+			array (
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-templates/no-container-landing.php',
+				'order_no' => 0,
+				'group_no' => 1,
+			),
+		),
+	),
+	'options' => array (
+		'position' => 'normal',
+		'layout' => 'default',
+		'hide_on_screen' => array (
+			0 => 'custom_fields',
+		),
+	),
+	'menu_order' => 5,
+));
+
+/**
+ * Post Options
+ */
+register_field_group(array (
+	'id' => 'acf_post-options',
+	'title' => 'Post Options',
+	'fields' => array (
+		array (
+			'key' => 'field_57a8f7e32ec9e',
+			'label' => 'Title Override Text',
+			'name' => 'custom_meta_post_title_override',
+			'type' => 'text',
+			'instructions' => 'Enter the text that will appear as the page title shown at the top of the content section of the page template',
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'formatting' => 'none',
+			'maxlength' => '',
+		),
+		array (
+			'key' => 'field_57a8fbede675d',
+			'label' => 'Hide Featured Image',
+			'name' => 'custom_meta_post_remove_featured',
+			'type' => 'checkbox',
+			'choices' => array (
+				1 => 'Hide the featured image from single post view',
+			),
+			'default_value' => 0,
+			'layout' => 'vertical',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
+				'order_no' => 0,
+				'group_no' => 0,
+			),
+		),
+	),
+	'options' => array (
+		'position' => 'normal',
+		'layout' => 'default',
+		'hide_on_screen' => array (
+			0 => 'custom_fields',
+		),
+	),
+	'menu_order' => 0,
+));
+
+/**
  * Post Featured Content Slider Options
  */
 register_field_group(array (
@@ -222,124 +313,3 @@ register_field_group(array (
 	),
 	'menu_order' => 0,
 ));
-
-/**
- * Post Options
- */
-register_field_group(array (
-	'id' => 'acf_post-options',
-	'title' => 'Post Options',
-	'fields' => array (
-		array (
-			'key' => 'field_57a8f7d62ec9d',
-			'label' => 'Subtitle Text',
-			'name' => 'custom_meta_post_subtitle',
-			'type' => 'text',
-			'instructions' => 'Enter the text that will appear as a secondary title',
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'formatting' => 'none',
-			'maxlength' => '',
-		),
-		array (
-			'key' => 'field_57a8f7e32ec9e',
-			'label' => 'Title Override Text',
-			'name' => 'custom_meta_post_title_override',
-			'type' => 'text',
-			'instructions' => 'Enter the text that will appear as the page title shown at the top of the content section of the page template',
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'formatting' => 'none',
-			'maxlength' => '',
-		),
-		array (
-			'key' => 'field_57a8fbede675d',
-			'label' => 'Hide Featured Image',
-			'name' => 'custom_meta_post_remove_featured',
-			'type' => 'checkbox',
-			'choices' => array (
-				1 => 'Hide the featured image from single post view',
-			),
-			'default_value' => 0,
-			'layout' => 'vertical',
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'post',
-				'order_no' => 0,
-				'group_no' => 0,
-			),
-		),
-	),
-	'options' => array (
-		'position' => 'normal',
-		'layout' => 'default',
-		'hide_on_screen' => array (
-			0 => 'custom_fields',
-		),
-	),
-	'menu_order' => 0,
-));
-
-
-/**
- * Landing Page Options 
- */
-register_field_group(array (
-	'id' => 'acf_landing-page-options',
-	'title' => 'Landing Page Options',
-	'fields' => array (
-		array (
-			'key' => 'field_582cc265f8a2c',
-			'label' => 'Background Image Height',
-			'name' => 'custom_meta_image_height',
-			'type' => 'select',
-			'instructions' => 'If the page has a Featured Image, this sets the height of the hero image.',
-			'choices' => array (
-				'large' => 'Large',
-				'medium' => 'Medium',
-				'half' => 'Small',
-			),
-			'default_value' => 'large',
-			'allow_null' => 0,
-			'multiple' => 0,
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'page_template',
-				'operator' => '==',
-				'value' => 'page-templates/landing-page.php',
-				'order_no' => 0,
-				'group_no' => 0,
-			),
-		),
-		array (
-			array (
-				'param' => 'page_template',
-				'operator' => '==',
-				'value' => 'page-templates/landing-page-full-width.php',
-				'order_no' => 0,
-				'group_no' => 1,
-			),
-		),
-	),
-	'options' => array (
-		'position' => 'normal',
-		'layout' => 'default',
-		'hide_on_screen' => array (
-			0 => 'custom_fields',
-		),
-	),
-	'menu_order' => 5,
-));
-

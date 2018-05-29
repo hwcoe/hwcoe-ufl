@@ -30,12 +30,12 @@ add_filter( 'body_class', 'hwcoe_ufl_body_classes' );
  */
 function hwcoe_ufl_archive_title( $title ){
 	if ( is_category() ) {
-        $queried_obj = get_queried_object();
+		$queried_obj = get_queried_object();
 		$icon = get_stylesheet_directory_uri();
 		$icon .= "/img/spritemap.svg#feed";
 		$title = sprintf( __( '%s', 'hwcoe-ufl' ), single_cat_title( '', false ) );
 		$title .= sprintf('<a href="%s" class="icon-svg icon-feed"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%s"></use></svg></a>', get_category_feed_link( $queried_obj->term_id ), $icon, $title );
-    }
+	}
 	else {
 		$title = str_replace( __('Archives: ', 'hwcoe-ufl'), '', $title);
 	}
@@ -79,7 +79,7 @@ add_filter( 'get_the_excerpt', 'hwcoe_ufl_teaser_excerpt', 9, 1);
  * @return int - modified excerpt length.
  */
 function hwcoe_ufl_excerpt_length( $length ) {
-    return 40;
+	return 40;
 }
 add_filter( 'excerpt_length', 'hwcoe_ufl_excerpt_length', 999 );
 
@@ -91,14 +91,13 @@ add_filter( 'excerpt_length', 'hwcoe_ufl_excerpt_length', 999 );
  * @return string  Post title
  */
 function hwcoe_ufl_title( $title, $id ) {
-    if ( is_page() ){
-      $title_override = get_post_meta( $id, 'custom_meta_page_title_override', true );
-      $title = ( !empty($title_override) )? $title_override : $title;
-    } else if ( is_single() ) {
-    	$title_override = get_post_meta( $id, 'custom_meta_post_title_override', true );
-		$title = ( !empty($title_override) )? $title_override : $title;
-    }
-  
-    return $title;
+	if ( is_page() ){
+		$title_override = get_post_meta( $id, 'custom_meta_page_title_override', true );
+	} else if ( is_single() ) {
+		$title_override = get_post_meta( $id, 'custom_meta_post_title_override', true );
+	}
+
+	$title = ( !empty($title_override) )? $title_override : $title;
+	return $title;
 }
 add_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );

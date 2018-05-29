@@ -16,16 +16,13 @@ Requirements and Suggested Plugins
 
 - WordPress 4.4
 - Support for .svg files
+- Advanced Custom Fields - visual interface for custom fields 
 
 ### Recommended Plugins
 
-- Advanced Custom Fields - visual interface for custom fields
 - List Category Posts - replacement for custom recent posts widget
 
-### Supported Plugins
-
-- Gravity Forms
-[list HWCOE optional plugins]
+See https://github.com/hwcoe/hwcoe-ufl/wiki/Plugins-Tools for additional recommended plugins and tools.
 
 Documentation
 --------------

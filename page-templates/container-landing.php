@@ -22,6 +22,7 @@ get_header(); ?>
 <div id="main" class="container main-content">
     <div class="row">
         <div class="col-sm-12">
+        	<?php var_dump(get_the_title()); ?>
             <?php 
 				if ( ! has_post_thumbnail() ): 
 					the_title( '<h1 class="entry-title">', '</h1>' );
