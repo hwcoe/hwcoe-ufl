@@ -1,8 +1,6 @@
 <?php 
 
 // Include theme widgets
-require get_template_directory() . '/inc/widgets/widget-landing-page-hero.php';
-require get_template_directory() . '/inc/widgets/widget-landing-page-double.php';
 require get_template_directory() . '/inc/widgets/widget-breaker.php';
 require get_template_directory() . '/inc/widgets/widget-breaker-cards.php';
 require get_template_directory() . '/inc/widgets/widget-content-image-left.php';
@@ -150,15 +148,15 @@ function hwcoe_ufl_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Landing Page Sections', 'hwcoe-ufl' ),
-		'id'            => 'page_sections',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	// register_sidebar( array(
+	// 	'name'          => esc_html__( 'Landing Page Sections', 'hwcoe-ufl' ),
+	// 	'id'            => 'page_sections',
+	// 	'description'   => '',
+	// 	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</aside>',
+	// 	'before_title'  => '<h2 class="widget-title">',
+	// 	'after_title'   => '</h2>',
+	// ) );
     /*
 	register_sidebar( array(
 		'name'          => esc_html__( 'Page Submenu', 'hwcoe-ufl' ),
@@ -172,8 +170,8 @@ function hwcoe_ufl_widgets_init() {
 	*/
 	
 	// Register theme widgets
-	register_widget( 'UFL_2015_Landing_Page_Hero' );
-	register_widget( 'UFL_2015_Landing_Page_Double' );
+	// register_widget( 'UFL_2015_Landing_Page_Hero' );
+	// register_widget( 'UFL_2015_Landing_Page_Double' );
 	register_widget( 'UFL_2015_Breaker' );
 	register_widget( 'UFL_2015_Breaker_Cards' );
 	register_widget( 'UFL_2015_Content_Image_Left' );

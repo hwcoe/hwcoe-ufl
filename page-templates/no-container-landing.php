@@ -30,6 +30,5 @@ get_header(); ?>
 	
     
 </div>
-<?php get_sidebar('page_sections'); ?>
 
 <?php get_footer(); ?>
