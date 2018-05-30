@@ -17,31 +17,36 @@ if ( !function_exists('is_uf_email') ) {
 		}
 	}
 }
-
-// Check if a valid REMOTE_USER is set.
+/**
+ * Check the server values for authenticated users in both the variable and REDIRECT_ variable.
+ */
+function ufl_check_server_auth_value( $var ){
+	if( isset($_SERVER['REDIRECT_UFShib_'.$var]) ){
+		return $_SERVER['REDIRECT_UFShib_'.$var];
+	}
+	elseif( isset($_SERVER[$var]) ){
+		return $_SERVER[$var];
+	}
+	elseif( isset($_SERVER['REDIRECT_'.$var]) ) {
+		return $_SERVER['REDIRECT_'.$var];
+	}
+	else{
+		return '';	
+	}
+}
+// Check if a vaild REMOTE_USER is set.
 function ufl_shibboleth_valid_user() {
 
-	$user = ufl_check_server_auth_value('REMOTE_USER');
+	$user = ufl_check_server_auth_value('REDIRECT_UFShib_eppn');
 		
 	if ( is_uf_email( $user ) ) {
-		return true;
-	} elseif ( is_uf_email($_SERVER['REDIRECT_UFShib_eppn']) ) {
 		return true;
 	} else {
 		return false;
 	}
 }
 
-// Check if a vaild REMOTE_USER is set.
-// function ufl_shibboleth_valid_user() {
-// 	if ( is_uf_email($_SERVER['REMOTE_USER']) ) {
-// 		return true;
-// 	} elseif ( is_uf_email($_SERVER['REDIRECT_UFShib_eppn']) ) {
-// 		return true;
-// 	}
-// }
-
-// Get current protocol from options, fallback to server variable.
+// Get current protocol from server variable.
 function ufl_get_protocol() {
 	if ( is_ssl() ) {
 		return 'https://';
@@ -49,6 +54,7 @@ function ufl_get_protocol() {
 		return 'http://';
 	}
 }
+
 
 // Create a button to log in to Shib.
 function ufl_shibboleth_login_button() {
@@ -66,38 +72,7 @@ function ufl_check_shibboleth_auth() {
 	}
 }
 
-// Check if authed with Shib.
-function ufl_check_shibboleth_group_auth( $postid ) {
-	
-	if ( !ufl_shibboleth_valid_user() ) {
-		return false;
-	} else {
-		// Valid GatorLink User
-		$group_meta = get_post_meta( $postid, 'custom_meta_visitor_auth_groups', true );
-		
-		$user_groups = ufl_check_server_auth_value('UFADGroupsDN');
-
-		if( empty($group_meta) || empty($user_groups) ){
-			return false;
-		}
-		else {
-			// Create an array of groups and check against groups
-			$group_meta = str_replace( ' ', '', $group_meta );
-			$valid_groups = explode(',', trim($group_meta, ' ,'));
-			
-			foreach($valid_groups as $group){
-				if(stripos($user_groups, 'CN='.$group.',') !== false){
-					return true;	
-				}
-			}
-			
-			// If not in any valid groups, reject user
-			return false;	
-		}
-	}
-}
-
-// Check the auth level for vistors of the page.
+// Check the auth level for visitors of the page.
 function ufl_check_page_visitor_level($postid) {
 	// Check if Shib is required for this page.
 	$custom_meta = get_post_custom($postid);
@@ -109,9 +84,6 @@ function ufl_check_page_visitor_level($postid) {
 			break;
 		case 'GatorLink Users':
 			$custom_visitor_auth_level = '2';
-			break;
-		case 'UFAD Group':
-			$custom_visitor_auth_level = '3';
 			break;
 		case 'Public':
 		default:
@@ -143,33 +115,12 @@ function ufl_check_authorized_user($postid) {
 				return false;
 			}
 			break;
-		case '3':
-			if ( ufl_check_shibboleth_group_auth($postid) ) {
-				//define( 'DONOTCACHEPAGE', 1 );
-				return true;
-			} else {
-				return false;
-			}
-			break;
 		default:
 			return false;
 			break;
 	}
 
 }
-/**
- * Check the server values for authenticated users in both the variable and REDIRECT_ variable.
- */
-function ufl_check_server_auth_value( $var ){
-	if( isset($_SERVER[$var]) ){
-		return $_SERVER[$var];
-	}
-	elseif( isset($_SERVER['REDIRECT_'.$var]) ) {
-		return $_SERVER['REDIRECT_'.$var];
-	}
-	else{
-		return '';	
-	}
-}
+
 
 ?>

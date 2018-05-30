@@ -22,7 +22,7 @@
 	}
 	else {
 		// If logged in and denied access
-		$webmaster_email = 'wordpress@clas.ufl.edu';
+		$webmaster_email = 'webmaster@eng.ufl.edu';
 		$site_admin = ( empty($webmaster_email) )? "site administrator" : "<a href=\"mailto:{$webmaster_email}\">site administrator</a>";
 		?>
         <header class="entry-header">

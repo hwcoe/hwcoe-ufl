@@ -16,7 +16,7 @@ Requirements and Suggested Plugins
 
 - WordPress 4.4
 - Support for .svg files
-- Advanced Custom Fields - visual interface for custom fields 
+- Advanced Custom Fields Pro - visual interface for custom fields 
 
 ### Recommended Plugins
 
