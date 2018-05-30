@@ -5,6 +5,9 @@
  * @package HWCOE_UFL
  *
  */
+if ( ufl_check_page_visitor_level( $post->ID ) > 0 ) { 
+  define( 'DONOTCACHEPAGE', 1 ); 
+}
 get_header(); ?>
 
 <div id="main" class="container main-content">

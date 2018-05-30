@@ -21,20 +21,17 @@ if ( !function_exists('is_uf_email') ) {
  * Check the server values for authenticated users in both the variable and REDIRECT_ variable.
  */
 function ufl_check_server_auth_value( $var ){
-	if( isset($_SERVER['REDIRECT_UFShib_'.$var]) ){
-		return $_SERVER['REDIRECT_UFShib_'.$var];
-	}
-	elseif( isset($_SERVER[$var]) ){
+	if( isset($_SERVER[$var]) ){
 		return $_SERVER[$var];
 	}
-	elseif( isset($_SERVER['REDIRECT_'.$var]) ) {
-		return $_SERVER['REDIRECT_'.$var];
+	elseif( isset($_SERVER['REMOTE_USER']) ) {
+		return $_SERVER['REMOTE_USER'];
 	}
 	else{
 		return '';	
 	}
 }
-// Check if a vaild REMOTE_USER is set.
+// Check if a valid REMOTE_USER is set.
 function ufl_shibboleth_valid_user() {
 
 	$user = ufl_check_server_auth_value('REDIRECT_UFShib_eppn');
