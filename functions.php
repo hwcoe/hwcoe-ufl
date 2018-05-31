@@ -48,7 +48,6 @@ function hwcoe_ufl_setup() {
 	register_nav_menus( array(
 		'main_menu' => esc_html__( 'Main Menu', 'hwcoe-ufl' ),
         'global_menu' => esc_html__( 'Global Menu', 'hwcoe-ufl' ),
-		'rolebased_nav' => esc_html__( 'Role-Based Navigation', 'hwcoe-ufl' ),
 		'audience_nav' => esc_html__( 'Audience Navigation', 'hwcoe-ufl' ),
 	) );
 	
