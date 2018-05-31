@@ -13,7 +13,7 @@ function hwcoe_ufl_customize_categories() {
 }
 /**
  * Get range of values for customizer select
- * @since 0.2.5
+ * @since 0.1.0
  */
 function hwcoe_ufl_customize_range( $min = 0, $max = 10 ) {
 	$range = array();
@@ -44,7 +44,7 @@ function hwcoe_ufl_sanitize_choices( $input, $setting ) {
 
 /**
  * Add Customizer CSS
- * @since 0.0.0
+ * @since 0.1.0
  */
 function hwcoe_ufl_customize_css() {
 	$custom_css = '';
@@ -74,7 +74,7 @@ add_action('wp_enqueue_scripts', 'hwcoe_ufl_customize_css');
 
 /**
  * Add Customizer Preview script
- * @since 0.0.0
+ * @since 0.1.0
  */
 function hwcoe_ufl_customize_script() {
 	wp_enqueue_script( 'ufl-2015-themecustomizer',	get_template_directory_uri() . '/js/customizer.min.js', array( 'jquery','customize-preview' ), null, true	);
@@ -83,7 +83,7 @@ add_action('customize_preview_init', 'hwcoe_ufl_customize_script');
  
 /**
  * Add custom theme mods to the Customizer
- * @since 0.0.0
+ * @since 0.1.0
  */
 function hwcoe_ufl_customize_register( $wp_customize ) {
 	// Colors section

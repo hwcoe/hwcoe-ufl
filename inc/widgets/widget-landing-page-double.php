@@ -3,7 +3,7 @@
  * Landing Page Double Image Widget
  *
  * @package HWCOE_UFL
- * @since 0.0.0
+ * @since 0.1.0
  */
 class UFL_2015_Landing_Page_Double extends WP_Widget {
 

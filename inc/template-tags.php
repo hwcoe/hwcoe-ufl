@@ -66,7 +66,7 @@ function hwcoe_ufl_post_featured_image(){
  *
  * @param array $args Options for classes
  * @return string Classes used on main content column
- * @since 0.3.2
+ *
  */
  function hwcoe_ufl_page_column_class(){
 	global $post;

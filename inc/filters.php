@@ -4,7 +4,7 @@
  *
  * @param array $classes Classes for the body element.
  * @return array
- * @since 0.0.0
+ * @since 0.1.0
  */
 function hwcoe_ufl_body_classes( $classes ) {
 	$classes[] = 'loading';
@@ -26,7 +26,7 @@ add_filter( 'body_class', 'hwcoe_ufl_body_classes' );
 /**
  * Adds feed link to category title
  * 
- * @since 0.0.0
+ * @since 0.1.0
  */
 function hwcoe_ufl_archive_title( $title ){
 	if ( is_category() ) {
