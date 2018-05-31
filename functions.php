@@ -1,6 +1,6 @@
 <?php
 /**
- * UF HWCOE 2018 WordPress theme functions and definitions.
+ * UF HWCOE WordPress theme functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
