@@ -24,6 +24,12 @@ function hwcoe_ufl_get_custom_logo() {
    return $custom_logo;
 }
 
+function hwcoe_ufl_custom_logo_styles() {
+	$custom_logo_style = '';
+	
+
+	return $custom_logo_style;
+}
 /**
  * Get featured image html
  *

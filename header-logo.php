@@ -28,7 +28,7 @@
 			<h1 class="screen-reader-title">
 				<a href="<?php echo site_url('/'); ?>">
 						<span class="screen-reader-text"><?php echo bloginfo('name'); ?></span>
-						<span class="icon-svg logo-unit"><svg><use xlink:href="<?php echo hwcoe_ufl_get_custom_logo(); ?>#Layer_1"></use></svg></span>
+						<span class="icon-svg logo-unit" <?php echo hwcoe_ufl_custom_logo_styles(); ?>><svg><use xlink:href="<?php echo hwcoe_ufl_get_custom_logo(); ?>#Layer_1"></use></svg></span>
 				</a>
 				</h1>
 			<nav role="navigation" aria-label="<?php _e( 'Main Menu', 'hwcoe-ufl' ); ?>">
