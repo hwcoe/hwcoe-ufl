@@ -49,10 +49,40 @@ function hwcoe_ufl_sanitize_choices( $input, $setting ) {
 function hwcoe_ufl_customize_css() {
 	$custom_css = '';
 	$theme_mods = get_theme_mods();
+	// $custom_logo_dimensions = array(
+	// 	'height' => ( isset($theme_mods['custom_logo_height']) )? $theme_mods['custom_logo_height'] : 58,
+	// 	'width'	=> ( isset($theme_mods['custom_logo_width']) )? $theme_mods['custom_logo_width'] : 240,
+	// 	'top'	=> ( isset($theme_mods['custom_logo_top']) )? $theme_mods['custom_logo_top'] : 22,
+	// );
+
+	$custom_logo_height = ( isset($theme_mods['custom_logo_height']) )? $theme_mods['custom_logo_height'] : 58;
+	$custom_logo_width = ( isset($theme_mods['custom_logo_width']) )? $theme_mods['custom_logo_width'] : 240;
+	$custom_logo_top = ( isset($theme_mods['custom_logo_top']) )? $theme_mods['custom_logo_top'] : 22;
+	
 	$background_color = ( isset($theme_mods['background_color']) )? $theme_mods['background_color'] : false;
 	$content_color = ( isset($theme_mods['content_color']) )? $theme_mods['content_color'] : false;
 	$collapse_sidebar_nav = ( isset($theme_mods['collapse_sidebar_nav']) )? $theme_mods['collapse_sidebar_nav'] : 1;
 	
+	// Custom logo dimensions and position
+	// if( !empty($custom_logo_dimensions) ) {
+	// 	$custom_css .= "@media (min-width: 992px){ .header.unit .main-menu-wrap .logo-unit {height:".$custom_logo_dimensions['height']."px; width:".$custom_logo_dimensions['width']."px; top:".$custom_logo_dimensions['top']."px;}}";
+	// 	$custom_css .= "@media screen and (min-width: 991px) and (max-width: 1250px) {.header.unit .main-menu-wrap .logo-unit {width:".$custom_logo_dimensions['width'] * 0.75."px;}}";
+	// }
+
+
+	if( !empty($custom_logo_height) ) {
+		$custom_css .= "@media (min-width: 992px){ .header.unit .main-menu-wrap .logo-unit {height:".$custom_logo_height."px;}}";
+		
+	}
+	if( !empty($custom_logo_width) ) {
+		$custom_css .= "@media (min-width: 992px){ .header.unit .main-menu-wrap .logo-unit {width:".$custom_logo_width."px;}}";
+		$custom_css .= "@media screen and (min-width: 991px) and (max-width: 1250px) {.header.unit .main-menu-wrap .logo-unit {width:".$custom_logo_width * 0.75."px;}}";
+	}
+	if( !empty($custom_logo_top) ) {
+		$custom_css .= "@media (min-width: 992px){ .header.unit .main-menu-wrap .logo-unit {top:".$custom_logo_top."px;}}";
+	}
+
+
 	// Custom background color
 	if ( !empty($background_color) ) {
 		$custom_css .=  "body { background-color: {$background_color}; } ";
@@ -86,6 +116,31 @@ add_action('customize_preview_init', 'hwcoe_ufl_customize_script');
  * @since 0.1.0
  */
 function hwcoe_ufl_customize_register( $wp_customize ) {
+	// Site Identity section
+	$wp_customize->add_setting( 'custom_logo_height', array( 'default' => '58', 'sanitize_callback' => 'sanitize_text_field' ));
+	$wp_customize->add_setting( 'custom_logo_width', array( 'default' => '240', 'sanitize_callback' => 'sanitize_text_field' ));
+	$wp_customize->add_setting( 'custom_logo_top', array( 'default' => '22', 'sanitize_callback' => 'sanitize_text_field' ));
+	
+	$wp_customize->add_control( 'custom_logo_height', array(
+		'label' => __('Logo Height', 'hwcoe-ufl'),
+		'description' => __("Enter height in pixels (default 58)", 'hwcoe-ufl'),
+		'section' => 'title_tagline',
+		'type' => 'text',
+	));
+	$wp_customize->add_control( 'custom_logo_width', array(
+		'label' => __('Logo Width', 'hwcoe-ufl'),
+		'description' => __("Enter width in pixels (default 240)", 'hwcoe-ufl'),
+		'section' => 'title_tagline',
+		'type' => 'text',
+	));
+	$wp_customize->add_control( 'custom_logo_top', array(
+		'label' => __('Logo Top Position', 'hwcoe-ufl'),
+		'description' => __("Enter top position in pixels (default 22)", 'hwcoe-ufl'),
+		'section' => 'title_tagline',
+		'type' => 'text',
+	));
+	
+
 	// Colors section
 	$default_colors = array( 'beige' => 'faf8f1' );
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';

@@ -113,7 +113,7 @@ add_action( 'wp_enqueue_scripts', 'hwcoe_ufl_scripts' );
 /**
  * Enqueue inline styles
  */
-function hwcoe_ufl_2015_inline_styles() {
+function hwcoe_ufl_inline_styles() {
 	$custom_css = '';
 	
 	// Adjust main menu width
@@ -128,13 +128,12 @@ function hwcoe_ufl_2015_inline_styles() {
 				$menu_item_count++; 
 			}	
 		}
-		//$custom_css .= '@media screen and (min-width:992px) and (max-width: 1249px){ .header.unit .main-menu-wrap .menu > li > .main-menu-link { padding-left: 15px; padding-right: 15px; }';
-		//$custom_css .= '@media screen and (min-width:1250px){ .main-menu-wrap .menu > li { width: calc(100%/' . $menu_item_count . '); }} ';
+		$custom_css .= '@media screen and (min-width:1250px){ .main-menu-wrap .menu > li { width: calc(100%/' . $menu_item_count . '); }} ';
 	}
 	
 	wp_add_inline_style('style', $custom_css);
 }
-add_action('wp_enqueue_scripts', 'hwcoe_ufl_2015_inline_styles');
+// add_action('wp_enqueue_scripts', 'hwcoe_ufl_inline_styles');
 
 /**
  * Registers an editor stylesheet for the theme

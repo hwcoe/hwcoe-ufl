@@ -19,17 +19,11 @@ function hwcoe_ufl_get_custom_logo() {
 		}
 		else {
 		 $custom_logo = get_template_directory_uri() . '/svg/logo-herbert.svg';
-		}	
+		}
    }
    return $custom_logo;
 }
 
-function hwcoe_ufl_custom_logo_styles() {
-	$custom_logo_style = '';
-	
-
-	return $custom_logo_style;
-}
 /**
  * Get featured image html
  *

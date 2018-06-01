@@ -7,7 +7,26 @@
 ( function( $ ) {
 	"use strict";
 	
-	//Update site background color...
+	//Update custom logo size and position
+	wp.customize( 'custom_logo_height', function( value ) {
+		value.bind( function( newval ) {
+			$('.header.unit .main-menu-wrap .logo-unit').css('height', newval );
+		} );
+	} );
+	
+	wp.customize( 'custom_logo_width', function( value ) {
+		value.bind( function( newval ) {
+			$('.header.unit .main-menu-wrap .logo-unit').css('width', newval );
+		} );
+	} );
+
+	wp.customize( 'custom_logo_top', function( value ) {
+		value.bind( function( newval ) {
+			$('.header.unit .main-menu-wrap .logo-unit').css('top', newval );
+		} );
+	} );
+
+	//Update site background color
 	wp.customize( 'background_color', function( value ) {
 		value.bind( function( newval ) {
 			$('body').css('background-color', newval );
