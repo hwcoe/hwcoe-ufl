@@ -9,7 +9,10 @@
 
 if ( ! function_exists( 'hwcoe_ufl_setup' ) ) :
 
-// Sets up theme defaults and registers support for various WordPress features.
+/*
+/* Sets up theme defaults and registers support for various WordPress features.
+*/
+
 function hwcoe_ufl_setup() {
 	// Make theme available for translation.
 	load_theme_textdomain( 'hwcoe-ufl', get_template_directory() . '/languages' );
@@ -26,10 +29,7 @@ function hwcoe_ufl_setup() {
 	// Allow partial refreshes of widgets in sidebars
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
+	// Switch default core markup for search form, comment form, and comments to output valid HTML5
 	add_theme_support( 'html5', array(
 		'search-form',
 		'comment-form',
@@ -38,18 +38,12 @@ function hwcoe_ufl_setup() {
 		'caption',
 	) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'hwcoe_ufl_custom_background_args', array(
-		'default-color' => 'faf8f1',
+	// Set up the WordPress custom background feature   
+	$defaults = array(
 		'default-image' => '',
-	) ) );
-	
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'main_menu' => esc_html__( 'Main Menu', 'hwcoe-ufl' ),
-        'global_menu' => esc_html__( 'Global Menu', 'hwcoe-ufl' ),
-		'audience_nav' => esc_html__( 'Audience Navigation', 'hwcoe-ufl' ),
-	) );
+		'default-color' => '#faf8f1',
+	);
+	add_theme_support( 'custom-background', $defaults );
 	
 	// Add support for custom logos in the Customizer, use flex-width/height to skip cropping
 	add_theme_support( 'custom-logo', array(
@@ -57,6 +51,13 @@ function hwcoe_ufl_setup() {
 		'height' => 58,
 		'flex-width' => true,
 		'flex-height' => true,
+	) );
+
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'main_menu' => esc_html__( 'Main Menu', 'hwcoe-ufl' ),
+		'global_menu' => esc_html__( 'Global Menu', 'hwcoe-ufl' ),
+		'audience_nav' => esc_html__( 'Audience Navigation', 'hwcoe-ufl' ),
 	) );
 }
 endif; // hwcoe_ufl_setup
@@ -126,7 +127,7 @@ function hwcoe_ufl_inline_styles() {
 			// Only count top level menu items
 			if ( $item->menu_item_parent == 0 ){
 				$menu_item_count++; 
-			}	
+			}   
 		}
 		$custom_css .= '@media screen and (min-width:1250px){ .main-menu-wrap .menu > li { width: calc(100%/' . $menu_item_count . '); }} ';
 	}
@@ -166,17 +167,17 @@ if ( !class_exists('wp_bootstrap_navwalker') ) {
 
 // The Events Calendar
 // if ( class_exists('Tribe__Events__Main') ) {
-// 	require get_stylesheet_directory() . '/inc/the-events-calendar.php';
+//  require get_stylesheet_directory() . '/inc/the-events-calendar.php';
 // }
 
 // Shortcake Shortcode UI
 // if( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
-// 	require get_stylesheet_directory() . '/inc/shortcake/shortcodes-ui.php';
+//  require get_stylesheet_directory() . '/inc/shortcake/shortcodes-ui.php';
 // }
 
 // IssueM newsletter
 // if ( class_exists( 'IssueM' ) ) {
-// 	require get_stylesheet_directory() . '/inc/issuem/issuem.php';
+//  require get_stylesheet_directory() . '/inc/issuem/issuem.php';
 // }
 
 /*
@@ -198,14 +199,23 @@ if( function_exists( 'register_field_group' )){
 
 if( function_exists('acf_add_options_page') ) {
   acf_add_options_page(array(
-    'page_title' => 'Footer Options',
-    'menu_title'=> 'Footer Options',
-    'menu_slug' => 'footer-options',
-    'parent_slug' => 'themes.php',
-    'capability'=> 'edit_posts',
-    'redirect'  => false
+	'page_title' => 'Footer Options',
+	'menu_title'=> 'Footer Options',
+	'menu_slug' => 'footer-options',
+	'parent_slug' => 'themes.php',
+	'capability'=> 'edit_posts',
+	'redirect'  => false
   ));
 }
+
+// Limit the ACF Custom Fields dashboard menu to users who are site administrators (single site) or network admins (multisite)
+
+function hwcoe_ufl_acf_init() {
+	acf_update_setting('capability', 'update_plugins'); 
+}
+
+add_action('acf/init', 'hwcoe_ufl_acf_init');
+
 
 /*
  * Trim content
@@ -215,9 +225,9 @@ if( function_exists('acf_add_options_page') ) {
 function hwcoe_ufl_trim_content( $content, $length, $after_content ){
 
   if( strlen( $content ) > $length ){
-    $trimmed_content = substr( strip_tags( $content ), 0,  $length  ) . $after_content;
-    return $trimmed_content; 
+	$trimmed_content = substr( strip_tags( $content ), 0,  $length  ) . $after_content;
+	return $trimmed_content; 
   } else{
-    return $content;
+	return $content;
   }
 }

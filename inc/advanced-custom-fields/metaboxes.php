@@ -1,14 +1,5 @@
 <?php
 /**
- * Hide the ACF Custom Fields dashboard menu from users who are not site administrators (single site) or network admins (multisite)
- *
- */
-
-if (!current_user_can('update_plugins')) {
-	define( 'ACF_LITE', true ); 
-}
-
-/**
  * Enqueue admin scripts and styles.
  */
 function hwcoe_ufl_metabox_styles_scripts( $hook ) {

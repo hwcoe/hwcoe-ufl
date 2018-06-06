@@ -95,8 +95,8 @@ add_action('wp_enqueue_scripts', 'hwcoe_ufl_customize_css');
  * @since 0.1.0
  */
 function hwcoe_ufl_customize_script() {
-	// wp_enqueue_script( 'ufl-2015-themecustomizer',	get_template_directory_uri() . '/js/customizer.min.js', array( 'jquery','customize-preview' ), null, true	);
-	wp_enqueue_script( 'ufl-2015-themecustomizer',	get_template_directory_uri() . '/js/customizer.min.js', array( 'jquery','customize-preview' ), rand(), true	);
+	wp_enqueue_script( 'ufl-2015-themecustomizer',	get_template_directory_uri() . '/js/customizer.min.js', array( 'jquery','customize-preview' ), null, true	);
+	// wp_enqueue_script( 'ufl-2015-themecustomizer',	get_template_directory_uri() . '/js/customizer.min.js', array( 'jquery','customize-preview' ), rand(), true	);
 }
 add_action('customize_preview_init', 'hwcoe_ufl_customize_script');
  
@@ -152,10 +152,14 @@ function hwcoe_ufl_customize_register( $wp_customize ) {
 	
 
 	// Colors section
-	$default_colors = array( 'beige' => 'faf8f1' );
+	$default_colors = array( 'beige' => '#faf8f1' );
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
-	$wp_customize->get_setting( 'background_color' )->default = 'faf8f1';
-	$wp_customize->add_setting( 'content_color', array( 'default' => 'faf8f1', 'transport' => 'postMessage', 'sanitize_callback' => 'sanitize_hex_color' ));
+	$wp_customize->get_setting( 'background_color' )->default = '#faf8f1';
+	$wp_customize->add_setting( 'content_color', array( 
+		'default' => '#faf8f1', 
+		'transport' => 'postMessage', 
+		'sanitize_callback' => 'sanitize_hex_color' 
+	));
 	
 	$wp_customize->add_control( 
 		new WP_Customize_Color_Control( $wp_customize, 'content_color', array(
