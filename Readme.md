@@ -31,6 +31,16 @@ Documentation
 
 Changelog
 ---------
+### 1.1.x
+
+- ACF: Implement PHP field registration for ACF Field Groups for performance enhancement
+- ACF: Implement synchronized JSON for version control of ACF field group settings
+
+### 1.0.x
+
+- Initial beta release
+- Add custom logo size and position controls to customizer
+- Update ACF settings
 
 ### 0.1.x
 

@@ -1,0 +1,89 @@
+{
+    "key": "group_561c4f6c2306d",
+    "title": "Post Options",
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "fields": [
+        {
+            "key": "field_561c516e24e1e",
+            "label": "Title Override",
+            "name": "custom_meta_post_title_override",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b0d7bd260ec9",
+            "label": "Hide Featured Image",
+            "name": "hide_featured_image",
+            "type": "true_false",
+            "instructions": "Hides the featured image from single post view.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b0dab581d31e",
+            "label": "Full Width Featured Image",
+            "name": "full_width_featured_image",
+            "type": "true_false",
+            "instructions": "Image will use 100% of the allowed width in single post view.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b0d7bd260ec9",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "modified": 1529584804
+}
