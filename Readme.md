@@ -34,6 +34,7 @@ Changelog
 ### 1.1.x
 
 - ACF: Implement synchronized JSON for enhanced performance and version control of ACF field groups
+- Add favicon.ico
 
 ### 1.0.x
 
