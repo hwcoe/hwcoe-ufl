@@ -217,6 +217,24 @@ function hwcoe_ufl_acf_json_save_point( $path ) {
     return $path; 
 }
 
+
+add_filter('acf/settings/load_json', 'hwcoe_ufl_acf_json_load_point');
+
+function hwcoe_ufl_acf_json_load_point( $paths ) {
+    
+    // remove original path (optional)
+    unset($paths[0]);
+    
+    
+    // append path
+    $paths[] = get_stylesheet_directory() . '/inc/advanced-custom-fields/acf-json';
+    
+    
+    // return
+    return $paths;
+    
+}
+
 // Limit the ACF Custom Fields dashboard menu to users who are site administrators (single site) or network admins (multisite)
 
 function hwcoe_ufl_acf_init() {

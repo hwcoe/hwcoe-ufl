@@ -33,8 +33,7 @@ Changelog
 ---------
 ### 1.1.x
 
-- ACF: Implement PHP field registration for ACF Field Groups for performance enhancement
-- ACF: Implement synchronized JSON for version control of ACF field group settings
+- ACF: Implement synchronized JSON for enhanced performance and version control of ACF field groups
 
 ### 1.0.x
 
