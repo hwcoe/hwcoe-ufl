@@ -148,7 +148,6 @@
 			}
 		}
 		h2 {
-			// font: 700 34px/38px $fontFamily;
 			font: 700 24px/28px $fontFamily;
 			letter-spacing: 1px;
 			padding-left: 0;
@@ -199,7 +198,6 @@
 		margin: -211px 0 80px;
 	}
 	&.bottom {
-		// appears below hero image, with category tag inside container. To delete?
 		margin: 0;
 		@include breakFirst(large){
 			margin: 0 0 80px;
@@ -224,42 +222,29 @@
 	.secondary-featured-block {
 		position: relative;
 		@include breakFirst(medium){
-			// float: left;
 			float: right;
-		}
-		@include breakFirst(large){
-			// margin-top: 200px;
-		}
-		@include breakFirst(wide){
-			// margin-top: 300px;
 		}
 		&.one {
 			@include breakFirst(large){
-				// float: right;
 				margin-top: -200px;
 				width: 39%;
 				margin-left: 2.6%;
-			}
-			@include breakFirst(wide){
-				// margin: -200px 18.5% 0 0;
 			}
 		}
 		&.two {
 			@include breakFirst(large){
 				width: 50%;
 				margin-top: 20px;
-			  	clear: none;
+				clear: none;
 				position: relative;
 			}
 		}
 		&.three {
 			width: 100%;
-			// margin-top: 0;
 			margin-top: 20px;
 			@include breakFirst(large){
 				margin-top: -80px;
-			}
-			
+			}	
 		}
 	}
 }
@@ -274,24 +259,10 @@
 		height: 270px;
 	}
 	@include breakTo(large){
-    background-image: url(img/_temp-bg-stat-hor.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-	@include breakFirst(large){
-		// width: 270px;
-		// width: percentage((5 / $grid-columns));
+		background-image: url(img/_temp-bg-stat-hor.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
-	&.in-bottom {
-		
-	}
-	&.in-left {
-		
-	}
-	&.in-right {
-		
-	}
-
 }
 .secondary-featured-story {
 	padding-top: 87px;
@@ -346,7 +317,6 @@
 	background-size: cover;
 	margin-bottom: 20px;
 	min-height: 350px;
-	// padding-top: 87px;
 	position: relative;
 	width: 100%;
 	@include break(medium){
@@ -362,10 +332,8 @@
 		height: 400px;
 	}
 	.two &, .three & {
-	// &.two,&.three {
 		@include breakFirst(large){
 		  clear: none;
-		  // float: right;
 		  position: relative;
 		}
 	}
@@ -384,10 +352,6 @@
 }
 .tweet-block {
 	background: $blueLight;
-	// 	@include break(medium){
-	// 		padding: 0;
-	// 		height: 350px;
-	// }
 }
 .tweet-copy {
 	color: $white;
@@ -445,17 +409,12 @@
 	bottom: 0;
 	left: 0;
 	position: absolute;
-	@include breakFirst(medium){
-		// bottom: 0;
-		// left: 0;
-		// position: absolute;
-	}
 	@include breakFirst(large){
 		padding: 15px 20px;
 	}
 	h2 {
 		color: $white;
-    	text-shadow: 1px 1px 0px $grayDark;
+		text-shadow: 1px 1px 0px $grayDark;
 		margin-bottom: 10px;
 		font: 500 24px/28px $serifFontFamily;
 		text-transform: none;
@@ -486,7 +445,6 @@
 				font: 500 22px/28px $fontFamily;
 			}
 		}
-
 		li {
 			text-transform: none;
 			&:before {

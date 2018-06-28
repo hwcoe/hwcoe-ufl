@@ -40,18 +40,15 @@
 			margin: 0;
 		}
 		&:nth-child(3){
-			// margin: 0;
 			margin:20px 0 0 0;
 			clear:left;
 			@include breakFirst(medium){
-				// margin-left: 20px;
 				margin: 0 0 0 20px;
 				clear:none;
 			}
 		}
 		&:nth-child(4){
 			@include breakTo(medium){
-				// margin-bottom: 0
 				margin:20px 0 0 20px;
 			}
 		}

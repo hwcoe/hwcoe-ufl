@@ -36,6 +36,9 @@ Changelog
 - ACF: Implement synchronized JSON for enhanced performance and version control of ACF field groups
 - Add favicon.ico
 - Correct ACF function calls in footer.php
+- Update node.js devDependencies
+- Accessibility improvements in stylesheets
+- Clean up Sass
 
 ### 1.0.x
 

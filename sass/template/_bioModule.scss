@@ -18,8 +18,8 @@
 }
 .bio, .feature-bio-copy-wrap {
   h3 {
-    color: $teal;
-    font: 500 18px/24px $serifFontFamily;
+    color: $cyan;
+    font: 500 20px/26px $serifFontFamily;
     margin-bottom: 18px;
   }
 }
@@ -48,7 +48,6 @@
     left: 0;
     position: absolute;
     width: 251px;
-    // z-index: 5;
   }
   &.active {
     cursor: default;
@@ -130,11 +129,6 @@
       margin: 0 0 20px;
       text-transform: uppercase;
     }
-    p {
-      @include breakTo(large){
-        // margin: 0;
-      }
-    }
     p, .btn {
       @include breakFirst(large){
         display: none;
@@ -193,7 +187,6 @@
   color: $white;
   display: none;
   height: 481px;
-  // padding: 70px 50px 50px;
   padding: 50px 40px 40px;
   position: absolute;
   transform: translateY(-94px);

@@ -349,7 +349,6 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 			border: none;
 		}
 		@include breakFirst(wide){
-			//width: 14.285714286%;
 			min-width: calc(99.9% / 7);
 		}
 		&:first-child {
@@ -374,9 +373,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		}
 		&:hover {
 			a {
-				// background: $beige;
 				background: $blueDark;
-				// color: $blue;
 			}
 			.no-js & .dropdown {
 				@include breakFirst(large){
@@ -623,7 +620,6 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 }
 
 .dropdown {
-	// background: $beige;
 	background: $blueDark;
 	display: none;
 	left: 0;
@@ -657,9 +653,11 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		&:first-child a {
 			border: none;
 		}
+		&:hover a, &:focus a {
+			background: $blue;
+		}
 	}
 	a {
-		// color: $blue;
 		color: $white;
 		border-top: 1px solid $beigeDark;
 		display: block;
@@ -667,9 +665,6 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		padding: 11px;
 		text-align: left;
 		text-transform: none;
-		&:hover {
-			// color: $orange;
-		}
 	}
 	.aux-dropdown {
 		padding-top: 7px;
@@ -691,9 +686,6 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 	}
 }
 .mobile-dropdown-wrap {
-	@include breakFirst(large){
-		display: none; 
-	}
 	background: $beigeLight;
 	border-left: 1px solid $beigeDark;
 	height: calc(100vh - 60px);
@@ -705,6 +697,9 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 	top: 60px;
 	width: 80%;
 	z-index: $zUI;
+	@include breakFirst(large){
+		display:none;
+	}
 	.open-mobile-dropdown & {
 		transform: translateX(0);
 	}

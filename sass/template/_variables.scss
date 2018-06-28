@@ -24,7 +24,7 @@ $textColor:             $grayDark !default;
 
 // Links
 // -------------------------
-$linkColor:             $orange !default;
+$linkColor:             $orangeDark !default;
 $linkColorHover:        lighten($linkColor, 15%) !default;
 
 // Transitions
@@ -38,9 +38,6 @@ $zUI: 									1000;
 
 // TYPOGRAPHY
 // -------------------------
-// $fontFamily:					"gentona", "Georgia", serif !default;
-// $serifFontFamily:				"quadon", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-
 $fontFamily:					"gentona", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $serifFontFamily:				"quadon", "Georgia", serif !default;
 
