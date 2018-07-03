@@ -6,6 +6,11 @@ require get_template_directory() . '/inc/widgets/widget-breaker-cards.php';
 require get_template_directory() . '/inc/widgets/widget-content-image-left.php';
 require get_template_directory() . '/inc/widgets/widget-content-image-right.php';
 require get_template_directory() . '/inc/widgets/widget-image-right-quote.php';
+
+// custom Events Manager events list widget - include if Events Manager plugin is active
+if (function_exists('em_init')) {
+	require get_template_directory() . '/inc/widgets/widget-em-events.php';
+}
 /**
  * Get the number of widget in a specific sidebar
  * 
@@ -179,10 +184,10 @@ function hwcoe_ufl_widgets_init() {
 	register_widget( 'UFL_2015_Image_Right_Quote' );
 
 	// Unregister unwanted default WP widgets
-	unregister_widget('WP_Widget_Media_Audio');
-	unregister_widget('WP_Widget_Media_Image');
-	unregister_widget('WP_Widget_Media_Video');
-	unregister_widget('WP_Widget_Custom_HTML');
+	// unregister_widget('WP_Widget_Media_Audio');
+	// unregister_widget('WP_Widget_Media_Image');
+	// unregister_widget('WP_Widget_Media_Video');
+	// unregister_widget('WP_Widget_Custom_HTML');
 	unregister_widget('WP_Widget_Pages');
 	unregister_widget('WP_Widget_Calendar');
 	unregister_widget('WP_Widget_Meta');
@@ -190,13 +195,7 @@ function hwcoe_ufl_widgets_init() {
 	unregister_widget('WP_Widget_Recent_Posts');
 	unregister_widget('WP_Widget_Categories');
 	unregister_widget('WP_Widget_Recent_Comments');
-	
  	unregister_widget('WP_Widget_Links');
- 	//	unregister_widget('WP_Widget_Text'); 	//kept active because some subsites are using it
- 	// unregister_widget('WP_Widget_Categories');
- 	// unregister_widget('WP_Widget_Recent_Comments');
- 	//unregister_widget('WP_Nav_Menu_Widget');
- 	// unregister_widget('WP_Widget_Tag_Cloud');
 }
 add_action( 'widgets_init', 'hwcoe_ufl_widgets_init' );
 

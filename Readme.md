@@ -31,6 +31,10 @@ Documentation
 
 Changelog
 ---------
+### 1.2.x
+
+- Add HWCOE_Events_Widget for use with Events Manager plugin
+
 ### 1.1.x
 
 - ACF: Implement synchronized JSON for enhanced performance and version control of ACF field groups

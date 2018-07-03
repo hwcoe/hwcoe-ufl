@@ -1,0 +1,75 @@
+.widget_hwcoe_events_widget {
+	h3 {
+		color: $white;
+		font-family: $fontFamily;
+		font-size: 18px;
+		line-height: 22px;
+		margin:0;
+	}
+	h4 {
+		float: left;
+		min-height: 80px;
+		width: 55px;
+		padding-right: 10px;
+		border-right: 3px solid $orange;
+	}
+	.item {
+		// clear:both;
+		// position: relative;
+		// overflow:hidden;
+		// padding: 0 15px 3px 0;
+		// margin-bottom: $grid-gutter-width/2;
+	}
+	.events-list {
+		li {
+			clear:both;
+			position: relative;
+			overflow:hidden;
+			padding: 0 15px 3px 0;
+			margin-bottom: $grid-gutter-width/2;
+		}
+	}
+	.event-info {
+		margin-left: 80px;
+		font-size:14px;
+	}
+	.month, .day {
+		color: $white;
+		display: block;
+		text-align: right;
+	}
+	.month {
+		font-size: 16px;
+		line-height: 16px;
+		text-transform: uppercase;
+	}
+	.day {
+		font-size: 36px;
+		line-height: 36px;
+		font-family: $serifFontFamily, Georgia, serif;
+	}
+	.time {
+		// margin-left: 80px;
+		margin-bottom: 0;
+	}
+
+	.all-events-link { 
+		margin: 10px 0 0 0;
+	}
+}
+
+#sidebar-nav .sidebar_widget .events,
+.sidebar_widget .events {
+	font-size: 0.8em;
+	line-height: 0.8em;
+}
+.sidebar_widget .events .month {
+	top: 10px;
+}
+
+.sidebar_widget .events .day {
+	top: 25px;
+	display: block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
