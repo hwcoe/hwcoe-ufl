@@ -423,30 +423,3 @@ function hwcoe_ufl_breaker_cards($atts, $content = NULL ) {
 }
 add_shortcode('ufl-breaker-cards', 'hwcoe_ufl_breaker_cards');
 
- /**
- * Add Icon Shortcode
- * 
- * Example [ufl-icon]
- * @param  array $atts Shortcode attributes
- * @param  string [$content = ''] Content between shortcode tags
- * @return string Shortcode output
- */
-// function ufclas_ufl_2015_icon($atts, $content = NULL ) {
-	
-// 	extract( shortcode_atts( 
-// 		array(
-// 			'name' => 'file',
-// 			'icon_class' => ''
-// 		), $atts )
-// 	);
-	
-// 	$classes = array( 'img-icon glyphicon glyphicon-' . esc_attr( $name ) );
-	
-// 	if ( !empty( $icon_class ) ){
-// 		$classes[] = esc_attr( $icon_class );
-// 	}
-	 
-// 	return '<div class="img-icon-wrap"><span class="' . join(' ', $classes) . '"></span></div>';
-// }
-// add_shortcode('ufl-icon', 'ufclas_ufl_2015_icon');
-
