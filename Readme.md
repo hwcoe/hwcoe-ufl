@@ -34,6 +34,7 @@ Changelog
 ### 1.2.x
 
 - Add HWCOE_Events_Widget for use with Events Manager plugin
+- Update content CSS
 
 ### 1.1.x
 

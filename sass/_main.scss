@@ -152,9 +152,6 @@
 	}
 }
 .screen-reader-text {
-	/*text-indent: -999em;
-	display: block;
-	margin-bottom: -30px;*/
 	@extend .visuallyhidden;
 }
 .img-responsive {
@@ -163,9 +160,10 @@
 	height: auto;
 }
 .lead {
-	@extend h2;
-	margin-top: 20px;
-	margin-bottom: 10px;
+	@extend h3;
+	margin: 0 0 20px;
+	font-size: 18px;
+	line-height: 30px;
 }
 .byline {
 	font-size: 16px;
