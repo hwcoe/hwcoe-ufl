@@ -159,7 +159,6 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/navigation.php';
 
 // Add Bootstrap compatible walker
-// TO DELETE?
 if ( !class_exists('wp_bootstrap_navwalker') ) {
 	// require_once get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
 	require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
@@ -181,22 +180,38 @@ if ( !class_exists('wp_bootstrap_navwalker') ) {
 // }
 
 /*
- * Theme variable definitions
+ * Trim content
+ * Useful for generating excerpt like snippets of content
  */
 
+function hwcoe_ufl_trim_content( $content, $length, $after_content ){
+
+  if( strlen( $content ) > $length ){
+	$trimmed_content = substr( strip_tags( $content ), 0,  $length  ) . $after_content;
+	return $trimmed_content; 
+  } else{
+	return $content;
+  }
+}
+
+/*
+ * Theme variable definitions
+ */
 define( "HWCOE_UFL_IMG_DIR", get_template_directory_uri() . "/img" );
 define( "HWCOE_UFL_INC_DIR", get_template_directory() . "/inc/modules" );
 
 // Advanced custom fields
-if( function_exists( 'acf_add_local_field_group' )){
-	require get_template_directory() . '/inc/advanced-custom-fields/field-groups.php';
-}
-
 /*
  * ACF functionality within the theme
  * All additional functionality should be defined here
  */
 
+// Add field groups programmatically for Page and Slider options
+if( function_exists( 'acf_add_local_field_group' )){
+	require get_template_directory() . '/inc/advanced-custom-fields/field-groups.php';
+}
+
+// Add Footer Options page under Appearance
 if( function_exists('acf_add_options_page') ) {
   acf_add_options_page(array(
 	'page_title' => 'Footer Options',
@@ -208,6 +223,7 @@ if( function_exists('acf_add_options_page') ) {
   ));
 }
 
+// Add field groups for Post options, Home and Landing page template modules, and footer options
 add_filter('acf/settings/save_json', 'hwcoe_ufl_acf_json_save_point');
  
 function hwcoe_ufl_acf_json_save_point( $path ) {
@@ -216,7 +232,6 @@ function hwcoe_ufl_acf_json_save_point( $path ) {
 	// return
 	return $path; 
 }
-
 
 add_filter('acf/settings/load_json', 'hwcoe_ufl_acf_json_load_point');
 
@@ -238,17 +253,4 @@ function hwcoe_ufl_acf_init() {
 
 add_action('acf/init', 'hwcoe_ufl_acf_init');
 
-/*
- * Trim content
- * Useful for generating excerpt like snippets of content
- */
-
-function hwcoe_ufl_trim_content( $content, $length, $after_content ){
-
-  if( strlen( $content ) > $length ){
-	$trimmed_content = substr( strip_tags( $content ), 0,  $length  ) . $after_content;
-	return $trimmed_content; 
-  } else{
-	return $content;
-  }
-}
+// END Advanced custom fields
