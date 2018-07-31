@@ -34,7 +34,10 @@ Changelog
 ### 1.2.x
 
 - Add HWCOE_Events_Widget for use with Events Manager plugin
+- Update default background images 
 - Update content CSS
+- Clean up stats module CSS and change default focus background
+- Revise comments
 
 ### 1.1.x
 
