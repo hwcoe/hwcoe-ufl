@@ -35,6 +35,8 @@ Changelog
 
 - Add HWCOE_Events_Widget for use with Events Manager plugin
 - Update styles for Events Manager plugin events list
+- Add Events Manager templates
+- Update WP-FullCalendar styles
 - Update default background images 
 - Update content CSS
 - Clean up stats module CSS and change default focus background

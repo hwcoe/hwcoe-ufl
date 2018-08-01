@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+
+.ui-widget {
+	font-family: $fontFamily;
+	table {
+		td {
+			padding: 0;
+		}
+	}
+	li {
+		&:before {
+			content: none;
+		}
+	}
+}
