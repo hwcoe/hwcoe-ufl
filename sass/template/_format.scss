@@ -508,13 +508,13 @@ form {
 	}
 	input[type='text'],textarea {
 		background: $white;
-		border: 2px solid transparent;
-		color: $orange;
+		// border: 2px solid transparent;
+		// color: $orange;
 		display: inline-block;
 		font: 500 20px/1 $serifFontFamily;
 		letter-spacing: 1px;
 		margin: 0 -2px;
-		padding: 17px 20px 16px;
+		// padding: 17px 20px 16px;
 		vertical-align: top;
 		width: 100%;
 		&:focus {
@@ -532,6 +532,13 @@ form {
 	}
 	textarea {
 		min-height: 200px;
+	}
+	select, textarea, input[type="text"], input[type="email"] {
+		padding: 15px 7.5px;	
+		// color: rgba(51, 49, 50, 0.8);
+		color: $grayDark;
+		// border: 2px solid rgba(76, 135, 181, 0.7);
+		border: 2px solid $blue;
 	}
 }
 .styled-select {

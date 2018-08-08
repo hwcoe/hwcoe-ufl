@@ -38,7 +38,7 @@ Changelog
 - Add Events Manager templates
 - Update WP-FullCalendar styles
 - Update default background images 
-- Update content CSS
+- Update content and forms CSS
 - Clean up stats module CSS and change default focus background
 - Revise comments
 
