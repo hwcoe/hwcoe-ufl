@@ -31,7 +31,11 @@ Documentation
 
 Changelog
 ---------
-### 1.2.x
+### 1.3.x
+
+- Add Gravity Forms add-on functions for enabling "maintenance mode" and enhanced multi-select field options
+
+### 1.2.0
 
 - Add HWCOE_Events_Widget for use with Events Manager plugin
 - Update styles for Events Manager plugin events list

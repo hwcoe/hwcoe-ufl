@@ -254,3 +254,11 @@ function hwcoe_ufl_acf_init() {
 add_action('acf/init', 'hwcoe_ufl_acf_init');
 
 // END Advanced custom fields
+
+// Gravity Forms custom code and enhancements
+
+if ( class_exists( 'GFCommon' ) && file_exists(get_template_directory() . '/plugins/gravityforms/gf-addons.php')) {
+    include ('plugins/gravityforms/gf-addons.php');	
+}
+
+// END Gravity Forms
