@@ -693,6 +693,11 @@ jQuery(function($){
 		}
 	});
 
+	// Responsive embeds
+	$('iframe').each(function(){
+		$(this).wrap("<div class=\"embed-wrapper\"></div>");
+	});
+
 	// Custom checkboxes
 	$('.uf-check input[type="checkbox"]').each(function(){
 		$(this).after('<div><span class="icon-svg"><svg><use xlink:href="'+hwcoe_ufl_sitedata.theme_url+'/img/spritemap.svg#close"></use></svg></span></div>');

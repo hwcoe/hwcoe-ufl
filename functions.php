@@ -64,16 +64,21 @@ endif; // hwcoe_ufl_setup
 add_action( 'after_setup_theme', 'hwcoe_ufl_setup' );
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
+ * Set the max content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
  * @global int $content_width
  */
-function hwcoe_ufl_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'hwcoe_ufl_content_width', 960 );
-}
-add_action( 'after_setup_theme', 'hwcoe_ufl_content_width', 0 );
+
+// default max content width
+if ( ! isset( $content_width ) ) $content_width = 1050;
+
+// function hwcoe_ufl_content_width() {
+
+// 	$GLOBALS['content_width'] = apply_filters( 'hwcoe_ufl_content_width', 1050 );
+// }
+// add_action( 'after_setup_theme', 'hwcoe_ufl_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
@@ -258,7 +263,7 @@ add_action('acf/init', 'hwcoe_ufl_acf_init');
 // Gravity Forms custom code and enhancements
 
 if ( class_exists( 'GFCommon' ) && file_exists(get_template_directory() . '/plugins/gravityforms/gf-addons.php')) {
-    include ('plugins/gravityforms/gf-addons.php');	
+	include ('plugins/gravityforms/gf-addons.php');	
 }
 
 // END Gravity Forms
