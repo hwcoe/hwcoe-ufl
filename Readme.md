@@ -34,6 +34,7 @@ Changelog
 ### 1.3.x
 
 - Add Gravity Forms add-on functions for enabling "maintenance mode" and enhanced multi-select field options
+- Add styles for post-list 
 
 ### 1.2.0
 
