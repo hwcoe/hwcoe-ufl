@@ -35,7 +35,7 @@ Changelog
 
 - Add Gravity Forms add-on functions for enabling "maintenance mode" and enhanced multi-select field options
 - Add styles for post-list 
-- Bugfix: Adjust default $content_width and make responsive
+- Bugfix: Adjust default $content_width; make video embeds responsive
 
 ### 1.2.0
 
