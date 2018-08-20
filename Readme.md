@@ -37,7 +37,8 @@ Changelog
 - Add styles for post-list 
 - Bugfix: Adjust default $content_width; make video embeds responsive
 - Add list bullets to unordered lists
-- Troubleshoot numbering and add "reversed" option for ordered lists
+- Fix numbering bug in ordered lists
+- Add "reversed" option for ordered lists
 
 ### 1.2.0
 
