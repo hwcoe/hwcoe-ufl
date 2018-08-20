@@ -139,21 +139,32 @@ ul, ol {
 		margin-bottom: 10px;
 		text-transform: uppercase;
 		&:before {
-				content: "• ";
+				content: "\2022";
 				color: $orange;
 				margin-right: 5px;
 		}
 	}
 }
 ol {
-	li {
-		counter-increment: step-counter;
+	counter-reset: step-counter;
+	.reversed > li {
+		counter-increment: step-counter -1;
 	}
-	li:before {
-		content: counter(step-counter);
+	& > li {
+		counter-increment: step-counter;
+		ul {
+			li:before{
+			counter-increment: none;
+			content: "\2022";
+			color: $orange;
+			margin-right: 5px;
+			}
+		}
+	}
+	& > li:before {
+		content: counter(step-counter)". ";
 		font-size: 14px;
-		margin-right: 10px;
-		top: -2px;
+		margin-right: 5px;
 		position: relative;
 	}
 }

@@ -36,6 +36,8 @@ Changelog
 - Add Gravity Forms add-on functions for enabling "maintenance mode" and enhanced multi-select field options
 - Add styles for post-list 
 - Bugfix: Adjust default $content_width; make video embeds responsive
+- Add list bullets to unordered lists
+- Troubleshoot numbering and add "reversed" option for ordered lists
 
 ### 1.2.0
 
