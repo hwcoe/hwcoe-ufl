@@ -46,8 +46,8 @@
         background-color: $orangeDark;
         
         @media screen and ( min-width: $screen-sm ){
-            margin-right: 50px;
-            position: absolute;
+            // margin-right: 50px;
+            // position: absolute;
         }
         /* Fixes SVG icon display in FF */
         .arw-right svg {

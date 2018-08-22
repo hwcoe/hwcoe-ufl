@@ -115,6 +115,7 @@
 
 		@media screen and (min-width: 1220px) {
 			padding-left: 50px;
+			text-align: right;
 		}
 	}
 }
@@ -486,6 +487,10 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		@include breakFirst(large){
 			width: auto;
 		}
+		@include breakFirst(wide){
+			position: absolute;
+			left: 50px;
+		}
 		a {
 			display: block;
 			font-size: 14px;
@@ -544,7 +549,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		}
 		@include breakFirst(wide){
 			margin-right: 50px;
-			position: absolute;
+			// position: absolute;
 		}
 		> a, .arw-right {
 			float: left;

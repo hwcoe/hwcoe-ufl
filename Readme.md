@@ -14,7 +14,7 @@ Requirements and Suggested Plugins
 
 ### Required
 
-- WordPress 4.4
+- WordPress 4.4 or above
 - Support for .svg files
 - Advanced Custom Fields Pro - visual interface for custom fields 
 
@@ -39,6 +39,8 @@ Changelog
 - Add list bullets to unordered lists
 - Fix numbering bug in ordered lists
 - Add "reversed" option for ordered lists
+- Fix bug with header display of social media icons 
+- Make global menu visible with Title Text header type
 
 ### 1.2.0
 
