@@ -47,7 +47,6 @@
 	@include breakFirst(wide){
 		background-color: transparent;
 	}
-	
 	.logo {
 		@media screen and (min-width: $screen-xs){
 			display: block;
@@ -78,8 +77,6 @@
 			left: 38px;
 		}
 	}
-}
-.header-type-text .header.unit { 
 	.site-title {
 		background-color: $blue;
 		height: 60px;
@@ -136,19 +133,17 @@
 		}
 		
 	}
-}
-.header-type-text .header.unit { 
-	#global-menu-title {
-		@media screen and (min-width: $screen-md){
-			padding: 0 30px 0 150px;
+	// #global-menu-title {
+	// 	@media screen and (min-width: $screen-md){
+	// 		padding: 0 30px 0 150px;
 			
-			a {
-				padding: 0 30px 0 20px;
-				line-height: 50px;
-				font-size: 22px;
-			}
-		}
-	}
+	// 		a {
+	// 			padding: 0 30px 0 20px;
+	// 			line-height: 50px;
+	// 			font-size: 22px;
+	// 		}
+	// 	}
+	// }
 	.menu-wrap {
 		// @media screen and (min-width: $screen-md){
 		@include breakFirst(wide){
@@ -169,27 +164,27 @@
 	}
 	.main-menu-wrap {
 		height: auto;
-		
+		@include breakFirst(large){
+			padding-left: 60px;
+		}
 		// @media screen and (min-width: $screen-md){
 		@include breakFirst(wide){
-			padding-left: 150px;
+			padding-left: 130px;
 			top: 100px;
 			height: 50px;
-			min-height: 50px;
-			
+			min-height: 50px;		
 			ul.menu {
 				margin-left: 20px;
 			}
 		}
 		.main-menu-link {
-			// @media screen and (min-width: $screen-md){
+			@include breakFirst(large){
+				padding: 37px 20px;
+			}
 			@include breakFirst(wide){
 				padding: 12px 45px;
 				font-size: 14px;
 				font-weight: 800;
-				// &:first-child {
-				// 	padding-left: 8px;
-				// }
 			}
 		}
 		&>ul>li {
@@ -211,9 +206,6 @@
 			top: 50px;
 		}
 	}
-}
-// .header-type-text .header.unit {
-.header-type-text {  
 	.aux-menu-wrap {
 		// background-color: $blue;
 		// position: relative; 
@@ -232,7 +224,7 @@
 	}
 	.aux-nav {
 		@include breakFirst(wide){
-			left: 140px;
+			left: 160px;
 		}
 	}
 	.audience-nav-wrap {

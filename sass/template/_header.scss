@@ -74,6 +74,8 @@
 	.menu-wrap {
 		padding-left: 0px;
 	}
+}
+.header.unit {
 	.main-menu-wrap {
 		@include breakFirst(large){
 			padding-left: 300px;

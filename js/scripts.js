@@ -233,7 +233,6 @@ jQuery(function($){
 	// Show aux menu on smaller width, only applies to default header
 	$('.btn-show-aux').on('click',function(e){
 		e.preventDefault();
-		// $('.header-type-logo .header').toggleClass('show-aux');
 		$('.header').toggleClass('show-aux');
 	});
 
