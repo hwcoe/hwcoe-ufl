@@ -150,7 +150,7 @@ function hwcoe_ufl_global_parent_organization(){
 		$org_title = esc_html( trim($parent_org[0]) );
 		$org_link = esc_url( trim($parent_org[1]) );
 		
-		printf( '<li id="global-menu-title" class="menu-item"><a href="%s">%s</a></li>', $org_link, $org_title );
+		printf( "<li id=\"global-menu-title\" class=\"menu-item\"><a href=\"%s\">%s</a></li>\n", $org_link, $org_title );
 	}
 }
 
@@ -173,7 +173,7 @@ function hwcoe_ufl_socialnetworks() {
 		$icon = get_template_directory_uri();
 		$icon .= "/img/spritemap.svg#{$name}";
 		if( !empty($link) ){
-			printf('<li><a href="%s" class="btn-circle icon-svg icon-%s"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%s"></use></svg><span class="visuallyhidden">%s</span></a></li>', $link, $name, $icon, $title );
+			printf("<li><a href=\"%s\" class=\"btn-circle icon-svg icon-%s\"><svg><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"%s\"></use></svg><span class=\"visuallyhidden\">%s</span></a></li>\n", $link, $name, $icon, $title );
 		}
 	}
 }

@@ -41,6 +41,7 @@ Changelog
 - Add "reversed" option for ordered lists
 - Fix bug with header display of social media icons 
 - Make global menu visible with Title Text header type
+- DRYify aux nav in header-text and header-logo
 
 ### 1.2.0
 
