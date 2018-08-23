@@ -551,7 +551,6 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		}
 		@include breakFirst(wide){
 			margin-right: 50px;
-			// position: absolute;
 		}
 		> a, .arw-right {
 			float: left;
@@ -616,7 +615,6 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 			letter-spacing: 2px;
 			padding: 15px 10px;
 			@include breakFirst(wide){
-				// padding: 15px 20px;
 				padding: 15px 5px 15px 10px;
 			}
 		}

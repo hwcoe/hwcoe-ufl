@@ -43,7 +43,6 @@
 
 // styles specific to header with Title Text type
 .header-type-text .header.unit { 
-	// @media screen and ( min-width: $screen-md ){
 	@include breakFirst(wide){
 		background-color: transparent;
 	}
@@ -55,7 +54,6 @@
 			background-color: #E47426;
 			padding: 0;
 		}
-		// @media screen and (min-width: $screen-md){
 		@include breakFirst(wide){
 			height: 150px;
 			width: 150px;
@@ -70,7 +68,6 @@
 			left: 15px;
 		}
 		@include breakFirst(wide){
-		// @media screen and (min-width: $screen-md){
 			width: 74px;
 			height: 48px;
 			top: 51px;
@@ -105,7 +102,6 @@
 				color: $white;
 			}
 		}
-		// @media screen and (min-width: $screen-md){
 		@include breakFirst(wide){
 	
 			height: 50px;
@@ -133,19 +129,7 @@
 		}
 		
 	}
-	// #global-menu-title {
-	// 	@media screen and (min-width: $screen-md){
-	// 		padding: 0 30px 0 150px;
-			
-	// 		a {
-	// 			padding: 0 30px 0 20px;
-	// 			line-height: 50px;
-	// 			font-size: 22px;
-	// 		}
-	// 	}
-	// }
 	.menu-wrap {
-		// @media screen and (min-width: $screen-md){
 		@include breakFirst(wide){
 			background-color: $white;
 			background-image: url('img/line.png');
@@ -167,7 +151,6 @@
 		@include breakFirst(large){
 			padding-left: 60px;
 		}
-		// @media screen and (min-width: $screen-md){
 		@include breakFirst(wide){
 			padding-left: 130px;
 			top: 100px;
@@ -207,19 +190,12 @@
 		}
 	}
 	.aux-menu-wrap {
-		// background-color: $blue;
-		// position: relative; 
-		
-		// @media screen and (min-width: $screen-md){
 		@include breakFirst(wide){
 	
 			background-color: $blue;
 			position: absolute;
 			top: 0;
-			// padding-left: 0;
-			// text-align: left;
 			padding-left: 150px;
-			// text-align: right;
 		}
 	}
 	.aux-nav {
@@ -232,16 +208,8 @@
 			border-left: none;
 		}	
 		.arw-right {
-			// border-left: 1px solid #fff;
-			// border-color: rgba(255,255,255,0.2);
-			// @media screen and (min-width: $screen-md){
 			@include breakFirst(large){	
-				// width: 50px;
 			}
-		}
-		
-		.arw-right svg {
-			// color: rgba(255,255,255,0.7);
 		}
 		
 		&:hover, &:focus {
@@ -250,24 +218,14 @@
 				right: 0;
 				min-width: 200px;
 			}
-			.arw-right svg {
-				// color: $blue;
-			}
-		}
-	}
-	.btn-show-aux {
-		@media screen and (min-width: $screen-md){
-			// display: none;
 		}
 	}
 	form.search-wrap {
-		// @media screen and (min-width: $screen-md){
 		@include breakFirst(wide){
 			right: 0;
 		}
 	}
 	.admin-bar & .menu-wrap {
-		// @media screen and (min-width: $screen-md){
 		@include breakFirst(wide){
 			background-position: 0 94px;
 		}

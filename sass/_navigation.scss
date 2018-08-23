@@ -22,42 +22,9 @@
 	font-weight: 400;
 }
 
-/* Bring first link in global nav closer to the UF logo */
-// .aux-menu-wrap .aux-nav li.global-menu-title a {
-// 	font-size: 14px;
-// 	font-weight: 700;
-// 	color: $beigeDark;
-	
-// 	@include breakFirst(wide){
-// 		padding-left: 13px;
-// 		padding-right: 20px;
-// 		font-size: 15px;
-// 	}
-// }
 #global-menu-title {
 	a {
 		font-weight: 700;
-	}
-	// @media screen and (min-width: $screen-md){
-
-	@include breakFirst(large){
-		// padding: 0 30px 0 150px;
-		// padding: 0 20px;
-		
-		a {
-			// padding: 0 30px 0 20px;
-			// line-height: 50px;
-			// // font-size: 22px;
-			// font-size: 14px;
-			// font-weight: 700;
-			// color: $beigeDark;
-
-			@include breakFirst(wide){
-				// padding-left: 13px;
-				// padding-right: 20px;
-				// font-size: 15px;
-			}
-		}
 	}
 }
 
@@ -71,10 +38,6 @@
 	.audience-nav-wrap { 
         background-color: $orangeDark;
         
-        @media screen and ( min-width: $screen-sm ){
-            // margin-right: 50px;
-            // position: absolute;
-        }
         /* Fixes SVG icon display in FF */
         .arw-right svg {
 			transform: translate(0, 0);
@@ -176,8 +139,7 @@
 				line-height: $size__menu_height - 7.5px;	
 			}
     	}
-	}
-	
+	}	
 	
 	&.subnav-dark {
 		&, .dropdown-menu {
@@ -238,11 +200,7 @@
 	@extend .big-list;
 	list-style: none;
 	margin-bottom: $grid-gutter-width;
-	// margin-bottom: $grid-gutter-width !important;
 	background: $beigeDark;
-	// @include breakFirst(large){
-	// 	margin: 0;
-	// }
 	ul {
 		margin: 0;
 	}
