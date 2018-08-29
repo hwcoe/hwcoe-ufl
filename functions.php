@@ -223,7 +223,7 @@ if( function_exists('acf_add_options_page') ) {
 	'menu_title'=> 'Footer Options',
 	'menu_slug' => 'footer-options',
 	'parent_slug' => 'themes.php',
-	'capability'=> 'edit_posts',
+	'capability'=> 'customize',
 	'redirect'  => false
   ));
 }
