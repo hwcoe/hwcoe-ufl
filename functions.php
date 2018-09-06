@@ -163,6 +163,14 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/navigation.php';
 
+// Gravity Forms custom code and enhancements
+
+if ( class_exists( 'GFCommon' ) && file_exists(get_template_directory() . '/plugins/gravityforms/gf-addons.php')) {
+	require get_template_directory() . '/plugins/gravityforms/gf-addons.php';
+}
+
+// END Gravity Forms
+
 // Add Bootstrap compatible walker
 if ( !class_exists('wp_bootstrap_navwalker') ) {
 	// require_once get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
@@ -259,11 +267,3 @@ function hwcoe_ufl_acf_init() {
 add_action('acf/init', 'hwcoe_ufl_acf_init');
 
 // END Advanced custom fields
-
-// Gravity Forms custom code and enhancements
-
-if ( class_exists( 'GFCommon' ) && file_exists(get_template_directory() . '/plugins/gravityforms/gf-addons.php')) {
-	include ('plugins/gravityforms/gf-addons.php');	
-}
-
-// END Gravity Forms
