@@ -31,6 +31,10 @@ Documentation
 
 Changelog
 ---------
+
+### 2.0.x
+- Bugfix: Remove gform_pre_render hook from GF custom code as it causes a `Cannot modify header information` warning. **Backward incompatible change** See [Issue #10](https://github.com/hwcoe/hwcoe-ufl/issues/10#issuecomment-419129443)
+
 ### 1.3.x
 
 - Add Gravity Forms add-on functions for enabling "maintenance mode" and enhanced multi-select field options
