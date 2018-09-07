@@ -17,11 +17,15 @@ get_header(); ?>
 <div class="row">
   <!-- <div class="col-sm-8 col-md-offset-3"> -->
   <div class="col-sm-12">
-    <?php hwcoe_ufl_breadcrumbs(); ?>
-    <header class="entry-header">
-      <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-    </header>
-    <!-- .entry-header --> 
+		<?php hwcoe_ufl_breadcrumbs(); ?>
+		<header class="entry-header">
+			<?php 
+			add_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
+			the_title( '<h1 class="entry-title">', '</h1>' ); 
+			remove_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
+			?>
+	 </header>
+	 <!-- .entry-header --> 
   </div>
 </div>
 <div class="row">
@@ -29,7 +33,7 @@ get_header(); ?>
   <?php get_sidebar('page_sidebar'); ?>  
   
   <div class="<?php echo hwcoe_ufl_page_column_class(); ?>">
-    <?php 
+	 <?php 
 		while ( have_posts() ) : the_post();
 			get_template_part( 'template-parts/content', 'page' );
 		endwhile; // End of the loop. 

@@ -91,6 +91,7 @@ add_filter( 'excerpt_length', 'hwcoe_ufl_excerpt_length', 999 );
  * @return string  Post title
  */
 function hwcoe_ufl_title( $title, $id ) {
+	// if ( is_page() && in_the_loop() ){ // page header title is not in the loop...
 	if ( is_page() ){
 		$title_override = get_post_meta( $id, 'custom_meta_page_title_override', true );
 	} else if ( is_single() ) {
@@ -98,6 +99,7 @@ function hwcoe_ufl_title( $title, $id ) {
 	}
 
 	$title = ( !empty($title_override) )? $title_override : $title;
+
 	return $title;
 }
-add_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
+// add_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
