@@ -12,7 +12,7 @@ get_header(); ?>
 <div class="row">
   <div class="col-sm-12">
 	<header class="entry-header">
-		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+      	<?php hwcoe_ufl_entry_title(); ?>
 	</header>
 	<!-- .entry-header --> 
   </div>

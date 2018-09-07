@@ -33,8 +33,11 @@ Changelog
 ---------
 
 ### 2.0.x
-- Bugfix: Remove gform_pre_render hook from GF custom code as it causes a `Cannot modify header information` warning. **Backward incompatible change** See [Issue #10](https://github.com/hwcoe/hwcoe-ufl/issues/10#issuecomment-419129443)
-- Bugfix: Update Title Override Text so it does not affect page title in navigation menus. **Backward incompatible change** see [Issue #9](https://github.com/hwcoe/hwcoe-ufl/issues/9#issue-357292449)
+- Bugfix: Remove gform_pre_render hook from GF custom code as it causes a `Cannot modify header information` warning. 
+	- **Backward incompatible change** See [Issue #10](https://github.com/hwcoe/hwcoe-ufl/issues/10#issuecomment-419129443)
+- Bugfix: Update Title Override Text so it does not affect page title in navigation menus. 
+	- **Backward incompatible change** see [Issue #9](https://github.com/hwcoe/hwcoe-ufl/issues/9#issue-357292449)
+- Remove `Title Override` field (`Page Options` field group) from blank and home page templates  
 
 ### 1.3.x
 

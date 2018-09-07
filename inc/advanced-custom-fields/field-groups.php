@@ -49,6 +49,20 @@ acf_add_local_field_group(array (
 				'order_no' => 0,
 				'group_no' => 0,
 			),
+			array (
+				'param' => 'page_template',
+				'operator' => '!=',
+				'value' => 'page-templates/home-page.php',
+				'order_no' => 1,
+				'group_no' => 0,
+			),
+			array (
+				'param' => 'page_template',
+				'operator' => '!=',
+				'value' => 'page-templates/blank.php',
+				'order_no' => 1,
+				'group_no' => 0,
+			),
 		),
 	),
 	'options' => array (

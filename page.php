@@ -19,12 +19,8 @@ get_header(); ?>
   <div class="col-sm-12">
 		<?php hwcoe_ufl_breadcrumbs(); ?>
 		<header class="entry-header">
-			<?php 
-			add_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
-			the_title( '<h1 class="entry-title">', '</h1>' ); 
-			remove_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
-			?>
-	 </header>
+			<?php hwcoe_ufl_entry_title(); ?>
+	 	</header>
 	 <!-- .entry-header --> 
   </div>
 </div>

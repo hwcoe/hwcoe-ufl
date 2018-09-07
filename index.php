@@ -19,7 +19,7 @@ get_header(); ?>
     <?php if ( !is_home() && !is_front_page() ): ?>
 		<?php hwcoe_ufl_breadcrumbs(); ?>
         <header class="entry-header">
-          <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+          <?php hwcoe_ufl_entry_title(); ?>
         </header><!-- .entry-header --> 
     <?php endif; ?>
   </div>
