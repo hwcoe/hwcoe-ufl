@@ -86,7 +86,7 @@ function hwcoe_ufl_landing_hero($atts, $content = NULL ) {
 	);
 	
 	// Support either image ID or image url
-	$image = ( is_numeric( $image ) )? wp_get_attachment_image_src( $image, 'large' ) : array($image);
+	$image = ( is_numeric( $image ) )? wp_get_attachment_image_src( $image, 'hero' ) : array($image);
 	$image_style = '';
 	$subtitle = (!empty( $subtitle ))? $subtitle : '';
 	
