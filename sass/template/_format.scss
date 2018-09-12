@@ -246,19 +246,33 @@ img {
 	letter-spacing: 2px;
 	padding: 15px 20px;
 	text-transform: uppercase;
-	&:hover {
+	.entry-content & {
+		text-decoration: none;
+	}
+	&:hover, &:active, &:focus {
 		background: $orange;
 		color: $white;
+		transition: all 0.3s ease;
+	}
+	&.btn--blue {
+		border-color: $blueDark;
+		color: $blueDark;
+		&:hover, &:active, &:focus {
+			background: $blueDark;
+		color: $white;
+		transition: all 0.3s ease;
+		}
 	}
 	&.btn--white {
 		border-color: $white;
 		color: $white;
-		&:hover {
+		&:hover, &:active, &:focus {
 			background: $white;
 			color: $orange;
 			transition: all 0.3s ease;
 		}
 	}
+
 	.arw-right {
 		height: 14px;
 		margin-left: 15px;

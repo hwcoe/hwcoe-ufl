@@ -1,5 +1,4 @@
 .landing-page-hero {
-	
 	overflow: hidden;
 	padding-bottom: 80px;
 	@include breakFirst(medium){
@@ -249,4 +248,8 @@
 		margin-top: 70px;
 		padding: 0 0 0 15px;
 	}
+}
+.archive-entry {
+	margin-right: 0;
+	margin-left: 0;
 }
