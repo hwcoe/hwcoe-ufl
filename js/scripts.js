@@ -693,11 +693,6 @@ jQuery(function($){
 		}
 	});
 
-	// Responsive embeds
-	$('iframe').each(function(){
-		$(this).wrap("<div class=\"embed-wrapper\"></div>");
-	});
-
 	// Custom checkboxes
 	$('.uf-check input[type="checkbox"]').each(function(){
 		$(this).after('<div><span class="icon-svg"><svg><use xlink:href="'+hwcoe_ufl_sitedata.theme_url+'/img/spritemap.svg#close"></use></svg></span></div>');
@@ -707,7 +702,17 @@ jQuery(function($){
 		$(this).after('<div></div>');
 	});
 
-	//// Homepage infinite scroll
+	// Responsive embeds
+	$('iframe').each(function(){
+		$(this).wrap("<div class=\"embed-wrapper\"></div>");
+	});
+
+	// Hide entry-title if a hero image shortcode exists
+	if ($('.landing-page-hero-full').length > 0) { 
+		$('.entry-title').hide();
+	}
+	
+	// Homepage infinite scroll
 	if($('.homepage .home-section').length>1){
 		if($('.homepage').length){
 		

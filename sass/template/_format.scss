@@ -239,7 +239,8 @@ img {
 	}
 }
 .btn {
-	border: 3px solid $orange;
+	border: 3px solid $orangeDark;
+	border-radius: 0;
 	cursor: pointer;
 	display: inline-block;
 	font: 700 16px/1 $fontFamily;
@@ -272,7 +273,10 @@ img {
 			transition: all 0.3s ease;
 		}
 	}
-
+	&.btn-white {
+		/* backward compatibility */
+		@extend .btn--white;
+	}
 	.arw-right {
 		height: 14px;
 		margin-left: 15px;
@@ -435,6 +439,9 @@ img {
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	text-decoration: underline;
+	.entry-content & {
+		color: $orangeDark;
+	}
 }
 
 // Hide the text and show an image

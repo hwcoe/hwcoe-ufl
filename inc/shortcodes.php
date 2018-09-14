@@ -178,7 +178,7 @@ function hwcoe_ufl_breaker($atts, $content = NULL ) {
                     <?php echo wpautop( wp_kses_post( $content ) ); ?>
                     
                     <?php if ( !$hide_button || !empty( $button_text ) ){ ?>
-                    <a href="<?php echo esc_url( $button_link ); ?>" class="btn btn-white"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
+                    <a href="<?php echo esc_url( $button_link ); ?>" class="btn btn--white"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
                     <?php } ?>
                 </div>
             </div>

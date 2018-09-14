@@ -38,8 +38,11 @@ Changelog
 - Bugfix: Update Title Override Text so it does not affect page title in navigation menus. 
 	- **Backward incompatible change** see [Issue #9](https://github.com/hwcoe/hwcoe-ufl/issues/9#issue-357292449)
 - Remove `Title Override` field (`Page Options` field group) from blank and home page templates  
+
+
 - Bugfix: Edit `ufl-landing-page-hero` shortcode to display original uploaded image size rather than `large` 1024x512 thumbnail
-- Update landing page Archive Content module styles
+- Display page title on landing page templates if no featured image/hero image shortcode exists
+- Update landing page Archive Content module and button styles
 
 ### 1.3.x
 

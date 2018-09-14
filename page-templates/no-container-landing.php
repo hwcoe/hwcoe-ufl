@@ -24,7 +24,9 @@ get_header(); ?>
 <div id="main" class="full-width-content">
 	<?php 
 		if ( ! has_post_thumbnail() ): 
+			echo "<div class=\"container\">";
 			hwcoe_ufl_entry_title();
+			echo "</div>";
 		endif;
 	?>
     

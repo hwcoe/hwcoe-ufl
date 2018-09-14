@@ -309,24 +309,7 @@ figure.wp-caption img {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
-.btn {
-	border-radius: 0;
-	
-	&:focus {
-		background-color: $orange;
-		color: $white;
-	}
-	
-	&.btn-white {
-		border-color: $white;
-		color: $white;
-		
-		&:hover {
-			background-color: $white;
-			color: $orange;
-		}
-	}
-}
+
 strong {
 	font-weight: 500;	
 }
