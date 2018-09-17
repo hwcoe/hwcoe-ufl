@@ -41,7 +41,7 @@ Changelog
 
 
 - Bugfix: Edit `ufl-landing-page-hero` shortcode to display original uploaded image size rather than `large` 1024x512 thumbnail
-- Display page title on landing page templates if no featured image/hero image shortcode exists
+- Display page title on landing page templates if no featured image or hero image shortcode exists
 - Update landing page Archive Content module and button styles
 
 ### 1.3.x

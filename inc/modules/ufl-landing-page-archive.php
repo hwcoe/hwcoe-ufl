@@ -19,10 +19,12 @@
 	<?php if ( $archive->have_posts() ): ?>
 		<?php while ( $archive->have_posts() ): $archive->the_post(); ?>
 			<div class="archive-entry row">
-				<h3 class="m-top"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>  
+				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>  
 				<?php if( has_post_thumbnail() && get_sub_field( 'include_thumbnails' ) ): ?> 
-					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' ); ?>
-					<div class="col-sm-2"><img src="<?php echo $image[0]; ?>" class="img-full"></div>
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium-cropped' ); ?>
+					<div class="col-sm-2">
+	 					<img src="<?php echo $image[0]; ?>" class="img-full">
+					</div>
 					<div class="col-sm-10">
 				<?php else: // has_post_thumbnail ?>
 					<div class="col-sm-12">
@@ -36,7 +38,9 @@
 			</div>
 		<?php endwhile // the_post ?>
 		<?php if( get_sub_field( 'read_more' ) ): ?>
-			<a href="<?php the_sub_field( 'read_more' ); ?>" class="btn btn--blue">Keep reading <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
+			<p style="text-align: center;">
+				<a href="<?php the_sub_field( 'read_more' ); ?>" class="btn btn--blue">Keep reading <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
+			</p>
 		<?php endif // read_more ?>
 	<?php endif // have_posts ?>
 <?php wp_reset_postdata(); ?>
