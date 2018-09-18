@@ -44,6 +44,7 @@ Changelog
 - Display page title on landing page templates if no featured image or hero image shortcode exists
 - Update landing page Archive Content module and button styles
 - Update landing page Subpage List module display
+- Remove large bottom margin from H3
 
 ### 1.3.x
 
