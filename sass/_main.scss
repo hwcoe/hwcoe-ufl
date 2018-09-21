@@ -156,6 +156,10 @@
 	display: block;
 	max-width: 100%;
 	height: auto;
+	@include breakTo (xsmall) {
+		float:none;
+		width:100%;
+	}
 }
 .lead {
 	@extend h3;
@@ -192,48 +196,52 @@ figure img {
 	max-width: 100%;
 	height: auto;
 }
-img.alignnone, img.aligncenter {
+img.alignnone, img.aligncenter, 
+img.alignleft, img.alignright {
 	@extend .img-responsive;
 }
-.alignnone {
+.alignnone, a img.alignnone {
 	margin: 0 20px 20px 0;
 }
-
 .aligncenter,
-div.aligncenter {
+div.aligncenter, a img.aligncenter {
 	display: block;
 	margin: 5px auto 5px auto;
 }
 
-.alignright {
+.alignright, a img.alignright {
 	float:right;
 	margin: 5px 0 20px 20px;
 }
-.alignleft {
-   width: 100%;
-   height: auto;
-   
-   @include breakFirst($screen-phone){ 
+.alignleft, a img.alignleft {
+	float:left;
+	margin: 5px 20px 20px 0;
+}
+// .alignleft {
+// 	width: 100%;
+// 	height: auto;
+	
+// 	@include breakFirst($screen-phone){ 
+// 		float: left;
+// 		margin: 5px 20px 20px 0;
+// 		width: auto;
+// 		height: auto;
+// 		max-width: 50%;
+// 	}
+// }
+
+
+figure.alignleft {
+	width: 100%;
+	height: auto;
+	
+	@include breakFirst($screen-phone){ 
 		float: left;
 		margin: 5px 20px 20px 0;
 		width: auto;
 		height: auto;
 		max-width: 50%;
-   }
-}
-a img.alignright {
-	float: right;
-	margin: 5px 0 20px 20px;
-}
-
-a img.alignnone {
-	margin: 0 20px 20px 0;
-}
-
-a img.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto
+	}
 }
 .wp-caption {
 	background: #fff;

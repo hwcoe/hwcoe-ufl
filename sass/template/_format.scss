@@ -361,12 +361,9 @@ img {
 		}
 	}
 	li {
-		display: none;
+		display: block;
 		margin: 0;
 		text-transform: uppercase;
-		@include breakFirst(medium){
-			display: block;
-		}
 		&:before {
 			display: none;
 		}

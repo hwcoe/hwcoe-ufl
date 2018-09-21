@@ -10,7 +10,6 @@
  *	[ufl-content-block][/ufl-content-block]
  *	[ufl-image-right-quote][/ufl-image-right-quote]
  *	[ufl-breaker-cards][/ufl-breaker-cards]
- *	[ufl-icon]
  *
  * @package HWCOE_UFL
  */

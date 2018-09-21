@@ -56,3 +56,12 @@
 		}
 	}
 }
+.lcp_catlist {
+	margin: 0;
+	li {
+		&::before {
+			// remove list bullets
+			content: none;
+		}
+	}
+}

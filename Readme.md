@@ -44,7 +44,15 @@ Changelog
 - Display page title on landing page templates if no featured image or hero image shortcode exists
 - Update landing page Archive Content module and button styles
 - Update landing page Subpage List module display
-- Remove large bottom margin from H3
+- Style updates and bug fixes:
+	- Remove large bottom margin from H3
+	- Allow .big-list to display at small screen sizes
+	- Add padding in small screen view of content modules
+	- Adjust background image alignment for Secondary Content with Image module
+	- Remove horizontal scrolling for small-screen view of Triple Image Callout module
+	- Modify styles for List Category Post listings
+	- Adjust responsive image display
+	- Refactor styles and remove unnecessary redundancies
 
 ### 1.3.x
 

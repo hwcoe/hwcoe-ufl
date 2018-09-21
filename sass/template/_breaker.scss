@@ -20,7 +20,14 @@
 		color: $white;
 		font: 500 20px/30px $serifFontFamily;
 		margin-bottom: 25px;
-		text-shadow: 2px 2px 1px #606060;
+		text-shadow: 2px 2px 1px $gray;
+		a {
+			color: $orangeLight;
+			text-shadow: 1px 1px 0px $grayDark;
+			&:hover, &:focus {
+				color: $orange;
+			}
+		}
 		@include breakFirst(medium){
 			font-size: 22px;
 			line-height: 38px;

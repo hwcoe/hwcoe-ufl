@@ -1,5 +1,6 @@
 .content-box-module {
 	margin-bottom: 50px;
+    margin-top: $grid-gutter-width*2;
 	@include breakFirst(medium){
 		margin-bottom: 100px;
 	}

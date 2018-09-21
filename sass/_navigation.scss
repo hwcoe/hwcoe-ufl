@@ -205,9 +205,9 @@
 		margin: 0;
 	}
 	li {
-		margin: 0;
-		&:before {
-	  		display: none;
+		display: none;
+		@include breakFirst(medium){
+			display: block;
 		}
 		li a {
 			padding: 13px 20px 13px 35px;
