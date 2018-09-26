@@ -63,6 +63,11 @@
 		ul, ol {
 			margin:0;
 		}
+		&.alignnone {
+			width: 100%;
+			float: none;
+			margin: 20px 0;
+		}
 	}
 	h2 {
 		margin-top: $grid-gutter-width;
@@ -222,16 +227,20 @@ img.alignleft, img.alignright {
 	margin: 0 20px 20px 0;
 }
 .aligncenter,
-div.aligncenter, a img.aligncenter {
+div.aligncenter, 
+a img.aligncenter {
 	display: block;
 	margin: 5px auto 5px auto;
 }
 
-.alignright, a img.alignright {
+.alignright, 
+a img.alignright {
 	float:right;
 	margin: 5px 0 20px 20px;
 }
-.alignleft, a img.alignleft {
+.alignleft, 
+a img.alignleft,
+.entry-content .alignleft {
 	float:left;
 	margin: 5px 20px 20px 0;
 }
@@ -341,13 +350,6 @@ strong {
 	overflow: auto;
 	margin-top: $grid-gutter-width;
 	margin-bottom: $grid-gutter-width;
-	
-	.gallery-caption {
-		/* required */
-	}
-}
-.bypostauthor {
-	/* required */
 }
 
 .article-post-title {
