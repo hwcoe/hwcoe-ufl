@@ -49,6 +49,21 @@
 			text-decoration: none;
 		}
 	}
+	aside {
+		margin: 0 0 20px 30px;
+		padding: 30px 40px;
+		width: 40%;
+		float: right;
+		background: $blueLight;
+		color: $white;
+		h2, h3, h4, h5 {
+			color: $white;
+			margin: 0;
+		}
+		ul, ol {
+			margin:0;
+		}
+	}
 	h2 {
 		margin-top: $grid-gutter-width;
 		
@@ -148,6 +163,9 @@
 			width: 150px; 
 		}
 	}
+	.clearleft {
+		clear:left;
+	}
 }
 .screen-reader-text {
 	@extend .visuallyhidden;
@@ -217,19 +235,6 @@ div.aligncenter, a img.aligncenter {
 	float:left;
 	margin: 5px 20px 20px 0;
 }
-// .alignleft {
-// 	width: 100%;
-// 	height: auto;
-	
-// 	@include breakFirst($screen-phone){ 
-// 		float: left;
-// 		margin: 5px 20px 20px 0;
-// 		width: auto;
-// 		height: auto;
-// 		max-width: 50%;
-// 	}
-// }
-
 
 figure.alignleft {
 	width: 100%;

@@ -52,6 +52,10 @@ Changelog
 	- Remove horizontal scrolling for small-screen view of Triple Image Callout module
 	- Modify styles for List Category Post listings
 	- Adjust responsive image display
+
+
+	- Adjust ul and ol list item styling
+	- Define styles for `aside` element
 	- Refactor styles and remove unnecessary redundancies
 
 ### 1.3.x

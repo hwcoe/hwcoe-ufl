@@ -93,7 +93,8 @@ h2 {
 	}
 }
 h3 {
-	color: #005496;
+	// color: #005496;
+	color: $blue;
 	font: 500 24px/36px $serifFontFamily;
 	letter-spacing: 1px;
 }
@@ -138,10 +139,18 @@ ul, ol {
 		margin-bottom: 10px;
 		text-transform: uppercase;
 		&:before {
-				content: "\2022";
-				color: $orange;
-				margin-right: 5px;
+			content: "\2022";
+			color: $orange;
+			margin-right: 5px;
+			position: relative;
+			font-size: 14px;
 		}
+	}
+}
+ul {
+	li:before {
+		font-family: $serifFontFamily;
+		margin-right: 8px;
 	}
 }
 ol {
@@ -153,18 +162,12 @@ ol {
 		counter-increment: step-counter;
 		ul {
 			li:before{
-			counter-increment: none;
-			content: "\2022";
-			color: $orange;
-			margin-right: 5px;
+				counter-increment: none;
 			}
 		}
 	}
 	& > li:before {
 		content: counter(step-counter)". ";
-		font-size: 14px;
-		margin-right: 5px;
-		position: relative;
 	}
 }
 dt {
