@@ -32,19 +32,12 @@ Documentation
 Changelog
 ---------
 
-### 2.0.x
-- Bugfix: Remove gform_pre_render hook from GF custom code as it causes a `Cannot modify header information` warning. 
-	- **Backward incompatible change** See [Issue #10](https://github.com/hwcoe/hwcoe-ufl/issues/10#issuecomment-419129443)
-- Bugfix: Update Title Override Text so it does not affect page title in navigation menus. 
-	- **Backward incompatible change** see [Issue #9](https://github.com/hwcoe/hwcoe-ufl/issues/9#issue-357292449)
-- Remove `Title Override` field (`Page Options` field group) from blank and home page templates  
-
-
+### 2.1.x
 - Bugfix: Edit `ufl-landing-page-hero` shortcode to display original uploaded image size rather than `large` 1024x512 thumbnail
 - Display page title on landing page templates if no featured image or hero image shortcode exists
 - Update landing page Archive Content module and button styles
 - Update landing page Subpage List module display
-- Style updates and bug fixes:
+- Style feature additions and bug fixes:
 	- Remove large bottom margin from H3
 	- Allow .big-list to display at small screen sizes
 	- Add padding in small screen view of content modules
@@ -55,6 +48,13 @@ Changelog
 	- Adjust ul and ol list item styling
 	- Define styles for `aside` element
 	- Refactor styles and remove unnecessary redundancies
+
+### 2.0.x
+- Bugfix: Remove gform_pre_render hook from GF custom code as it causes a `Cannot modify header information` warning. 
+	- **Backward incompatible change** See [Issue #10](https://github.com/hwcoe/hwcoe-ufl/issues/10#issuecomment-419129443)
+- Bugfix: Update Title Override Text so it does not affect page title in navigation menus. 
+	- **Backward incompatible change** see [Issue #9](https://github.com/hwcoe/hwcoe-ufl/issues/9#issue-357292449)
+- Remove `Title Override` field (`Page Options` field group) from blank and home page templates  
 
 ### 1.3.x
 
