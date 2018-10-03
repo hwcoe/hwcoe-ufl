@@ -277,18 +277,15 @@
 	}
 	.category-tag {
 		right: auto;
-		top: 15px;
-		left: 15px;
+		top: 10px;
+		left: 10px;
+		@include breakFirst(medium) {
+			top: 15px;
+			left: 15px;
+		}
 		@include breakFirst(large){
 			left: -15px;
-		}
-		// commented out - right align category tag on right aligned blocks
-		// .one &, .three & {
-		// 	@include breakFirst(large){
-		// 		left: auto;
-		// 		right: -15px;
-		// 	}
-		// }	
+		}	
 	}
 	&.alert {
 		.category-tag {
@@ -319,13 +316,14 @@
 	min-height: 350px;
 	position: relative;
 	width: 100%;
-	@include break(medium){
+
+	@include break(medium) {
 		margin: 0;
 	}
-	@include breakFirst(medium){
+	@include breakFirst(medium) {
 		float: left;
 	}
-	@include breakFirst(large){
+	@include breakFirst(large) {
 		clear: left;
 		margin: 0;
 		padding: 0;
@@ -398,7 +396,6 @@
 		}
 	}
 }
-// .big-stat-copy {
 .secondary-featured-copy {
 	color: $white;
 	font-size: 16px;
@@ -409,7 +406,13 @@
 	bottom: 0;
 	left: 0;
 	position: absolute;
-	@include breakFirst(large){
+	overflow: hidden;
+
+	@include break(small) {
+		padding: 10px;
+	}
+
+	@include breakFirst(large) {
 		padding: 15px 20px;
 	}
 	h2 {
@@ -418,7 +421,7 @@
 		margin-bottom: 10px;
 		font: 500 24px/28px $serifFontFamily;
 		text-transform: none;
-		@include breakFirst(large){
+		@include breakFirst(large) {
 			font-size: 28px;
 			line-height: 32px;
 		}
@@ -438,11 +441,38 @@
 	ul.lcp_catlist {
 		margin:0;
 		h2 {
+			// font: 500 16px/20px $fontFamily;
 			font: 500 18px/22px $fontFamily;
 			text-transform: uppercase;
 			margin:5px 0;
-			@include breakFirst(large){
-				font: 500 22px/28px $fontFamily;
+
+			.two &, .one & {
+				@media (max-width: 580px) {
+					font: 500 16px/20px $fontFamily;
+					margin-bottom: 0;
+				}
+				@include break(medium) {
+					font: 500 16px/20px $fontFamily;
+					margin-bottom: 0;
+				}
+				@include breakFirst(large) {
+					font: 500 22px/28px $fontFamily;
+				}
+			}
+			.three & {
+				@include breakFirst(medium) {
+					font: 500 22px/28px $fontFamily;
+				}
+			}
+		}
+		p {
+			@include break (small) {
+				font: 100 14px/16px $fontFamily;
+			}
+			.two &, .one & {
+				@include break(medium) {
+					font: 100 14px/16px $fontFamily;
+				}
 			}
 		}
 		li {

@@ -32,7 +32,11 @@ Documentation
 Changelog
 ---------
 
-### 2.1.x
+### 2.1.1
+- Bugfix: Remove WPAUTOP from ACF TinyMCE Editor to get rid of random p tags being added in ACF text/WYSIWYG fields
+- Bugfix: Adjust text size, margins, etc. in secondary featured content to improve display in small screen breakpoints
+
+### 2.1.0
 - Bugfix: Edit `ufl-landing-page-hero` shortcode to display original uploaded image size rather than `large` 1024x512 thumbnail
 - Display page title on landing page templates if no featured image or hero image shortcode exists
 - Update landing page Archive Content module and button styles
