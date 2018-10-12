@@ -31,6 +31,8 @@ Documentation
 
 Changelog
 ---------
+### 2.x.x
+- Update package dependencies and gruntfile
 
 ### 2.1.1
 - Bugfix: Remove WPAUTOP from ACF TinyMCE Editor to get rid of random p tags being added in ACF text/WYSIWYG fields
