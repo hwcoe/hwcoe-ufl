@@ -65,20 +65,22 @@ add_action( 'after_setup_theme', 'hwcoe_ufl_setup' );
 
 /**
  * Set the max content width in pixels, based on the theme's design and stylesheet.
- *
  * Priority 0 to make it available to lower priority callbacks.
- *
  * @global int $content_width
  */
 
 // default max content width
 if ( ! isset( $content_width ) ) $content_width = 1050;
 
-// function hwcoe_ufl_content_width() {
+/*
+ * Get theme version
+ */
 
-// 	$GLOBALS['content_width'] = apply_filters( 'hwcoe_ufl_content_width', 1050 );
-// }
-// add_action( 'after_setup_theme', 'hwcoe_ufl_content_width', 0 );
+function get_theme_version(){
+  $theme_info = wp_get_theme();
+  $version = $theme_info->get( 'Version' );
+  return $version;
+}
 
 /**
  * Enqueue scripts and styles.
@@ -101,9 +103,9 @@ function hwcoe_ufl_scripts() {
 	wp_enqueue_script('prettyPhoto', get_stylesheet_directory_uri() . '/inc/prettyPhoto/js/jquery.prettyPhoto.js', array('jquery'), null, true);
 	
 	// Theme
-	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), null );
-	wp_enqueue_script('hwcoe-ufl-plugins', get_stylesheet_directory_uri() . '/js/plugins.min.js', array('jquery'), null, true);
-	wp_enqueue_script('hwcoe-ufl-scripts', get_stylesheet_directory_uri() . '/js/scripts.min.js', array(), null, true);
+	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), get_theme_version() );
+	wp_enqueue_script('hwcoe-ufl-plugins', get_stylesheet_directory_uri() . '/js/plugins.min.js', array('jquery'), get_theme_version(), true );
+	wp_enqueue_script('hwcoe-ufl-scripts', get_stylesheet_directory_uri() . '/js/scripts.min.js', array(), get_theme_version(), true);
 	
 	// Pass site data to Javascript
 	$site_data = array(
