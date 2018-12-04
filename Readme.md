@@ -31,9 +31,11 @@ Documentation
 
 Changelog
 ---------
-### 2.x.x
+### 2.2.0
 - Update package dependencies and gruntfile
 - Add theme version to enqueueing of scripts and styles
+- Add support for page excerpts
+- Accessibility improvements
 
 ### 2.1.1
 - Bugfix: Remove WPAUTOP from ACF TinyMCE Editor to get rid of random p tags being added in ACF text/WYSIWYG fields

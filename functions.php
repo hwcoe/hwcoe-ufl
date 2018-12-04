@@ -63,6 +63,14 @@ function hwcoe_ufl_setup() {
 endif; // hwcoe_ufl_setup
 add_action( 'after_setup_theme', 'hwcoe_ufl_setup' );
 
+/*
+/* Adds page excerpt support
+*/
+function hwcoe_ufl_page_excerpt_support() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'hwcoe_ufl_page_excerpt_support' );
+
 /**
  * Set the max content width in pixels, based on the theme's design and stylesheet.
  * Priority 0 to make it available to lower priority callbacks.
@@ -265,9 +273,7 @@ function hwcoe_ufl_acf_json_load_point( $paths ) {
 function hwcoe_ufl_acf_init() {
 	acf_update_setting('capability', 'update_plugins'); 
 }
-
 add_action('acf/init', 'hwcoe_ufl_acf_init');
-
 
 //Remove WPAUTOP from ACF TinyMCE Editor
 function acf_wysiwyg_remove_wpautop() {
