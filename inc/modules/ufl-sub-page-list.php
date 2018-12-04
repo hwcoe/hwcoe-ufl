@@ -44,7 +44,7 @@ foreach( $pages as $page ): ?>
 			<?php endif // show_thumb ?>
 					<h2><a href="<?php echo $link; ?>"><?php echo $title; ?></a></h2>
 					<div class="normal"><?php echo $content; ?>
-						<a class="read-more" href="<?php echo $link; ?>">Read More</a>
+						<a class="read-more" aria-label="<?php echo $title; ?>" href="<?php echo $link; ?>">Read More</a>
 					</div>
 			<?php if( $list_children ): ?>
 				<?php 

@@ -7,6 +7,8 @@
 <?php 
 	$profile_count = 0; 
 	$featured_bio_copy = '';
+	$button_text = '';
+	$button_label = '';
 ?>
 	<?php while ( have_rows('profile') ) : the_row(); ?> 
 		<?php if( 0 === $profile_count ){
@@ -15,7 +17,14 @@
 			$featured_bio_copy .=   '<h3>' . get_sub_field( 'title' ) . '</h3>';
 			$featured_bio_copy .=   '<p>' .  get_sub_field( 'description' ) . '</p>';
 			if( get_sub_field( 'include_button' ) ){
-				$featured_bio_copy .= '<a href="' . get_sub_field( 'button_url' ) . '" class="btn btn--white">' . get_sub_field( 'button_text' ) . '<span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' . HWCOE_UFL_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span></a>';
+				$button_text = strtolower( get_sub_field( 'button_text' ) );
+				if ( $button_text == "learn more" ||  $button_text == 'read more' ) {
+					$button_label = "Read More: " . get_sub_field( 'profile_name' );
+				}
+				else {
+					$button_label = get_sub_field( 'button_text' );
+				}
+				$featured_bio_copy .= '<a href="' . get_sub_field( 'button_url' ) . '" class="btn btn--white" aria-label="' . $button_label . '">' . get_sub_field( 'button_text' ) . '<span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' . HWCOE_UFL_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span></a>';
 		 	}
 		 	if ( get_sub_field( 'profile_type' ) ) {
 				$featured_bio_copy .=   '<span class="category-tag orange">' . get_sub_field( 'profile_type' ) . '</span>';
@@ -30,8 +39,16 @@
 				<h2><?php the_sub_field( 'profile_name' ); ?></h2>
 				<h3><?php the_sub_field( 'title' ); ?></h3>
 				<p><?php the_sub_field( 'description' ); ?></p>
-				<?php if( get_sub_field( 'include_button' ) ): ?>
-					<a href="<?php the_sub_field( 'button_url' ); ?>" class="btn btn--white"><?php the_sub_field( 'button_text' ); ?> <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
+				<?php if( get_sub_field( 'include_button' ) ): 
+					$button_text = strtolower( get_sub_field( 'button_text' ) );
+					if ( $button_text == "learn more" ||  $button_text == 'read more' ) {
+						$button_label = "Read More: " . get_sub_field( 'profile_name' );
+					}
+					else {
+						$button_label = get_sub_field( 'button_text' );
+					}
+				?>
+				<a href="<?php the_sub_field( 'button_url' ); ?>" class="btn btn--white" aria-label="<?php echo $button_label; ?>"><?php the_sub_field( 'button_text' ); ?> <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
 				<?php endif // include_button ?>
 				<?php if ( get_sub_field( 'profile_type' ) ) : ?>
 					<span class="category-tag orange"><?php the_sub_field( 'profile_type' ); ?></span>

@@ -23,7 +23,7 @@ if ( $slider_query->have_posts() ):
 	$slider_speed = $slider_speed * 1000;
 	$slider_disable_link = get_theme_mod('featured_disable_link', 0);
 ?>
-<main class="carousel-row">
+<main id="main" class="carousel-row">
 	<div class="container carousel-wrap">
 		<div id="featured-carousel" class="carousel slide" data-ride="carousel" data-interval="<?php echo $slider_speed; ?>" aria-labelledby="carousel-heading" aria-describedby="carousel-desc">
 			<h2 id="carousel-heading" class="sr-only"><?php _e('Featured Posts', 'hwcoe-ufl'); ?></h2>
@@ -78,7 +78,7 @@ if ( $slider_query->have_posts() ):
 								?>
 								<p><?php the_excerpt(); ?></p>
 								<?php if ( !$slider_disable_link && $slide_button_text != NULL): ?>
-									<a class="btn btn--white" href="<?php echo $slide_url; ?>"><?php echo $slide_button_text; ?></a>
+									<a class="btn btn--white" aria-label="Read '<?php echo esc_html( get_the_title() ); ?>'" href="<?php echo $slide_url; ?>"><?php echo $slide_button_text; ?></a>
 								<?php endif  // !$slider_disable_link && slide_button_text ?>
 							</div>
 						<?php endif //!slide_disable_caption ?>
@@ -108,7 +108,7 @@ if ( $slider_query->have_posts() ):
 						?>
 								<p><?php the_excerpt(); ?></p>
 							<?php if ( !$slider_disable_link && $slide_button_text != NULL): ?>
-								<a class="btn btn--white"><?php echo $slide_button_text; ?></a>
+								<a class="btn btn--white"aria-label="Read '<?php echo esc_html( get_the_title() ); ?>'" href="<?php echo $slide_url; ?>"><?php echo $slide_button_text; ?></a>
 							<?php endif  // !$slider_disable_link && slide_button_text ?>
 					
 						  </div>

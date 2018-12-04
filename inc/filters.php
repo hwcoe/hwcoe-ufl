@@ -50,7 +50,7 @@ function hwcoe_ufl_excerpt_more( $more ){
 	$custom_meta = get_post_custom( get_the_ID() );
 	$custom_button_text = ( isset($custom_meta['custom_meta_featured_content_button_text']) )? $custom_meta['custom_meta_featured_content_button_text'][0]:'';
 	$label = ( empty($custom_button_text) )? __('Read&nbsp;More', 'hwcoe-ufl'):$custom_button_text;
-	return '&hellip; <a href="'. get_permalink() . '" title="'. get_the_title() . '" class="read-more">' . $label . '</a>';
+	return '&hellip; <a href="'. get_permalink() . '" aria-label="Read \"'. get_the_title() . '\" class="read-more">' . $label . '</a>';
 }
 add_filter('excerpt_more', 'hwcoe_ufl_excerpt_more');
 add_filter('the_content_more_link', 'hwcoe_ufl_excerpt_more');

@@ -326,13 +326,15 @@
 
 #skip-link:focus {
 	top: -30px;
-	
+	z-index: 1100;
 	@media screen and ( min-width: $screen-sm ){
-		top: -90px;
-		
+		top: -90px;	
 		.header-type-text & {
 			top: -95px;
 			background-color: $blue;
+		}
+		.page-template-home-page & {
+			top: 0;
 		}
 	}
 }

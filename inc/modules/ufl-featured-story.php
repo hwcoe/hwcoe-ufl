@@ -54,13 +54,13 @@ $stories = array();
 			 <?php $story_count = 1; foreach( $stories as $story): ?>
 				<?php if( 1 === $story_count ): ?>
 				  <div class="featured-story active">
-					 <h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> <a href="<?php echo $story['link']; ?>" class="read-more"><?php echo $story['tagline']; ?></a></h2>
+					 <h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> <a href="<?php echo $story['link']; ?>" aria-label="Read '<?php echo $story['title']; ?>'" class="read-more"><?php echo $story['tagline']; ?></a></h2>
 					
 					 <a href="<?php echo get_category_link( $story['category'] ); ?>" class="category-tag"><?php echo get_cat_name( $story['category'] ); ?></a>
 				  </div>
 				<?php else:  // story_count ?>
 				  <div data-number="<?php echo $story_count; ?>" class="featured-story">
-					 <h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> <a href="<?php echo $story['link']; ?>" class="read-more"><?php echo $story['tagline']; ?></a></h2>
+					 <h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> <a href="<?php echo $story['link']; ?>" aria-label="Read '<?php echo $story['title']; ?>'" class="read-more"><?php echo $story['tagline']; ?></a></h2>
 					 <a href="<?php echo get_category_link( $story['category']); ?>" class="category-tag"><?php echo get_cat_name( $story['category'] ); ?></a>
 				  </div>
 				<?php endif // story_count ?>

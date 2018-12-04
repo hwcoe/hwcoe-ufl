@@ -46,7 +46,7 @@ while ( have_posts() ) : the_post();
 	$post_info .= '<h3 class="lcp_post_alt">' . get_the_title() . '</h3>';
 	// $post_info .= '<p class="lcp_date">' . get_the_date() . '</p>';
 	$post_info .= '<div class="lcp_excerpt">' . get_the_excerpt() . '</div>';
-  $post_info .= '<p class="lcp_readmore">Read More</p>';
+  $post_info .= '<p class="lcp_readmore" aria-label="Read \'' . get_the_title() . '\'">Read More</p>';
 	$post_info .= '</div>';
  	
 	/**

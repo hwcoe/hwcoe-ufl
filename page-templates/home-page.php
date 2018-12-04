@@ -10,7 +10,7 @@ get_header();
 	<?php while ( have_posts() ) : the_post(); ?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
 		<div class="home-section">
-			<div class="page-wrapper">
+			<div id="main" class="page-wrapper">
 				<?php if( have_rows('home_page_modules') ): ?>
 					<?php while ( have_rows('home_page_modules') ) : the_row(); ?>
 						<?php

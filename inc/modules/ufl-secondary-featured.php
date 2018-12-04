@@ -28,7 +28,7 @@
 				<div class="secondary-featured-copy">
 					<h2><a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>"><?php echo get_the_title( $secondary_story->ID ); ?></a></h2>
 					<p><?php echo $excerpt ?></p>
-					<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" class="read-more">Read more</a>
+					<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" aria-label="Read '<?php echo get_the_title( $secondary_story->ID ); ?>'" class="read-more">Read more</a>
 				</div>
 				<a href="<?php echo get_category_link( $story_category ); ?>" class="category-tag"><?php echo get_cat_name( $story_category ); ?></a>
 			</div>
@@ -39,7 +39,7 @@
 				<div class="secondary-featured-copy">
 					<h2><a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>"><?php the_sub_field( 'story_title' ) ?></a></h2>
 					<p><?php the_sub_field( 'story_excerpt' ); ?></p>
-					<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" class="read-more">Read more</a>
+					<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" aria-label="Read '<?php the_sub_field( 'story_title' ) ?>'" class="read-more">Read more</a>
 				</div>
 				<a href="<?php echo get_category_link( get_sub_field( 'story_category' ) ); ?>" class="category-tag"><?php echo get_cat_name( get_sub_field( 'story_category' ) ); ?></a>
 			</div>
@@ -100,7 +100,7 @@
 
 						<h2><a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>"><?php echo get_the_title( $secondary_story->ID ); ?></a></h2>
 						<p><?php echo $excerpt ?></p>
-						<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" class="read-more">Read more</a>
+						<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" aria-label="Read '<?php echo get_the_title( $secondary_story->ID ); ?>'" class="read-more">Read more</a>
 					</div>
 					<a href="<?php echo get_category_link( $story_category ); ?>" class="category-tag"><?php echo get_cat_name( $story_category ); ?></a>
 				</div>
@@ -111,7 +111,7 @@
 				<div class="secondary-featured-copy">
 					<h2><a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>"><?php the_sub_field( 'story_title' ) ?></a></h2>
 					<p><?php the_sub_field( 'story_excerpt' ); ?></p>
-					<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" class="read-more">Read more</a>
+					<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" aria-label="Read <?php the_sub_field( 'story_title' ) ?>" class="read-more">Read more</a>
 				</div>
 				<a href="<?php echo get_category_link( get_sub_field( 'story_category' ) ); ?>" class="category-tag"><?php echo get_cat_name( get_sub_field( 'story_category' ) ); ?></a>
 			</div>
@@ -170,7 +170,7 @@
 
 						<h2><a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>"><?php echo get_the_title( $secondary_story->ID ); ?></a></h2>
 						<p><?php echo $excerpt ?></p>
-						<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" class="read-more">Read more</a>
+						<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" aria-label="Read '<?php echo get_the_title( $secondary_story->ID ); ?>'" class="read-more">Read more</a>
 					</div>
 					<a href="<?php echo get_category_link( $story_category ); ?>" class="category-tag"><?php echo get_cat_name( $story_category ); ?></a>
 				</div>
@@ -180,7 +180,7 @@
 					<div class="secondary-featured-copy">
 						<h2><a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>"><?php the_sub_field( 'story_title' ) ?></a></h2>
 						<p><?php the_sub_field( 'story_excerpt' ); ?></p>
-						<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" class="read-more">Read more</a>
+						<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" aria-label="Read '<?php the_sub_field( 'story_title' ) ?>'" class="read-more">Read more</a>
 					</div>
 					<a href="<?php echo get_category_link( get_sub_field( 'story_category' ) ); ?>" class="category-tag"><?php echo get_cat_name( get_sub_field( 'story_category' ) ); ?></a>
 				</div>

@@ -41,23 +41,23 @@ function hwcoe_ufl_landing_double_image($atts, $content = NULL ) {
 	ob_start();
 	?>
 	<div class="landing-page-hero">
-  	<div class="container">
-  	<div class="row">
-        <div class="col-sm-7 col-sm-pull-1">
-          <div class="img-hero" style="background-image:url('<?php echo esc_url( $image1[0] ); ?>');"></div>
-        </div>
-        <div class="col-sm-5 col-sm-offset-5 hero-content">
-            <h2><?php echo esc_html( $headline ); ?></h2>
+	<div class="container">
+	<div class="row">
+		  <div class="col-sm-7 col-sm-pull-1">
+			 <div class="img-hero" style="background-image:url('<?php echo esc_url( $image1[0] ); ?>');"></div>
+		  </div>
+		  <div class="col-sm-5 col-sm-offset-5 hero-content">
+				<h2><?php echo esc_html( $headline ); ?></h2>
 			<?php echo wpautop( wp_kses_post( $content ) ); ?>
-        </div>
-        <div class="col-sm-7 secondary">
-          <div class="img-hero" style="background-image:url('<?php echo esc_url( $image2[0] ); ?>');"></div>
-        </div>
-  		</div>
-  	</div>
-  	</div>
-    
-    <?php 
+		  </div>
+		  <div class="col-sm-7 secondary">
+			 <div class="img-hero" style="background-image:url('<?php echo esc_url( $image2[0] ); ?>');"></div>
+		  </div>
+		</div>
+	</div>
+	</div>
+	 
+	 <?php 
 	return ob_get_clean();
 }
 add_shortcode('ufl-landing-page-double-image', 'hwcoe_ufl_landing_double_image');
@@ -111,9 +111,9 @@ function hwcoe_ufl_landing_hero($atts, $content = NULL ) {
 	// Shortcode callbacks must return content, so use output buffering
 	ob_start();
 	?>
-    <div class="landing-page-hero-full">
-        <div class="hero-img<?php echo $image_class; ?>" <?php echo $image_style; ?>>
-            <div class="hero-heading">
+	 <div class="landing-page-hero-full">
+		  <div class="hero-img<?php echo $image_class; ?>" <?php echo $image_style; ?>>
+				<div class="hero-heading">
 			<?php 
 				echo '<h1>' . esc_html( $headline ) . '</h1>';
 				
@@ -121,24 +121,29 @@ function hwcoe_ufl_landing_hero($atts, $content = NULL ) {
 					echo '<h2>' . esc_html( $subtitle ) . '</h2>';
 				}
 			?>
-            </div>
-        </div>
-        
-        <?php if ( !empty( $content ) ): ?>
-        <div class="hero-text">
-            <div class="container">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <?php echo wpautop( wp_kses_post( $content ) ); ?>
-                    
-                    <?php if ( !empty($button_text) ){ ?>
-                    <a href="<?php echo esc_url( $button_link ); ?>" class="btn"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
-                    <?php } ?>
-                </div>
-            </div>
-        </div>
-        <?php endif; ?>
-    </div>
-    <?php 
+				</div>
+		  </div>
+		  
+		  <?php if ( !empty( $content ) ): ?>
+		  <div class="hero-text">
+				<div class="container">
+					 <div class="col-sm-10 col-sm-offset-1">
+						  <?php echo wpautop( wp_kses_post( $content ) ); ?>
+						  <?php if ( !empty($button_text) ){ 
+						  	if ( strtolower($button_text) == "learn more" || strtolower($button_text) == "read more" ) {
+								$button_label = "Read More: " . esc_html($headline);
+							} else {
+								$button_label = esc_html($button_text);	
+							}				
+						  ?>
+						  <a href="<?php echo esc_url( $button_link ); ?>" class="btn" aria-label="<?php echo $button_label; ?>"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
+						  <?php } ?>
+					 </div>
+				</div>
+		  </div>
+		  <?php endif; ?>
+	 </div>
+	 <?php 
 	return ob_get_clean();
 }
 add_shortcode('ufl-landing-page-hero', 'hwcoe_ufl_landing_hero');
@@ -169,21 +174,27 @@ function hwcoe_ufl_breaker($atts, $content = NULL ) {
 	// Shortcode callbacks must return content, so use output buffering
 	ob_start();
 	?>
-    <div class="breaker" style="background-image:url('<?php echo esc_url( $image[0] ); ?>');">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <h2><?php echo esc_html( $headline ); ?></h2>
-                    <?php echo wpautop( wp_kses_post( $content ) ); ?>
-                    
-                    <?php if ( !$hide_button || !empty( $button_text ) ){ ?>
-                    <a href="<?php echo esc_url( $button_link ); ?>" class="btn btn--white"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
-                    <?php } ?>
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php 
+	 <div class="breaker" style="background-image:url('<?php echo esc_url( $image[0] ); ?>');">
+		  <div class="container">
+				<div class="row">
+					 <div class="col-sm-8 col-sm-offset-2">
+						  <h2><?php echo esc_html( $headline ); ?></h2>
+						  <?php echo wpautop( wp_kses_post( $content ) ); ?>
+						  
+						  <?php if ( !$hide_button || !empty( $button_text ) ){ 
+						  	  	if ( strtolower($button_text) == "learn more" || strtolower($button_text) == "read more" ) {
+									$button_label = "Read More: " . esc_html($headline);
+								} else {
+									$button_label = esc_html($button_text);	
+								}				
+						  	?>
+						  <a href="<?php echo esc_url( $button_link ); ?>" class="btn btn--white" aria-label="<?php echo $button_label; ?>"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
+						  <?php } ?>
+					 </div>
+				</div>
+		  </div>
+	 </div>
+	 <?php 
 	return ob_get_clean();
 }
 add_shortcode('ufl-breaker', 'hwcoe_ufl_breaker');
@@ -212,29 +223,29 @@ function hwcoe_ufl_content_image_left($atts, $content = NULL ) {
 	// Shortcode callbacks must return content, so use output buffering
 	ob_start();
 	?>
-    <div class="gal-list-wrap content-image-left">
+	 <div class="gal-list-wrap content-image-left">
 	  <div class="container">
-	  	<div class="row">
-	  		<div class="col-md-6">
-	  			<div class="gal-with-caption">
-		  			<div class="gal-img temp-img" style="background-image:url('<?php echo esc_url( $image[0] ); ?>');">
-		  				<img src="<?php echo esc_url( $image[0] ); ?>" alt="" class="visuallyhidden">
-	  				</div>
-	  				<?php if (!empty( $caption )){ ?>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="gal-with-caption">
+					<div class="gal-img temp-img" style="background-image:url('<?php echo esc_url( $image[0] ); ?>');">
+						<img src="<?php echo esc_url( $image[0] ); ?>" alt="" class="visuallyhidden">
+					</div>
+					<?php if (!empty( $caption )){ ?>
 						<div class="caption"><?php echo esc_html( $caption ); ?></div>
 					<?php } ?>
-	  			</div>
-	  		</div>
-	  		<div class="col-md-6 gal-img-content">
-	  			<?php if (!empty( $headline )){ ?>
+				</div>
+			</div>
+			<div class="col-md-6 gal-img-content">
+				<?php if (!empty( $headline )){ ?>
 					<h2><?php echo esc_html( $headline ); ?></h2>
 				<?php } ?>
-                <?php echo wpautop( wp_kses_post( $content ) ); ?>
-	  		</div>
-	  	</div>
+					 <?php echo wpautop( wp_kses_post( $content ) ); ?>
+			</div>
+		</div>
 	  </div>
 	</div>
-    <?php 
+	 <?php 
 	return ob_get_clean();
 }
 add_shortcode('ufl-content-image-left', 'hwcoe_ufl_content_image_left');
@@ -256,23 +267,23 @@ function hwcoe_ufl_content_image_right($atts, $content = NULL ) {
 			'label' => '',
 		), $atts )
 	);
-    
+	 
 	// Support either image ID or image url
-    $image = ( is_numeric( $image ) )? wp_get_attachment_image_src( $image, 'large' ) : array($image);
+	 $image = ( is_numeric( $image ) )? wp_get_attachment_image_src( $image, 'large' ) : array($image);
 	
 	// Shortcode callbacks must return content, so use output buffering
 	ob_start();
 	?>
-    <div class="content-box-module">
+	 <div class="content-box-module">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-7 content-box-copy">
-                    <?php if (!empty( $headline )){ ?>
-                    	<h2><?php echo esc_html( $headline ); ?></h2>
+						  <?php if (!empty( $headline )){ ?>
+							<h2><?php echo esc_html( $headline ); ?></h2>
 					<?php } ?>
 					<?php echo wpautop( wp_kses_post( $content ) ); ?>
 					<?php if (!empty( $label )){ ?>
-                    	<span class="category-tag orange"><?php echo esc_html( $label ); ?></span>
+							<span class="category-tag orange"><?php echo esc_html( $label ); ?></span>
 					<?php } ?>
 				</div>
 				<div class="col-sm-5 content-box-img" style="background-image:url('<?php echo esc_url( $image[0] ); ?>')">
@@ -281,7 +292,7 @@ function hwcoe_ufl_content_image_right($atts, $content = NULL ) {
 			</div>
 		</div>
 	</div>
-    <?php 
+	 <?php 
 	return ob_get_clean();
 }
 add_shortcode('ufl-content-image-right', 'hwcoe_ufl_content_image_right');
@@ -333,19 +344,19 @@ function hwcoe_ufl_image_right_quote($atts, $content = NULL ) {
 	// Shortcode callbacks must return content, so use output buffering
 	ob_start();
 	?>
-    <div class="container image-right-quote">
-    <div class="row">
-    <div class="col-md-6">
-    	<img class="center-block img-responsive pic" src="<?php echo esc_url( $image[0] ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>">
-    </div>
- 	<div class="col-md-6">
-    	<div class="quote">
-        	<h3><?php echo esc_html( $content ); ?></h3>
-        </div>
+	 <div class="container image-right-quote">
+	 <div class="row">
+	 <div class="col-md-6">
+		<img class="center-block img-responsive pic" src="<?php echo esc_url( $image[0] ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>">
+	 </div>
+	<div class="col-md-6">
+		<div class="quote">
+			<h3><?php echo esc_html( $content ); ?></h3>
+		  </div>
 	</div>
-    </div>
-    </div>
-    <?php 
+	 </div>
+	 </div>
+	 <?php 
 	return ob_get_clean();
 }
 add_shortcode('ufl-image-right-quote', 'hwcoe_ufl_image_right_quote');
@@ -379,10 +390,10 @@ function hwcoe_ufl_breaker_cards($atts, $content = NULL ) {
 	// Shortcode callbacks must return content, so use output buffering
 	ob_start();
 	?>
-    <div class="img-callout-wrapper" style="background-image:url('<?php echo esc_url( $image[0] ); ?>');">
+	 <div class="img-callout-wrapper" style="background-image:url('<?php echo esc_url( $image[0] ); ?>');">
 		<div class="container">
 			<div class="row">
-            <?php 
+				<?php 
 				global $post;
 				foreach($card_posts as $post):
 					setup_postdata( $post ); // Access all post data
@@ -410,14 +421,14 @@ function hwcoe_ufl_breaker_cards($atts, $content = NULL ) {
 							?>
 						</div>
 					</div>
-            <?php
+				<?php
 				endforeach; 
 				wp_reset_postdata();
 			?> 
 			</div>
 		</div>
 	</div>
-    <?php 
+	 <?php 
 	return ob_get_clean();
 }
 add_shortcode('ufl-breaker-cards', 'hwcoe_ufl_breaker_cards');

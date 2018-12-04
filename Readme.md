@@ -34,8 +34,14 @@ Changelog
 ### 2.2.0
 - Update package dependencies and gruntfile
 - Add theme version to enqueueing of scripts and styles
-- Add support for page excerpts
+- Bugfix: Add support for page excerpts
+- Bugfix: Add href for half width legacy slider link
 - Accessibility improvements
+	- Increase text/bg color contrast for certain elements
+	- Edit #skip-link:focus positioning and z-index so it's visible on home page
+	- Add #main element on home page template, adjust location of #main element on legacy slider/widgets layout
+	- Add ARIA labels to describe purpose for generic links (e.g. "read more") in modules and templates
+	- Eliminate duplicate IDs for search form elements
 
 ### 2.1.1
 - Bugfix: Remove WPAUTOP from ACF TinyMCE Editor to get rid of random p tags being added in ACF text/WYSIWYG fields
