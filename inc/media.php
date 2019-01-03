@@ -25,7 +25,7 @@ function hwcoe_ufl_image_sizes(){
 	add_image_size('half-width-thumb', 570, 399, array('right', 'top'));	// Half width recent posts slider
 
 	// available for inserting in pages/posts
-	add_image_size('page_header', 750, 263, array('center', 'top'));
+	add_image_size('page_header', 780, 274, array('center', 'top'));
 	add_image_size('medium-cropped', 310, 275, array('right', 'top'));		// UFL Breaker Cards Thumbnail
 
 	// legacy

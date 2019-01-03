@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 2.2.1
+- Correct Subpage Header thumbnail image dimensions to fill width of default template content area
+
 ### 2.2.0
 - Update package dependencies and gruntfile
 - Add theme version to enqueueing of scripts and styles
