@@ -172,6 +172,7 @@
 		clear:left;
 	}
 }
+
 .screen-reader-text {
 	@extend .visuallyhidden;
 }
@@ -182,6 +183,15 @@
 	@include breakTo (xsmall) {
 		float:none;
 		width:100%;
+	}
+}
+.gallery-item {
+	float:none !important;
+	display:inline-block;
+	vertical-align:top;
+	@include breakTo (medium) {
+		display: block;
+		width:100% !important;
 	}
 }
 .lead {
@@ -208,9 +218,6 @@
 .sticky {
 	background-color: $white;
 	padding: 30px;
-}
-.gallery-caption {
-	
 }
 .bypostauthor {
 	
@@ -352,6 +359,9 @@ strong {
 	margin-bottom: $grid-gutter-width;
 }
 
+.gallery-caption {
+	
+}
 .article-post-title {
 	font-family: $fontFamily;
 	color: $white;
