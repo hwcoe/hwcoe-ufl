@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.wp-block-gallery {
+	margin-left: 0;
+}
+.blocks-gallery-item {
+	&:before {
+		content:'';
+	}
+}
