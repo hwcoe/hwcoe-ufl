@@ -189,7 +189,12 @@
 	float:none !important;
 	display:inline-block;
 	vertical-align:top;
-	@include breakTo (medium) {
+	img {
+		border: none !important;
+		padding-right: 10px;
+		margin: 0 auto;
+	}
+	@include breakTo (xsmall) {
 		display: block;
 		width:100% !important;
 	}
