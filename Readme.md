@@ -34,6 +34,8 @@ Changelog
 ### 2.3.0
 - Add Options Output page template to display lists of posts with custom meta information
 - Fix layout for image galleries (classic editor shortcode and block editor gallery)
+- Display image title (standalone image) or description (gallery image) in prettyPhoto lightbox (Classic editor only)
+- Hide social buttons in prettyPhoto lightbox 
 
 ### 2.2.1
 - Correct Subpage Header thumbnail image dimensions to fill width of default template content area

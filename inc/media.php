@@ -73,3 +73,18 @@ add_filter( 'get_site_icon_url', 'hwcoe_ufl_icon_url', 10, 3 );
  * @since 0.1.0
  */
 add_filter( 'use_default_gallery_style', function( $html5 ){ return true; } );
+
+/**
+ * Add title attribute to gallery image tags
+ *
+ * @param string $atts attributes to add to tag
+ * @param array $attachment data to be written into the media post
+ * @return string $atts
+ * @since 2.3.0
+ */
+function hwcoe_ufl_gallery_img_atts( $atts, $attachment ){
+	// passes gallery image description to title attribute
+	$atts['title'] = $attachment->post_content;
+	return $atts;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'hwcoe_ufl_gallery_img_atts', 10, 2 );

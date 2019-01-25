@@ -17,7 +17,7 @@ jQuery(function($){
 		}
 	}
 	
-    function ufl_audience_cookie() {
+	function ufl_audience_cookie() {
 		ufl_cookie = Cookies.get('ufl_audience_preference');
 		if (ufl_cookie) {
 			ufl_audience_preference_set_html(ufl_cookie);
@@ -29,7 +29,7 @@ jQuery(function($){
 		});
 	}
 	
-    /*
+	/*
 	 * UFL Site Alert Cookies
 	 * Requires js.cookie.js 
 	 */
@@ -425,52 +425,52 @@ jQuery(function($){
 		}
 	  if(!$this.hasClass('active')){
 		  $this.velocity({
-		    left: 0,
-		    height: 638,
-		    width: $activeWidth
+			left: 0,
+			height: 638,
+			width: $activeWidth
 		  },{
-		    duration: 400,
-		    queue: false
+			duration: 400,
+			queue: false
 		  });
 
 		  $curActive = $('.bio.active',$bioWrap).clone();
 		  $curActive.appendTo($bioWrap.find('.bio-wrap')).css({
-		    left: $activeWidth + $('.bio:not(.active)',$bioWrap).width() * 2,
-		    height: '251px',
-		    width: '251px'
+			left: $activeWidth + $('.bio:not(.active)',$bioWrap).width() * 2,
+			height: '251px',
+			width: '251px'
 		  })
 		  .removeClass('active')
 		  .velocity({
-		    left: 900
+			left: 900
 		  },{
-		    duration: 400,
-		    queue: false,
-		    complete: function(){
-		    	// Remove old active
-		    	$('.bio.active',$bioWrap).remove();
+			duration: 400,
+			queue: false,
+			complete: function(){
+				// Remove old active
+				$('.bio.active',$bioWrap).remove();
 
-		      $this.addClass('active');
-		      $('.feature-bio-copy-wrap',$bioWrap).html($this.find('.copy-wrap').html());
+			  $this.addClass('active');
+			  $('.feature-bio-copy-wrap',$bioWrap).html($this.find('.copy-wrap').html());
 
-		      $('.feature-bio-copy-wrap',$bioWrap).find('h2,h3,p').velocity('finish').velocity('transition.slideUpIn',{
-		      	duration: 400,
-		      	easing: 'easeOut',
-		      	stagger: 100
-		      });
-		    }
+			  $('.feature-bio-copy-wrap',$bioWrap).find('h2,h3,p').velocity('finish').velocity('transition.slideUpIn',{
+				duration: 400,
+				easing: 'easeOut',
+				stagger: 100
+			  });
+			}
 		  });
 
 		  $this.nextAll('.bio').velocity({
-		    left: '-=251px'
+			left: '-=251px'
 		  },{
-		    duration: 400,
-		    delay: 0,
-		    queue: false,
-		    complete: function(){
-		      $newActive = $this.clone();
-		      $this.remove();
-		      $newActive.prependTo($bioWrap.find('.bio-wrap')).addClass('active');
-		    }
+			duration: 400,
+			delay: 0,
+			queue: false,
+			complete: function(){
+			  $newActive = $this.clone();
+			  $this.remove();
+			  $newActive.prependTo($bioWrap.find('.bio-wrap')).addClass('active');
+			}
 		  });
 		}
 	});
@@ -731,17 +731,33 @@ jQuery(function($){
 	
 	// Add arrows to big lists
 	$('.big-list li a').append('<span class="arw-right icon-svg"><svg><use xlink:href="'+hwcoe_ufl_sitedata.theme_url+'/img/spritemap.svg#arw-right"></use></svg></span>');
-	
-	// Add prettyPhoto for image links
-	$('.entry-content a[href$=".jpg"]').has('img').prop('rel', 'prettyPhoto');
-	$('.entry-content a[href$=".png"]').has('img').prop('rel', 'prettyPhoto');
-	$('.entry-content a[href$=".gif"]').has('img').prop('rel', 'prettyPhoto');
-	
-	// Initialize prettyPhoto
-	$('a[rel^="prettyPhoto"]').prettyPhoto();
-	
-	$('.entry-content a img').click(function (){
-		var desc = $(this).parents('.wp-caption').find('.wp-caption-text').html();
-		$('.entry-content a').attr('title', desc);
-	});
+
+
+	// Prettyphoto lightbox
+
+	function lightBox() {
+		// Add prettyPhoto for image links
+		$('.entry-content a[href$=".jpg"]').has('img').prop('rel', 'prettyPhoto');
+		$('.entry-content a[href$=".png"]').has('img').prop('rel', 'prettyPhoto');
+		$('.entry-content a[href$=".gif"]').has('img').prop('rel', 'prettyPhoto');
+		// Initialize prettyPhoto
+		$('a[rel^="prettyPhoto"]').prettyPhoto();
+
+		// pass image title to its parent anchor in order to display in lightbox
+		$('.entry-content a img').each(function(key,$elem){
+			// var desc = $(this).parents('.wp-caption').find('.wp-caption-text').html();
+		   var desc = $(this).attr('title');
+		   $(this).parent().attr('title', desc);
+		});
+
+		$('.gallery a img').each(function(key,$elem){
+		   var desc = $(this).attr('title');
+		   $(this).parent().attr('title', desc);
+		});
+
+	}
+
+	if(jQuery().prettyPhoto) {
+		lightBox(); 
+	}
 });
