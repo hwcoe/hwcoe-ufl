@@ -29,7 +29,7 @@
 		position: absolute;	
 	}
 	
-	@include breakFirst( wide){
+	@include breakFirst(wide){
 		padding-top: 150px;			
 	}
 }
@@ -50,10 +50,8 @@
 		}
 	}
 	aside {
-		margin: 0 0 20px 30px;
+		@extend .col-md-5;
 		padding: 30px 40px;
-		width: 40%;
-		float: right;
 		background: $blueLight;
 		color: $white;
 		h2, h3, h4, h5 {
@@ -63,10 +61,21 @@
 		ul, ol {
 			margin:0;
 		}
-		&.alignnone {
-			width: 100%;
-			float: none;
-			margin: 20px 0;
+		@include breakFirst(medium){
+			margin: 0 0 20px 30px;
+			float: right;
+			&.alignnone {
+				width: 100%;
+				float: none;
+				margin: 20px 0;
+			}
+		}
+		@include breakTo(xsmall){
+			&.alignleft {
+				width: 100%;
+				float: none;
+				margin: 20px 0;
+			}
 		}
 	}
 	h2 {
