@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 2.3.1
+- Fix issue with lengthy .btn elements overflowing at small screen sizes
+
 ### 2.3.0
 - Add Options Output page template to display lists of posts with custom meta information
 - Fix layout for image galleries (classic editor shortcode and block editor gallery)
