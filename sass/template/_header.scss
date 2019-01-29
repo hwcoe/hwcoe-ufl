@@ -634,6 +634,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 	top: 150px;
 	width: 100%;
 	z-index: $zUI;
+
 	@include breakFirst(wide){
 		min-width: 845px;
 		position: absolute;
@@ -643,6 +644,11 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 	.offscreen & {
 		left: auto;
 		right: 0;
+	}
+	.admin-bar & {
+		@include breakTo(wide){
+			top:182px;
+		}
 	}
 	ul {
 		margin: 0;

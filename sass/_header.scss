@@ -10,7 +10,6 @@
 .header {
 	.admin-bar & {
 		top: 46px;
-
 		@include breakFirst(783px){
 			top: 32px; 
 		}
@@ -183,9 +182,8 @@
 	.dropdown {
 		.offscreen & { // adjust dropdown
 			margin-top: 30px;
-		}  
-		
-		@media screen and (min-width: $screen-lg){
+		} 
+		@include breakFirst(wide){
 			top: 50px;
 		}
 	}

@@ -34,6 +34,7 @@ Changelog
 ### 2.3.1
 - Fix issue with lengthy .btn elements overflowing at small screen sizes
 - Make aside element 100% width at small screen sizes
+- Adjust primary nav positioning when admin bar is present
 
 ### 2.3.0
 - Add Options Output page template to display lists of posts with custom meta information
