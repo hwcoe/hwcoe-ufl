@@ -31,8 +31,7 @@ Documentation
 
 Changelog
 ---------
-### 2.3.1
-- Fix non-homepage widget styles
+### 2.3.2
 - Add comments.php
 
 ### 2.3.1
