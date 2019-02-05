@@ -32,6 +32,10 @@ Documentation
 Changelog
 ---------
 ### 2.3.1
+- Fix non-homepage widget styles
+- Add comments.php
+
+### 2.3.1
 - Fix issue with lengthy .btn elements overflowing at small screen sizes
 - Make aside element 100% width at small screen sizes
 - Adjust primary nav positioning when admin bar is present
