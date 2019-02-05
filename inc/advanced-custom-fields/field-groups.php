@@ -184,7 +184,9 @@ acf_add_local_field_group(array (
  * Latest Posts Slider Options
  */
 
-if ( 'posts' == get_option( 'show_on_front' ) ) {
+// if ( 'posts' == get_option( 'show_on_front' ) ) {
+
+if ( get_option( 'page_for_posts' ) || 'posts' == get_option( 'show_on_front' ) ) {
 	acf_add_local_field_group(array (
 		'id' => 'acf_latest-posts-slider-options',
 		'title' => 'Latest Posts Slider Options',
@@ -244,5 +246,5 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			),
 		),
 		'menu_order' => 0,
-	));
-}
+	)); 
+}// end  if ( 'posts' == get_option( 'show_on_front' ) )
