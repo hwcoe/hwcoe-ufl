@@ -35,6 +35,7 @@ Changelog
 - Fix issue with lengthy .btn elements overflowing at small screen sizes
 - Make aside element 100% width at small screen sizes
 - Adjust primary nav positioning when admin bar is present
+- Have Latest Post Slider Options show up on post edit screen when a Posts page is set
 
 ### 2.3.0
 - Add Options Output page template to display lists of posts with custom meta information
