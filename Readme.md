@@ -33,6 +33,8 @@ Changelog
 ---------
 ### 2.3.2
 - Add comments.php
+- Fix non-homepage widgets and refactor widget styles
+- Add bullets to unordered list items in Text and Custom HTML widgets
 
 ### 2.3.1
 - Fix issue with lengthy .btn elements overflowing at small screen sizes
