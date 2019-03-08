@@ -31,6 +31,10 @@ Documentation
 
 Changelog
 ---------
+### 2.3.3
+- Add formatting to data tables in the main-content area
+- Override some Tablepress CSS rules with HWCOE formatting
+
 ### 2.3.2
 - Add comments.php
 - Fix non-homepage widgets and refactor widget styles

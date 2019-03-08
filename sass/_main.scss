@@ -113,15 +113,27 @@
 		width: 100%;
 		max-width: 100%;
 		margin-bottom: $grid-gutter-width;
-		
+	}
+
+	tr:nth-child(even) {
 		td, th {
-			padding: $grid-gutter-width/4 $grid-gutter-width/2;
-			vertical-align: top;
+			background-color: $beigeLight;
 		}
+	}
+	tr:nth-child(odd) {
+		td, th {
+			background-color: $beigeDark;
+		}
+	}
+	td, th {
+		padding: $grid-gutter-width/4 $grid-gutter-width/2;
+		border-bottom: 1px solid $grayLight;
+		vertical-align: top;
 		
-		th {
-			border-bottom: 2px solid #ddd;
-		}
+	}		
+	th {
+		font-weight: bold;
+		color: $grayDark;
 	}
 	
 }
