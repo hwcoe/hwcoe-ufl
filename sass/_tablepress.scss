@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+.tablepress-table-description {
+	margin: 0 0 20px;
+}
+
+.tablepress {
+	th, td {
+		border-bottom: 1px solid $grayLight;
+	}
+	.row-hover tr:hover td {
+		background-color: $teal !important;
+	}
+	.sorting:hover, .sorting_asc, .sorting_desc {
+		background-color: $cyan !important;
+	}
+}
+.dataTables_paginate.paging_simple {
+	float: none;
+	@extend .pagination;
+	a {
+		text-transform: uppercase;
+		text-decoration: none;
+		outline:inherit;
+		font-family: $fontFamily;
+		font-weight: 700;
+		padding-top: 15px;
+		display: block;
+		&:first-child {
+			float:left;
+		}
+		&:last-child {
+			float: right;
+		}
+
+	}
+	
+}
+.paging_simple .paginate_button.previous:before,
+.paging_simple .paginate_button.next:after {
+	content: "";
+	text-shadow: none;
+	position:relative;
+}
+
+// .dataTables_paginate a {
+// 	color: #111111 !important;
+// 	display: inline-block;
+// 	position: relative;
+// 	margin: 0 5px;
+
+// }
+// .dataTables_paginate a:first-child {
+// 	float: left;
+// }
+// .dataTables_paginate a:last-child {
+// 	float: right;
+// }
