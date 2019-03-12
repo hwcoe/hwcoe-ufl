@@ -3,7 +3,6 @@
 .tablepress-table-description {
 	margin: 0 0 20px;
 }
-
 .tablepress {
 	th, td {
 		border-bottom: 1px solid $grayLight;
@@ -15,8 +14,12 @@
 		background-color: $blueDark !important;
 	}
 }
+.dataTables_info {
+	float:none !important;
+}
 .dataTables_paginate.paging_simple {
 	float: none;
+	padding: 0 !important;
 	@extend .pagination;
 	a {
 		text-transform: uppercase;
@@ -32,12 +35,35 @@
 		&:last-child {
 			float: right;
 		}
-
 	}
-	
 }
-.paging_simple .paginate_button.previous:before,
-.paging_simple .paginate_button.next:after {
-	content: "" !important;
+.dataTables_paginate a {
+	outline:inherit;
+	position: relative;
+	color: $linkColor !important;
+	transition: all 0.3s ease;
+	&:hover, &:focus {
+		color: $linkColorHover !important;
+		text-decoration: underline !important;
+	}
+}
+.paginate_button {
+	&:hover {
+		text-decoration: underline !important;
+	}
+	&.disabled {
+		&:hover, &:focus{
+			text-decoration: none !important;
+			color: #999999 !important;
+		}
+	}
+}
+.paging_simple {
+	.paginate_button {
+		&.previous:before, &.next:after {
+			content: "" !important;
+			width: 0 !important;
+		}
+	}
 }
 

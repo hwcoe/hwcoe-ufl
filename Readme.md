@@ -33,7 +33,7 @@ Changelog
 ---------
 ### 2.3.3
 - Add formatting to data tables in the main-content area
-- Override some Tablepress CSS rules with HWCOE formatting
+- Override some Tablepress CSS rules with HWCOE theme formatting
 
 ### 2.3.2
 - Add comments.php
