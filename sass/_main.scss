@@ -114,7 +114,14 @@
 		max-width: 100%;
 		margin-bottom: $grid-gutter-width;
 	}
-
+	td, th {
+		padding: $grid-gutter-width/4 $grid-gutter-width/2;
+		border-bottom: 1px solid $grayLight;
+		vertical-align: top;	
+	}		
+	th {
+		font-weight: bold;
+	}
 	tr:nth-child(even) {
 		td, th {
 			background-color: $beigeLight;
@@ -125,15 +132,15 @@
 			background-color: $beigeDark;
 		}
 	}
-	td, th {
-		padding: $grid-gutter-width/4 $grid-gutter-width/2;
-		border-bottom: 1px solid $grayLight;
-		vertical-align: top;
-		
-	}		
-	th {
-		font-weight: bold;
-		color: $grayDark;
+	tr:first-child {
+		th {
+			color: $white;
+			background-color: $blueLight;
+		}
+		th[scope="row"] {
+			background-color: $beigeDark;
+			color: $grayDark;
+		}
 	}
 	
 }
