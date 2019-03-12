@@ -38,21 +38,6 @@
 }
 .paging_simple .paginate_button.previous:before,
 .paging_simple .paginate_button.next:after {
-	content: "";
-	text-shadow: none;
-	position:relative;
+	content: "" !important;
 }
 
-// .dataTables_paginate a {
-// 	color: #111111 !important;
-// 	display: inline-block;
-// 	position: relative;
-// 	margin: 0 5px;
-
-// }
-// .dataTables_paginate a:first-child {
-// 	float: left;
-// }
-// .dataTables_paginate a:last-child {
-// 	float: right;
-// }
