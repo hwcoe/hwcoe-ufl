@@ -34,6 +34,9 @@ Changelog
 ### 2.3.3
 - Add formatting to data tables in the main-content area
 - Override some Tablepress CSS rules with HWCOE theme formatting
+- Edits to styles for Secondary Featured Content:
+	- Remove bullets and margins from unordered lists
+	- Update H2 and span styles within ULs to play nice with RSSImport
 
 ### 2.3.2
 - Add comments.php

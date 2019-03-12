@@ -405,11 +405,9 @@
 	left: 0;
 	position: absolute;
 	overflow: hidden;
-
 	@include break(small) {
 		padding: 10px;
 	}
-
 	@include breakFirst(large) {
 		padding: 15px 20px;
 	}
@@ -436,10 +434,28 @@
 		margin-bottom: 10px;
 		line-height: 20px;
 	}
-	ul.lcp_catlist {
+	ul {
 		margin:0;
+		li {
+			text-transform: none;
+			&:before {
+				content:none;
+			}
+		}
+		span, p {
+			text-transform:none;
+			font-size:16px;
+			font-weight:100;
+			@include break (small) {
+				font: 100 14px/16px $fontFamily;
+			}
+			.two &, .one & {
+				@include break(medium) {
+					font: 100 14px/16px $fontFamily;
+				}
+			}
+		}
 		h2 {
-			// font: 500 16px/20px $fontFamily;
 			font: 500 18px/22px $fontFamily;
 			text-transform: uppercase;
 			margin:5px 0;
@@ -450,33 +466,18 @@
 					margin-bottom: 0;
 				}
 				@include break(medium) {
-					font: 500 16px/20px $fontFamily;
+					// font: 500 16px/20px $fontFamily;
+					font: 500 14px/16px $fontFamily;
 					margin-bottom: 0;
 				}
 				@include breakFirst(large) {
-					font: 500 22px/28px $fontFamily;
+					font: 500 20px/26px $fontFamily;
 				}
 			}
 			.three & {
 				@include breakFirst(medium) {
-					font: 500 22px/28px $fontFamily;
+					font: 500 20px/26px $fontFamily;
 				}
-			}
-		}
-		p {
-			@include break (small) {
-				font: 100 14px/16px $fontFamily;
-			}
-			.two &, .one & {
-				@include break(medium) {
-					font: 100 14px/16px $fontFamily;
-				}
-			}
-		}
-		li {
-			text-transform: none;
-			&:before {
-				content:none;
 			}
 		}
 	}
