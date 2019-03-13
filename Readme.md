@@ -37,6 +37,7 @@ Changelog
 - Edits to styles for Secondary Featured Content:
 	- Remove bullets and margins from unordered lists
 	- Update H2 and span styles within ULs to play nice with RSSImport
+- Update Node dependencies
 
 ### 2.3.2
 - Add comments.php

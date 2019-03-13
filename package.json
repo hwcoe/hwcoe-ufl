@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/hwcoe/hwcoe-ufl#readme",
   "devDependencies": {
-    "autoprefixer": "^9.4.3",
+    "autoprefixer": "^9.4.10",
     "grunt": "^1.0.3",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-jshint": "^2.0.0",
