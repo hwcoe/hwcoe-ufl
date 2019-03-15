@@ -6,7 +6,7 @@
  *
  * @package HWCOE_UFL
  */
-
+// Display only if a Page Right sidebar exists
 if ( ! is_active_sidebar( 'page_right' ) ): 
 	return;
 endif;

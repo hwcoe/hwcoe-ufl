@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 2.3.4
+- Templates with sidebars - make content area 100% width if no active sidebars exist 
+
 ### 2.3.3
 - Add formatting to data tables in the main-content area
 - Override some Tablepress CSS rules with HWCOE theme formatting

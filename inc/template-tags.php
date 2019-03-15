@@ -72,9 +72,15 @@ function hwcoe_ufl_post_featured_image(){
 	global $post;
 	$classes = array();
 	$columns = 12;
-	
-	if ( is_page_template('page-templates/container-right-sidebar.php') ){
-		$columns -= 3;
+	$sidebar_nav = hwcoe_ufl_sidebar_navigation($post);
+	$has_sidebar_nav = !empty( $sidebar_nav );
+	$has_page_sidebar = is_active_sidebar( 'page_sidebar' );
+	$has_page_right = is_active_sidebar( 'page_right' );
+		
+	if ( is_page_template('page-templates/container-right-sidebar.php') ) {
+		if ( $has_page_right ){
+			$columns -= 3;
+		}
 	}
 	elseif ( is_page_template('page-templates/container-no-sidebar.php') ) {
 		$columns = 12;
@@ -82,15 +88,10 @@ function hwcoe_ufl_post_featured_image(){
 	else {
 		
 		// Default page template
-		$sidebar_nav = hwcoe_ufl_sidebar_navigation($post);
-		$has_sidebar_nav = !empty( $sidebar_nav );
-		$has_page_sidebar = is_active_sidebar( 'page_sidebar' );
-		$has_page_right = is_active_sidebar( 'page_right' );
-		
 		$columns -= 3;
 		
 		if ( !$has_sidebar_nav && !$has_page_sidebar ){
-			$classes[] = 'col-md-offset-3';		
+			$columns = 12;
 		}
 		if ( $has_page_right ){
 			$columns -= 3;
@@ -101,6 +102,7 @@ function hwcoe_ufl_post_featured_image(){
 	
 	return join( ' ', $classes ); 
  }
+
  
 /**
  * Display a custom version of the search form based on location

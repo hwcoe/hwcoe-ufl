@@ -15,13 +15,11 @@ get_header(); ?>
 
 <div id="main" class="container main-content">
 <div class="row">
-  <!-- <div class="col-sm-8 col-md-offset-3"> -->
   <div class="col-sm-12">
 		<?php hwcoe_ufl_breadcrumbs(); ?>
 		<header class="entry-header">
 			<?php hwcoe_ufl_entry_title(); ?>
 	 	</header>
-	 <!-- .entry-header --> 
   </div>
 </div>
 <div class="row">
