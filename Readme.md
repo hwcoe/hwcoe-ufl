@@ -33,6 +33,7 @@ Changelog
 ---------
 ### 2.3.4
 - Templates with sidebars - make content area 100% width if no active sidebars exist 
+- Remove widget files not included in theme
 
 ### 2.3.3
 - Add formatting to data tables in the main-content area
