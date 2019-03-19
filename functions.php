@@ -111,7 +111,7 @@ function hwcoe_ufl_scripts() {
 	wp_enqueue_script('prettyPhoto', get_template_directory_uri() . '/inc/prettyPhoto/js/jquery.prettyPhoto.js', array('jquery'), null, true);
 	
 	// Theme
-	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), get_theme_version() );
+	wp_enqueue_style( 'hwcoe-ufl-style', get_stylesheet_uri(), array(), get_theme_version() );
 	wp_enqueue_script('hwcoe-ufl-plugins', get_template_directory_uri() . '/js/plugins.min.js', array('jquery'), get_theme_version(), true );
 	wp_enqueue_script('hwcoe-ufl-scripts', get_template_directory_uri() . '/js/scripts.min.js', array(), get_theme_version(), true);
 	
