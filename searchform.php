@@ -8,7 +8,7 @@
 		<span class="sr-only"><?php esc_html_e('Search', 'hwcoe-ufl'); ?></span>
 		<span class="icon-svg">
 			<svg>
-				<use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#search"></use>
+				<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#search"></use>
 			</svg>
 		</span>
 	</button>

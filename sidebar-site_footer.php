@@ -11,7 +11,7 @@ if ( ! is_active_sidebar( 'site_footer' ) ) : ?>
 
 <div id="site-footer" class="row">
     <div class="col-md-4 col-sm-4 footer-menu">
-        <h2>UF Resources <span class="icon-svg icon-caret"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#caret"></use></svg></span></h2>
+        <h2>UF Resources <span class="icon-svg icon-caret"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#caret"></use></svg></span></h2>
         <ul>
             <li><a href="http://news.ufl.edu/">UF News</a></li>
             <li><a href="http://calendar.ufl.edu/">UF Calendar</a></li>
@@ -21,7 +21,7 @@ if ( ! is_active_sidebar( 'site_footer' ) ) : ?>
         </ul>
     </div>
     <div class="col-md-4 col-sm-4 footer-menu">
-        <h2>Campus <span class="icon-svg icon-caret"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#caret"></use></svg></span></h2>
+        <h2>Campus <span class="icon-svg icon-caret"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#caret"></use></svg></span></h2>
         <ul>
             <li><a href="http://www.ufweather.org/">Weather</a></li>
             <li><a href="http://campusmap.ufl.edu/">Campus Map</a></li>
@@ -31,7 +31,7 @@ if ( ! is_active_sidebar( 'site_footer' ) ) : ?>
         </ul>
     </div>
     <div class="col-md-4 col-sm-4 footer-menu">
-        <h2>Website <span class="icon-svg icon-caret"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#caret"></use></svg></span></h2>
+        <h2>Website <span class="icon-svg icon-caret"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#caret"></use></svg></span></h2>
         <ul>
             <li><a href="http://www.ufl.edu/websites/">UF Website Listing</a></li>
             <li><a href="http://accessibility.ufl.edu/">Accessibility</a></li>

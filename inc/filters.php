@@ -31,7 +31,7 @@ add_filter( 'body_class', 'hwcoe_ufl_body_classes' );
 function hwcoe_ufl_archive_title( $title ){
 	if ( is_category() ) {
 		$queried_obj = get_queried_object();
-		$icon = get_stylesheet_directory_uri();
+		$icon = get_template_directory_uri();
 		$icon .= "/img/spritemap.svg#feed";
 		$title = sprintf( __( '%s', 'hwcoe-ufl' ), single_cat_title( '', false ) );
 		$title .= sprintf('<a href="%s" class="icon-svg icon-feed"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%s"></use></svg></a>', get_category_feed_link( $queried_obj->term_id ), $icon, $title );

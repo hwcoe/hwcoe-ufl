@@ -8,13 +8,13 @@
 </head>
 
 <body <?php body_class('loading'); // Enable JS transitions ?>>
-	<?php include get_stylesheet_directory() . '/inc/google-analytics.php'; ?>
+	<?php include get_template_directory() . '/inc/google-analytics.php'; ?>
 
 	<header>
 		<a href="#main" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
 		<div class="header unit">
 			<a href="http://ufl.edu/" class="logo">
-				<span class="icon-svg logo-uf"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-uf.svg#Layer_1"></use></svg></span>
+				<span class="icon-svg logo-uf"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/logo-uf.svg#Layer_1"></use></svg></span>
 			</a>
 			<div class="site-title">
 				<h1>
@@ -43,12 +43,12 @@
 				<a href="#" class="btn-show-aux">
 					<span class="icon-svg icon-menu">
 						<svg>
-							<use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#menu"></use>
+							<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#menu"></use>
 						</svg>
 					</span>
 					<span class="icon-svg icon-close">
 						<svg>
-						<use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#close"></use>
+						<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#close"></use>
 						</svg>
 					</span>
 					</a>
@@ -63,12 +63,12 @@
 			<a href="#" class="btn-menu" role="button" aria-haspopup="true" aria-expanded="false">
 				<span class="icon-svg icon-menu">
 					<svg>
-						<use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#menu"></use>
+						<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#menu"></use>
 					</svg>
 				</span>
 				<span class="icon-svg icon-close" role="button">
 					<svg>
-						<use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#close"></use>
+						<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#close"></use>
 					</svg>
 				</span>
 			</a>
