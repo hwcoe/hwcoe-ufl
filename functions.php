@@ -183,23 +183,22 @@ if ( class_exists( 'GFCommon' ) && file_exists(get_template_directory() . '/plug
 
 // Add Bootstrap compatible walker
 if ( !class_exists('wp_bootstrap_navwalker') ) {
-	// require_once get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
 	require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 }
 
 // The Events Calendar
 // if ( class_exists('Tribe__Events__Main') ) {
-//  require get_stylesheet_directory() . '/inc/the-events-calendar.php';
+//  require get_template_directory() . '/inc/the-events-calendar.php';
 // }
 
 // Shortcake Shortcode UI
 // if( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
-//  require get_stylesheet_directory() . '/inc/shortcake/shortcodes-ui.php';
+//  require get_template_directory() . '/inc/shortcake/shortcodes-ui.php';
 // }
 
 // IssueM newsletter
 // if ( class_exists( 'IssueM' ) ) {
-//  require get_stylesheet_directory() . '/inc/issuem/issuem.php';
+//  require get_template_directory() . '/inc/issuem/issuem.php';
 // }
 
 /*
@@ -263,7 +262,7 @@ function hwcoe_ufl_acf_json_load_point( $paths ) {
 	unset($paths[0]);
 
 	// append path
-	$paths[] = get_stylesheet_directory() . '/inc/advanced-custom-fields/acf-json';
+	$paths[] = get_template_directory() . '/inc/advanced-custom-fields/acf-json';
 	
 	// return
 	return $paths;
