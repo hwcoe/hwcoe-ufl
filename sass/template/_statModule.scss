@@ -8,6 +8,8 @@
 		top: 50px;
 		z-index: 2;
 		left: 50%;
+		width: 90%;
+		text-align: center;
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
 		color:$white;
@@ -36,6 +38,7 @@
 		text-shadow: 3px 3px 1px $white;
 		width: 100%;
 		word-wrap: break-word;
+		font-size: 60px;
 		@include breakTo(large){
 			font-size: 100px;
 		}
