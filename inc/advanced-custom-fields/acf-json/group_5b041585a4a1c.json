@@ -1,31 +1,6 @@
 {
     "key": "group_5b041585a4a1c",
     "title": "Homepage",
-    "location": [
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-templates\/home-page.php"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content",
-        "excerpt",
-        "custom_fields",
-        "discussion",
-        "comments",
-        "featured_image",
-        "send-trackbacks"
-    ],
-    "active": 1,
-    "description": "",
     "fields": [
         {
             "key": "field_5b041585e8aca",
@@ -1773,6 +1748,35 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5c93e1c347060": {
+                    "key": "layout_5c93e1c347060",
+                    "name": "general_content",
+                    "label": "General Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c93e1d647061",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Module",
@@ -1780,5 +1784,29 @@
             "max": ""
         }
     ],
-    "modified": 1529584799
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/home-page.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "featured_image",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1553195511
 }

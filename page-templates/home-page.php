@@ -60,6 +60,14 @@ get_header();
 						<?php if( get_row_layout() == 'profile_module' ): ?>
 							<?php include( HWCOE_UFL_INC_DIR . '/ufl-profile.php' ); ?>
 						<?php endif // profile_module ?>
+						<?php
+						  /*
+						   * General Content- No Formatting 
+						   */
+						  ?>
+						<?php if( get_row_layout() == 'general_content' ): ?>
+							<?php include( HWCOE_UFL_INC_DIR . '/ufl-content.php' ); ?>
+						<?php endif // general_content ?>
 					<?php endwhile //home_page_modules ?>
 				<?php endif // home_page_modules ?>
 			</div> <!-- page-wrapper -->

@@ -31,10 +31,13 @@ Documentation
 
 Changelog
 ---------
+### 2.4.0
+- Add General Content module to Home Page - No Container template
+
 ### 2.3.4
 - Templates with sidebars - make content area 100% width if no active sidebars exist 
 - Remove widget files not included in theme
-- Child theme support improvements 
+- Child theme support bugfixes 
 	- Change relevant instances of get_stylesheet_directory to get_template_directory
 	- Update handle for parent stylesheet 
 

@@ -31,7 +31,7 @@
 				?>
 				<?php if( get_row_layout() == 'secondary_with_image' ): ?>
 					<?php include( HWCOE_UFL_INC_DIR . '/ufl-secondary-image.php' ); ?>
-				<?php endif // secondary_module ?>
+				<?php endif // secondary_with_image ?>
 				<?php
 				  /*
 				   * Statistics Wide Module
@@ -40,7 +40,7 @@
 				  ?>
 				<?php if( get_row_layout() == 'statistics_module' ): ?>
 					<?php include( HWCOE_UFL_INC_DIR . '/ufl-statistics.php' ); ?>
-				<?php endif // secondary_module ?>
+				<?php endif // statistics_module ?>
 				<?php
 				  /*
 				   * Category Content Module 
@@ -49,7 +49,7 @@
 				  ?>
 				<?php if( get_row_layout() == 'category_content' ): ?>
 					<?php include( HWCOE_UFL_INC_DIR . '/ufl-category-content.php' ); ?>
-				<?php endif // secondary_module ?>
+				<?php endif // category_content ?>
 				<?php
 				  /*
 				   * Image Callout
@@ -58,7 +58,7 @@
 				  ?>
 				<?php if( get_row_layout() == 'triple_image_callout' ): ?>
 					<?php include( HWCOE_UFL_INC_DIR . '/ufl-image-callout.php' ); ?>
-				<?php endif // secondary_module ?>
+				<?php endif // triple_image_callout ?>
 				<?php
 				  /*
 				   * Content Block with Quote 
@@ -66,7 +66,7 @@
 				  ?>
 				<?php if( get_row_layout() == 'secondary_content_with_quote_block' ): ?>
 					<?php include( HWCOE_UFL_INC_DIR . '/ufl-secondary-quote.php' ); ?>
-				<?php endif // secondary_module ?>
+				<?php endif // secondary_content_with_quote_block ?>
 				<?php
 				  /*
 				   * General Content- No Formatting 
@@ -74,7 +74,7 @@
 				  ?>
 				<?php if( get_row_layout() == 'general_content' ): ?>
 					<?php include( HWCOE_UFL_INC_DIR . '/ufl-content.php' ); ?>
-				<?php endif // secondary_module ?>
+				<?php endif // general_content ?>
 				<?php
 				  /*
 				   * General Content- Image
@@ -83,7 +83,7 @@
 				  ?>
 				<?php if( get_row_layout() == 'general_content_with_image' ): ?>
 					<?php include( HWCOE_UFL_INC_DIR . '/ufl-content-image.php' ); ?>
-				<?php endif // secondary_module ?>
+				<?php endif // general_content_with_image ?>
 				<?php
 				  /*
 				   * List Sub-Pages
@@ -91,7 +91,7 @@
 				  ?>
 				<?php if( get_row_layout() == 'list_sub_pages' ): ?>
 					<?php include( HWCOE_UFL_INC_DIR . '/ufl-sub-page-list.php' ); ?>
-				<?php endif // secondary_module ?>
+				<?php endif // list_sub_pages ?>
 				<?php
 				  /*
 				   * List Posts from category
@@ -99,7 +99,7 @@
 				  ?>
 				<?php if( get_row_layout() == 'archive_content' ): ?>
 					<?php include( HWCOE_UFL_INC_DIR . '/ufl-landing-page-archive.php' ); ?>
-				<?php endif // secondary_module ?>
+				<?php endif // archive_content ?>
 				<?php
 				  /*
 				   * Profiles 
@@ -107,7 +107,7 @@
 				  ?>
 				<?php if( get_row_layout() == 'profile_module' ): ?>
 					<?php include( HWCOE_UFL_INC_DIR . '/ufl-profile.php' ); ?>
-				<?php endif // secondary_module ?>
+				<?php endif // profile_module ?>
  			<?php endwhile // the_row ?>
 		<?php endif // have_rows ?>
 	</div><!-- .entry-content -->
