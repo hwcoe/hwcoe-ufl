@@ -34,6 +34,7 @@ Changelog
 ### 2.4.0
 - Add General Content module to Home Page - No Container template
 - Fix commenting on landing page content modules
+- Fix display issues with Stats module H2 breaking layout at longer lengths
 
 ### 2.3.4
 - Templates with sidebars - make content area 100% width if no active sidebars exist 

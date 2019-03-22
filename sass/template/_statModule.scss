@@ -13,11 +13,11 @@
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
 		color:$white;
-    	text-shadow: 3px 3px 1px $orange;
-    	font: 700 36px/1 $fontFamily;
-    	white-space: normal;
-    	@include breakFirst(medium){
-    		font-size: 52px;
+		text-shadow: 3px 3px 1px $orange;
+		font: 700 36px/1 $fontFamily;
+		white-space: normal;
+		@include breakFirst(wide){
+			font-size: 48px;
 		}
 	}
 }
@@ -32,13 +32,12 @@
 	}
 	h3 {
 		color: $orange;
-		font: 700 64px/1 $fontFamily;
+		font: 700 60px/1 $fontFamily;
 		margin: 0;
 		padding: 0 15px 10px;
 		text-shadow: 3px 3px 1px $white;
 		width: 100%;
 		word-wrap: break-word;
-		font-size: 60px;
 		@include breakTo(large){
 			font-size: 100px;
 		}
