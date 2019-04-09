@@ -45,8 +45,8 @@ if( !empty($_REQUEST['success']) ){
 
 		<div class="inside event-form-name">
 			<label for="event-name"><?php esc_html_e('Event Name', 'events-manager'); ?><?php echo $required; ?></label>
-			<input type="text" name="event_name" id="event-name" value="<?php echo esc_attr($EM_Event->event_name,ENT_QUOTES); ?>" />
-			<label class="description" for="event-name"><?php esc_html_e('Example: Information session', 'events-manager'); ?></label>
+			<input type="text" name="event_name" id="event-name" maxlength="110" value="<?php echo esc_attr($EM_Event->event_name,ENT_QUOTES); ?>" />
+			<label class="description" for="event-name"><?php esc_html_e('Example: Information Session (max 110 characters)', 'events-manager'); ?></label>
 			<?php em_locate_template('forms/event/group.php',true); ?>
 		</div>
 					

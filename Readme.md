@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 2.4.1
+- Limit Event Name character length in event submission form template
+
 ### 2.4.0
 - Add General Content module to Home Page - No Container template
 - Fix commenting on landing page content modules
