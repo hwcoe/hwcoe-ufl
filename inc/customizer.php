@@ -74,19 +74,19 @@ function hwcoe_ufl_customize_css() {
 	// Custom background color
 	if ( !empty($background_color) ) {
 		$custom_css .=  "body { background-color: {$background_color}; } ";
-  	}
+	}
 	
 	// Custom content color
 	if ( !empty($content_color) ) {
 		$custom_css .=  "#main.main-content { background-color: {$content_color}; } ";
-  	}
+	}
 	
 	// Custom css for sidenav
 	if ( $collapse_sidebar_nav ) {
 		$custom_css  .= '.sidenav .page_item_has_children .children {display: none;} ';	
-  	}
+	}
 	
-    wp_add_inline_style( 'style', $custom_css );
+	 wp_add_inline_style( 'hwcoe-ufl-style', $custom_css );
 }
 add_action('wp_enqueue_scripts', 'hwcoe_ufl_customize_css');
 
@@ -95,8 +95,7 @@ add_action('wp_enqueue_scripts', 'hwcoe_ufl_customize_css');
  * @since 0.1.0
  */
 function hwcoe_ufl_customize_script() {
-	wp_enqueue_script( 'ufl-2015-themecustomizer',	get_template_directory_uri() . '/js/customizer.min.js', array( 'jquery','customize-preview' ), null, true	);
-	// wp_enqueue_script( 'ufl-2015-themecustomizer',	get_template_directory_uri() . '/js/customizer.min.js', array( 'jquery','customize-preview' ), rand(), true	);
+	wp_enqueue_script( 'hwcoe-ufl-themecustomizer',	get_template_directory_uri() . '/js/customizer.min.js', array( 'jquery','customize-preview' ), null, true	);
 }
 add_action('customize_preview_init', 'hwcoe_ufl_customize_script');
  
