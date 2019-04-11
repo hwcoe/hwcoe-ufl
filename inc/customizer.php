@@ -53,7 +53,7 @@ function hwcoe_ufl_customize_css() {
 	$custom_logo_height = ( isset($theme_mods['custom_logo_height']) )? $theme_mods['custom_logo_height'] : 58;
 	$custom_logo_width = ( isset($theme_mods['custom_logo_width']) )? $theme_mods['custom_logo_width'] : 240;
 	$custom_logo_top = ( isset($theme_mods['custom_logo_top']) )? $theme_mods['custom_logo_top'] : 22;
-	
+
 	$background_color = ( isset($theme_mods['background_color']) )? $theme_mods['background_color'] : false;
 	$content_color = ( isset($theme_mods['content_color']) )? $theme_mods['content_color'] : false;
 	$collapse_sidebar_nav = ( isset($theme_mods['collapse_sidebar_nav']) )? $theme_mods['collapse_sidebar_nav'] : 1;
@@ -66,10 +66,9 @@ function hwcoe_ufl_customize_css() {
 		$custom_css .= "@media (min-width: 992px){ .header.unit .main-menu-wrap .logo-unit {width:".$custom_logo_width."px;}}";
 		$custom_css .= "@media screen and (min-width: 991px) and (max-width: 1250px) {.header.unit .main-menu-wrap .logo-unit {width:".$custom_logo_width * 0.75."px;}}";
 	}
-	if( !empty($custom_logo_top) ) {
+	if( !empty($custom_logo_top) || strlen($custom_logo_top) > 0 ) {
 		$custom_css .= "@media (min-width: 992px){ .header.unit .main-menu-wrap .logo-unit {top:".$custom_logo_top."px;}}";
 	}
-
 
 	// Custom background color
 	if ( !empty($background_color) ) {
@@ -124,7 +123,7 @@ function hwcoe_ufl_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'custom_logo_top', 
 		array( 
-			'default' => '0', 
+			'default' => '22', 
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'sanitize_text_field' 
 		)

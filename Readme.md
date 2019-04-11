@@ -33,7 +33,9 @@ Changelog
 ---------
 ### 2.4.1
 - Limit Event Name character length in event submission form template
-- Bugfix: Update handle for Customizer inline styles function (changed in 2.3.4 for child theme support) 
+- Bugfix: Update handle for Customizer inline styles function (changed in 2.3.4 for child theme support)
+- Update svg4everybody js plugin
+- Bugfix: Improve SVG scaling support in Edge browser (TODO)
 
 ### 2.4.0
 - Add General Content module to Home Page - No Container template
