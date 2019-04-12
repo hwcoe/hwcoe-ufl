@@ -14,7 +14,12 @@
 		<a href="#main" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
 		<div class="header unit">
 			<a href="http://ufl.edu/" class="logo">
-				<span class="icon-svg logo-uf"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/logo-uf.svg#Layer_1"></use></svg></span>
+				<span class="icon-svg logo-uf">
+					<svg>
+						<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#logo-uf"></use>
+						<span class="visuallyhidden">University of Florida</span>
+					</svg>
+				</span>
 			</a>
 			<div class="site-title">
 				<h1>

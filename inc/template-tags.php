@@ -16,9 +16,11 @@ function hwcoe_ufl_get_custom_logo() {
 		if ( has_custom_logo( $blog_id ) ){
 		  $custom_logo = get_custom_logo();
 		  $custom_logo = preg_replace("/(.+)src=\"([^\"]*)\"(.+)/", "$2", $custom_logo);
+		  $custom_logo .= "#Layer_1";
 		}
 		else {
-		 $custom_logo = get_template_directory_uri() . '/svg/logo-herbert.svg';
+		 // $custom_logo = get_template_directory_uri() . '/svg/logo-herbert.svg';
+		 $custom_logo = get_template_directory_uri() . '/img/logo-hwcoe.svg#hwcoe-logo';
 		}
    }
    return $custom_logo;

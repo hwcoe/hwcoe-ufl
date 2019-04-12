@@ -13,22 +13,35 @@
 	<header>
 		<a href="#main" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
 		<div class="header unit">
-			<a href="http://ufl.edu/" class="logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/logo-uf.svg" alt="University of Florida">
+			<a href="http://ufl.edu/" class="logo icon-svg" aria-label="UF">
+				<svg>
+					<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#logo-uf"></use>
+					<span class="visuallyhidden">University of Florida</span>
+				</svg>
 			</a>
 			<h1 class="screen-reader-title">
+				<!-- Small screens -->
 				<a href="<?php echo site_url('/'); ?>" class="logo mobile">
 					<span class="screen-reader-text"><?php echo bloginfo('name'); ?></span>
-					<span class="icon-svg logo-unit"><svg><use xlink:href="<?php echo hwcoe_ufl_get_custom_logo(); ?>#Layer_1"></use></svg></span>
+					<span class="icon-svg logo-unit">
+						<svg>
+							<use xlink:href="<?php echo hwcoe_ufl_get_custom_logo(); ?>"></use>
+						</svg>
+					</span>
 				</a>
 			</h1>
-	
+			
+			<!-- Large screens -->
 			<div class="menu-wrap">
 				<div class="main-menu-wrap">
 					<h1 class="screen-reader-title">
 						<a href="<?php echo site_url('/'); ?>">
+							<span class="icon-svg logo-unit">
 								<span class="screen-reader-text"><?php echo bloginfo('name'); ?></span>
-								<span class="icon-svg logo-unit"><svg><use xlink:href="<?php echo hwcoe_ufl_get_custom_logo(); ?>#Layer_1"></use></svg></span>
+								<svg>
+									<use xlink:href="<?php echo hwcoe_ufl_get_custom_logo(); ?>"></use>
+								</svg>
+							</span>
 						</a>
 					</h1>
 					<nav role="navigation" aria-label="<?php _e( 'Main Menu', 'hwcoe-ufl' ); ?>">

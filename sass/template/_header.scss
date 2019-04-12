@@ -60,7 +60,7 @@
 				display: block;
 			}
 		}
-		.logo-unit {
+		.logo-unit {	// small viewport 
 			display: block;
 			top: 0px;
 			height: 60px;
@@ -85,7 +85,7 @@
 			padding-left: 220px;
 		}
 
-		.logo-unit {
+		.logo-unit {	// large viewport
 			color: $white;
 			display: none;
 

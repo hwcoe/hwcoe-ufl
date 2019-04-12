@@ -21,7 +21,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-md-push-8 footer-contact-wrap">
-					<a href="http://ufl.edu/" class="footer-logo icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#florida-logo-full"></use></svg><span class="visuallyhidden">University of Florida</span></a>
+					<a href="http://ufl.edu/" class="footer-logo icon-svg">
+						<svg>
+							<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#florida-logo-full"></use>
+						</svg>
+						<span class="visuallyhidden">University of Florida</span>
+					</a>
 					<ul class="social-nav">
 						<?php hwcoe_ufl_socialnetworks(); ?>
 					</ul>
@@ -32,7 +37,14 @@
 						<?php if( have_rows('footer_columns', 'option') ): ?>
 							<?php while ( have_rows( 'footer_columns', 'option' ) ) : the_row(); ?>
 								<div class="col-md-<?php the_sub_field( 'columns' ); ?> col-sm-<?php the_sub_field( 'columns' ); ?> footer-menu">
-									<h2><?php the_sub_field( 'heading' ); ?> <span class="icon-svg icon-caret"><svg><use xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#caret"></use></svg></span></h2>
+									<h2><?php the_sub_field( 'heading' ); ?> 
+										<span class="icon-svg icon-caret">
+											<svg>
+												<use xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#caret"></use>
+											</svg>
+											<span class="visuallyhidden">Open/Close</span>
+										</span>
+									</h2>
 									<?php the_sub_field( 'list_items' ); ?>
 								</div>
 							<?php endwhile // footer_columns ?>
