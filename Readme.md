@@ -37,7 +37,7 @@ Changelog
 - Bugfix: Add markup to SVGs to improve accessibility and scaling support in Edge browser
 	- Append `#Layer_1` to `$custom_logo` variable rather than including it in header markup
 	- Update svg4everybody js plugin
-
+- Bugfix: Ensure "use post featured image" setting does not prevent uploaded homepage hero image displaying on external stories
 
 ### 2.4.0
 - Add General Content module to Home Page - No Container template

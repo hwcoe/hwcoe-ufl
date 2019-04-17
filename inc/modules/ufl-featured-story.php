@@ -15,7 +15,7 @@ $stories = array();
 		  $featured_image   	= '';
 		  $title            	= get_sub_field( 'story_title' );
 		  $category         	= get_sub_field( 'primary_category' );
-		  $tagline         	= trim( get_sub_field( 'link_text' ) );
+		  $tagline         		= trim( get_sub_field( 'link_text' ) );
 
 		  if( $internal ){
 			 $page   = get_sub_field( 'internal_link' ); 
@@ -23,11 +23,11 @@ $stories = array();
 			 $link   = get_permalink( $id );
 			 if( get_sub_field( 'use_post_featured_image' ) ){
 				$featured_image  = wp_get_attachment_url( get_post_thumbnail_id( $page->ID ) );
+			 } else {
+			 	$featured_image = get_sub_field( 'featured_image' );
 			 }
 		  } else {
 			 $link = get_sub_field( 'external_url' );
-		  }
-		  if ( false === get_sub_field( 'use_post_featured_image' ) ){
 			 $featured_image = get_sub_field( 'featured_image' );
 		  }
 
