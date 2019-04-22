@@ -13,7 +13,7 @@
  */
 get_header(); ?>
 
-<div id="main" class="container main-content">
+<div class="container main-content">
 <div class="row">
   <div class="col-sm-12">
 		<?php hwcoe_ufl_breadcrumbs(); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
   
   <?php get_sidebar('page_sidebar'); ?>  
   
-  <div class="<?php echo hwcoe_ufl_page_column_class(); ?>">
+  <div id="main" tabindex="-1" class="<?php echo hwcoe_ufl_page_column_class(); ?>">
 	 <?php 
 		while ( have_posts() ) : the_post();
 			get_template_part( 'template-parts/content', 'page' );
