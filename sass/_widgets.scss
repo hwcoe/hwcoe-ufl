@@ -6,6 +6,7 @@
 		
 		li:before {
 			content: normal;
+			color: #ffffff;
 		}
 		li {
 			margin-bottom: $grid-gutter-width/2;
@@ -37,6 +38,23 @@
 		content: "\2022";
 	}
 }
+.custom-html-widget, .textwidget, .widget_nav_menu {
+	a:hover, a:focus {
+		text-decoration: none;
+	}
+}
+ul.sub-menu {
+	margin-top:5px;
+	margin-bottom: $grid-gutter-width/2;
+	margin-left: $grid-gutter-width/2;
+	li {
+		margin-bottom: 5px;
+		&:before {
+			content: "\2022";
+		}
+	}
+}
+
 .widget {
 	.widgettitle, .widget-title {
 		text-transform: none;

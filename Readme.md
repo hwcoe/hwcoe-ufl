@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 2.5.0
+- Navigation Menu Widget: adjust formatting for .sub-menu list
+
 ### 2.4.1
 - Limit Event Name character length in event submission form template
 - Bugfix: Update handle for Customizer inline styles function (changed in 2.3.4 for child theme support)
