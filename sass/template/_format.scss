@@ -13,15 +13,15 @@ body {
 		font-size: $baseFontSize;
 	}
 	@include breakFirst(large){
-		// padding-top: 245px;
-		padding-top:200px;
+		padding-top:220px;
 	}
 	// legacy homepage layout - latest posts slider
-	&.home {
+	&.home, &.page-template-container-landing, &.page-template-no-container-landing {
 		@include breakFirst(large){
 			padding-top: 245px;
 		}
 	}
+
 	// updated homepage layout with feature stories
 	&.homepage {
 		padding-top: 60px;

@@ -34,6 +34,11 @@ Changelog
 ### 2.4.2
 - Fix print styles so extraneous info won't print
 - Navigation Menu Widget: adjust formatting for .sub-menu list
+- Reduce body padding-top for the following templates:
+	- Default
+	- Members Only Page
+	- No Sidebars or Widgets - Container
+	- Right Sidebar, No Left Navigation - Container
 
 ### 2.4.1
 - Limit Event Name character length in event submission form template
