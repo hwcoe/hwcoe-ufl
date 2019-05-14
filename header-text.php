@@ -24,7 +24,8 @@
 			<div class="site-title">
 				<h1>
 					<a href="<?php echo site_url('/'); ?>">
-						<span class=""><?php echo bloginfo('name'); ?></span>
+<!-- 						<span class=""><?php echo bloginfo('name'); ?></span> -->
+						<?php echo bloginfo('name'); ?>
 					</a>
 				</h1>	
 			</div> <!-- /site-title -->
@@ -81,3 +82,6 @@
 		</div><!-- .header.unit -->
 	</header>
 <!-- END HEADER -->
+	<div class="print-header">
+		<h1><?php echo bloginfo('name'); ?></h1>
+	</div>

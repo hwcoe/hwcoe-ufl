@@ -9,12 +9,20 @@ body {
 	line-height: $baseLineHeight;
 	margin: 0;
 	padding-top: 90px;
-	@include breakFirst(medium){
+	@include breakFirst(medium) {
 		font-size: $baseFontSize;
 	}
 	@include breakFirst(large){
-		padding-top: 245px;
+		// padding-top: 245px;
+		padding-top:200px;
 	}
+	// legacy homepage layout - latest posts slider
+	&.home {
+		@include breakFirst(large){
+			padding-top: 245px;
+		}
+	}
+	// updated homepage layout with feature stories
 	&.homepage {
 		padding-top: 60px;
 		@include breakFirst(large){

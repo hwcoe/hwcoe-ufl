@@ -31,7 +31,8 @@ Documentation
 
 Changelog
 ---------
-### 2.5.0
+### 2.4.2
+- Fix print styles so extraneous info won't print
 - Navigation Menu Widget: adjust formatting for .sub-menu list
 
 ### 2.4.1

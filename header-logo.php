@@ -95,3 +95,6 @@
 		</div><!-- .header.unit -->
 	</header>
 	<!-- END HEADER -->
+	<div class="print-header">
+		<h1><?php echo bloginfo('name'); ?></h1>
+	</div>
