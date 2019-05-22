@@ -34,6 +34,7 @@ Changelog
 ### 2.4.2
 - Fix print styles so extraneous info won't print
 - Navigation Menu Widget: adjust formatting for .sub-menu list
+- Fix caption color contrast in widgets
 - Reduce body padding-top for the following templates:
 	- Default
 	- Members Only Page

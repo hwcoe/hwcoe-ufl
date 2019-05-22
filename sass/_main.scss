@@ -329,10 +329,13 @@ figure.wp-caption img {
 }
 
 .wp-caption-text {
-	color: $grayDark;
+	// .wp-caption-text in article or .footer-bottom
+	article &, .footer-bottom & {
+		color: $grayDark;
 	
-	a {
-		color: $grayDark;	
+		a {
+			color: $grayDark;	
+		}
 	}
 }
 
