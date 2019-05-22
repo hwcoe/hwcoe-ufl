@@ -78,28 +78,35 @@ function hwcoe_ufl_post_featured_image(){
 	$has_sidebar_nav = !empty( $sidebar_nav );
 	$has_page_sidebar = is_active_sidebar( 'page_sidebar' );
 	$has_page_right = is_active_sidebar( 'page_right' );
-		
-	if ( is_page_template('page-templates/container-right-sidebar.php') ) {
-		if ( $has_page_right ){
-			$columns -= 3;
+	$has_post_sidebar = is_active_sidebar( 'post_sidebar' );
+
+	if ( is_page() ) {
+		if ( is_page_template('page-templates/container-right-sidebar.php') ) {
+			if ( $has_page_right ){
+				$columns -= 3;
+			}
 		}
-	}
-	elseif ( is_page_template('page-templates/container-no-sidebar.php') ) {
-		$columns = 12;
-	}
-	else {
-		
-		// Default page template
-		$columns -= 3;
-		
-		if ( !$has_sidebar_nav && !$has_page_sidebar ){
+		elseif ( is_page_template('page-templates/container-no-sidebar.php') ) {
 			$columns = 12;
 		}
-		if ( $has_page_right ){
+		else {
+			// Default page template
 			$columns -= 3;
+			
+			if ( !$has_sidebar_nav && !$has_page_sidebar ){
+				$columns = 12;
+			}
+			if ( $has_page_right ){
+				$columns -= 3;
+			}
+			
+		}
+	} else { // is not page
+		if ( $has_post_sidebar ){
+			$columns = 9;
 		}
 	}
-	
+		
 	$classes[] = 'col-md-' . $columns;
 	
 	return join( ' ', $classes ); 

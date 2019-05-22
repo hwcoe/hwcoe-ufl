@@ -31,6 +31,10 @@ Documentation
 
 Changelog
 ---------
+### 2.X.X.
+- Remove default archive widget from post sidebar
+	- Change default archive widget in archive template from dropdown to list
+
 ### 2.4.2
 - Fix print styles so extraneous info won't print
 - Navigation Menu Widget: adjust formatting for .sub-menu list

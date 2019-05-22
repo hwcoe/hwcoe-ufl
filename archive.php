@@ -30,7 +30,7 @@ get_header(); ?>
   </div>
   <div class="col-md-3">
     <div id="post-sidebar" class="widget-area" role="complementary">
-      <?php the_widget( 'WP_Widget_Archives', array('title' => __('News Archive', 'hwcoe-ufl'), 'dropdown' => 1) ); ?>
+      <?php the_widget( 'WP_Widget_Archives', array('title' => __('News Archive', 'hwcoe-ufl'), 'dropdown' => 0) ); ?>
    </div><!-- post_sidebar -->
   </div>
 </div>

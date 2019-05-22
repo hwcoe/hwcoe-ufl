@@ -10,15 +10,16 @@ get_header(); ?>
 
 <div id="main" class="container main-content">
 <div class="row">
-  <div class="col-sm-12">
-	<header class="entry-header">
-      	<?php hwcoe_ufl_entry_title(); ?>
-	</header>
-	<!-- .entry-header --> 
-  </div>
+	<div class="col-sm-12">
+		<header class="entry-header">
+			<?php hwcoe_ufl_entry_title(); ?>
+		</header>
+		<!-- .entry-header --> 
+	</div>
 </div>
 <div class="row">
-  <div class="col-md-9">
+	<div tabindex="-1" class="<?php echo hwcoe_ufl_page_column_class(); ?>">
+	
 	<?php 
 		while ( have_posts() ) : the_post();
 			get_template_part( 'template-parts/content', get_post_type() );
@@ -34,9 +35,7 @@ get_header(); ?>
 		) );
 	?>
   </div>
-  <div class="col-md-3">
 	<?php get_sidebar('post_sidebar'); ?>
-  </div>
 </div>
 </div>
 

@@ -7,16 +7,12 @@
  * @package HWCOE_UFL
  */
 
-if ( ! is_active_sidebar( 'post_sidebar' ) ): ?>
+if ( is_active_sidebar( 'post_sidebar' ) ): ?>
 
-<div id="post-sidebar" class="widget-area" role="complementary">
-    <?php the_widget( 'WP_Widget_Archives', array('title' => __('News Archive', 'hwcoe-ufl'), 'dropdown' => 1) ); ?>
-</div><!-- post_sidebar -->
-
-<?php else: ?>
-
-<div id="post-sidebar" class="widget-area" role="complementary">
-    <?php dynamic_sidebar( 'post_sidebar' ); ?>
-</div><!-- post_sidebar -->
+<div class="col-md-3">
+	<div id="post-sidebar" class="widget-area" role="complementary">
+		<?php dynamic_sidebar( 'post_sidebar' ); ?>
+	</div><!-- post_sidebar -->
+</div>
 
 <?php endif; ?>
