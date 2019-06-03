@@ -433,3 +433,14 @@ function hwcoe_ufl_breaker_cards($atts, $content = NULL ) {
 }
 add_shortcode('ufl-breaker-cards', 'hwcoe_ufl_breaker_cards');
 
+function hwcoe_ufl_clear_floats($atts, $content = null) {
+	extract(shortcode_atts(array(
+				'autop' => '1',
+	), $atts));
+	$content = do_shortcode($content);
+		
+	$float_clear = "<div class=\"cf\">&nbsp;</div>";
+	
+	return $float_clear;
+}
+add_shortcode('clear', 'hwcoe_ufl_clear_floats');

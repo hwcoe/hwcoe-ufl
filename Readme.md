@@ -31,9 +31,10 @@ Documentation
 
 Changelog
 ---------
-### 2.X.X.
+### 2.5.0
 - Remove default archive widget from post sidebar
 	- Change default archive widget in archive template from dropdown to list
+- Add [clear] shortcode to theme to allow adding clearfix to post content
 
 ### 2.4.2
 - Fix print styles so extraneous info won't print
