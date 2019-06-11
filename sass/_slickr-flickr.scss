@@ -1,2 +1,9 @@
 @charset "utf-8";
 
+.slickr-flickr-gallery {
+	ul li {
+		&:before {
+			content:none;
+		}
+	}
+}

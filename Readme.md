@@ -35,6 +35,7 @@ Changelog
 - Remove default archive widget from post sidebar
 	- Change default archive widget in archive template from dropdown to list
 - Add [clear] shortcode to theme to allow adding clearfix to post content
+- Add styles for Slickr Flickr plugin; remove bullets for SF gallery list items
 
 ### 2.4.2
 - Fix print styles so extraneous info won't print
