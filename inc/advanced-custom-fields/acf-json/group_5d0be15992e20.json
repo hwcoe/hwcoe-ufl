@@ -1,0 +1,79 @@
+{
+    "key": "group_5d0be15992e20",
+    "title": "Page Options",
+    "fields": [
+        {
+            "key": "field_5d0be1ddef775",
+            "label": "Title Override Text",
+            "name": "custom_meta_page_title_override",
+            "type": "text",
+            "instructions": "Enter the text that will appear as the page title shown at the top of the content section of the page template",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d0be225386cc",
+            "label": "Full Width Content Container",
+            "name": "full_width_content_container",
+            "type": "true_false",
+            "instructions": "Select to make the content container width 100% of the display window",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/container-no-sidebar.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/membersonly.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Page Options for pages with \"Members Only\" and \"No Sidebars or Widgets\" templates",
+    "modified": 1561138718
+}

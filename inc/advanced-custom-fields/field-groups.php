@@ -13,67 +13,9 @@ add_action( 'admin_enqueue_scripts', 'hwcoe_ufl_metabox_styles_scripts' );
 /**
  *	Add the ACF exported field groups - groups cannot be edited in dashboard
  *	Displays field groups across multisite without having to import them
- *	1. Page Options
- *	2. Page Visibility Options
- *	3. Latest Posts Slider Options
+ *	1. Page Visibility Options
+ *	2. Latest Posts Slider Options
  */
-
-/**
- * Page Options
- *
- */
-acf_add_local_field_group(array (
-	'id' => 'acf_page-options',
-	'title' => 'Page Options',
-	'fields' => array (
-		array (
-			'key' => 'field_57a905164badf',
-			'label' => 'Title Override Text',
-			'name' => 'custom_meta_page_title_override',
-			'type' => 'text',
-			'instructions' => 'Enter the text that will appear as the page title shown at the top of the content section of the page template',
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'formatting' => 'none',
-			'maxlength' => '',
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'page',
-				'order_no' => 0,
-				'group_no' => 0,
-			),
-			array (
-				'param' => 'page_template',
-				'operator' => '!=',
-				'value' => 'page-templates/home-page.php',
-				'order_no' => 1,
-				'group_no' => 0,
-			),
-			array (
-				'param' => 'page_template',
-				'operator' => '!=',
-				'value' => 'page-templates/blank.php',
-				'order_no' => 1,
-				'group_no' => 0,
-			),
-		),
-	),
-	'options' => array (
-		'position' => 'normal',
-		'layout' => 'default',
-		'hide_on_screen' => array (
-			0 => 'custom_fields',
-		),
-	),
-	'menu_order' => 0,
-));
 
 /**
  * Page Visibility Options

@@ -6,7 +6,7 @@
 		// padding-top: 50px;
 	}
 	&.main-content {
-		padding-top: 30px; 
+		padding-top: $grid-gutter-width; 
 			
 		@include breakFirst(wide){
 			padding: $grid-gutter-width*1.5 $grid-gutter-width*2;
@@ -21,6 +21,12 @@
 		.breaker {
 			margin-bottom: 0;	
 		}	
+	}
+	&.no-container {
+		max-width: 100%;
+		width: 100%;
+		padding-left: $grid-gutter-width/2;
+		padding-right: $grid-gutter-width/2;
 	}
 }
 .page-template-landing-page,

@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: No Sidebars or Widgets - Container
+ * Template Name: No Sidebars or Widgets
  * 
  * @package HWCOE_UFL
  *
  */
 get_header(); ?>
 
-<div id="main" class="container main-content">
+<div id="main" class="<?php if( get_field('full_width_content_container') ){echo 'no-';} ?>container main-content">
 <div class="row">
   <div class="col-sm-12">
     <?php hwcoe_ufl_breadcrumbs(); ?>

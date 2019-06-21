@@ -1,0 +1,63 @@
+{
+    "key": "group_5d0d162682491",
+    "title": "Page Options",
+    "fields": [
+        {
+            "key": "field_5d0d201c4a974",
+            "label": "Title Override Text",
+            "name": "custom_meta_page_title_override",
+            "type": "text",
+            "instructions": "Enter the text that will appear as the page title shown at the top of the content section of the page template",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-templates\/blank.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-templates\/home-page.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-templates\/container-no-sidebar.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-templates\/membersonly.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Page Options for pages with Landing Page, Right Sidebar\/No Left Navigation, and default page templates",
+    "modified": 1561141311
+}
