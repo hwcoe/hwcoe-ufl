@@ -78,7 +78,7 @@ module.exports = function(grunt){
 					inline: false	
 				},
 				processors: [
-					require('autoprefixer')({browsers: ['last 2 versions']})
+					require('autoprefixer')
 				]
 			},
 			// prefix all css files in the project root

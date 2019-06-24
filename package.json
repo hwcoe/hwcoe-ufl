@@ -3,15 +3,11 @@
   "version": "2.2.0",
   "description": "HWCOE 2018 WordPress theme",
   "main": "index.php",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hwcoe/hwcoe-ufl.git"
   },
-  "keywords": [
-    "sass",
-    "grunt",
-    "wordpress"
-  ],
   "author": "sezj",
   "bugs": {
     "url": "https://github.com/hwcoe/hwcoe-ufl/issues"
@@ -26,5 +22,11 @@
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-postcss": "^0.9.0"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
 }
