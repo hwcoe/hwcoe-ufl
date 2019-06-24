@@ -34,6 +34,7 @@ Changelog
 ### 2.6.0
 - Provide "Remove content container" option for Members Only and No Sidebars or Widgets page templates
 	- Move Page Options ACF field group from local PHP into synchronized JSON
+- Update Node dependencies
 
 ### 2.5.0
 - Remove default archive widget from post sidebar
