@@ -17,6 +17,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
+    "private": true,
     "description": "",
     "fields": [
         {
