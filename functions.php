@@ -251,6 +251,10 @@ add_filter('acf/settings/save_json', 'hwcoe_ufl_acf_json_save_point');
 function hwcoe_ufl_acf_json_save_point( $path ) {
 	// update path
 	$path = get_template_directory() . '/inc/advanced-custom-fields/acf-json';
+
+	if ( is_child_theme() ) {
+		$path = get_stylesheet_directory() . '/inc/acf-json';
+	}
 	// return
 	return $path; 
 }
