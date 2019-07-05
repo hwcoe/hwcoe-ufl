@@ -247,17 +247,20 @@ if( function_exists('acf_add_options_page') ) {
 
 // Add field groups for Post options, Home and Landing page template modules, and footer options
 add_filter('acf/settings/save_json', 'hwcoe_ufl_acf_json_save_point');
- 
-function hwcoe_ufl_acf_json_save_point( $path ) {
-	// update path
-	$path = get_template_directory() . '/inc/advanced-custom-fields/acf-json';
 
-	if ( is_child_theme() ) {
-		$path = get_stylesheet_directory() . '/inc/acf-json';
+if (!function_exists('hwcoe_ufl_acf_json_save_point')) { 
+	function hwcoe_ufl_acf_json_save_point( $path ) {
+		// update path
+		$path = get_template_directory() . '/inc/advanced-custom-fields/acf-json';
+
+		// if ( is_child_theme() ) {
+		// 	$path = get_stylesheet_directory() . '/inc/acf-json';
+		// }
+		// return
+		return $path; 
 	}
-	// return
-	return $path; 
 }
+
 
 add_filter('acf/settings/load_json', 'hwcoe_ufl_acf_json_load_point');
 
