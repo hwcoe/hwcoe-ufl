@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 2.7.0
+- Make theme functions pluggable for better child theme and plugin support
+
 ### 2.6.0
 - Provide "Remove content container" option for Members Only and No Sidebars or Widgets page templates
 	- Move Page Options ACF field group from local PHP into synchronized JSON

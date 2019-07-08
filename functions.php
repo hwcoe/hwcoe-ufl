@@ -66,10 +66,14 @@ add_action( 'after_setup_theme', 'hwcoe_ufl_setup' );
 /*
 /* Adds page excerpt support
 */
+if ( ! function_exists( 'hwcoe_ufl_page_excerpt_support' ) ) :
+
 function hwcoe_ufl_page_excerpt_support() {
 	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'hwcoe_ufl_page_excerpt_support' );
+
+endif; 	// hwcoe_ufl_page_excerpt_support
 
 /**
  * Set the max content width in pixels, based on the theme's design and stylesheet.
@@ -84,15 +88,22 @@ if ( ! isset( $content_width ) ) $content_width = 1050;
  * Get theme version
  */
 
+if ( ! function_exists( 'get_theme_version' ) ) :
+
 function get_theme_version(){
   $theme_info = wp_get_theme();
   $version = $theme_info->get( 'Version' );
   return $version;
 }
 
+endif; // get_theme_version
+
 /**
  * Enqueue scripts and styles.
  */
+
+if ( ! function_exists( 'hwcoe_ufl_scripts' ) ) :
+
 function hwcoe_ufl_scripts() {
 	// Bootstrap
 	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/inc/bootstrap/css/bootstrap.min.css', array(), null);
@@ -126,9 +137,14 @@ function hwcoe_ufl_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'hwcoe_ufl_scripts' );
 
+endif; // hwcoe_ufl_scripts
+
 /**
  * Enqueue inline styles
  */
+
+if ( ! function_exists( 'hwcoe_ufl_inline_styles' ) ) :
+
 function hwcoe_ufl_inline_styles() {
 	$custom_css = '';
 	
@@ -149,15 +165,22 @@ function hwcoe_ufl_inline_styles() {
 	
 	wp_add_inline_style('hwcoe-ufl-style', $custom_css);
 }
+endif; // hwcoe_ufl_inline_styles
+
 // add_action('wp_enqueue_scripts', 'hwcoe_ufl_inline_styles');
 
 /**
  * Registers an editor stylesheet for the theme
  */
+
+if ( ! function_exists( 'hwcoe_ufl_editor_styles' ) ) :
+
 function hwcoe_ufl_editor_styles() {
 	add_editor_style('editor-style.css');
 }
 add_action( 'admin_init', 'hwcoe_ufl_editor_styles' );
+
+endif; // hwcoe_ufl_editor_styles
 
 /**
  * Load custom theme files 
@@ -206,6 +229,8 @@ if ( !class_exists('wp_bootstrap_navwalker') ) {
  * Useful for generating excerpt like snippets of content
  */
 
+if ( ! function_exists( 'hwcoe_ufl_trim_content' ) ) :
+
 function hwcoe_ufl_trim_content( $content, $length, $after_content ){
 
   if( strlen( $content ) > $length ){
@@ -215,6 +240,8 @@ function hwcoe_ufl_trim_content( $content, $length, $after_content ){
 	return $content;
   }
 }
+
+endif; // hwcoe_ufl_trim_content
 
 /*
  * Theme variable definitions
@@ -252,27 +279,23 @@ if (!function_exists('hwcoe_ufl_acf_json_save_point')) {
 	function hwcoe_ufl_acf_json_save_point( $path ) {
 		// update path
 		$path = get_template_directory() . '/inc/advanced-custom-fields/acf-json';
-
-		// if ( is_child_theme() ) {
-		// 	$path = get_stylesheet_directory() . '/inc/acf-json';
-		// }
-		// return
 		return $path; 
 	}
 }
 
-
 add_filter('acf/settings/load_json', 'hwcoe_ufl_acf_json_load_point');
 
-function hwcoe_ufl_acf_json_load_point( $paths ) {	
-	// remove original path (optional)
-	unset($paths[0]);
+if (!function_exists('hwcoe_ufl_acf_json_load_point')) {
+	function hwcoe_ufl_acf_json_load_point( $paths ) {	
+		// remove original path (optional)
+		unset($paths[0]);
 
-	// append path
-	$paths[] = get_template_directory() . '/inc/advanced-custom-fields/acf-json';
-	
-	// return
-	return $paths;
+		// append path
+		$paths[] = get_template_directory() . '/inc/advanced-custom-fields/acf-json';
+		
+		// return
+		return $paths;
+	}
 }
 
 // Limit the ACF Custom Fields dashboard menu to users who are site administrators (single site) or network admins (multisite)
