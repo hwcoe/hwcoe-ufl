@@ -33,6 +33,7 @@ Changelog
 ---------
 ### 2.7.0
 - Make theme functions pluggable for better child theme and plugin support
+- Fix padding issue with TinyMCE fields
 
 ### 2.6.0
 - Provide "Remove content container" option for Members Only and No Sidebars or Widgets page templates
