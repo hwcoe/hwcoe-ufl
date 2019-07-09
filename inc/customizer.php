@@ -290,6 +290,8 @@ function hwcoe_ufl_customize_register( $wp_customize ) {
 	));
 	
 	$wp_customize->add_setting( 'header_type', array( 'default' => 'icon', 'sanitize_callback' => 'hwcoe_ufl_sanitize_choices' ));
+	$wp_customize->add_setting( 'tagline_display', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
+	
 	$wp_customize->add_control( 'header_type', array(
 		'label' => __('Header Type', 'hwcoe-ufl'),
 		'description' => __("Select the type of header to display on all pages", 'hwcoe-ufl'),
@@ -300,7 +302,14 @@ function hwcoe_ufl_customize_register( $wp_customize ) {
 			'text' => __('Title Text', 'hwcoe-ufl'),
 		),
 	));
-	
+	$wp_customize->add_control( 'tagline_display', array(
+		'label' => __('Enable Tagline Display', 'hwcoe-ufl'),
+		'description' => __('Site tagline appears in Title Text header mode', 'hwcoe-ufl'),
+		'section' => 'theme_options_header',
+		'type' => 'checkbox',
+	));
+
+
 	// Announcement/Alert
 	$wp_customize->add_section( 'theme_options_alert', array(
 		'title' => __('Announcement or Alert', 'hwcoe-ufl'),

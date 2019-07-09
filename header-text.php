@@ -22,12 +22,12 @@
 				</span>
 			</a>
 			<div class="site-title">
-				<h1>
-					<a href="<?php echo site_url('/'); ?>">
-<!-- 						<span class=""><?php echo bloginfo('name'); ?></span> -->
-						<?php echo bloginfo('name'); ?>
-					</a>
-				</h1>	
+
+				<h1 class="title-with-tagline"><a href="<?php echo site_url('/'); ?>"><?php echo bloginfo('name'); ?></a></h1>	
+				
+				<?php if ( get_theme_mod('tagline_display', 0) ): // if site tagline display is turned on ?>
+				<h2><?php echo bloginfo('description'); ?></h2>	
+				<?php endif; ?>
 			</div> <!-- /site-title -->
 			<div class="menu-wrap">
 				<div class="main-menu-wrap">
@@ -84,4 +84,5 @@
 <!-- END HEADER -->
 	<div class="print-header">
 		<h1><?php echo bloginfo('name'); ?></h1>
+		<h2><?php echo bloginfo('description'); ?></h2>
 	</div>

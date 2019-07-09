@@ -92,17 +92,32 @@
 			margin: 0;
 			display: table-cell;
 			vertical-align: middle;
+			// line-height: 14px;
+			line-height: 22px;
 			
-			@media screen and (max-width: $screen-sm-max){
-				line-height: 14px;
+			// @media screen and (max-width: $screen-sm-max){
+			// 	line-height: 14px;
+			// }
+
+			&.title-with-tagline {
+
 			}
 			
 			a {
 				color: $white;
 			}
 		}
+		h2 {
+			display: table-row;
+			vertical-align: middle;
+			font-size: 12px;
+			line-height:14px;
+			font-weight: 100;
+			text-transform: none;
+			color: #fff;
+		}
+
 		@include breakFirst(wide){
-	
 			height: 50px;
 			background-color: $white;
 			position: absolute;
@@ -116,12 +131,33 @@
 			h1 {
 				font-size: 24px;
 				line-height: 50px;
-				display: inline-block;
+				// display: inline-block;
+				display: table-cell;
+				vertical-align: middle;
 				padding-left: 20px;
 				padding-right: 10px;
 				
 				a {
-					color: rgb(13, 83, 153);
+					color:$blueDark;
+				}
+			}
+			h2 {
+				color: $blueDark;
+				// display:block;	
+				display: table-cell;
+				vertical-align: middle;			
+				padding-left: 15px;
+				padding-right: 10px;
+				font-size: 14px;
+				&:before {
+					// content: "\002F \002F \002F";
+					content: "\2044 \00A0 \2044 \00A0 \2044 \00A0 \2044 \00A0";
+					color: $orange;
+					text-shadow: 1px 1px 0px $orangeDark;
+					margin-right: 8px;
+					position: relative;
+					font-size: 16px;
+					font-weight: 800;
 				}
 			}
 			
