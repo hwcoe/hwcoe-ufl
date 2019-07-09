@@ -6,6 +6,10 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<?php wp_head(); ?>
 </head>
+<?php 
+	$tagline_display = get_theme_mod('tagline_display', 0);
+	$tagline = get_bloginfo( 'description' );
+?>
 
 <body <?php body_class('loading'); // Enable JS transitions ?>>
 	<?php include get_template_directory() . '/inc/google-analytics.php'; ?>
@@ -25,9 +29,9 @@
 
 				<h1 class="title-with-tagline"><a href="<?php echo site_url('/'); ?>"><?php echo bloginfo('name'); ?></a></h1>	
 				
-				<?php if ( get_theme_mod('tagline_display', 0) ): // if site tagline display is turned on ?>
-				<h2><?php echo bloginfo('description'); ?></h2>	
-				<?php endif; ?>
+				<?php if ( $tagline_display == 1 ) {
+					echo "<h2>" . $tagline . "</h2>";
+				} ?>
 			</div> <!-- /site-title -->
 			<div class="menu-wrap">
 				<div class="main-menu-wrap">
@@ -84,5 +88,7 @@
 <!-- END HEADER -->
 	<div class="print-header">
 		<h1><?php echo bloginfo('name'); ?></h1>
-		<h2><?php echo bloginfo('description'); ?></h2>
+		<?php if ( $tagline_display == 1 ) {
+			echo "<h2>" . $tagline . "</h2>";
+		} ?>
 	</div>
