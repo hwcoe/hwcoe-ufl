@@ -21,8 +21,10 @@ if ( !empty( $actionitem_text ) ):
 	$actionitem_class = ( $actionitem_altcolor )? '' : ' alert-default';
 ?>
     <div class="alert-small<?php echo $actionitem_class; ?>">
-        <span class="icon-svg icon-alert"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#alert"></use></svg></span>
-        <div class="alert-title"><?php echo $actionitem_heading . $actionitem_text; ?></div>
+        <a href="<?php echo $actionitem_url; ?>">
+        	<span class="icon-svg icon-alert"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#alert"></use></svg></span>
+        	<div class="alert-title"><?php echo $actionitem_heading . $actionitem_text; ?></div>
+        </a>
         <a href="<?php echo $actionitem_url; ?>" class="alert-link">More <span class="hidden-mobile">Information</span> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
     </div>
 <?php
