@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 2.7.1
+- Provide fallback styles for Media & Text Gutenberg blocks in IE11
+
 ### 2.7.0
 - Make some theme functions pluggable for better child theme and plugin support
 - Fix padding issue with TinyMCE fields
