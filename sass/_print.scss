@@ -24,7 +24,8 @@
 		content: " (" attr(title) ")";
 	}
 	a[href^="http"]::after {
-		content: " (" attr(href) ")";
+		// content: " (" attr(href) ")";
+		content: "";
 	}
 
 	// Custom print styling
@@ -73,6 +74,10 @@
 		page-break-after: avoid;
 		break-after: avoid;
 		text-align: left !important;
+	}
+	h3 {
+		font-size:16px;
+		line-height: 20px;
 	}
 	#main {
 		width:100%;
