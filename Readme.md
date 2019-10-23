@@ -31,8 +31,8 @@ Documentation
 
 Changelog
 ---------
-### 2.8.0 
-- Update print stylesheet to remove link URLs (per leadership)
+### 2.7.2
+- Update print stylesheet to remove link URLs (per leadership) and improve directory printout display
 
 ### 2.7.1
 - Provide fallback styles for Media & Text Gutenberg blocks in IE11

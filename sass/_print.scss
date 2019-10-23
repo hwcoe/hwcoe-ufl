@@ -21,12 +21,10 @@
 		padding:0;
 	}
 	abbr[title]:after {
-		content: " (" attr(title) ")";
+		// content: " (" attr(title) ")";
+		content: none !important;
 	}
-	a[href^="http"]::after {
-		// content: " (" attr(href) ")";
-		content: "";
-	}
+	
 
 	// Custom print styling
 	body {
@@ -43,16 +41,23 @@
 	p:first-line, div:first-line,
 	blockquote:first-line, li:first-line {
 		background: transparent !important;
-		color: $grayDark !important;
+		color: #000 !important;
 		box-shadow: none !important;
 		text-shadow: none !important;
 	}
 	a, a:visited {
-		color: $grayDark !important;
-		text-decoration: underline;
+		color: #000 !important;
+		text-decoration: none;
 	}
+
+	a[href^="http"]::after,
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after,
+	a[href^="mailto:"]:after {
+		content: "";
+	 }
 	pre, blockquote, aside, .widget {
-		border: 2px solid $grayDark;
+		border: 2px solid #000;
 		page-break-inside: avoid;
 	}
 	thead {
@@ -61,19 +66,23 @@
 	tr, img {
 		page-break-inside: avoid;
 	}
-	p, h2, h3 {
+	p, h1, h2, h3 {
 		orphans: 4;
 		widows: 4;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		page-break-after: avoid;
+		break-after: avoid;
+		text-align: left !important;
+		margin:0px 0px 10px 0px;
 	}
 	h1 {
 		font-size: 36px;
 		line-height: 40px;
-		text-align: left !important;
 	}
-	h2, h3 {
-		page-break-after: avoid;
-		break-after: avoid;
-		text-align: left !important;
+	h2 {
+		font-size: 28px;
+		line-height: 32px;
 	}
 	h3 {
 		font-size:16px;
@@ -81,6 +90,10 @@
 	}
 	#main {
 		width:100%;
+	}
+	#main.main-content {
+		padding:0px;
+		margin:0px;
 	}
 	@page  {
 		margin: 1cm;
