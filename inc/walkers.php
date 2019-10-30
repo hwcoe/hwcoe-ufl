@@ -13,6 +13,26 @@ class hwcoe_ufl_main_nav_menu extends Walker_Nav_Menu {
 		$indent = str_repeat("\t", $depth);
 		$output .= "$indent</ul>\n</div>";
 	}
+
+	public static function fallback( $args ) {
+		extract( $args );
+
+		$fb_output = null;
+		$menu_args = array(
+	        // 'show_date'   => '',
+			'depth'        => 2,
+			'echo'         => true,
+			// 'link_after'   => '',
+			'link_before'  => '',
+			'sort_column'  => 'menu_order, post_title',
+			// 'title_li'     => '',
+			'before'		=> '',
+			'after'			=> '',
+		  );
+
+		$fb_output .= wp_page_menu($menu_args);
+		echo $fb_output;
+	}
 }
 
 function hwcoe_ufl_main_menu_item_args( $args, $item, $depth ){
