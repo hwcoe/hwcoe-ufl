@@ -14,24 +14,68 @@ class hwcoe_ufl_main_nav_menu extends Walker_Nav_Menu {
 		$output .= "$indent</ul>\n</div>";
 	}
 
+	/**
+	 * Menu Fallback
+	 * =============
+	 * If this function is assigned to the wp_nav_menu's fallback_cb variable
+	 * and a manu has not been assigned to the theme location in the WordPress
+	 * menu manager the function with display nothing to a non-logged in user,
+	 * and will add a link to the WordPress menu manager if logged in as an admin.
+	 *
+	 * @param array $args passed from the wp_nav_menu function.
+	 *
+	 */
 	public static function fallback( $args ) {
+
 		extract( $args );
 
-		$fb_output = null;
-		$menu_args = array(
-	        // 'show_date'   => '',
+		// wp_page_menu
+		// $args = array(
+		// 	'depth'        => 2,
+		// 	'echo'         => 0,
+		// 	'container'		=>'',
+		// 	'before'		=> '<ul id="menu-primary-navigation" class="menu">',
+		// 	'after'			=> '</ul>',
+		// 	'link_before'  => '<span>',
+		// 	'link_after'   => '</span>',
+		// 	// 'link_before'  => '',
+		// 	// 'link_after'   => '',
+		// 	'post_type'    => 'page',
+		// 	'post_status'  => 'publish',
+		// 	'show_date'    => '',
+		// 	'sort_column'  => 'menu_order, post_title',
+		// 	'sort_order'   => '',
+		// 	'title_li'     => '',
+		//   );
+
+		// $output .= wp_page_menu( $args );
+
+		
+		// wp_list_pages
+		$args = array(
+			'date_format'  => get_option('date_format'),
 			'depth'        => 2,
-			'echo'         => true,
+			'echo'         => 0,
+			'link_before'  => '<span>',
+			'link_after'   => '</span>',
+			// 'link_before'  => '',
 			// 'link_after'   => '',
-			'link_before'  => '',
+			'post_type'    => 'page',
+			'post_status'  => 'publish',
+			'show_date'    => '',
 			'sort_column'  => 'menu_order, post_title',
-			// 'title_li'     => '',
-			'before'		=> '',
-			'after'			=> '',
+			'sort_order'   => '',
+			'title_li'     => '',
 		  );
 
-		$fb_output .= wp_page_menu($menu_args);
-		echo $fb_output;
+		$output = '<ul id="menu-primary-navigation-fallback" class="menu">';
+
+		$output .= wp_list_pages( $args );
+
+		$output .= '</ul>';
+
+		echo $output;
+
 	}
 }
 
