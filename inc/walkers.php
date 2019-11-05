@@ -25,32 +25,8 @@ class hwcoe_ufl_main_nav_menu extends Walker_Nav_Menu {
 	 * @param array $args passed from the wp_nav_menu function.
 	 *
 	 */
-	public static function fallback( $args ) {
+	public static function fallback() {
 
-		extract( $args );
-
-		// wp_page_menu
-		// $args = array(
-		// 	'depth'        => 2,
-		// 	'echo'         => 0,
-		// 	'container'		=>'',
-		// 	'before'		=> '<ul id="menu-primary-navigation" class="menu">',
-		// 	'after'			=> '</ul>',
-		// 	'link_before'  => '<span>',
-		// 	'link_after'   => '</span>',
-		// 	// 'link_before'  => '',
-		// 	// 'link_after'   => '',
-		// 	'post_type'    => 'page',
-		// 	'post_status'  => 'publish',
-		// 	'show_date'    => '',
-		// 	'sort_column'  => 'menu_order, post_title',
-		// 	'sort_order'   => '',
-		// 	'title_li'     => '',
-		//   );
-
-		// $output .= wp_page_menu( $args );
-
-		
 		// wp_list_pages
 		$args = array(
 			'date_format'  => get_option('date_format'),
@@ -68,7 +44,7 @@ class hwcoe_ufl_main_nav_menu extends Walker_Nav_Menu {
 			'title_li'     => '',
 		  );
 
-		$output = '<ul id="menu-primary-navigation-fallback" class="menu">';
+		$output = '<ul id="menu-primary-navigation" class="menu fallback">';
 
 		$output .= wp_list_pages( $args );
 
