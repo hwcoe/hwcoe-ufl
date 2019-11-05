@@ -78,33 +78,6 @@ function hwcoe_ufl_sidebar_navigation($post) {
 }
 
 /**
- * Page Menu Navigation
- *
- * @return string List of page links
- *
- */
-// function hwcoe_ufl_sidebar_navigation() {
-// 	global $post;
-	
-// 	$post_ancestors = get_post_ancestors( $post );
-// 	$depth = count($post_ancestors);
-// 	$top_page = $post->ID;
-	
-// 	if ( $depth ){
-// 		$top_page = $post_ancestors[0];
-// 	}
-	
-// 	$children = wp_list_pages(array(
-// 		'title_li' => '',
-// 		'child_of' => $top_page,
-// 		'echo' => false,
-// 		'depth' => 2,
-// 	));
-	
-// 	return $children;
-// }
-
-/**
  * Filter the CSS class for the menu list items <li>
  *
  * @return array Menu item classes

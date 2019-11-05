@@ -29,22 +29,15 @@ class hwcoe_ufl_main_nav_menu extends Walker_Nav_Menu {
 
 		// wp_list_pages
 		$args = array(
-			'date_format'  => get_option('date_format'),
 			'depth'        => 2,
 			'echo'         => 0,
 			'link_before'  => '<span>',
 			'link_after'   => '</span>',
-			// 'link_before'  => '',
-			// 'link_after'   => '',
-			'post_type'    => 'page',
-			'post_status'  => 'publish',
-			'show_date'    => '',
-			'sort_column'  => 'menu_order, post_title',
-			'sort_order'   => '',
 			'title_li'     => '',
+			'walker'		=> new hwcoe_ufl_main_nav_fallback,
 		  );
 
-		$output = '<ul id="menu-primary-navigation" class="menu fallback">';
+		$output = '<ul id="menu-primary-navigation" class="menu">';
 
 		$output .= wp_list_pages( $args );
 
@@ -72,3 +65,18 @@ function hwcoe_ufl_main_menu_link_attrs( $atts, $item, $args, $depth = null ){
 	return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'hwcoe_ufl_main_menu_link_attrs', 10, 4);
+
+// fallback page menu if no main nav menu is set
+class hwcoe_ufl_main_nav_fallback extends Walker_Page {
+
+	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<div class=\"dropdown\">\n<ul role=\"menu\">";
+    }
+	
+	public function end_lvl( &$output, $depth = 0, $args = array() ) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "$indent</ul>\n</div>";
+	}
+
+}

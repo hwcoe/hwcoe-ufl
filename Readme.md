@@ -31,7 +31,8 @@ Documentation
 
 Changelog
 ---------
-### 2.7.2
+### 2.8.0
+- Implement fallback page menu for primary nav 
 - Update print stylesheet to remove link URLs (per leadership) and improve directory printout display
 - Correct sidenav code to be valid HTML
 
