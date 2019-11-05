@@ -1,5 +1,10 @@
 .widget {
 	margin-bottom: $grid-gutter-width;
+	select {
+		border: 1px solid #999;
+		padding: 7.5px;
+		color:$black;
+	}
 
 	ul {
 		margin-left: 0;
@@ -112,8 +117,6 @@ ul.sub-menu {
 .widget_archive, .widget_categories {
 	select {
 		width: 99%;
-		border: 1px solid #999;
-		padding: 7.5px;
 	}
 	label {
 		text-indent: -999em;

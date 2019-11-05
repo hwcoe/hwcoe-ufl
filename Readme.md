@@ -35,6 +35,7 @@ Changelog
 - Implement fallback page menu for primary nav 
 - Update print stylesheet to remove link URLs (per leadership) and improve directory printout display
 - Correct sidenav code to be valid HTML
+- Fix select text color in widgets
 
 ### 2.7.1
 - Provide fallback styles for Media & Text Gutenberg blocks in IE11
