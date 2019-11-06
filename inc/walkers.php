@@ -18,11 +18,8 @@ class hwcoe_ufl_main_nav_menu extends Walker_Nav_Menu {
 	 * Menu Fallback
 	 * =============
 	 * If this function is assigned to the wp_nav_menu's fallback_cb variable
-	 * and a manu has not been assigned to the theme location in the WordPress
-	 * menu manager the function with display nothing to a non-logged in user,
-	 * and will add a link to the WordPress menu manager if logged in as an admin.
-	 *
-	 * @param array $args passed from the wp_nav_menu function.
+	 * and a manu has not been assigned to the 'Main Menu' theme location in the WordPress
+	 * menu manager, the function will display a page menu.
 	 *
 	 */
 	public static function fallback() {
@@ -37,7 +34,7 @@ class hwcoe_ufl_main_nav_menu extends Walker_Nav_Menu {
 			'walker'		=> new hwcoe_ufl_main_nav_fallback,
 		  );
 
-		$output = '<ul id="menu-primary-navigation" class="menu">';
+		$output = '<ul id="menu-primary-navigation" class="menu fallback">';
 
 		$output .= wp_list_pages( $args );
 

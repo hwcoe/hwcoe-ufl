@@ -183,6 +183,7 @@
 			}
 		}
 		.main-menu-link {
+			transition:none;
 			@include breakFirst(large){
 				padding: 37px 20px;
 			}
