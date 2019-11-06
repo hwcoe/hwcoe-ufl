@@ -39,19 +39,29 @@
 		padding: $grid-gutter-width/2;
 	}
 	.lcp_img_bg {
-		height: 205px;
+		margin: -70px 0px 0px -16px;
+		height: 265px;
+		width: calc(100% + 31px);
+
 		.widget-post-thumbnail {
-			height: 290px;
-			width: calc(100% - 30px);
-			margin-left: 15px;
-			position: absolute;
-			top:0;	
-			left: 0;
+			// height: 290px;
+			// width: calc(100% - 30px);
+			// margin-left: 15px;
+			// position: absolute;
+			// top:0;	
+			// left: 0;
+			
+			height: 280px;
+			width: 100%;
+			position: relative;
+
 			@include breakTo (xsmall) {
 				height: 305px;
+				height: 295px;
 			}
 			@include break (mediumWide) {
 				height: 305px;
+				height: 295px;
 			}
 		}
 	}

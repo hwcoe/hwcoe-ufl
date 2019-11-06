@@ -68,7 +68,7 @@ endwhile;
  $lcp_display_output .= ob_get_clean();
  
 // Close the wrapper I opened at the beginning:
-$lcp_display_output .= '</div>';
+$lcp_display_output .= '</div><!-- /lcp_img_bg --> ';
 
 // If there's a "more link", show it:
 $lcp_display_output .= $this->get_morelink();
