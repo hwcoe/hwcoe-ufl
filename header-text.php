@@ -8,7 +8,9 @@
 </head>
 <?php 
 	$tagline_display = get_theme_mod('tagline_display', 0);
+	$tagline_url = get_theme_mod('tagline_url', 0);
 	$tagline = get_bloginfo( 'description' );
+
 ?>
 
 <body <?php body_class('loading'); // Enable JS transitions ?>>
@@ -30,7 +32,11 @@
 				<h1 class="title-with-tagline"><a href="<?php echo site_url('/'); ?>"><?php echo bloginfo('name'); ?></a></h1>	
 				
 				<?php if ( $tagline_display == 1 ) {
-					echo "<h2>" . $tagline . "</h2>";
+					if ( !empty( $tagline_url) ) {
+						echo "<h2><a href=\"" . $tagline_url . "\" target=\"_blank \">" . $tagline . "</a></h2>";
+					} else {
+						echo "<h2>" . $tagline . "</h2>";
+					}
 				} ?>
 			</div> <!-- /site-title -->
 			<div class="menu-wrap">

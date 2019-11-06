@@ -291,6 +291,7 @@ function hwcoe_ufl_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_setting( 'header_type', array( 'default' => 'icon', 'sanitize_callback' => 'hwcoe_ufl_sanitize_choices' ));
 	$wp_customize->add_setting( 'tagline_display', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
+	$wp_customize->add_setting( 'tagline_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	
 	$wp_customize->add_control( 'header_type', array(
 		'label' => __('Header Type', 'hwcoe-ufl'),
@@ -307,6 +308,12 @@ function hwcoe_ufl_customize_register( $wp_customize ) {
 		'description' => __('Site tagline appears in Title Text header mode', 'hwcoe-ufl'),
 		'section' => 'theme_options_header',
 		'type' => 'checkbox',
+	));
+	$wp_customize->add_control( 'tagline_url', array(
+		'label' => __('Tagline URL', 'hwcoe-ufl'),
+		'description' => __("If you wish your tagline to be a link, fill in with a complete URL (e.g. https://www.eng.ufl.edu). Leave blank to leave tagline unlinked.", 'hwcoe-ufl'),
+		'section' => 'theme_options_header',
+		'type' => 'text',
 	));
 
 

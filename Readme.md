@@ -33,6 +33,7 @@ Changelog
 ---------
 ### 2.8.0
 - Implement fallback page menu for primary nav 
+- Allow site tagline to be a link
 - Update print stylesheet to remove link URLs (per leadership) and improve directory printout display
 - Correct sidenav code to be valid HTML
 - Fix select text color in widgets

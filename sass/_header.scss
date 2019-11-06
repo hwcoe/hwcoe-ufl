@@ -81,7 +81,11 @@
 		padding: 0 5px 0 15px;
 		display: table;
 		position: relative;
-		z-index: 1000;
+		// z-index: 1000;
+		z-index: 1001;
+		a {
+			color: $white;
+		}
 		
 		h1 {
 			font-family: quadon, Georgia, serif;
@@ -92,20 +96,7 @@
 			margin: 0;
 			display: table-cell;
 			vertical-align: middle;
-			// line-height: 14px;
 			line-height: 22px;
-			
-			// @media screen and (max-width: $screen-sm-max){
-			// 	line-height: 14px;
-			// }
-
-			&.title-with-tagline {
-
-			}
-			
-			a {
-				color: $white;
-			}
 		}
 		h2 {
 			display: table-row;
@@ -124,33 +115,29 @@
 			top: 50px;
 			left: 150px;
 			padding-left: 0;
-			z-index: 1001;
+			// z-index: 1001;
 			display: block;
 			margin-right: 30px;
+			a {
+				color:$blueDark;
+			}
 			
 			h1 {
 				font-size: 24px;
 				line-height: 50px;
-				// display: inline-block;
 				display: table-cell;
 				vertical-align: middle;
 				padding-left: 20px;
 				padding-right: 10px;
-				
-				a {
-					color:$blueDark;
-				}
 			}
 			h2 {
 				color: $blueDark;
-				// display:block;	
 				display: table-cell;
 				vertical-align: middle;			
 				padding-left: 15px;
 				padding-right: 10px;
 				font-size: 14px;
 				&:before {
-					// content: "\002F \002F \002F";
 					content: "\2044 \00A0 \2044 \00A0 \2044 \00A0 \2044 \00A0";
 					color: $orange;
 					text-shadow: 1px 1px 0px $orangeDark;
