@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 2.8.1
+- Moved gtag code to correct location inside `<head>` tag
+
 ### 2.8.0
 - Implement fallback page menu for primary nav 
 - Allow site tagline to be a link
