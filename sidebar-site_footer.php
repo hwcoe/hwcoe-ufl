@@ -17,7 +17,7 @@ if ( ! is_active_sidebar( 'site_footer' ) ) : ?>
             <li><a href="http://calendar.ufl.edu/">UF Calendar</a></li>
             <li><a href="https://my.ufl.edu/ps/signon.html">myUFL</a></li>
             <li><a href="https://one.uf.edu/">One.UF</a></li>
-            <li><a href="https://phonebook.ufl.edu/">Directory</a></li>
+            <li><a href="https://directory.ufl.edu/">Directory</a></li>
         </ul>
     </div>
     <div class="col-md-4 col-sm-4 footer-menu">

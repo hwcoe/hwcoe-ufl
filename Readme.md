@@ -32,7 +32,8 @@ Documentation
 Changelog
 ---------
 ### 2.8.1
-- Moved gtag code to correct location inside `<head>` tag
+- Move gtag code to correct location inside `<head>` tag
+- Correct default UF directory link in footer
 
 ### 2.8.0
 - Implement fallback page menu for primary nav 
