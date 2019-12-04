@@ -92,9 +92,9 @@
 		</div><!-- .header.unit -->
 	</header>
 <!-- END HEADER -->
-	<div class="print-header">
+	<header class="print-header">
 		<h1><?php echo bloginfo('name'); ?></h1>
 		<?php if ( $tagline_display == 1 ) {
 			echo "<h2>" . $tagline . "</h2>";
 		} ?>
-	</div>
+	</header>

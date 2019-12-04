@@ -8,7 +8,7 @@
 
 @media print {
 	// Show/hide elements
-	header, header:not([class*="entry-header"]), footer, nav, iframe {
+	header, header:not([class*="entry-header"]), header:not([class*="print-header"]), footer, nav, iframe {
 		display:none;
 	}
 	.breadcrumb-wrap, .sidenav, .pagination,
