@@ -21,7 +21,7 @@ get_header(); ?>
 		remove_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
 	endif;
 ?>
-<div id="main" class="container main-content">
+<main id="main" class="container main-content">
     <div class="row">
         <div class="col-sm-12">
             <?php 
@@ -39,6 +39,6 @@ get_header(); ?>
         </div>
     </div>
     
-</div>
+</main>
 
 <?php get_footer(); ?>

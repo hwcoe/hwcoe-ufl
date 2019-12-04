@@ -8,7 +8,7 @@
  */
 get_header(); ?>
 
-<div id="main" class="container main-content">
+<main id="main" class="container main-content">
 <div class="row">
 	<div class="col-sm-12">
 		<header class="entry-header">
@@ -18,7 +18,7 @@ get_header(); ?>
 	</div>
 </div>
 <div class="row">
-	<div tabindex="-1" class="<?php echo hwcoe_ufl_page_column_class(); ?>">
+	<div class="<?php echo hwcoe_ufl_page_column_class(); ?>">
 	
 	<?php 
 		while ( have_posts() ) : the_post();
@@ -37,6 +37,6 @@ get_header(); ?>
   </div>
 	<?php get_sidebar('post_sidebar'); ?>
 </div>
-</div>
+</main>
 
 <?php get_footer(); ?>

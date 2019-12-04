@@ -10,7 +10,7 @@ get_header();
 	<?php while ( have_posts() ) : the_post(); ?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
 		<div class="home-section">
-			<div id="main" class="page-wrapper">
+			<main id="main" class="page-wrapper">
 				<?php if( have_rows('home_page_modules') ): ?>
 					<?php while ( have_rows('home_page_modules') ) : the_row(); ?>
 						<?php
@@ -70,7 +70,7 @@ get_header();
 						<?php endif // general_content ?>
 					<?php endwhile //home_page_modules ?>
 				<?php endif // home_page_modules ?>
-			</div> <!-- page-wrapper -->
+			</main> <!-- page-wrapper -->
 		</div><!-- home-section -->
 	</div>
 <?php endwhile //the_post ?>

@@ -3,7 +3,7 @@
   <?php
     $title = (get_sub_field( 'title_override' ) ? get_sub_field( 'title_override' ) : get_the_title());
   ?>
-  <div id="main" class="landing-page-hero-full post-<?php the_ID(); ?>">
+  <main id="main" class="landing-page-hero-full post-<?php the_ID(); ?>">
     <div class="hero-img gradient-bg" style="background-image:url(<?php the_sub_field( 'hero_image' ); ?>)">
     <h1><?php echo $title; ?></h1>
     </div>
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
   <?php endwhile // ?>
 <?php endif // ?>
 

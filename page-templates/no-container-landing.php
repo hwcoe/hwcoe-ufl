@@ -21,7 +21,7 @@ get_header(); ?>
 		remove_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
 	endif;
 ?>
-<div id="main" class="full-width-content">
+<main id="main" class="full-width-content">
 	<?php 
 		if ( ! has_post_thumbnail() ): 
 			echo "<div class=\"container\">";
@@ -38,6 +38,6 @@ get_header(); ?>
     
 	
     
-</div>
+</main>
 
 <?php get_footer(); ?>

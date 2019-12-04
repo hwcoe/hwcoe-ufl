@@ -7,7 +7,7 @@
  */
 get_header(); ?>
 
-<div id="main" class="container main-content">
+<main id="main" class="container main-content">
 <div class="row">
   <div class="col-sm-12">
     <?php hwcoe_ufl_breadcrumbs(); ?>
@@ -30,6 +30,6 @@ get_header(); ?>
   <?php get_sidebar('page_right'); ?> 
   
 </div><!-- .row -->
-</div><!-- #main -->
+</main><!-- #main -->
 
 <?php get_footer(); ?>

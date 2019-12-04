@@ -10,7 +10,7 @@ if ( ufl_check_page_visitor_level( $post->ID ) > 0 ) {
 }
 get_header(); ?>
 
-<div id="main" class="<?php if( get_field('full_width_content_container') ){echo 'no-';} ?>container main-content">
+<main id="main" class="<?php if( get_field('full_width_content_container') ){echo 'no-';} ?>container main-content">
 <div class="row">
   <div class="col-sm-12">
     <?php hwcoe_ufl_breadcrumbs(); ?>
@@ -33,6 +33,6 @@ get_header(); ?>
 	?>
   </div>
 </div>
-</div>
+</main>
 
 <?php get_footer(); ?>

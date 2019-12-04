@@ -1,10 +1,10 @@
-<div id="main" class="container post-<?php the_ID(); ?>">
+<main id="main" class="container post-<?php the_ID(); ?>">
   <div class="row">
     <div class="col-sm-12">
       <?php the_title( '<h1>', '</h1>' ); ?>
     </div>
   </div>
-</div>
+</main>
 <?php if( have_rows('double_image_landing_page') ): ?>
   <?php while ( have_rows('double_image_landing_page') ) : the_row(); ?>
     <div class="landing-page-hero">
