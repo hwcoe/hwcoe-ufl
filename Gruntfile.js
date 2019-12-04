@@ -18,7 +18,7 @@ module.exports = function(grunt){
 					'js/plugins/modernizr.min.js',
 					'js/plugins/svg4everybody.min.js',
 					'js/plugins/smartresize-debounce.js',
-					'js/plugins/smooth-scrolling.js',
+					// 'js/plugins/smooth-scrolling.js',
 					'js/plugins/velocity.min.js',
 					'js/plugins/velocity.ui.min.js'
                 ],
@@ -102,7 +102,8 @@ module.exports = function(grunt){
 				tasks: ['sass', 'postcss']
 			},
 			js: {
-				files: ['js/*.js', '!node_modules/*'],
+				// files: ['js/*.js', '!node_modules/*'],
+				files: ['js/**/*.js', '!node_modules/*'],
 				tasks: ['concat', 'uglify', 'jshint']
 			} 
 		 }
