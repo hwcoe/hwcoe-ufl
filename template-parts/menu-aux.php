@@ -10,32 +10,34 @@
 ?>
 		
 <div class="aux-menu-wrap">
-	<ul class="aux-nav">
-		<?php 
-		// Audience menu
-		if ( has_nav_menu( 'audience_nav' ) ):
+	<nav aria-label="<?php _e('Global Menu', 'hwcoe-ufl'); ?>">
+		<ul class="aux-nav">
+			<?php 
+			// Audience menu
+			if ( has_nav_menu( 'audience_nav' ) ):
+				wp_nav_menu( array( 
+					'theme_location' => 'audience_nav',
+					'items_wrap' => '%3$s',
+					'container' => '',
+					'depth' => 1,
+					'fallback_cb' => false,
+				));
+			endif;
+			
+			// Display parent organization link
+			hwcoe_ufl_global_parent_organization();
+			
+			// Global menu
 			wp_nav_menu( array( 
-				'theme_location' => 'audience_nav',
+				'theme_location' => 'global_menu',
 				'items_wrap' => '%3$s',
 				'container' => '',
 				'depth' => 1,
 				'fallback_cb' => false,
-			));
-		endif;
-		
-		// Display parent organization link
-		hwcoe_ufl_global_parent_organization();
-		
-		// Global menu
-		wp_nav_menu( array( 
-			'theme_location' => 'global_menu',
-			'items_wrap' => '%3$s',
-			'container' => '',
-			'depth' => 1,
-			'fallback_cb' => false,
-		)); 
-	?>
-	</ul><!-- /aux-nav -->
+			)); 
+		?>
+		</ul><!-- /aux-nav -->
+	</nav>
 	<ul class="social-nav">
 		<?php hwcoe_ufl_socialnetworks(); ?>
 	</ul><!-- /social-nav -->

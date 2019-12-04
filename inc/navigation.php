@@ -17,7 +17,8 @@ function hwcoe_ufl_breadcrumbs() {
 	// Do not display on the homepage
 	if ( !is_front_page() ) {
 
-		$breadcrumb = '<ul class="breadcrumb-wrap">';
+		$breadcrumb = '<nav aria-label="Breadcrumb">';
+		$breadcrumb .= '<ul class="breadcrumb-wrap">';
 
 		// Link to home page
 		$breadcrumb .= '<li class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="Home">Home</a></li>';
@@ -32,7 +33,8 @@ function hwcoe_ufl_breadcrumbs() {
 		}
 
 		$breadcrumb .= '<li class="item-current item-' . $post->ID . '"><strong>' . get_the_title() . '</strong></li>';
-		$breadcrumb .= "</ul>";
+		$breadcrumb .= '</ul>';
+		$breadcrumb .= '</nav>';
 		
 		echo $breadcrumb;
 	}

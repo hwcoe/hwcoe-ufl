@@ -17,13 +17,14 @@ if ( empty( $hwcoe_ufl_sidebar_nav ) && !is_active_sidebar( 'page_sidebar' ) ){
 <div class="col-md-3">
 	
 	<?php if ( !empty( $hwcoe_ufl_sidebar_nav ) ): ?>
-	
-	<ul class="sidenav">
-	  <li class="btn-mobile-toggle" aria-hidden="true" role="presentation"><a href="#">Pages <span class="arw-right icon-svg"><svg>
-		<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use>
-		</svg></span></a></li>
-	  <?php echo $hwcoe_ufl_sidebar_nav; ?>
-	</ul> <!-- /sidenav -->
+	<nav aria-label="<?php _e('Sidebar', 'hwcoe-ufl'); ?>">
+		<ul class="sidenav">
+		  <li class="btn-mobile-toggle" aria-hidden="true" role="presentation"><a href="#">Pages <span class="arw-right icon-svg"><svg>
+			<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use>
+			</svg></span></a></li>
+		  <?php echo $hwcoe_ufl_sidebar_nav; ?>
+		</ul> <!-- /sidenav -->
+	</nav>
 	
 	<?php endif; ?>
 	
