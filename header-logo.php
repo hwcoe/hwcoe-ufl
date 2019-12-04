@@ -44,7 +44,7 @@
 							</span>
 						</a>
 					</h1>
-					<nav role="navigation" aria-label="<?php _e( 'Main Menu', 'hwcoe-ufl' ); ?>">
+					<nav aria-label="<?php _e( 'Main Menu', 'hwcoe-ufl' ); ?>">
 						<?php 
 							wp_nav_menu( array( 
 								'theme_location' => 'main_menu',

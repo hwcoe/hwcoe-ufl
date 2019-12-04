@@ -37,7 +37,7 @@ if ( post_password_required() ) {
     </section>
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-    	<nav class="navigation comment-navigation" role="navigation">
+    	<nav class="navigation comment-navigation">
       	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'hwcoe-ufl' ) ); ?></div>
       	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'hwcoe-ufl' ) ); ?></div>
     	</nav>

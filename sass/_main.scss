@@ -45,8 +45,7 @@
 .category #main {
 	@extend .main-content;	
 }
-
-.entry-content, .wp-editor {
+.entry-content, .entry-meta, .nav-links, .wp-editor {
 	a {
 		letter-spacing: 1px;
 		font-weight: 500;
@@ -55,6 +54,8 @@
 			text-decoration: none;
 		}
 	}
+}
+.entry-content, .wp-editor {
 	aside {
 		@extend .col-md-5;
 		padding: 30px 40px;
