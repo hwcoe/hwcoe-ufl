@@ -37,7 +37,7 @@ Changelog
 - Accessibility improvements
 	- Remove redundant role attribute from nav elements
 	- Add text-decoration to category and post nav links
-	- Fix landmark issues
+	- Fix landmark issues (add/move nav and header landmarks where needed)
 
 ### 2.8.0
 - Implement fallback page menu for primary nav 
