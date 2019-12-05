@@ -10,7 +10,7 @@
 ?>
 		
 <div class="aux-menu-wrap">
-	<nav aria-label="<?php _e('Global Menu', 'hwcoe-ufl'); ?>">
+	<nav aria-label="<?php _e('Global Menu', 'hwcoe-ufl'); ?>" class="aux-menu">
 		<ul class="aux-nav">
 			<?php 
 			// Audience menu
