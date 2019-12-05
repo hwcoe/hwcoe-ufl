@@ -18,7 +18,7 @@ module.exports = function(grunt){
 					'js/plugins/modernizr.min.js',
 					'js/plugins/svg4everybody.min.js',
 					'js/plugins/smartresize-debounce.js',
-					// 'js/plugins/smooth-scrolling.js',
+					'js/plugins/smooth-scrolling.js',
 					'js/plugins/velocity.min.js',
 					'js/plugins/velocity.ui.min.js'
                 ],
