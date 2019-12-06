@@ -9,7 +9,7 @@
 get_header(); ?>
 
 <main id="main" class="container main-content">
-<div class="row">
+<div class="row" id="skiplink-dest">
   <div class="col-sm-12">
     <header class="entry-header">
       <?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>

@@ -14,7 +14,7 @@ get_header(); ?>
 <div class="row">
   <div class="col-sm-12">
     <?php hwcoe_ufl_breadcrumbs(); ?>
-    <header class="entry-header">
+    <header class="entry-header" id="skiplink-dest">
       <?php hwcoe_ufl_entry_title(); ?>
     </header>
     <!-- .entry-header --> 

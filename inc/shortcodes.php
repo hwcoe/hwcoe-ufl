@@ -114,7 +114,7 @@ function hwcoe_ufl_landing_hero($atts, $content = NULL ) {
 	 <div class="landing-page-hero-full">
 		  <div class="hero-img<?php echo $image_class; ?>" <?php echo $image_style; ?>>
 				<!-- <div class="hero-heading"> -->
-				<header class="hero-heading">
+				<header class="hero-heading" id="skiplink-dest">
 			<?php 
 				echo '<h1>' . esc_html( $headline ) . '</h1>';
 				

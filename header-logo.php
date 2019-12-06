@@ -11,7 +11,7 @@
 <body <?php body_class('loading'); // Enable JS transitions ?>>
 
 	<header>
-		<a href="#main" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
+		<a href="#skiplink-dest" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
 		<div class="header unit">
 			<a href="http://ufl.edu/" class="logo icon-svg" aria-label="UF">
 				<svg>
