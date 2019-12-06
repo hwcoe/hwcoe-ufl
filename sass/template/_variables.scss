@@ -11,6 +11,7 @@ $blueLight: 			#3E7198 !default;
 $orangeLight:			#eba171 !default;
 $orange: 				#f37021 !default;
 $orangeDark: 			#bc581a !default;
+$orangeDarker:			#AB5017 !default;
 $beige: 				#faf8f1 !default;
 $beigeLight: 			#fffdf5 !default;
 $beigeDark: 			#eae5d7 !default;
@@ -27,7 +28,7 @@ $textColor:             $grayDark !default;
 
 // Links
 // -------------------------
-$linkColor:             $orangeDark !default;
+$linkColor:             $orangeDarker !default;
 $linkColorHover:        lighten($linkColor, 15%) !default;
 
 // Transitions

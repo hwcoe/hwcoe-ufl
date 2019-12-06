@@ -65,7 +65,7 @@
 		padding: 18px;
 		text-align: center;
 		text-transform: uppercase;
-		&:hover {
+		&:hover, &:focus {
 			background: $blueLight;
 		}
 	}
@@ -97,7 +97,7 @@ footer {
 		a {
 			border-color: $orange;
 			color: $orange;
-			&:hover {
+			&:hover, &:focus {
 				background: $orange;
 				color: $white;
 			}

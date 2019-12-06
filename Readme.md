@@ -37,6 +37,8 @@ Changelog
 - Accessibility improvements
 	- Remove redundant role attribute from nav elements
 	- Add text-decoration to category and post nav links
+	- Increase color contrast for article and sidenav links
+	- Add more visible focus styles for links and form elements
 	- Fix landmark issues (add/move nav and header landmarks where needed)
 	- Make sure focus updates on skip-nav link click 
 

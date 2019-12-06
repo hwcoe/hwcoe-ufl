@@ -7,10 +7,20 @@
 		}
 	}
 	.gform_body {
-		select, textarea, input[type="text"], input[type="email"] {
+		// select, textarea, input[type="text"], input[type="email"] {
+		select, textarea, input {
 			padding: 15px 7.5px;	
 			color: rgba(51, 49, 50, 0.8);
 			border: 2px solid rgba(76, 135, 181, 0.7);
+			&:focus {
+				border-color: $orange;
+			}
+		}
+		input[type="file"]:focus,
+		input[type="radio"]:focus,
+		input[type="checkbox"]:focus {
+		  outline: 2px solid $orange;
+		  outline-offset: -2px;
 		}
 		.left_label .gfield_label {
 			color: rgba(51, 49, 50, 0.8);
@@ -27,9 +37,9 @@
 			background-color: transparent;
 			color: $orange;
 			
-			&:hover {
+			&:hover, &:focus {
 				color: $white;
-				background-color: $orange;	
+				background-color: $orange;			
 			}
 		}
 	}

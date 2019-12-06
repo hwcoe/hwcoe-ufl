@@ -49,11 +49,14 @@ body {
 }
 a {
 	color: $linkColor;
-	// transition: all 0.3s ease;
 	transition: color 0.3s ease,
 	background 0.3s ease;
 	&:hover, &:focus {
 		color: $linkColorHover;
+	}
+	&:focus {
+		outline-offset: 2px;
+		outline:1px dotted $linkColor;
 	}
 }
 
@@ -400,7 +403,7 @@ img {
 		@include breakFirst(medium){
 			padding-left: 34px;
 		}
-		&:hover {
+		&:hover, &:focus {
 			background: $orange;
 			color: $white;
 		}
@@ -596,7 +599,6 @@ form {
 		width: 100%;
 		&:focus {
 			border-color: $orange;
-			outline: none;
 			&::placeholder {
 				color: $orange;
 				line-height: 1.2
@@ -622,7 +624,7 @@ form {
 	font: 500 20px/1.2 $serifFontFamily;
 	position: relative;
 	width: 100%;
-	&:hover {
+	&:hover, &:focus {
 		color: $orange;
 	}
 	.no-js & ul, &.hover ul {
@@ -677,7 +679,7 @@ form {
 			width: 14px;
 		}
 	}
-	&.hover .arw-right {
+	&.hover .arw-right, &.focus .arw-right {
 		background: $beige;
 		border-color: $orange;
 		color: $orange;
