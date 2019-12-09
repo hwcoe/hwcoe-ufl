@@ -315,6 +315,9 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 	}
 	a {
 		color: $white;
+		&:focus {
+			outline-color: $white;
+		}
 	}
 	ul {
 		margin: 0;
@@ -393,6 +396,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		letter-spacing: 2px;
 		padding: 15px;
 		text-transform: uppercase;
+		
 		@include breakFirst(large){
 			font-size: 17px;
 			padding: 37px 9px
@@ -687,7 +691,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		letter-spacing: 2px;
 		padding: 6px 0;
 		text-transform: uppercase;
-		&:hover {
+		&:hover, &:focus {
 			color: $linkColorHover;
 		}
 	}

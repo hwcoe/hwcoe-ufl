@@ -56,7 +56,7 @@ a {
 	}
 	&:focus {
 		outline-offset: 2px;
-		outline:1px dotted $linkColor;
+		outline:1px dotted $linkColorHover;
 	}
 }
 

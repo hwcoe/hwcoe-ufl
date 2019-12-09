@@ -8,7 +8,7 @@
 	}
 	.gform_body {
 		// select, textarea, input[type="text"], input[type="email"] {
-		select, textarea, input {
+		select, textarea, input:not([type="file"]) {
 			padding: 15px 7.5px;	
 			color: rgba(51, 49, 50, 0.8);
 			border: 2px solid rgba(76, 135, 181, 0.7);
@@ -16,12 +16,15 @@
 				border-color: $orange;
 			}
 		}
-		input[type="file"]:focus,
-		input[type="radio"]:focus,
-		input[type="checkbox"]:focus {
-		  outline: 2px solid $orange;
-		  outline-offset: -2px;
+		input[type="file"],
+		input[type="radio"],
+		input[type="checkbox"] {
+			&:focus {
+			  outline: 2px solid $orange;
+			  outline-offset: -2px;
+			}
 		}
+
 		.left_label .gfield_label {
 			color: rgba(51, 49, 50, 0.8);
 		}

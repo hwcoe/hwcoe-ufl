@@ -83,8 +83,9 @@
 		position: relative;
 		// z-index: 1000;
 		z-index: 1001;
-		a {
+		a, a:focus {
 			color: $white;
+			outline-color: $white;
 		}
 		
 		h1 {
@@ -118,8 +119,9 @@
 			// z-index: 1001;
 			display: block;
 			margin-right: 30px;
-			a {
+			a, a:focus {
 				color:$blueDark;
+				outline-color: $blueDark;
 			}
 			
 			h1 {

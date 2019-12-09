@@ -100,7 +100,7 @@
 		text-transform: uppercase;	
 		background-color: transparent;
 		color: $orange;	
-		&:hover {
+		&:hover, &:focus {
 			color: $white;
 			background-color: $orange;	
 		}

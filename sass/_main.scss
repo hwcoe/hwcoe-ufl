@@ -53,6 +53,9 @@
 		&:focus, &:hover {
 			text-decoration: none;
 		}
+		&:focus {
+			background-color: $white;
+		}
 	}
 }
 .entry-content, .wp-editor {

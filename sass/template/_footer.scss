@@ -67,6 +67,7 @@
 		text-transform: uppercase;
 		&:hover, &:focus {
 			background: $blueLight;
+			outline-color:$white;
 		}
 	}
 }
