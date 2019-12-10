@@ -54,7 +54,8 @@
 			text-decoration: none;
 		}
 		&:focus {
-			background-color: $white;
+			outline-width: 2px;
+			outline-offset: -1px;
 		}
 	}
 }

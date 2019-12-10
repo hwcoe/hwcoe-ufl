@@ -120,7 +120,7 @@
 	}
 }
 .stat-block-wrap {
-	&:hover, .touch & {
+	&:hover, &:focus, .touch & {
 		background-image: url(img/_temp-bg-texture.jpg);
 	
 		.info {

@@ -405,10 +405,11 @@ img {
 		}
 		&:hover, &:focus {
 			background: $orange;
-			color: $white;
+			color: $white !important;
 		}
 	}
-	.no-touch & a:hover {
+	.no-touch & a:hover,
+	.no-touch & a:focus {
 		background: $orange;
 		color: $white;
 		.arw-right {

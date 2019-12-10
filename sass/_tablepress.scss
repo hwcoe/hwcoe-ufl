@@ -10,7 +10,7 @@
 	.row-hover tr:hover td {
 		background-color: $teal !important;
 	}
-	.sorting:hover, .sorting_asc, .sorting_desc {
+	.sorting:hover, .sorting:focus, .sorting_asc, .sorting_desc {
 		background-color: $blueDark !important;
 	}
 }
@@ -48,7 +48,7 @@
 	}
 }
 .paginate_button {
-	&:hover {
+	&:hover, &:focus {
 		text-decoration: underline !important;
 	}
 	&.disabled {

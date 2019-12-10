@@ -19,7 +19,7 @@
 			height: 150px;
 			width: 150px;
 		}
-		&:hover {
+		&:hover, &:focus {
 			background: $blueDark;
 		}
 		img {
@@ -202,7 +202,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 	@include breakFirst(wide){
 		background: $orange;
 	}
-	&:hover {
+	&:hover, &:focus {
 		background: $orange;
 		@include breakFirst(wide){
 			background: $orangeDark;
@@ -377,7 +377,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 				width: 100%;
 			}
 		}
-		&:hover {
+		&:hover, &:focus {
 			a {
 				background: $blueDark;
 			}
@@ -607,7 +607,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 			a {
 			  text-align: left;
 			  text-transform: none;
-			  &:hover {
+			  &:hover, &:focus {
 			  	background: $beigeDark;
 			  }
 			}

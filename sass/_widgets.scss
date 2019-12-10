@@ -30,22 +30,20 @@
 	.main-content &, #secondary & {
 		background: $blueLight;
 		color: $white;
-		padding: $grid-gutter-width/2;
-		
+		padding: $grid-gutter-width/2;		
 		a {
 			color: $white;
 			text-decoration: underline;
+			&:hover, &:focus {
+				text-decoration: none;
+				outline-color: $white;
+			}
 		}
 	}
 }
 .custom-html-widget, .textwidget {
 	ul li:before {
 		content: "\2022";
-	}
-}
-.custom-html-widget, .textwidget, .widget_nav_menu {
-	a:hover, a:focus {
-		text-decoration: none;
 	}
 }
 ul.sub-menu {
@@ -88,10 +86,10 @@ ul.sub-menu {
 				color: $blue;
 				text-decoration: none;
 			}
-			&:hover {
+			&:hover, &:focus {
 				background: $white;
 			}
-			&:hover a {
+			&:hover a, &:focus a {
 				color: $blue;
 			}
 			&.orange {

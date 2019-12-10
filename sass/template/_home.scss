@@ -67,7 +67,7 @@
 	@include breakFirst(large){
 		padding: 20px 40px;
 	}
-	&:hover h2 {
+	&:hover h2, &:focus h2 {
 		color: $orange;
 	}
 	&:before {
@@ -135,7 +135,7 @@
 		&:before, &:after {
 			display: none
 		}
-		&:hover h2 {
+		&:hover h2, &:focus h2 {
 			color: $blue;
 		}
 		.category-tag {
@@ -161,7 +161,7 @@
 		}
 		.read-more {
 			display: inline-block;
-			&:hover {
+			&:hover, &:focus {
 				color: $blue;
 			}
 		}
@@ -179,9 +179,11 @@
 	position: absolute;
 	top: -25px;
 	text-transform: uppercase;
-	&:hover {
+	text-decoration:none;
+	&:hover, &:focus {
 		background: $white;
 		color: $blue;
+		text-decoration:underline;
 	}
 	&.orange {
 	  background: $orangeDark;
@@ -294,7 +296,7 @@
 			@include breakFirst(large){
 				left: -15px;
 			}
-			&:hover {
+			&:hover, &:focus {
 				color: $red;
 				background: $white;
 			}
@@ -389,8 +391,9 @@
 		color: $white;
 		display: inline-block;
 		margin-left: 20px;
-		&:hover {
-			color: $orange;
+		&:hover, &:focus {
+			text-decoration: none;
+			outline-color: $white;
 		}
 	}
 }
@@ -425,8 +428,9 @@
 			color: $white;
 			display: block;
 			text-decoration: underline;
-			&:hover {
+			&:hover, &:focus {
 				color: $orange;
+				text-decoration: none;
 			}
 		}
 	}
