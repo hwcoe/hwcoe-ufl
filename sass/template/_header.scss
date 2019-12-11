@@ -557,7 +557,7 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		> a, .arw-right {
 			float: left;
 		}
-		&:hover,&:focus {
+		&:hover, &:focus, &:focus-within {
 			ul {
 				display: block;
 			}

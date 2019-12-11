@@ -41,6 +41,7 @@ Changelog
 	- Add more visible focus styles for links and form elements
 	- Fix landmark issues (add/move nav and header landmarks where needed)
 	- Make sure focus updates on skip-nav link click 
+	- Add accessibility focus on audience menu
 
 ### 2.8.0
 - Implement fallback page menu for primary nav 

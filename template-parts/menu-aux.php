@@ -42,6 +42,7 @@
 		<?php hwcoe_ufl_socialnetworks(); ?>
 	</ul><!-- /social-nav -->
 
+	<!-- <div class="audience-nav-wrap" tabindex="0"> -->
 	<div class="audience-nav-wrap">
 		<?php 
 			if ( has_nav_menu( 'audience_nav' ) ): ?>
