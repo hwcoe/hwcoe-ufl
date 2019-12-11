@@ -196,16 +196,15 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 	width: 60px;
 	z-index: 5;
 	@include breakFirst(large){
-		background: $orangeDark;
 		width: 100%;
 	}
-	@include breakFirst(wide){
-		background: $orange;
+	&:hover, &:focus, .open-search & {
+		background: $orangeDark;
 	}
-	&:hover, &:focus {
-		background: $orange;
-		@include breakFirst(wide){
-			background: $orangeDark;
+	&:focus {
+		.icon-svg {
+			outline: 1px dotted $white;
+			outline-offset: 3px;
 		}
 	}
 	.mobile & {
@@ -276,7 +275,6 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 		}
 	}
 	@include breakFirst(large){
-		background: $orange;
 		display: block;
 		right: 0;
 	}

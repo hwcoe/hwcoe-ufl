@@ -30,8 +30,10 @@
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		color: $orange;
+		font: 500 16px/16px $fontFamily;
 		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.85);
 		margin-bottom: 0;
+		display:inline-block;
 	}
 	.lcp_post_info {
 		position: absolute;
@@ -42,15 +44,16 @@
 		margin: -70px 0px 0px -16px;
 		height: 265px;
 		width: calc(100% + 31px);
+		a {
+			&:hover, &:focus {
+				.lcp_readmore {
+					outline: 1px dotted $orange;
+					text-decoration: none;
+				}
+			}
+		}
 
 		.widget-post-thumbnail {
-			// height: 290px;
-			// width: calc(100% - 30px);
-			// margin-left: 15px;
-			// position: absolute;
-			// top:0;	
-			// left: 0;
-			
 			height: 280px;
 			width: 100%;
 			position: relative;

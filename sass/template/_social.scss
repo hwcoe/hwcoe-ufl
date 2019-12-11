@@ -28,7 +28,7 @@ ul.social-nav {
 		border-color: $white;
 		background: $white;
 		color: $orangeDark;
-		&:hover {
+		&:hover, &:focus {
 			border-color: $white;
 			background: $orangeDark;
 			color: $white;

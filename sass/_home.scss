@@ -1,3 +1,5 @@
+
+// Latest posts slider styles
 .carousel-row {
 	color: $white;
 	text-align: center;
@@ -66,7 +68,6 @@
 }
 
 #featured-carousel {
-	
 	.carousel-indicators {
 		display: none;
 	}
@@ -243,9 +244,6 @@
 			p {
 				font-size: 14px;
 				line-height: 20px;
-			}
-			.read-more {
-				font-weight: bold;	
 			}
 			a, a:visited {
 				color: $white;	

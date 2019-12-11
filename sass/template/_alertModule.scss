@@ -60,7 +60,7 @@
 			margin: 0 33px 0 0;
 			position: relative;
 		}
-		&:hover {
+		&:hover, &:focus {
 			color: $white;
 		}
 		.arw-right {
@@ -173,7 +173,7 @@
 			right:98px;
 			top: 50%;
 		}
-		&:hover {
+		&:hover, &:focus {
 			color: $grayDark;
 		}
 	}
@@ -202,7 +202,7 @@
 	a {
 		color: $grayDark;
 		text-decoration: underline;
-		&:hover {
+		&:hover, &:focus{
 			color: $red
 		}
 	}
@@ -247,7 +247,7 @@
 		padding: 10px 20px;
 		text-decoration: none;
 		text-transform: none;
-		&:hover {
+		&:hover, &:focus {
 			color: $grayDark;
 		}
 	}
@@ -262,7 +262,7 @@
 		height: 65px;
 		width: 65px;
 	}
-	&:hover {
+	&:hover, &:focus {
 		background: $red;
 	}
 	.icon-svg {

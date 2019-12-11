@@ -451,11 +451,15 @@ img {
 
 .read-more {
 	color: $orange;
+	text-shadow: 1px 1px 0px $grayDark;
 	display: inline-block;
 	font: 500 16px/16px $fontFamily;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	text-decoration: underline;
+	&:hover, &:focus {
+		text-decoration: none;
+	}
 	.entry-content & {
 		color: $orangeDark;
 	}

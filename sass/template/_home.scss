@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+
+// Featured content homepage layout
+
 .slick-list, .slick-track {
 	height: 100%;
 	width: 100%;
@@ -161,6 +164,7 @@
 		}
 		.read-more {
 			display: inline-block;
+			text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.50);
 			&:hover, &:focus {
 				color: $blue;
 			}
