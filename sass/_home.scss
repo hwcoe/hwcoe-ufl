@@ -77,7 +77,7 @@
 	.item.half-image-feature, .item.full-image-feature {
 		width: 100%;
 		height: $size__carousel_height;
-		.btn--white:hover {
+		.btn--white:hover, .btn--white:focus {
 			color: $orange !important;	
 		}
 		

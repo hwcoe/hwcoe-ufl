@@ -513,7 +513,8 @@ form.search-wrap,.btn-show-aux, .btn-menu,.btn-search-mobile {
 				padding: 18px 10px;
 			}
 			&:hover,&:focus {
-				opacity: .8
+				opacity: .8;
+				outline-offset: -1px;
 			}
 		}
 		.audience-link {
