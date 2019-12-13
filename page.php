@@ -17,7 +17,7 @@ get_header(); ?>
 <div class="row">
   <div class="col-sm-12">
 		<?php hwcoe_ufl_breadcrumbs(); ?>
-		<header class="entry-header">
+    <header class="entry-header" aria-label="Content Header">
 			<?php hwcoe_ufl_entry_title(); ?>
 	 	</header>
   </div>

@@ -9,8 +9,7 @@
 </head>
 
 <body <?php body_class('loading'); // Enable JS transitions ?>>
-
-	<header>
+	<header aria-label="Screen Website Header">
 		<a href="#skiplink-dest" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
 		<div class="header unit">
 			<a href="http://ufl.edu/" class="logo icon-svg" aria-label="UF">
@@ -95,6 +94,6 @@
 		</div><!-- .header.unit -->
 	</header>
 	<!-- END HEADER -->
-	<header class="print-header">
+	<header class="print-header" aria-label="Print Website Header">
 		<h1><?php echo bloginfo('name'); ?></h1>
 	</header>

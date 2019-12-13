@@ -16,7 +16,7 @@
 
 <body <?php body_class('loading'); // Enable JS transitions ?>>
 
-	<header>
+	<header aria-label="Screen Website Header">
 		<a href="#skiplink-dest" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
 		<div class="header unit">
 			<a href="http://ufl.edu/" class="logo">
@@ -92,7 +92,7 @@
 		</div><!-- .header.unit -->
 	</header>
 <!-- END HEADER -->
-	<header class="print-header">
+	<header class="print-header" aria-label="Print Website Header">
 		<h1><?php echo bloginfo('name'); ?></h1>
 		<?php if ( $tagline_display == 1 ) {
 			echo "<h2>" . $tagline . "</h2>";

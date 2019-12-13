@@ -25,7 +25,7 @@
 		$webmaster_email = 'webmaster@eng.ufl.edu';
 		$site_admin = ( empty($webmaster_email) )? "site administrator" : "<a href=\"mailto:{$webmaster_email}\">site administrator</a>";
 		?>
-        <header class="entry-header">
+		<header class="entry-header" aria-label="Content Header">
 			<h1 class="entry-title"><?php esc_html_e( 'Access Denied', 'hwcoe-ufl' ); ?></h1>
 		</header><!-- .page-header -->
 		<div class="entry-content">
