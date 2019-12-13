@@ -19,7 +19,7 @@
 	<header aria-label="Screen Website Header">
 		<a href="#skiplink-dest" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
 		<div class="header unit">
-			<a href="http://ufl.edu/" class="logo">
+			<a href="http://www.ufl.edu/" class="logo" aria-label="Visit the main University of Florida website">
 				<span class="icon-svg logo-uf">
 					<svg>
 						<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#logo-uf"></use>
