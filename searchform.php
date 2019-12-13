@@ -1,4 +1,18 @@
-<form action="https://search.ufl.edu/search" method="get" class="search-form" role="search">
+<?php
+/**
+ * searchform template, used when get_search_form() is called.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package HWCOE_UFL
+ */
+?>
+<form action="https://search.ufl.edu/search" method="get" class="search-form" role="search" aria-label="Search Form">
 	<label for="query_content" class="visuallyhidden sr-only"><?php esc_html_e('Search', 'hwcoe-ufl'); ?></label>
 	<input type="text" id="query_content" name="query" placeholder="<?php esc_attr_e('Search', 'hwcoe-ufl'); ?>" />
 

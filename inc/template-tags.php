@@ -120,19 +120,21 @@ function hwcoe_ufl_post_featured_image(){
 	 $form = get_search_form( false );
 	 
 	 if ( 'mobile' == $location ){
-		$form = str_replace( 'search-form', 'search-wrap mobile', $form );
+	 	$form = str_replace( 'search-form', 'search-wrap mobile', $form );
 		$form = str_replace( 'query_content', 'query_mobile', $form );
 		$form = str_replace( 'submit_content', 'submit_mobile', $form );
 		$form = str_replace( 'source_content', 'source_mobile', $form );
 		$form = str_replace( 'site_content', 'site_mobile', $form );
+		$form = str_replace( 'Search Form', 'Mobile Search', $form );
 	 }
 	 
 	 if ( 'menu' == $location ){
-		$form = str_replace( 'search-form', 'search-wrap', $form );
+	 	$form = str_replace( 'search-form', 'search-wrap', $form );
 		$form = str_replace( 'query_content', 'query_desktop', $form );
 		$form = str_replace( 'submit_content', 'submit_desktop', $form );
 		$form = str_replace( 'source_content', 'source_desktop', $form );
 		$form = str_replace( 'site_content', 'site_desktop', $form );
+		$form = str_replace( 'Search Form', 'Desktop Search', $form );
 	 }
 	 
 	 echo $form;	 

@@ -39,7 +39,8 @@ Changelog
 	- Add text-decoration to category and post nav links
 	- Increase color contrast for article and sidenav links
 	- Add more visible focus styles for links and form elements
-	- Fix landmark issues (add/move nav and header landmarks where needed)
+	- Add/move nav and header landmarks where needed
+	- Add aria-label attributes to duplicate landmarks where needed
 	- Make sure focus updates on skip-nav link click 
 	- Add accessibility focus on audience menu
 
