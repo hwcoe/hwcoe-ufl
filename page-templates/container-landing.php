@@ -23,7 +23,7 @@ get_header(); ?>
 ?>
 <main id="main" class="container main-content">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12" id="skiplink-dest">
             <?php 
 				if ( ! has_post_thumbnail() ): 
 					hwcoe_ufl_entry_title();

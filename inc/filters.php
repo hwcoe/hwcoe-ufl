@@ -105,6 +105,6 @@ function hwcoe_ufl_title( $title, $id ) {
 function hwcoe_ufl_entry_title() {
 	// add hwcoe_ufl_title filter for title at the top of the content section of the page template
 	add_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
-	the_title( '<h1 class="entry-title" id="skiplink-dest">', '</h1>' ); 
+	the_title( '<h1 class="entry-title">', '</h1>' ); 
 	remove_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
 }

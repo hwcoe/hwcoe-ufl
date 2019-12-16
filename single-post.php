@@ -9,9 +9,9 @@
 get_header(); ?>
 
 <main id="main" class="container main-content">
-<div class="row" id="skiplink-dest">
+<div class="row">
 	<div class="col-sm-12">
-		<header class="entry-header" aria-label="Content Header">
+		<header class="entry-header" aria-label="Content Header" id="skiplink-dest">
 			<?php hwcoe_ufl_entry_title(); ?>
 		</header>
 		<!-- .entry-header --> 

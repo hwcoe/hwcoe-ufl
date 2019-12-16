@@ -7,9 +7,9 @@
 get_header(); ?>
 
 <main id="main" class="container main-content">
-	<div class="row" id="skiplink-dest">
+	<div class="row">
 		<div class="col-sm-12">
-			<header class="entry-header page-header" aria-label="Content Header">
+			<header class="entry-header page-header" aria-label="Content Header" id="skiplink-dest">
 				<h1><?php esc_html_e( 'Page not found', 'hwcoe-ufl' ); ?></h1>
 			</header>
 			<!-- .entry-header --> 
