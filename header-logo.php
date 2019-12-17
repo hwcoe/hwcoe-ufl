@@ -10,7 +10,7 @@
 
 <body <?php body_class('loading'); // Enable JS transitions ?>>
 	<header aria-label="Screen Website Header">
-		<a href="#skiplink-dest" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
+		<a href="<?php echo hwcoe_ufl_skiplink_anchor(); ?>" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
 		<div class="header unit">
 			<a href="http://www.ufl.edu/" class="logo icon-svg" aria-label="Visit the main University of Florida website">
 				<svg>

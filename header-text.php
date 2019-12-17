@@ -11,13 +11,12 @@
 	$tagline_display = get_theme_mod('tagline_display', 0);
 	$tagline_url = get_theme_mod('tagline_url', 0);
 	$tagline = get_bloginfo( 'description' );
-
 ?>
 
 <body <?php body_class('loading'); // Enable JS transitions ?>>
 
 	<header aria-label="Screen Website Header">
-		<a href="#skiplink-dest" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
+		<a href="<?php echo hwcoe_ufl_skiplink_anchor(); ?>" id="skip-link" class="visuallyhidden focusable">Skip to main content</a>
 		<div class="header unit">
 			<a href="http://www.ufl.edu/" class="logo" aria-label="Visit the main University of Florida website">
 				<span class="icon-svg logo-uf">

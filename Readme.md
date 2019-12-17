@@ -31,7 +31,7 @@ Documentation
 
 Changelog
 ---------
-### 2.8.1
+### 3.0.0
 - Move gtag code to correct location inside `<head>` tag
 - Correct default UF directory link in footer
 - Accessibility improvements
@@ -42,7 +42,10 @@ Changelog
 	- Add/move nav and header landmarks where needed
 	- Add aria-label attributes to duplicate landmarks where needed
 	- Make sure focus updates on skip-nav link click 
+	- Change destination ID for skip-nav link 
 	- Add accessibility focus on audience menu
+
+NOTE: Child theme custom page templates will need to have the ID #skiplink-dest added to an element just above entry-title ([See example](https://github.com/hwcoe/hwcoe-ufl-child/blob/master/page-templates/custom-page-template.php))
 
 ### 2.8.0
 - Implement fallback page menu for primary nav 

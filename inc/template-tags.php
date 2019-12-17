@@ -120,7 +120,7 @@ function hwcoe_ufl_post_featured_image(){
 	 $form = get_search_form( false );
 	 
 	 if ( 'mobile' == $location ){
-	 	$form = str_replace( 'search-form', 'search-wrap mobile', $form );
+		$form = str_replace( 'search-form', 'search-wrap mobile', $form );
 		$form = str_replace( 'query_content', 'query_mobile', $form );
 		$form = str_replace( 'submit_content', 'submit_mobile', $form );
 		$form = str_replace( 'source_content', 'source_mobile', $form );
@@ -129,7 +129,7 @@ function hwcoe_ufl_post_featured_image(){
 	 }
 	 
 	 if ( 'menu' == $location ){
-	 	$form = str_replace( 'search-form', 'search-wrap', $form );
+		$form = str_replace( 'search-form', 'search-wrap', $form );
 		$form = str_replace( 'query_content', 'query_desktop', $form );
 		$form = str_replace( 'submit_content', 'submit_desktop', $form );
 		$form = str_replace( 'source_content', 'source_desktop', $form );
@@ -197,4 +197,24 @@ function hwcoe_ufl_socialnetworks() {
 			printf("<li><a href=\"%s\" class=\"btn-circle icon-svg icon-%s\"><svg><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"%s\"></use></svg><span class=\"visuallyhidden\">%s</span></a></li>\n", $link, $name, $icon, $title );
 		}
 	}
+}
+
+/**
+ * Determine skiplink anchor destination based on whether left sidebar is present
+ *
+ * @return string anchor for skip-link
+ *
+ */
+ function hwcoe_ufl_skiplink_anchor(){
+	global $post;
+	$sidebar_nav = hwcoe_ufl_sidebar_navigation($post);
+	$has_sidebar_nav = !empty( $sidebar_nav );
+	$has_page_sidebar = is_active_sidebar( 'page_sidebar' );
+
+	if ( $has_sidebar_nav || $has_page_sidebar ){
+		$skiplink_anchor = '#post-' . $post->ID;
+	} else {
+		$skiplink_anchor = '#main';
+	}
+	return $skiplink_anchor;
 }
