@@ -703,7 +703,8 @@ jQuery(function($){
 	});
 
 	// Responsive embeds
-	$('iframe').each(function(){
+	// Styled wrapper div around all iframes except Gravity Forms ajax
+	$( 'iframe').not('[id*="gform_ajax"]').each(function() {
 		$(this).wrap("<div class=\"embed-wrapper\"></div>");
 	});
 

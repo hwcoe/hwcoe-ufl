@@ -31,9 +31,10 @@ Documentation
 
 Changelog
 ---------
-### 3.0.0
+### 2.8.1
 - Move gtag code to correct location inside `<head>` tag
 - Correct default UF directory link in footer
+- Bugfix: Remove unwanted padding for embedded iframe with ajax-enabled forms
 - Accessibility improvements
 	- Remove redundant role attribute from nav elements
 	- Add text-decoration to category and post nav links
