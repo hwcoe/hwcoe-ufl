@@ -24,7 +24,7 @@ if ( $slider_query->have_posts() ):
 	$slider_disable_link = get_theme_mod('featured_disable_link', 0);
 ?>
 <main id="main" class="carousel-row">
-	<div id="skiplink-dest" class="container carousel-wrap">
+	<div class="container carousel-wrap">
 		<div id="featured-carousel" class="carousel slide" data-ride="carousel" data-interval="<?php echo $slider_speed; ?>" aria-labelledby="carousel-heading" aria-describedby="carousel-desc">
 			<h2 id="carousel-heading" class="sr-only"><?php _e('Featured Posts', 'hwcoe-ufl'); ?></h2>
 			<p id="carousel-desc" class="sr-only"><?php _e('Use the previous and next buttons to change the displayed slide.', 'hwcoe-ufl'); ?></p>

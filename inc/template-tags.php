@@ -214,7 +214,6 @@ function hwcoe_ufl_socialnetworks() {
 
 	// default page template with sidebar nav or left sidebar widgets gets a different skiplink anchor
 	if ( is_page() && !is_page_template() ) {
-
 		if ( $has_sidebar_nav || $has_page_sidebar ){
 			$skiplink_anchor = '#post-' . $post->ID;
 		} else {

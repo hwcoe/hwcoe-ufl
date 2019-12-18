@@ -24,7 +24,7 @@ get_header(); ?>
 <main id="main" class="full-width-content">
 	<?php 
 		if ( ! has_post_thumbnail() ): 
-			echo "<div class=\"container\" id=\"skiplink-dest\">";
+			echo "<div class=\"container\">";
 			hwcoe_ufl_entry_title();
 			echo "</div>";
 		endif;

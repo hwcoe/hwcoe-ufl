@@ -710,7 +710,6 @@ jQuery(function($){
 	// Hide entry-title if a hero image shortcode exists
 	if ($('.landing-page-hero-full').length > 0) { 
 		$('.entry-title').hide();
-		$('div#skiplink-dest').removeAttr('id');
 	}
 	
 	// Homepage infinite scroll

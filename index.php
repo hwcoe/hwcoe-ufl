@@ -18,7 +18,7 @@ get_header(); ?>
   <div class="col-sm-12">
     <?php if ( !is_home() && !is_front_page() ): ?>
 		<?php hwcoe_ufl_breadcrumbs(); ?>
-        <header class="entry-header" aria-label="Content Header" id="skiplink-dest">
+        <header class="entry-header" aria-label="Content Header">
           <?php hwcoe_ufl_entry_title(); ?>
         </header><!-- .entry-header --> 
     <?php endif; ?>
