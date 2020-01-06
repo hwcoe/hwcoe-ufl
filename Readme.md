@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 2.8.2
+- Filter navigation_markup_template to remove redundant role attribute from post/comment nav landmarks
+
 ### 2.8.1
 - Move gtag code to correct location inside `<head>` tag
 - Correct default UF directory link in footer

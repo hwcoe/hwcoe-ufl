@@ -108,3 +108,22 @@ function hwcoe_ufl_entry_title() {
 	the_title( '<h1 class="entry-title">', '</h1>' ); 
 	remove_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
 }
+
+/**
+ * Remove redundant role attribute from post and comment nav
+ * @param  string  $template navigation markup template
+ * @return string  modified nav markup template
+ * @since 2.8.2
+ */
+
+function hwcoe_ufl_navigation_template( $template ) {
+    $template = '
+    <nav class="navigation %1$s" aria-label="%4$s">
+		<h2 class="screen-reader-text">%2$s</h2>
+		<div class="nav-links">%3$s</div>
+	</nav>';
+
+    return $template;
+}
+
+add_filter( 'navigation_markup_template', 'hwcoe_ufl_navigation_template' );
