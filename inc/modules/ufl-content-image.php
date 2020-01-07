@@ -1,12 +1,12 @@
 <?php
-	$headline = ( get_sub_field( 'headline' ) ? '<h2>' . get_sub_field( 'headline' ) . '</h2>' : '');
+	$headline = ( get_sub_field( 'headline' ) ? '<h2>' . esc_html( get_sub_field( 'headline' ) ) . '</h2>' : '');
 	$content = 	( get_sub_field( 'content' ) ? '<div>' . get_sub_field( 'content' ) . '</div>' : '');
 
 	if ( get_sub_field( 'image' ) ) {						
 		$image = get_sub_field( 'image' );
 		$img_src = $image['sizes']['large'];
 		$alt = $image['alt'];
-		$img_markup = '<img src="' . $img_src . '" alt="' . $alt . '" class="img-full">';
+		$img_markup = '<img src="' . esc_url( $img_src ) . '" alt="' . esc_attr( $alt ) . '" class="img-full">';
 	} else {
 		$img_markup = '';
 	}
@@ -35,7 +35,6 @@
 					<div class="row">
 						<div class="col-md-12">
 							<?php echo $headline; ?>
-
 							<?php echo $content; ?>
 						</div>
 					</div>

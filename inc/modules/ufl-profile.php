@@ -1,4 +1,4 @@
-
+<!-- ufl-profile module -->
 <div class="feature-bio-wrap hor-scroll-wrap">
 	<div class="container">
 		<div class="feature-bios">
@@ -12,30 +12,31 @@
 ?>
 	<?php while ( have_rows('profile') ) : the_row(); ?> 
 		<?php if( 0 === $profile_count ){
-			$title_markup = ( get_sub_field( 'title' ) ? '<h3>' . get_sub_field( 'title' ) . '</h3>' : '');
+			$title_markup = ( get_sub_field( 'title' ) ? '<h3>' . esc_html( get_sub_field( 'title' ) ) . '</h3>' : '');
 			$featured_bio_copy .=   '<div class="feature-bio-copy-wrap">';
-			$featured_bio_copy .=   '<h2>' . get_sub_field( 'profile_name' ) . '</h2>';
+			$featured_bio_copy .=   '<h2>' . esc_html( get_sub_field( 'profile_name' ) ) . '</h2>';
 			$featured_bio_copy .=	$title_markup;
-			$featured_bio_copy .=   '<p>' .  get_sub_field( 'description' ) . '</p>';
+			$featured_bio_copy .=   '<p>' .  esc_html( get_sub_field( 'description' )) . '</p>';
 			if( get_sub_field( 'include_button' ) ){
-				$button_text = strtolower( get_sub_field( 'button_text' ) );
-				if ( $button_text == "learn more" ||  $button_text == 'read more' ) {
-					$button_label = "Read More: " . get_sub_field( 'profile_name' );
+				$button_text = get_sub_field( 'button_text' ) ;
+				if ( strtolower( $button_text ) == "learn more" || strtolower( $button_text ) == "read more")  {
+						$button_label = $button_text . ": " . esc_attr( get_sub_field( 'profile_name' ) );
 				}
 				else {
-					$button_label = get_sub_field( 'button_text' );
+					$button_label = $button_text;
 				}
-				$featured_bio_copy .= '<a href="' . get_sub_field( 'button_url' ) . '" class="btn btn--white" aria-label="' . $button_label . '">' . get_sub_field( 'button_text' ) . '<span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' . HWCOE_UFL_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span></a>';
+
+				$featured_bio_copy .= '<a href="' . esc_url( get_sub_field( 'button_url' ) ) . '" class="btn btn--white" aria-label="' . $button_label . '">' . $button_text . '<span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' . HWCOE_UFL_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span></a>';
 		 	}
 		 	if ( get_sub_field( 'profile_type' ) ) {
-				$featured_bio_copy .=   '<span class="category-tag orange">' . get_sub_field( 'profile_type' ) . '</span>';
+				$featured_bio_copy .=   '<span class="category-tag orange">' . esc_html( get_sub_field( 'profile_type' )) . '</span>';
 			}
 			$featured_bio_copy .=   '<span class="btn-circle arw-right icon-svg"><svg><use xlink:href="' . HWCOE_UFL_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span>';
 		 	$featured_bio_copy .= '</div>';
 		} // profile_count ?>
 		<?php 
-			$profile_image = (get_sub_field( 'profile_image' ) ? "style='background-image:url(" . get_sub_field( 'profile_image' ) . ");' " : '');
-			$title_markup = ( get_sub_field( 'title' ) ? '<h3>' . get_sub_field( 'title' ) . '</h3>' : '');
+			$profile_image = (get_sub_field( 'profile_image' ) ? "style='background-image:url(" . esc_url( get_sub_field( 'profile_image' ) ) . ");' " : '');
+			$title_markup = (get_sub_field( 'title' ) ? '<h3>' . esc_html( get_sub_field( 'title' ) ) . '</h3>' : '');
 		?>
 		<div class="bio hor-scroll-el">
 			<div class="bio-img" <?php echo $profile_image; ?>></div>
@@ -44,18 +45,18 @@
 				<?php echo $title_markup; ?>
 				<p><?php the_sub_field( 'description' ); ?></p>
 				<?php if( get_sub_field( 'include_button' ) ): 
-					$button_text = strtolower( get_sub_field( 'button_text' ) );
-					if ( $button_text == "learn more" ||  $button_text == 'read more' ) {
-						$button_label = "Read More: " . get_sub_field( 'profile_name' );
+					$button_text = get_sub_field( 'button_text' ) ;					
+					if ( strtolower( $button_text ) == "learn more" || strtolower( $button_text ) == "read more")  {
+						$button_label = $button_text . ": " . esc_attr( get_sub_field( 'profile_name' ) );
 					}
 					else {
-						$button_label = get_sub_field( 'button_text' );
+						$button_label = $button_text;
 					}
 				?>
-				<a href="<?php the_sub_field( 'button_url' ); ?>" class="btn btn--white" aria-label="<?php echo $button_label; ?>"><?php the_sub_field( 'button_text' ); ?> <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
+				<a href="<?php esc_url( the_sub_field( 'button_url' ) ); ?>" class="btn btn--white" aria-label="<?php echo $button_label; ?>"><?php echo $button_text; ?> <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
 				<?php endif // include_button ?>
 				<?php if ( get_sub_field( 'profile_type' ) ) : ?>
-					<span class="category-tag orange"><?php the_sub_field( 'profile_type' ); ?></span>
+					<span class="category-tag orange"><?php esc_html_e( the_sub_field( 'profile_type' ) ); ?></span>
 				<?php endif ?>
 				<span class="btn-circle arw-right icon-svg"><svg><use xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span>
 			</div>

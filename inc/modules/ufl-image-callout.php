@@ -1,5 +1,9 @@
+<?php
+	$background_img = (get_sub_field( 'background_image' ) ? "style='background-image:url(" . esc_url( get_sub_field( 'background_image' ) ) . ");'" : '');
+
+?>
 <!-- ufl-image-callout module -->
-<div class="img-callout-wrapper" style="background-image:url(<?php the_sub_field( 'background_image' ); ?>)">
+<div class="img-callout-wrapper" <?php echo $background_img; ?>>
 	<div class="container">
 		<div class="row">
 		<?php if( have_rows( 'image_callout' ) ): ?>
@@ -11,11 +15,22 @@
 				?>
 			<div class="col-sm-12 col-md-4 img-callout-wrap">
 				<div class="img-callout">
-					<img src="<?php echo $img_src; ?>" alt="<?php echo $alt; ?>" class="img-full">
-					<h2><?php esc_attr( the_sub_field( 'headline' ) ); ?></h2>
-					<p><?php esc_attr( the_sub_field( 'content' ) ); ?></p>
+					<img src="<?php echo esc_url( $img_src ); ?>" alt="<?php echo esc_attr( $alt ); ?>" class="img-full">
+					<h2><?php esc_html_e( the_sub_field( 'headline' ) ); ?></h2>
+					<?php if ( get_sub_field( 'content') ): ?>
+						<p><?php esc_html_e( the_sub_field( 'content' ) ); ?></p>
+					<?php endif ?>
 					<?php if ( get_sub_field( 'link_text') ): ?>
-						<a href="<?php esc_url( the_sub_field( 'link_url' ) ); ?>" class="read-more"><?php esc_attr( the_sub_field( 'link_text' ) ); ?></a>
+						<?php 
+							$link_text = get_sub_field( 'link_text' ) ;
+							if ( strtolower( $link_text ) == "learn more" || strtolower( $link_text ) == "read more")  {
+								$link_label = $link_text . ": " . get_sub_field( 'headline' );
+							}
+							else {
+								$link_label = $link_text;
+							}
+						?>
+						<a href="<?php esc_url( the_sub_field( 'link_url' ) ); ?>" aria-label="<?php echo esc_attr( $link_label ); ?>" class="read-more"><?php echo esc_html( $link_text ); ?></a>
 					<?php endif ?>
 				</div>
 			</div>
