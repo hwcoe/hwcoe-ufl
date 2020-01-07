@@ -1,3 +1,4 @@
+<!-- ufl-image-callout module -->
 <div class="img-callout-wrapper" style="background-image:url(<?php the_sub_field( 'background_image' ); ?>)">
 	<div class="container">
 		<div class="row">

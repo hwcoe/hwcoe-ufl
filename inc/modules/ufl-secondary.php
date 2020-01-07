@@ -2,6 +2,7 @@
 	$background_img = (get_sub_field( 'background_image' ) ? "style='background-image:url(" . get_sub_field( 'background_image' ) . ");'" : '');
 	$headline = get_sub_field( 'headline' );
 ?>
+<!-- ufl-secondary module -->
 <div class="breaker" <?php echo $background_img; ?>>
 	<div class="container">
 		<div class="row">
@@ -18,7 +19,9 @@
 				<?php endif // include_circle_graphic ?>
 				</span>
 				<h2><?php echo $headline; ?></h2>
-				<p><?php the_sub_field( 'content' ); ?></p>
+				<?php if( get_sub_field( 'content' ) ): ?>
+					<p><?php the_sub_field( 'content' ); ?></p>
+				<?php endif // content ?>
 				<?php if( have_rows ( 'buttons' ) ): ?>
 					<?php while( have_rows( 'buttons' ) ) : the_row(); ?>
 						<?php 

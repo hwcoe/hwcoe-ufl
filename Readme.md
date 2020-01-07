@@ -33,6 +33,8 @@ Changelog
 ---------
 ### 2.8.2
 - Filter navigation_markup_template to remove redundant role attribute from post/comment nav landmarks
+- Remove unused image_header field group from Secondary Image with Quote module
+- Disable display of empty tags for non-required ACF fields without content
 
 ### 2.8.1
 - Move gtag code to correct location inside `<head>` tag

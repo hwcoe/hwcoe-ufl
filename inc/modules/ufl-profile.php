@@ -12,9 +12,10 @@
 ?>
 	<?php while ( have_rows('profile') ) : the_row(); ?> 
 		<?php if( 0 === $profile_count ){
+			$title_markup = ( get_sub_field( 'title' ) ? '<h3>' . get_sub_field( 'title' ) . '</h3>' : '');
 			$featured_bio_copy .=   '<div class="feature-bio-copy-wrap">';
 			$featured_bio_copy .=   '<h2>' . get_sub_field( 'profile_name' ) . '</h2>';
-			$featured_bio_copy .=   '<h3>' . get_sub_field( 'title' ) . '</h3>';
+			$featured_bio_copy .=	$title_markup;
 			$featured_bio_copy .=   '<p>' .  get_sub_field( 'description' ) . '</p>';
 			if( get_sub_field( 'include_button' ) ){
 				$button_text = strtolower( get_sub_field( 'button_text' ) );
@@ -32,12 +33,15 @@
 			$featured_bio_copy .=   '<span class="btn-circle arw-right icon-svg"><svg><use xlink:href="' . HWCOE_UFL_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span>';
 		 	$featured_bio_copy .= '</div>';
 		} // profile_count ?>
-		<?php $profile_image = (get_sub_field( 'profile_image' ) ? "style='background-image:url(" . get_sub_field( 'profile_image' ) . ");' " : '');?>
+		<?php 
+			$profile_image = (get_sub_field( 'profile_image' ) ? "style='background-image:url(" . get_sub_field( 'profile_image' ) . ");' " : '');
+			$title_markup = ( get_sub_field( 'title' ) ? '<h3>' . get_sub_field( 'title' ) . '</h3>' : '');
+		?>
 		<div class="bio hor-scroll-el">
 			<div class="bio-img" <?php echo $profile_image; ?>></div>
 			<div class="copy-wrap">
 				<h2><?php the_sub_field( 'profile_name' ); ?></h2>
-				<h3><?php the_sub_field( 'title' ); ?></h3>
+				<?php echo $title_markup; ?>
 				<p><?php the_sub_field( 'description' ); ?></p>
 				<?php if( get_sub_field( 'include_button' ) ): 
 					$button_text = strtolower( get_sub_field( 'button_text' ) );
