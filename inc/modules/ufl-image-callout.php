@@ -1,6 +1,5 @@
 <?php
-	$background_img = (get_sub_field( 'background_image' ) ? "style='background-image:url(" . esc_url( get_sub_field( 'background_image' ) ) . ");'" : '');
-
+	$background_img = (get_sub_field( 'background_image' ) ? 'style="background-image:url(' . esc_url( get_sub_field( 'background_image' ) ) . ');"' : '');
 ?>
 <!-- ufl-image-callout module -->
 <div class="img-callout-wrapper" <?php echo $background_img; ?>>

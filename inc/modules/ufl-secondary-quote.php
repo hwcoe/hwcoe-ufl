@@ -19,7 +19,7 @@
 			</div>
 			<div class="col-sm-6 col-sm-pull-6 col-md-5 col-md-pull-5 content-box-copy">
 				<h2><?php esc_html_e( the_sub_field( 'headline' ) ); ?></h2>
-				<?php the_sub_field( 'content' ); ?>
+				<?php wp_kses_post( the_sub_field( 'content' ) ); ?>
 			</div>
 		</div>
 	</div>
