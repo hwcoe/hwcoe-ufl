@@ -36,7 +36,7 @@ Changelog
 - Remove unused image_header field group from Secondary Image with Quote module
 - Security and accessibility enhancements:
 	- Disable display of empty tags for non-required ACF fields without content
-	- Sanitize ACF field output for landing page content modules
+	- Escape ACF field output for landing page content modules
 
 ### 2.8.1
 - Move gtag code to correct location inside `<head>` tag

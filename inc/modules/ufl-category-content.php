@@ -43,7 +43,7 @@
 <?php endif // pull_latest_from_category ?>
 <?php
 	// image content div
-	$content_box_img = '<div class="col-sm-5 content-box-img" style="background-image:url(' . esc_url( $image ). '"></div>';
+	$content_box_img = '<div class="col-sm-5 content-box-img" style="background-image:url(' . $image . '"></div>';
 
 	// post copy div
 	$content_box_copy .= '<div class="col-sm-7 content-box-copy">';
@@ -63,7 +63,7 @@
 			$content_box_copy .= ' <a href="' . esc_url( $readmore_link ) . '" aria-label="' . esc_attr( $readmore_label ) . '" class="read-more">' . esc_html( $readmore_text ) . '</a>';
 		endwhile;
 	endif;
-	$content_box_copy .= '<a href="' . esc_url( get_category_link( $category_obj ) ) . '" class="category-tag orange" aria-label="' . esc_attr($category_name) . '">' . esc_html( $category_name ) . '</a>';
+	$content_box_copy .= '<a href="' . get_category_link( $category_obj ) . '" class="category-tag orange" aria-label="' . $category_name . '">' . $category_name . '</a>';
 	$content_box_copy .= '</div>';
 ?>
 <!-- ufl-category-content module -->
