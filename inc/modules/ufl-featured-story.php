@@ -1,3 +1,4 @@
+<!-- ufl-featured-story module -->
 <div class="featured-story-wrap">
 	 <div class="featured-story-img-wrap">
 <?php 
@@ -15,7 +16,7 @@ $stories = array();
 		  $featured_image   	= '';
 		  $title            	= get_sub_field( 'story_title' );
 		  $category         	= get_sub_field( 'primary_category' );
-		  $tagline         		= trim( get_sub_field( 'link_text' ) );
+		  $tagline				= ( trim( get_sub_field( 'link_text' ) ) ? get_sub_field( 'link_text' ) : '');
 
 		  if( $internal ){
 			 $page   = get_sub_field( 'internal_link' ); 
@@ -24,7 +25,7 @@ $stories = array();
 			 if( get_sub_field( 'use_post_featured_image' ) ){
 				$featured_image  = wp_get_attachment_url( get_post_thumbnail_id( $page->ID ) );
 			 } else {
-			 	$featured_image = get_sub_field( 'featured_image' );
+				$featured_image = get_sub_field( 'featured_image' );
 			 }
 		  } else {
 			 $link = get_sub_field( 'external_url' );
@@ -54,13 +55,21 @@ $stories = array();
 			 <?php $story_count = 1; foreach( $stories as $story): ?>
 				<?php if( 1 === $story_count ): ?>
 				  <div class="featured-story active">
-					 <h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> <a href="<?php echo $story['link']; ?>" aria-label="Read '<?php echo $story['title']; ?>'" class="read-more"><?php echo $story['tagline']; ?></a></h2>
+				  	<h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> 
+					<?php if ( $story['tagline'] !== ''): ?>
+						<a href="<?php echo $story['link']; ?>" aria-label="Read '<?php echo $story['title']; ?>'" class="read-more"><?php echo $story['tagline']; ?></a>
+					<?php endif; ?>
+					</h2>
 					
 					 <a href="<?php echo get_category_link( $story['category'] ); ?>" class="category-tag"><?php echo get_cat_name( $story['category'] ); ?></a>
 				  </div>
 				<?php else:  // story_count ?>
 				  <div data-number="<?php echo $story_count; ?>" class="featured-story">
-					 <h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> <a href="<?php echo $story['link']; ?>" aria-label="Read '<?php echo $story['title']; ?>'" class="read-more"><?php echo $story['tagline']; ?></a></h2>
+						<h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> 
+						<?php if ( $story['tagline'] !== ''): ?>
+							<a href="<?php echo $story['link']; ?>" aria-label="Read '<?php echo $story['title']; ?>'" class="read-more"><?php echo $story['tagline']; ?></a>
+						<?php endif; ?>
+					  </h2>
 					 <a href="<?php echo get_category_link( $story['category']); ?>" class="category-tag"><?php echo get_cat_name( $story['category'] ); ?></a>
 				  </div>
 				<?php endif // story_count ?>

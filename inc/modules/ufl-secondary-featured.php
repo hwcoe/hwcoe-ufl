@@ -207,8 +207,8 @@
 			</div> <!-- secondary-featured-block three -->
 	<?php endif // $content_type === post_list ?>
 	<?php endwhile // have_rows ?>
-</div> <!--col-sm-12-->
-</div> <!--row -->
+		</div> <!--col-sm-12-->
+	</div> <!--row -->
 </div> <!--container -->
 </div> <!-- homepage-secondary-featured-wrap -->
 <?php endif // have_rows ?> 

@@ -35,6 +35,7 @@ Changelog
 - Filter navigation_markup_template to remove redundant role attribute from post/comment nav landmarks
 - Remove unused image_header field group from Secondary Image with Quote module
 - Enable display of custom background image in secondary featured content module post list
+- Allow unlinked feature story in ufl-featured-story module
 - Security and accessibility enhancements:
 	- Disable display of empty tags for non-required ACF fields without content
 	- Escape ACF field output for content modules
