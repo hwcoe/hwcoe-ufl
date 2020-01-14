@@ -34,9 +34,10 @@ Changelog
 ### 2.8.2
 - Filter navigation_markup_template to remove redundant role attribute from post/comment nav landmarks
 - Remove unused image_header field group from Secondary Image with Quote module
+- Enable display of custom background image in secondary featured content module post list
 - Security and accessibility enhancements:
 	- Disable display of empty tags for non-required ACF fields without content
-	- Escape ACF field output for landing page content modules
+	- Escape ACF field output for content modules
 
 ### 2.8.1
 - Move gtag code to correct location inside `<head>` tag
