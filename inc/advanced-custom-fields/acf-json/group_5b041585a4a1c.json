@@ -251,7 +251,7 @@
                                     "name": "featured_image",
                                     "type": "image",
                                     "instructions": "",
-                                    "required": 0,
+                                    "required": 1,
                                     "conditional_logic": [
                                         [
                                             {
@@ -1808,5 +1808,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1579019155
+    "modified": 1579019475
 }
