@@ -40,7 +40,7 @@ $stories = array();
 		  );
 		  array_push( $stories, $story );
 		?>
-		  <div class="featured-story-img" style="background-image:url(<?php echo $featured_image; ?>)"></div>
+		  <div class="featured-story-img" style="background-image:url(<?php echo esc_url($featured_image); ?>)"></div>
 
   <?php endwhile // have_rows ?>
 <?php endif // have_rows ?>
@@ -55,22 +55,22 @@ $stories = array();
 			 <?php $story_count = 1; foreach( $stories as $story): ?>
 				<?php if( 1 === $story_count ): ?>
 				  <div class="featured-story active">
-				  	<h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> 
+				  	<h2 data-index="<?php echo esc_attr($story_count); ?>"><?php echo $story['title']; ?> 
 					<?php if ( $story['tagline'] !== ''): ?>
-						<a href="<?php echo $story['link']; ?>" aria-label="Read '<?php echo $story['title']; ?>'" class="read-more"><?php echo $story['tagline']; ?></a>
+						<a href="<?php echo esc_url( $story['link'] ); ?>" aria-label="Read '<?php echo esc_attr( $story['title'] ); ?>'" class="read-more"><?php echo esc_html($story['tagline']); ?></a>
 					<?php endif; ?>
 					</h2>
 					
-					 <a href="<?php echo get_category_link( $story['category'] ); ?>" class="category-tag"><?php echo get_cat_name( $story['category'] ); ?></a>
+					 <a href="<?php echo esc_url( get_category_link( $story['category'] ) ); ?>" class="category-tag"><?php echo esc_html(get_cat_name( $story['category'] )); ?></a>
 				  </div>
 				<?php else:  // story_count ?>
-				  <div data-number="<?php echo $story_count; ?>" class="featured-story">
-						<h2 data-index="<?php echo $story_count; ?>"><?php echo $story['title']; ?> 
+				  <div data-number="<?php echo esc_attr($story_count); ?>" class="featured-story">
+						<h2 data-index="<?php echo esc_attr($story_count); ?>"><?php echo esc_html($story['title']); ?> 
 						<?php if ( $story['tagline'] !== ''): ?>
-							<a href="<?php echo $story['link']; ?>" aria-label="Read '<?php echo $story['title']; ?>'" class="read-more"><?php echo $story['tagline']; ?></a>
+							<a href="<?php echo esc_url( $story['link'] ); ?>" aria-label="Read '<?php echo esc_attr($story['title']); ?>'" class="read-more"><?php echo esc_html($story['tagline']); ?></a>
 						<?php endif; ?>
 					  </h2>
-					 <a href="<?php echo get_category_link( $story['category']); ?>" class="category-tag"><?php echo get_cat_name( $story['category'] ); ?></a>
+					 <a href="<?php echo esc_url( get_category_link( $story['category']) ); ?>" class="category-tag"><?php echo esc_html(get_cat_name( $story['category'] )); ?></a>
 				  </div>
 				<?php endif // story_count ?>
 			 <?php $story_count++; ?>
