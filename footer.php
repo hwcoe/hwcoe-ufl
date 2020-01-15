@@ -9,7 +9,7 @@
 						<ul class="footer-audience-nav">
 							<?php while( have_rows('footer_buttons', 'option') ): the_row(); ?>
 								<?php $button_link = ( 'internal' == get_sub_field( 'internal_or_external_link' ) ? get_sub_field( 'internal_link' ) : get_sub_field( 'external_url' ) ); ?>
-								<li><a href="<?php echo $button_link; ?>"><?php the_sub_field( 'button_text' ); ?></a></li>
+								<li><a href="<?php echo esc_url($button_link); ?>"><?php esc_html(the_sub_field( 'button_text' )); ?></a></li>
 							<?php endwhile // the_row ?>
 						</ul>
 					</div>
@@ -45,7 +45,7 @@
 											<span class="visuallyhidden">Open/Close</span>
 										</span>
 									</h2>
-									<?php the_sub_field( 'list_items' ); ?>
+									<?php wp_kses_post(the_sub_field( 'list_items' )); ?>
 								</div>
 							<?php endwhile // footer_columns ?>
 						<?php endif // have_rows footer_columns ?>

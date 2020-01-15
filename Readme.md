@@ -41,6 +41,7 @@ Changelog
 - Security and accessibility enhancements:
 	- Disable display of empty tags for non-required ACF fields without content
 	- Escape ACF field output for content modules
+	- Add alt text to thumbnail display in archive content module
 
 ### 2.8.1
 - Move gtag code to correct location inside `<head>` tag

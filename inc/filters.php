@@ -97,7 +97,7 @@ function hwcoe_ufl_title( $title, $id ) {
 		$title_override = get_post_meta( $id, 'custom_meta_post_title_override', true );
 	}
 
-	$title = ( !empty($title_override) )? $title_override : $title;
+	$title = ( !empty($title_override) )? esc_html($title_override) : esc_html($title);
 
 	return $title;
 }
