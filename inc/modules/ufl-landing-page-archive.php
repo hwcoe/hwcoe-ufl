@@ -25,9 +25,13 @@
 		<div class="archive-entry row">
 			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>  
 			<?php if( has_post_thumbnail() && get_sub_field( 'include_thumbnails' ) ): ?> 
-				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium-cropped' ); ?>
+				<?php $image = wp_get_attachment_image( get_post_thumbnail_id(), 'medium-cropped', "", array(
+					"class" => 'img-full',
+					"alt"	=> get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ),
+				) ); ?>
+				
 				<div class="col-sm-2">
- 					<img src="<?php echo $image[0]; ?>" class="img-full">
+ 					<?php echo $image; ?>
 				</div>
 				<div class="col-sm-10">
 			<?php else: // has_post_thumbnail ?>
