@@ -63,7 +63,7 @@
 			$content_box_copy .= ' <a href="' . esc_url( $readmore_link ) . '" aria-label="' . esc_attr( $readmore_label ) . '" class="read-more">' . esc_html( $readmore_text ) . '</a>';
 		endwhile;
 	endif;
-	$content_box_copy .= '<a href="' . get_category_link( $category_obj ) . '" class="category-tag orange" aria-label="' . $category_name . '">' . $category_name . '</a>';
+	$content_box_copy .= '<a href="' . get_category_link( $category_obj ) . '" class="category-tag orange">' . $category_name . '</a>';
 	$content_box_copy .= '</div>';
 ?>
 <!-- ufl-category-content module -->

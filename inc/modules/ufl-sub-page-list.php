@@ -30,21 +30,22 @@ foreach( $pages as $page ): ?>
 		$content  = ($page->post_excerpt ? $page->post_excerpt : wp_trim_words( $page->post_content , 50 ) . "..." );
 	}
 ?>
+<!-- ufl-sub-page-list module -->
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12 col-md-11">
 			<div class="row">
 			<?php if( $show_thumb && $image ): ?>
 				<div class="col-sm-4">
-					<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" class="img-full">
+					<img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($title); ?>" class="img-full">
 				</div>
 				<div class="col-sm-8">
 			<?php else: // show_thumb ?>
 				<div class="col-sm-12 sub-page-list-item">
 			<?php endif // show_thumb ?>
-					<h2><a href="<?php echo $link; ?>"><?php echo $title; ?></a></h2>
-					<div class="normal"><?php echo $content; ?>
-						<a class="read-more" aria-label="<?php echo $title; ?>" href="<?php echo $link; ?>">Read More</a>
+					<h2><a href="<?php echo esc_url($link); ?>"><?php echo esc_html($title); ?></a></h2>
+					<div class="normal"><?php echo wp_kses_post($content); ?>
+						<a class="read-more" aria-label="<?php echo esc_attr($title); ?>" href="<?php echo esc_url($link); ?>">Read More</a>
 					</div>
 			<?php if( $list_children ): ?>
 				<?php 
@@ -68,7 +69,7 @@ foreach( $pages as $page ): ?>
 						<h3>Related</h3>
 						<ul class="big-list">
 						<?php foreach( $subpages as $subpage ): ?>
-						<li><a href="<?php echo get_permalink( $subpage->ID ); ?>"><?php echo $subpage->post_title; ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a></li> 
+						<li><a href="<?php echo esc_url(get_permalink( $subpage->ID )); ?>"><?php echo esc_html($subpage->post_title); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a></li> 
 						<?php endforeach // subpage ?>
 						</ul>
 					</div>
