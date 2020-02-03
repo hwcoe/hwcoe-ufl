@@ -31,6 +31,10 @@ Documentation
 
 Changelog
 ---------
+### 2.8.3
+- Accessibility enhancements
+	- Increase color contrast for sidenav links
+
 ### 2.8.2
 - Filter navigation_markup_template to remove redundant role attribute from post/comment nav landmarks
 - Remove unused image_header field group from Secondary Image with Quote module
