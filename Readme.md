@@ -31,11 +31,6 @@ Documentation
 
 Changelog
 ---------
-
-### 2.8.3
-- Accessibility enhancements:
-	- Add aria-label attributes to widget `<aside>` elements
-
 ### 2.8.2
 - Filter navigation_markup_template to remove redundant role attribute from post/comment nav landmarks
 - Remove unused image_header field group from Secondary Image with Quote module
