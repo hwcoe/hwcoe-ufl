@@ -32,8 +32,9 @@ Documentation
 Changelog
 ---------
 ### 2.8.3
-- Accessibility enhancements
+- Accessibility enhancements and bug fixes
 	- Increase color contrast for sidenav links
+	- Remove duplicate #site-footer elements when custom footer menu widgets are not defined
 
 ### 2.8.2
 - Filter navigation_markup_template to remove redundant role attribute from post/comment nav landmarks

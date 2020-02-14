@@ -41,7 +41,7 @@ if ( ! is_active_sidebar( 'site_footer' ) ) : ?>
         </ul>
     </div>
 </div><!-- #site-footer -->
-<?php endif; ?>
+<?php else: ?>
 
 <?php // If we get this far, we have widgets. Let's do this. ?>
 
@@ -50,3 +50,4 @@ if ( ! is_active_sidebar( 'site_footer' ) ) : ?>
 		<?php dynamic_sidebar( 'site_footer' ); ?>
 	</div><!-- .widget-area -->
 </div><!-- #site-footer -->
+<?php endif; ?>
