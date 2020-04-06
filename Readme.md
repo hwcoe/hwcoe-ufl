@@ -31,6 +31,10 @@ Documentation
 
 Changelog
 ---------
+### 2.8.4
+- TODO Remove default archive widget from archive sidebar
+- Update npm dependencies
+
 ### 2.8.3
 - Accessibility enhancements and bug fixes
 	- Increase color contrast for sidenav links
