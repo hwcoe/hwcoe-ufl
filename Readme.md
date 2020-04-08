@@ -32,8 +32,9 @@ Documentation
 Changelog
 ---------
 ### 2.8.4
-- TODO Remove default archive widget from archive sidebar
+- Remove default archive widget from archive sidebar
 - Update npm dependencies
+- Bugfix: Accessible smooth scrolling
 
 ### 2.8.3
 - Accessibility enhancements and bug fixes

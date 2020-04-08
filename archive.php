@@ -28,11 +28,8 @@ get_header(); ?>
 		the_posts_pagination();
 	?>
   </div>
-  <div class="col-md-3">
-    <div id="post-sidebar" class="widget-area" role="complementary">
-      <?php the_widget( 'WP_Widget_Archives', array('title' => __('News Archive', 'hwcoe-ufl'), 'dropdown' => 0) ); ?>
-   </div><!-- post_sidebar -->
-  </div>
+ 
+  <?php get_sidebar('post_sidebar'); ?>
 </div>
 </main>
 

@@ -102,7 +102,6 @@ module.exports = function(grunt){
 				tasks: ['sass', 'postcss']
 			},
 			js: {
-				// files: ['js/*.js', '!node_modules/*'],
 				files: ['js/**/*.js', '!node_modules/*'],
 				tasks: ['concat', 'uglify', 'jshint']
 			} 
