@@ -31,7 +31,8 @@ Documentation
 
 Changelog
 ---------
-### 2.8.4
+### 2.9.0
+- Add Staff Listing page template and field group for simple in-page staff listings
 - Remove default archive widget from archive sidebar
 - Update npm dependencies
 - Bugfix: Accessible smooth scrolling
