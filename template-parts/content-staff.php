@@ -46,7 +46,7 @@
 							<div class="row">
 							<?php if ($staff_photo_url != ''): ?>
 								<div class="col-md-3">			
-									<img src="<?php echo esc_url($staff_photo_url); ?>" alt="<?php echo esc_attr($staff_name); ?>" style="max-width:100%;" />
+									<img src="<?php echo esc_url($staff_photo_url); ?>" alt="<?php echo esc_attr($staff_name); ?>" class="alignnone" />
 								</div>
 								<div class="col-md-9">
 							<?php else: ?>
