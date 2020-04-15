@@ -60,12 +60,11 @@
 							</div> <!-- row -->
 							<hr style="margin:20px 0 30px;" />
 
-							<?php endwhile // the_row staff_member ?>
-						<?php endif // have_rows staff_member ?>
-					
-				<?php endif; // get_row_layout ?>
-			<?php endwhile; //the_row ?>
-		<?php endif; // have_rows ?>
+						<?php endwhile // the_row staff_member ?>
+					<?php endif // have_rows staff_member ?>
+				<?php endif; // get_row_layout staff_listing_section ?>
+			<?php endwhile; //the_row staff_listing ?>
+		<?php endif; // have_rows staff_listing ?>
 	</div><!-- .entry-content -->
 	
 	<footer class="entry-footer">
