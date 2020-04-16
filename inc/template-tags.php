@@ -212,10 +212,12 @@ function hwcoe_ufl_socialnetworks() {
 	$has_sidebar_nav = !empty( $sidebar_nav );
 	$has_page_sidebar = is_active_sidebar( 'page_sidebar' );
 
-	// default page template with sidebar nav or left sidebar widgets gets a different skiplink anchor
-	if ( is_page() && !is_page_template() ) {
-		if ( $has_sidebar_nav || $has_page_sidebar ){
-			$skiplink_anchor = '#post-' . $post->ID;
+	// page using default or staff listing template with sidebar nav or left sidebar widgets gets a different skiplink anchor
+	if ( is_page() ) {
+		if (!is_page_template() || is_page_template('page-templates/staff.php') ) {
+			if ( $has_sidebar_nav || $has_page_sidebar ){
+				$skiplink_anchor = '#post-' . $post->ID;
+			}
 		} else {
 			$skiplink_anchor = '#main';
 		}

@@ -22,6 +22,8 @@ get_header(); ?>
 	<?php get_sidebar('page_sidebar'); ?>  
   
 		<div class="<?php echo hwcoe_ufl_page_column_class(); ?>">
+  		<!-- repeat page title for screen reader users who skip nav -->
+  		<span class="visuallyhidden"><?php hwcoe_ufl_entry_title(); ?></span>
 		<?php 
 			while ( have_posts() ) : the_post();
 				get_template_part( 'template-parts/content', 'staff' );
