@@ -36,6 +36,7 @@ Changelog
 - Remove default archive widget from archive sidebar
 - Update npm dependencies
 - Bugfix: Accessible smooth scrolling
+- Bugfix: Non-object error in hwcoe_ufl_skiplink_anchor
 
 ### 2.8.3
 - Accessibility enhancements and bug fixes

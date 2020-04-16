@@ -208,8 +208,9 @@ function hwcoe_ufl_socialnetworks() {
  function hwcoe_ufl_skiplink_anchor(){
 	global $post;
 	$skiplink_anchor = '#main';
-	$sidebar_nav = hwcoe_ufl_sidebar_navigation($post);
-	$has_sidebar_nav = !empty( $sidebar_nav );
+	// $sidebar_nav = hwcoe_ufl_sidebar_navigation($post);
+	// $has_sidebar_nav = !empty( $sidebar_nav );
+	$has_sidebar_nav = hwcoe_ufl_sidebar_navigation($post);
 	$has_page_sidebar = is_active_sidebar( 'page_sidebar' );
 
 	// page using default or staff listing template with sidebar nav or left sidebar widgets gets a different skiplink anchor
