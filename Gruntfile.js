@@ -14,7 +14,6 @@ module.exports = function(grunt){
                     'js/plugins/iframe-resizer.min.js',
 					'js/plugins/jquery.hoverIntent.min.js',
 					'js/plugins/js.cookie.min.js',
-					'js/plugins/slick.min.js',
 					'js/plugins/modernizr.min.js',
 					'js/plugins/svg4everybody.min.js',
 					'js/plugins/smartresize-debounce.js',

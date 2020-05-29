@@ -364,7 +364,6 @@ jQuery(function($){
 
 	//// Homepage featured story
 
-	// ufl featured story script
 	// Homepage Hero helper
 	$(".featured-story-content-wrap>.featured-story").each(function(i){if(0==i){$(this).addClass("active");}$(this).attr("data-number",i+1);$(this).children("h2").attr("data-index",i+1);});
 
@@ -379,7 +378,6 @@ jQuery(function($){
 
 		// Changed featured carousel
 		$('.featured-story-img-wrap').each(function(){
-			// $homeWrap = $(this).closest('.homepage-wrapper');
 			$homeWrap = $(this).closest('.page-wrapper');
 
 			// Get this carousel's clicked element
@@ -401,8 +399,6 @@ jQuery(function($){
 			$el.prependTo($container);
 		});
 	});
-
-	// end ufl featured story script
 
 
 	// Homepage feature bio wrap
