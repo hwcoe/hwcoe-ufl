@@ -47,39 +47,38 @@ $stories = array();
   </div><!-- ./featured-story-img-wrap -->
 </div><!-- ./featured-story-wrap -->
 <div class="homepage-secondary-featured-wrap<?php if( get_sub_field('standalone') ){echo ' standalone';} ?><?php if( get_sub_field('alternate_format') ){echo ' bottom';} ?>">
-  <div class="container">
-	 <div class="row">
-		<div class="col-sm-12">
-		  <div class="featured-story-content-wrap-wrap">
-			 <div class="featured-story-content-wrap col-md-6 col-md-offset-1">
-			 <?php $story_count = 1; foreach( $stories as $story): ?>
-				<?php if( 1 === $story_count ): ?>
-				  <div class="featured-story active">
-				  	<h2 data-index="<?php echo esc_attr($story_count); ?>"><?php echo $story['title']; ?> 
-					<?php if ( $story['tagline'] !== ''): ?>
-						<a href="<?php echo esc_url( $story['link'] ); ?>" aria-label="Read '<?php echo esc_attr( $story['title'] ); ?>'" class="read-more"><?php echo esc_html($story['tagline']); ?></a>
-					<?php endif; ?>
-					</h2>
-					
-					 <a href="<?php echo esc_url( get_category_link( $story['category'] ) ); ?>" class="category-tag"><?php echo esc_html(get_cat_name( $story['category'] )); ?></a>
-				  </div>
-				<?php else:  // story_count ?>
-				  <div data-number="<?php echo esc_attr($story_count); ?>" class="featured-story">
-						<h2 data-index="<?php echo esc_attr($story_count); ?>"><?php echo esc_html($story['title']); ?> 
-						<?php if ( $story['tagline'] !== ''): ?>
-							<a href="<?php echo esc_url( $story['link'] ); ?>" aria-label="Read '<?php echo esc_attr($story['title']); ?>'" class="read-more"><?php echo esc_html($story['tagline']); ?></a>
-						<?php endif; ?>
-					  </h2>
-					 <a href="<?php echo esc_url( get_category_link( $story['category']) ); ?>" class="category-tag"><?php echo esc_html(get_cat_name( $story['category'] )); ?></a>
-				  </div>
-				<?php endif // story_count ?>
-			 <?php $story_count++; ?>
-<?php endforeach //stories ?>
-			 </div>
-		  </div><!-- ./featured-story-content-wrap -->
-		<?php if ( get_sub_field('standalone') ): ?>
-		</div>
-	 </div>
-  </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="featured-story-content-wrap-wrap">
+					<div class="featured-story-content-wrap col-md-6 col-md-offset-1">
+					<?php $story_count = 1; foreach( $stories as $story): ?>
+						<?php if( 1 === $story_count ): ?>
+						<div class="featured-story active article-xxx">
+							<h2 data-index="<?php echo esc_attr($story_count); ?>"><?php echo $story['title']; ?> 
+							<?php if ( $story['tagline'] !== ''): ?>
+								<a href="<?php echo esc_url( $story['link'] ); ?>" aria-label="Read '<?php echo esc_attr( $story['title'] ); ?>'" class="read-more"><?php echo esc_html($story['tagline']); ?></a>
+							<?php endif; ?>
+							</h2>
+							<a href="<?php echo esc_url( get_category_link( $story['category'] ) ); ?>" class="category-tag"><?php echo esc_html(get_cat_name( $story['category'] )); ?></a>
+						</div>
+						<?php else:  // story_count ?>
+						<div data-number="<?php echo esc_attr($story_count); ?>" class="featured-story">
+							<h2 data-index="<?php echo esc_attr($story_count); ?>"><?php echo esc_html($story['title']); ?> 
+							<?php if ( $story['tagline'] !== ''): ?>
+								<a href="<?php echo esc_url( $story['link'] ); ?>" aria-label="Read '<?php echo esc_attr($story['title']); ?>'" class="read-more"><?php echo esc_html($story['tagline']); ?></a>
+							<?php endif; ?>
+							</h2>
+							<a href="<?php echo esc_url( get_category_link( $story['category']) ); ?>" class="category-tag"><?php echo esc_html(get_cat_name( $story['category'] )); ?></a>
+						</div>
+						<?php endif // story_count ?>
+					<?php $story_count++; ?>
+					<?php endforeach //stories ?>
+					</div><!-- //featured-story-content-wrap -->
+				</div><!-- //featured-story-content-wrap-wrap -->
+			<?php if ( get_sub_field('standalone') ): ?>
+			</div><!-- //col-sm-12 -->
+		</div><!-- //row -->
+	</div><!-- //container -->
 </div>
 <?php endif ?>

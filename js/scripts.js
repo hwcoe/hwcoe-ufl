@@ -363,33 +363,48 @@ jQuery(function($){
 	});
 
 	//// Homepage featured story
-	// Featured story carousel
-	$('.featured-story-img-wrap').slick({
-	  arrows: false,
-	  draggable: false,
-	  infinite: false,
-	  fade: true,
-	  slide: '.featured-story-img',
-	  speed: 400,
-	  swipe: false,
-	  touchMove: false
+
+	// ufl featured story script
+	// Homepage Hero helper
+	$(".featured-story-content-wrap>.featured-story").each(function(i){if(0==i){$(this).addClass("active");}$(this).attr("data-number",i+1);$(this).children("h2").attr("data-index",i+1);});
+
+	// Setting homepage hero story on load
+	$('.featured-story-img-wrap').each(function(){
+		$(this).find('.featured-story-img:first').addClass('active');
 	});
 
 	// Switching to a new featured story
-	$('.featured-story:not(.active)').on('click',function(){
+	$(document).on('click','.featured-story',function(){
 		$this = $(this);
 
 		// Changed featured carousel
-		$('.featured-story-img-wrap').slick('slickGoTo',$this.find('h2').attr('data-index') - 1);
+		$('.featured-story-img-wrap').each(function(){
+			// $homeWrap = $(this).closest('.homepage-wrapper');
+			$homeWrap = $(this).closest('.page-wrapper');
 
-		$storyNew = $this.html();
-		$storyOld = $('.featured-story.active').html();
+			// Get this carousel's clicked element
+			$el = $homeWrap.find('.featured-story[data-number="'+ $this.attr('data-number') +'"]');
 
-		$('.featured-story.active').html($storyNew);
+			// Move Carousel
+			$(this).find('.featured-story-img').removeClass('active').eq($el.attr('data-number') - 1).addClass('active');
 
-		$this.html($storyOld);
+			// Establish container to append to
+			$container = $homeWrap.find('.featured-story-content-wrap');
+
+			// Get this carousel's active element
+			$active = $homeWrap.find('.featured-story.active');
+			$active.removeClass('active');
+
+			// Move active to clicked element, and move clicked element to active
+			$el.before($active);
+			$el.addClass('active');
+			$el.prependTo($container);
+		});
 	});
-	
+
+	// end ufl featured story script
+
+
 	// Homepage feature bio wrap
 	function bioSize(){
 		$activeWidth = 370;
