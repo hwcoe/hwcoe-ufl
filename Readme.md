@@ -32,8 +32,9 @@ Documentation
 Changelog
 ---------
 ### 2.9.1
-- Bugfix: dashicon issue (#50)
-- Make featured story data-index and data-number tied to story, not position
+- Bugfix: allow dashicons to display for non-logged in users on front end
+- Tie featured story data-index and data-number to story, not position
+- Update npm dependencies
 
 ### 2.9.0
 - Add Staff Listing page template and field group for simple in-page staff listings
