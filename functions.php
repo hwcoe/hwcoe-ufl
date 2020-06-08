@@ -126,6 +126,9 @@ function hwcoe_ufl_scripts() {
 	wp_enqueue_script( 'hwcoe-ufl-plugins', get_template_directory_uri() . '/js/plugins.min.js', array('jquery'), get_theme_version(), true );
 	wp_enqueue_script( 'hwcoe-ufl-scripts', get_template_directory_uri() . '/js/scripts.min.js', array(), get_theme_version(), true );
 	
+	// Dashicons for front end use
+	wp_enqueue_style( 'dashicons' );
+
 	// Pass site data to Javascript
 	$site_data = array(
 		'home_url' => home_url('/'),
