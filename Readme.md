@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 2.9.2
+- Bugfix: Update password input field styles
+
 ### 2.9.1
 - Bugfix: allow dashicons to display for non-logged in users on front end
 - Tie featured story data-index and data-number to story, not position

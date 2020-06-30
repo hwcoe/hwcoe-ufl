@@ -594,7 +594,7 @@ form {
 	.row {
 		margin-bottom: 30px;
 	}
-	input[type='text'],textarea {
+	input[type='text'], input[type='password'], textarea {
 		background: $white;
 		display: inline-block;
 		font: 500 20px/1 $serifFontFamily;
