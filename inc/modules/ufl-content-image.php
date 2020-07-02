@@ -1,6 +1,6 @@
 <?php
 	$headline = ( get_sub_field( 'headline' ) ? '<h2>' . esc_html( get_sub_field( 'headline' ) ) . '</h2>' : '');
-	$content = 	( get_sub_field( 'content' ) ? '<div>' . wp_kses_post( get_sub_field( 'content' ) ) . '</div>' : '');
+	$content = 	( get_sub_field( 'content' ) ? '<div>' . wpautop( wp_kses_post( get_sub_field( 'content' ) ) ) . '</div>' : '');
 
 	if ( get_sub_field( 'image' ) ) {						
 		$image = get_sub_field( 'image' );

@@ -20,7 +20,7 @@
 				</span>
 				<h2><?php echo esc_html( $headline ); ?></h2>
 				<?php if( get_sub_field( 'content' ) ): ?>
-					<p><?php wp_kses_post( the_sub_field( 'content' ) ); ?></p>
+					<?php echo wpautop( wp_kses_post( get_sub_field( 'content' ) ) ); ?>
 				<?php endif // content ?>
 				<?php if( have_rows ( 'buttons' ) ): ?>
 					<?php while( have_rows( 'buttons' ) ) : the_row(); ?>

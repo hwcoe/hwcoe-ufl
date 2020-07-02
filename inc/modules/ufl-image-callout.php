@@ -17,7 +17,7 @@
 					<img src="<?php echo esc_url( $img_src ); ?>" alt="<?php echo esc_attr( $alt ); ?>" class="img-full">
 					<h2><?php esc_html_e( the_sub_field( 'headline' ) ); ?></h2>
 					<?php if ( get_sub_field( 'content') ): ?>
-						<p><?php esc_html_e( the_sub_field( 'content' ) ); ?></p>
+						<?php echo wpautop( wp_kses_post( get_sub_field( 'content' ) ) ); ?>
 					<?php endif ?>
 					<?php if ( get_sub_field( 'link_text') ): ?>
 						<?php 

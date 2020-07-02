@@ -48,7 +48,7 @@ function hwcoe_ufl_landing_double_image($atts, $content = NULL ) {
 		  </div>
 		  <div class="col-sm-5 col-sm-offset-5 hero-content">
 				<h2><?php echo esc_html( $headline ); ?></h2>
-			<?php echo wpautop( wp_kses_post( $content ) ); ?>
+				<?php echo wpautop( wp_kses_post( $content ) ); ?>
 		  </div>
 		  <div class="col-sm-7 secondary">
 			 <div class="img-hero" style="background-image:url('<?php echo esc_url( $image2[0] ); ?>');"></div>

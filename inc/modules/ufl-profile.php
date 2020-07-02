@@ -16,7 +16,7 @@
 			$featured_bio_copy .=   '<div class="feature-bio-copy-wrap">';
 			$featured_bio_copy .=   '<h2>' . esc_html( get_sub_field( 'profile_name' ) ) . '</h2>';
 			$featured_bio_copy .=	$title_markup;
-			$featured_bio_copy .=   '<p>' .  esc_html( get_sub_field( 'description' )) . '</p>';
+			$featured_bio_copy .=  wpautop( wp_kses_post( get_sub_field( 'description' ) ) );
 			if( get_sub_field( 'include_button' ) ){
 				$button_text = get_sub_field( 'button_text' ) ;
 				if ( strtolower( $button_text ) == "learn more" || strtolower( $button_text ) == "read more")  {

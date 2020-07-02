@@ -17,7 +17,7 @@
 				<?php else: // image_side ?>		
 				<?php echo $headline; ?>
 				<div>
-					<?php wp_kses_post( the_sub_field( 'content' ) ); ?>
+					<?php echo wpautop( wp_kses_post( get_sub_field( 'content' ) ) ); ?>
 				</div>			
 				<?php endif // image_side ?>			
 			</div><!-- /col-md-6 -->		
@@ -25,7 +25,7 @@
 				<?php if( 'left' == $image_side ): ?>
 				<?php echo $headline; ?>
 				<div>
-					<?php wp_kses_post( the_sub_field( 'content' ) ); ?>
+					<?php echo wpautop( wp_kses_post( get_sub_field( 'content' ) ) ); ?>
 				</div>
 				<?php else: // image_side ?>
 				<div class="gal-with-caption">

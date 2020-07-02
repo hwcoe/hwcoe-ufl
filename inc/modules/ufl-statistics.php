@@ -22,7 +22,7 @@
 						</div>
 						<div class="info">
 							<div class="info-copy">
-								<p><?php esc_html_e( the_sub_field( 'statistic_description' ) ); ?></p>
+								<?php echo wp_kses_post( get_sub_field( 'statistic_description' ) ); ?> 
 							</div>
 						 </div>
 					</div>

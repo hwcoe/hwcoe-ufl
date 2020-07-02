@@ -307,7 +307,8 @@ function hwcoe_ufl_acf_init() {
 }
 add_action('acf/init', 'hwcoe_ufl_acf_init');
 
-//Remove WPAUTOP from ACF TinyMCE Editor
+// Remove WPAUTOP from ACF TinyMCE Editor by default, so that we can use complex shortcodes in content fields
+// WPAUTOP is reinstated in some areas
 function acf_wysiwyg_remove_wpautop() {
     remove_filter('acf_the_content', 'wpautop' );
 }
