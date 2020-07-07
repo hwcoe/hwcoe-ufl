@@ -50,7 +50,7 @@
 	if ( $headline ) {
 		$content_box_copy .= '<h2>' . esc_html( $headline ) . '</h2>';
 	}
-	$content_box_copy .= wp_kses_post( $content );
+	$content_box_copy .= wpautop( wp_kses_post( $content ) );
 	if ( have_rows ( 'read_more_links' ) ):
 		while( have_rows( 'read_more_links' ) ) : the_row();
 			$readmore_link = get_sub_field( 'read_more_url' );

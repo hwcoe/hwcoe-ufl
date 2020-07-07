@@ -32,9 +32,9 @@ Documentation
 Changelog
 ---------
 ### 2.9.2
-- Bugfix: Update password input field styles
+- Bugfix: (TODO)Update password input field styles
 - Bugfix: Target wpautop removal in ACF fields more precisely
-- Bugfix: Adjust media queries to prevent primary nav wrapping
+- Bugfix: (TODO)Adjust media queries to prevent primary nav wrapping
 
 ### 2.9.1
 - Bugfix: allow dashicons to display for non-logged in users on front end

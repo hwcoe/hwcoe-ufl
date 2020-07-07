@@ -45,7 +45,7 @@
 											<span class="visuallyhidden">Open/Close</span>
 										</span>
 									</h2>
-									<?php wp_kses_post(the_sub_field( 'list_items' )); ?>
+									<?php echo wpautop( wp_kses_post( get_sub_field( 'list_items' ) ) ); ?>
 								</div>
 							<?php endwhile // footer_columns ?>
 						<?php endif // have_rows footer_columns ?>
