@@ -15,10 +15,10 @@
 		position: relative;
 		width: 76px;
 		z-index: $zUI + 1;
-		@include breakFirst(large){
-			height: 150px;
-			width: 150px;
-		}
+		// @include breakFirst(large){
+		// 	height: 150px;
+		// 	width: 150px;
+		// }
 		&:hover, &:focus {
 			background: $blueDark;
 		}

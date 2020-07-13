@@ -165,18 +165,14 @@
 		@media (max-width: 767px) { @content; }
 	}
 	@else if $media == medium {
-		// @media (min-width: 768px) and (max-width: 979px) { @content; }
-		// @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {@content;}
 		@media (min-width: $screen-tablet) and (max-width: 979px) { @content; }
 		@media (min-width: $screen-tablet) and (max-width: 1024px) and (orientation: landscape) {@content;}
 	}
 	@else if $media == mediumLand {
-		// @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {@content;}
 		// 768 to 1024 px
 		@media (min-width: $screen-tablet) and (max-width: 1024px) and (orientation: landscape) {@content;}
 	}
 	@else if $media == mediumPort {
-		// @media (min-width: 768px) and (max-width: 979px) { @content; }
 		// 768 to 979 px
 		@media (min-width: $screen-tablet) and (max-width: 979px) { @content; } 
 	}

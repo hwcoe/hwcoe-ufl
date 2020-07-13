@@ -69,7 +69,8 @@ $screen-md:                  992px !default;
 $screen-desktop:             $screen-md !default;
 
 // Large screen / wide desktop
-$screen-lg:                  1220px !default;
+// $screen-lg:                  1220px !default;
+$screen-lg:                  1366px !default;
 $screen-lg-desktop:          $screen-lg !default;
 
 // So media queries don't overlap when required, provide a maximum
