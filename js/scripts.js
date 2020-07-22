@@ -150,7 +150,7 @@ jQuery(function($){
 			$('#menu-item-more .dropdown ul').append($moreMenuItems);
 		}
 		
-		$("head").append("<style>@media (min-width: 1220px) { .header-type-logo .main-menu-wrap>nav>ul>li { width: calc(99.9% / "+items+"); } }</style>");
+		$("head").append("<style>@media (min-width: 1366px) { .header-type-logo .main-menu-wrap>nav>ul>li { width: calc(99.9% / "+items+"); } }</style>");
 	}
 	
 	function autoMainMenuHelper() {
