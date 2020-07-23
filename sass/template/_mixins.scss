@@ -191,13 +191,13 @@
 // --------------------------------------------------
 @mixin breakFirst($media) {
 	@if $media == medium {
-		@media (min-width: $screen-tablet) { @content; }
+		@media (min-width: $screen-sm) { @content; }
 	}
 	@else if $media == large {
-		@media (min-width: $screen-desktop) { @content; }
+		@media (min-width: $screen-md) { @content; }
 	}
 	@else if $media == wide {
-		@media (min-width: $screen-lg-desktop) { @content; }
+		@media (min-width: $screen-lg) { @content; }
 	}
 	@else {
 		@media (min-width: $media) { @content; }
@@ -211,12 +211,12 @@
 		@media (max-width: $screen-xs) { @content; }
 	}
 	@else if $media == medium {
-		@media (max-width: $screen-tablet) { @content; }
+		@media (max-width: $screen-sm) { @content; }
 	}
 	@else if $media == large {
-		@media (max-width: $screen-desktop) { @content; }
+		@media (max-width: $screen-md) { @content; }
 	}
 	@else if $media == wide {
-		@media (max-width: $screen-lg-desktop) { @content; }
+		@media (max-width: $screen-lg) { @content; }
 	}
 }

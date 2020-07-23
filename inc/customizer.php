@@ -64,7 +64,7 @@ function hwcoe_ufl_customize_css() {
 	}
 	if( !empty($custom_logo_width) ) {
 		$custom_css .= "@media (min-width: 992px){ .header.unit .main-menu-wrap .logo-unit {width:".$custom_logo_width."px;}}";
-		$custom_css .= "@media screen and (min-width: 991px) and (max-width: 1250px) {.header.unit .main-menu-wrap .logo-unit {width:".$custom_logo_width * 0.75."px;}}";
+		$custom_css .= "@media screen and (min-width: 993px) and (max-width: 1366px) {.header.unit .main-menu-wrap .logo-unit {width:".$custom_logo_width * 0.75."px;}}";
 	}
 	if( !empty($custom_logo_top) || strlen($custom_logo_top) > 0 ) {
 		$custom_css .= "@media (min-width: 992px){ .header.unit .main-menu-wrap .logo-unit {top:".$custom_logo_top."px;}}";
