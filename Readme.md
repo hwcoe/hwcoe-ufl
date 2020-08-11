@@ -32,10 +32,9 @@ Documentation
 Changelog
 ---------
 ### 2.9.2
-- Bugfix: (TODO)Update password input field styles
 - Bugfix: Target wpautop removal in ACF fields more precisely
 - Bugfix: Adjust media queries to prevent primary nav wrapping between screen-md and screen-lg viewport sizes
-- Bugfix: Adjust site title height and UF logo height for screen-md viewport size
+- Bugfix: Adjust site title and UF logo padding and height for screen-md viewport size
 
 ### 2.9.1
 - Bugfix: allow dashicons to display for non-logged in users on front end

@@ -190,7 +190,7 @@
 	.main-menu-wrap {
 		height: auto;
 		@include breakFirst(large){
-			padding-left: 60px;
+			padding-left: 50px;
 		}
 		@include breakFirst(wide){
 			padding-left: 130px;
