@@ -37,27 +37,24 @@ function hwcoe_ufl_breadcrumbs() {
 			$events_page_id = get_option ( 'dbem_events_page' );
     		$events_page_url = (!empty($events_page_id)) ? get_permalink($events_page_id) : '';
 
-    		// $events_page_url = ( !empty($events_page_url) ) ? trailingslashit($events_page_url) : '';
-
-    		// $events_permalink_slug = get_option( 'dbem_cp_events_slug' );
-    		// $events_permalink_slug = urldecode(preg_replace('/\/$/', '', str_replace( trailingslashit(home_url()), '', get_option( 'dbem_cp_events_slug' )) ));
     		$events_permalink_slug = trailingslashit( home_url() ) . get_option( 'dbem_cp_events_slug' );
     		$events_permalink_slug = ( !empty($events_permalink_slug) ) ? trailingslashit($events_permalink_slug) : $events_permalink_slug;
 
-    		$events_page_title = get_the_title($events_page_id);
-
     		if( !empty($events_page_url) ) {
-    			// events page ancestors?
+    			$events_page_title = get_the_title($events_page_id);
+				$events_page_ancestors = get_post_ancestors($events_page_id);
+				if ( $events_page_ancestors) {
+					$events_page_ancestors = array_reverse($events_page_ancestors);
+					foreach ( $events_page_ancestors as $crumb_id ){
+						$breadcrumb .= '<li><a href="' . get_permalink( $crumb_id ) . '">' . get_the_title( $crumb_id ) . '</a></li>';
+					}
+				}
     			$breadcrumb .= '<li><a href="' . $events_page_url . '">'. $events_page_title . '</a></li>';
     		} else {
 				$breadcrumb .= '<li><a href="'. $events_permalink_slug .'">Events</a></li>';
     		}
 
-    		// var_dump($events_permalink_slug);
-    		var_dump($events_page_id);
-    		var_dump($events_page_url);
-			// get ancestors for evnets page as well?
-		}
+		} // end Events Manager breadcrumbs
 
 		$breadcrumb .= '<li class="item-current item-' . $post->ID . '"><strong>' . get_the_title() . '</strong></li>';
 		$breadcrumb .= '</ul>';
