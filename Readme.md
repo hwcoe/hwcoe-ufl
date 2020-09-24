@@ -31,6 +31,10 @@ Documentation
 
 Changelog
 ---------
+### 2.9.3
+- Bugfix: Update password input field styles and Events Manager form field styles
+- Bugfix: Update Events Manager single event template to correct breadcrumb nav hierarchy (In progress)
+
 ### 2.9.2
 - Bugfix: Target wpautop removal in ACF fields more precisely
 - Bugfix: Adjust media queries to prevent primary nav wrapping between screen-md and screen-lg viewport sizes

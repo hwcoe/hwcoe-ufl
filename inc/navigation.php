@@ -31,6 +31,8 @@ function hwcoe_ufl_breadcrumbs() {
 				$breadcrumb .= '<li><a href="' . get_permalink( $crumb_id ) . '">' . get_the_title( $crumb_id ) . '</a></li>';
 			}
 		}
+		// events manager
+		// $breadcrumb .= '<li><a href="#">Events Listing</a></li>';
 
 		$breadcrumb .= '<li class="item-current item-' . $post->ID . '"><strong>' . get_the_title() . '</strong></li>';
 		$breadcrumb .= '</ul>';
