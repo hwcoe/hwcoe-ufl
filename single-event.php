@@ -13,7 +13,7 @@ get_header(); ?>
 	<div class="col-sm-12">
 		<?php hwcoe_ufl_breadcrumbs(); ?>
 		<header class="entry-header" aria-label="Content Header">
-			Event <?php hwcoe_ufl_entry_title(); ?>
+			<?php hwcoe_ufl_entry_title(); ?>
 		</header>
 		<!-- .entry-header --> 
 	</div>

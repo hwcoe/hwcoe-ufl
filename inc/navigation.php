@@ -31,8 +31,33 @@ function hwcoe_ufl_breadcrumbs() {
 				$breadcrumb .= '<li><a href="' . get_permalink( $crumb_id ) . '">' . get_the_title( $crumb_id ) . '</a></li>';
 			}
 		}
-		// events manager
-		// $breadcrumb .= '<li><a href="#">Events Listing</a></li>';
+
+		// Add Events page or permalink slug to breadcrumbs if Events Manager is activated and the event post type is displayed
+		if( 'event' == get_post_type() && class_exists('EM_Events') ) {
+			$events_page_id = get_option ( 'dbem_events_page' );
+    		$events_page_url = (!empty($events_page_id)) ? get_permalink($events_page_id) : '';
+
+    		// $events_page_url = ( !empty($events_page_url) ) ? trailingslashit($events_page_url) : '';
+
+    		// $events_permalink_slug = get_option( 'dbem_cp_events_slug' );
+    		// $events_permalink_slug = urldecode(preg_replace('/\/$/', '', str_replace( trailingslashit(home_url()), '', get_option( 'dbem_cp_events_slug' )) ));
+    		$events_permalink_slug = trailingslashit( home_url() ) . get_option( 'dbem_cp_events_slug' );
+    		$events_permalink_slug = ( !empty($events_permalink_slug) ) ? trailingslashit($events_permalink_slug) : $events_permalink_slug;
+
+    		$events_page_title = get_the_title($events_page_id);
+
+    		if( !empty($events_page_url) ) {
+    			// events page ancestors?
+    			$breadcrumb .= '<li><a href="' . $events_page_url . '">'. $events_page_title . '</a></li>';
+    		} else {
+				$breadcrumb .= '<li><a href="'. $events_permalink_slug .'">Events</a></li>';
+    		}
+
+    		// var_dump($events_permalink_slug);
+    		var_dump($events_page_id);
+    		var_dump($events_page_url);
+			// get ancestors for evnets page as well?
+		}
 
 		$breadcrumb .= '<li class="item-current item-' . $post->ID . '"><strong>' . get_the_title() . '</strong></li>';
 		$breadcrumb .= '</ul>';
