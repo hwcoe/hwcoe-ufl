@@ -7,7 +7,6 @@
 		}
 	}
 	.gform_body {
-		// select, textarea, input[type="text"], input[type="email"] {
 		select, textarea, input:not([type="file"]) {
 			padding: 15px 7.5px;	
 			color: rgba(51, 49, 50, 0.8);

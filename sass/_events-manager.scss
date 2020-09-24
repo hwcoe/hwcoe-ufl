@@ -68,7 +68,7 @@
 
 // form templates
 
-#event-form {
+#event-form, .em-booking-form, .em-booking-login-form {
 	h2, h3 {
 		clear:both;
 		margin-bottom: 10px; 
@@ -86,7 +86,7 @@
 			padding-top: 6px;
 		}
 	}
-	select, textarea, input[type="text"], input[type="email"] {
+	select, textarea, input[type="text"], input[type="password"], input[type="email"] {
 		padding: 5px 4px;	
 		color: rgba(51, 49, 50, 0.8);
 		border: 2px solid rgba(76, 135, 181, 0.7);
@@ -149,4 +149,10 @@
 			content: none;
 		}
 	}
+}
+div.em-booking-login label {
+	width:auto;
+}
+#em_wp-submit {
+	margin: 10px 10px 10px 0;
 }

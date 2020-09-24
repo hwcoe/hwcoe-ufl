@@ -617,7 +617,7 @@ form {
 	textarea {
 		min-height: 200px;
 	}
-	select, textarea, input[type="text"], input[type="email"] {
+	select, textarea, input[type="text"], input[type="password"], input[type="email"] {
 		padding: 15px 7.5px;	
 		color: $grayDark;
 		border: 2px solid $blue;
