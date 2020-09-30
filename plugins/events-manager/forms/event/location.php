@@ -1,29 +1,72 @@
 <?php
 global $EM_Event;
-global $EM_Location;
+// global $EM_Location;
 $required = apply_filters('em_required_html','<span class="required">*</span>');
+
+//determine location types (if needed)
+$location_types = array();
+if( !get_option('dbem_require_location') && !get_option('dbem_use_select_for_locations') ) {
+	$location_types[0] = array(
+		'selected' =>  $EM_Event->location_id === '0' || $EM_Event->location_id === 0,
+		'description' => esc_html__('No Location','events-manager'),
+	);
+}
+if( EM_Locations::is_enabled() ){
+	$location_types['location'] = array(
+		'selected' =>  !empty($EM_Event->location_id),
+		'display-class' => 'em-location-type-place',
+		'description' => esc_html__('Physical Location','events-manager'),
+	);
+}
+foreach( EM_Event_Locations\Event_Locations::get_types() as $event_location_type => $EM_Event_Location_Class ){ /* @var EM_Event_Locations\Event_Location $EM_Event_Location_Class */
+	if( $EM_Event_Location_Class::is_enabled() ){
+		$location_types[$EM_Event_Location_Class::$type] = array(
+			'display-class' => 'em-event-location-type-'. $EM_Event_Location_Class::$type,
+			'selected' => $EM_Event_Location_Class::$type == $EM_Event->event_location_type,
+			'description' => $EM_Event_Location_Class::get_label(),
+		);
+	}
+}
 ?>
-<?php if( !get_option('dbem_require_location') && !get_option('dbem_use_select_for_locations') ): ?>
-<div class="em-location-data-nolocation">
-	<div class="input-full">
-		<input type="checkbox" name="no_location" id="no-location" value="1" <?php if( $EM_Event->location_id === '0' || $EM_Event->location_id === 0 ) echo 'checked="checked"'; ?> />
-		<label for="no-location"><?php _e('This event does not have a physical location.','events-manager'); ?></label>
-	</div>
+<div class="em-input-field em-input-field-select em-location-types <?php if( count($location_types) == 1 ) echo 'em-location-types-single'; ?>">
+	<label><?php esc_html_e ( 'Location Type', 'events-manager')?></label>
+	<select name="location_type" class="em-location-types-select">
+		<?php foreach( $location_types as $location_type => $location_type_option ): ?>
+		<option value="<?php echo esc_attr($location_type); ?>" <?php if( !empty($location_type_option['selected']) ) echo 'selected="selected"'; ?> data-display-class="<?php if( !empty($location_type_option['display-class']) ) echo esc_attr($location_type_option['display-class']); ?>">
+			<?php echo esc_html($location_type_option['description']); ?>
+		</option>
+		<?php endforeach; ?>
+	</select>
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$('.em-location-types .em-location-types-select').change(function(){
+				let el = $(this);
+				if( el.val() == 0 ){
+					$('.em-location-type').hide();
+				}else{
+					let location_type = el.find('option:selected').data('display-class');
+					$('.em-location-type').hide();
+					$('.em-location-type.'+location_type).show();
+					if( location_type != 'em-location-type-place' ){
+						jQuery('#em-location-reset a').trigger('click');
+					}
+				}
+			}).trigger('change');
+		});
+	</script>
 </div>
-<?php endif; ?>
-<div id="em-location-data" class="em-location-data">
+
+<?php if( EM_Locations::is_enabled() ): ?>
+<div id="em-location-data" class="em-location-data em-location-type em-location-type-place <?php if( count($location_types) == 1 ) echo 'em-location-type-single'; ?>">
 	<div id="location_coordinates" style='display: none;'>
 		<input id='location-latitude' name='location_latitude' type='text' value='<?php echo esc_attr($EM_Event->get_location()->location_latitude); ?>' size='15' />
 		<input id='location-longitude' name='location_longitude' type='text' value='<?php echo esc_attr($EM_Event->get_location()->location_longitude); ?>' size='15' />
 	</div>
-	<?php if( get_option('dbem_use_select_for_locations') || !$EM_Event->can_manage('edit_locations','edit_others_locations') ) : ?> 
+	<?php if( get_option('dbem_use_select_for_locations') || !$EM_Event->can_manage('edit_locations','edit_others_locations') ) : ?>
 	<div class="em-location-data">
 		<p class="em-location-data-select">
 			<label for="location-id"><?php esc_html_e('Location:','events-manager') ?> </label>
-			<select name="location_id" id='location-select-id' size="1">  
-				<?php if(!get_option('dbem_require_location',true)): ?><option value="0"><?php esc_html_e('No Location','events-manager'); ?></option>
-				<?php endif; ?>
-				
+			<select name="location_id" id='location-select-id' size="1">
 				<?php
 				$ddm_args = array('private'=>$EM_Event->can_manage('read_private_locations'));
 				$ddm_args['owner'] = (is_user_logged_in() && !current_user_can('read_others_locations')) ? get_current_user_id() : false;
@@ -32,28 +75,26 @@ $required = apply_filters('em_required_html','<span class="required">*</span>');
 				foreach($locations as $EM_Location) {
 					$selected = ($selected_location == $EM_Location->location_id) ? "selected='selected' " : '';
 					if( $selected ) $found_location = true;
-			   		?>  
-			   		<option value="<?php echo esc_attr($EM_Location->location_id) ?>" title="<?php echo esc_attr("{$EM_Location->location_latitude},{$EM_Location->location_longitude}"); ?>"
-
-			   		<?php echo $selected ?>><?php echo esc_html($EM_Location->location_name); ?></option>
-			    	<?php
+			        ?>
+			        <option value="<?php echo esc_attr($EM_Location->location_id) ?>" title="<?php echo esc_attr("{$EM_Location->location_latitude},{$EM_Location->location_longitude}"); ?>" <?php echo $selected ?>><?php echo esc_html($EM_Location->location_name); ?></option>
+			        <?php
 				}
 				if( empty($found_location) && !empty($EM_Event->location_id) ){
 					$EM_Location = $EM_Event->get_location();
-						if( $EM_Location->post_id ){
+					if( $EM_Location->post_id ){
 						?>
-						<option value="<?php echo esc_attr($EM_Location->location_id) ?>" title="<?php echo esc_attr("{$EM_Location->location_latitude},{$EM_Location->location_longitude}"); ?>" selected="selected"><?php echo esc_html($EM_Location->location_name); ?></option>
-				    	<?php
+				        <option value="<?php echo esc_attr($EM_Location->location_id) ?>" title="<?php echo esc_attr("{$EM_Location->location_latitude},{$EM_Location->location_longitude}"); ?>" selected="selected"><?php echo esc_html($EM_Location->location_name); ?></option>
+				        <?php
 					}
 				}
 				?>
 			</select>
 		</p>
-	</div>			  
-	<?php else : ?>
+	</div> <!-- / .em-location-data -->
 
+	<?php else : ?>
 	<div class="em-location-fields">
-	<?php 
+		<?php
 		global $EM_Location;
 		if( $EM_Event->location_id !== 0 ){
 			$EM_Location = $EM_Event->get_location();
@@ -62,7 +103,7 @@ $required = apply_filters('em_required_html','<span class="required">*</span>');
 		}else{
 			$EM_Location = new EM_Location();
 		}
-	?>
+		?>
 		<div class="input-full em-location-data-name">
 			<label for="location-name"><?php _e ( 'Location Name:', 'events-manager')?><?php echo $required; ?></label>
 			<input id='location-id' name='location_id' type='hidden' value='<?php echo esc_attr($EM_Location->location_id); ?>' size='15' />
@@ -73,8 +114,7 @@ $required = apply_filters('em_required_html','<span class="required">*</span>');
 		<div class="input-full em-location-data-address">
 			<label for="location-address"><?php _e ( 'Address:', 'events-manager')?><?php echo $required; ?></label>
 			<input id="location-address" type="text" name="location_address" value="<?php echo esc_attr($EM_Location->location_address); ; ?>" />
-
-		</div>
+		</div>	
 		<div class="input-full em-location-data-town">
 			<label for="location-town"><?php _e ( 'City:', 'events-manager')?><?php echo $required; ?></label>
 			<input id="location-town" type="text" name="location_town" value="<?php echo esc_attr($EM_Location->location_town); ?>" />
@@ -89,6 +129,7 @@ $required = apply_filters('em_required_html','<span class="required">*</span>');
 		</div>
 		<div class="em-location-data-country input-full">
 			<label for="location-country"><?php _e ( 'Country:', 'events-manager')?><?php echo $required; ?></label><br />
+			
 			<select id="location-country" name="location_country">
 				<option value="0" <?php echo ( $EM_Location->location_country == '' && $EM_Location->location_id == '' && get_option('dbem_location_default_country') == '' ) ? 'selected="selected"':''; ?>><?php _e('none selected','events-manager'); ?></option>
 				<?php foreach(em_get_countries() as $country_key => $country_name): ?>
@@ -96,19 +137,29 @@ $required = apply_filters('em_required_html','<span class="required">*</span>');
 				<?php endforeach; ?>
 			</select>
 		</div>
-	</div>
+		
+		<div class="em-location-data-url input-full">
+			<label for="location-url"><?php _e ( 'Location Website:', 'events-manager')?></label><br />
+			<input id="location-url" type="text" name="location_url" value="<?php echo esc_attr($EM_Location->location_url); ; ?>" />
+		</div>
+	</div><!-- /em-location-fields -->
+
 	<?php endif; ?>
-	<?php if ( get_option( 'dbem_gmap_is_active' ) ) em_locate_template('forms/map-container.php',true); ?>
+
+	<?php if ( get_option( 'dbem_gmap_is_active' ) ):?>
+		<?php em_locate_template('forms/map-container.php',true); ?>
+	<?php endif; ?>
 	<br style="clear:both;" />
-	<script type="text/javascript">
-		jQuery(document).ready(function($){
-			$('#no-location').change(function(){
-				if( $('#no-location').is(':checked') ){
-					$('#em-location-data').hide();
-				}else{
-					$('#em-location-data').show();
-				}
-			}).trigger('change');
-		});
-	</script>
+</div> <!-- / #em-location-data -->
+
+<?php endif; // EM_Locations is_enabled ?>
+<div class="em-event-location-data">
+	<?php foreach( EM_Event_Locations\Event_Locations::get_types() as $event_location_type => $EM_Event_Location_Class ): /* @var EM_Event_Locations\Event_Location $EM_Event_Location_Class */ ?>
+		<?php if( $EM_Event_Location_Class::is_enabled() ): ?>
+			<div class="em-location-type em-event-location-type-<?php echo esc_attr($event_location_type); ?>">
+			<?php $EM_Event_Location_Class::load_admin_template(); ?>
+			</div>
+		<?php endif; ?>
+	<?php endforeach; ?>
+	
 </div>
