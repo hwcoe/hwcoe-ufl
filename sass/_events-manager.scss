@@ -135,14 +135,18 @@
 		margin-left: 4px;
 	}
 }
-.em-location-fields, .em-location-map-container {
-	width: 100%;
-	display: inline-block;
-	@include breakFirst(medium){
-		width: 50%;
-		float:left;
-	}
+#em-location-data .em-location-map-container {
+	width:auto;
+	float:none;
 }
+// .em-location-fields, .em-location-map-container {
+// 	width: 100%;
+// 	display: inline-block;
+// 	@include breakFirst(medium){
+// 		width: 50%;
+// 		float:left;
+// 	}
+// }
 .time-picker {
 	li {
 		&:before {
