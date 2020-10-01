@@ -199,6 +199,12 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/navigation.php';
 
+// Events Manager
+
+if ( class_exists( 'EM_Events' ) && file_exists(get_template_directory() . '/plugins/events-manager/em-addons.php')) {
+	require get_template_directory() . '/plugins/events-manager/em-addons.php';
+}
+
 // Gravity Forms custom code and enhancements
 
 if ( class_exists( 'GFCommon' ) && file_exists(get_template_directory() . '/plugins/gravityforms/gf-addons.php')) {
@@ -315,3 +321,4 @@ function acf_wysiwyg_remove_wpautop() {
 add_action('acf/init', 'acf_wysiwyg_remove_wpautop');
 
 // END Advanced custom fields
+

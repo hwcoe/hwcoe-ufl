@@ -34,7 +34,12 @@ Changelog
 ### 2.9.3
 - Bugfix: Update password input field styles and Events Manager form field styles
 - Add Events Manager single event template
-- Bugfix: Update navigation to correct breadcrumb nav hierarchy in single event template (In progress)
+- Bugfix: Update navigation to correct breadcrumb nav hierarchy in single event template
+- Bugfix: Add conditional placeholder in Events Manager for "Host" custom attribute
+- Bugfix: Update event submission form template and dependencies to reflect parent plugin changes
+	- Adjust Google maps display
+	- Add location type fields to event submission form
+	- TODO Add option for private event URL
 
 ### 2.9.2
 - Bugfix: Target wpautop removal in ACF fields more precisely
