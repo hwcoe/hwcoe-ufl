@@ -7,13 +7,18 @@ $admin_recurring = is_admin() && $EM_Event->is_recurring();
 ?>
 <!-- START recurrence postbox -->
 <div id="em-form-with-recurrence" class="event-form-with-recurrence event-form-when">
+	<div class="input-full">
+		<input type="checkbox" id="em-recurrence-checkbox" name="recurring" value="1" <?php if($EM_Event->is_recurring()) echo 'checked' ?> /> <label for="em-recurrence-checkbox"><?php _e('This is a recurring event.', 'events-manager'); ?></label> 
+	</div>
 	<div class="em-date-range input-left">
-		<label for="event-start-date"><?php _e ( 'Start Date', 'events-manager'); ?></label>
+		<label for="event-start-date" class="em-event-text"><?php _e ( 'Start Date', 'events-manager'); ?></label>
+		<label for="event-start-date" class="em-recurring-text"><?php _e ( 'Recurrence Start Date', 'events-manager'); ?></label>
 		<input class="em-date-start em-date-input-loc" type="text" />
 		<input class="em-date-input" type="hidden" name="event_start_date" id="event-start-date" value="<?php echo $EM_Event->start()->getDate(); ?>" />
 	</div>
 	<div class="em-date-range input-right">
-		<label for="event-end-date"><?php _e ( 'End Date', 'events-manager'); ?></label>
+		<label for="event-end-date" class="em-event-text"><?php _e ( 'End Date', 'events-manager'); ?></label>
+		<label for="event-end-date" class="em-recurring-text"><?php _e ( 'Recurrence End Date', 'events-manager'); ?></label>
 		<input class="em-date-end em-date-input-loc" type="text" />
 		<input class="em-date-input" type="hidden" name="event_end_date" id="event-end-date" value="<?php echo $EM_Event->end()->getDate(); ?>" />
 	</div>
@@ -24,16 +29,25 @@ $admin_recurring = is_admin() && $EM_Event->is_recurring();
 	<div class="em-time-entry input-left">
 		<label for="start-time"><?php _e ( 'Start Time', 'events-manager'); ?></label>
 		<input id="start-time" type="text" size="8" maxlength="8" name="event_start_time" value="<?php echo $EM_Event->start()->i18n($hours_format); ?>" />
-		<label class="description" for="start-time"><?php esc_html_e( 'HH:MM (24 hour format)', 'events-manager')?></label>
+		<?php if($hours_format == 'H:i') : ?>
+			<br /><label class="description" for="start-time"><?php esc_html_e( 'HH:MM (24 hour format)', 'events-manager')?></label>
+		<?php endif; ?>
 	</div>
 	<div class="em-time-entry input-right">
 		<label for="end-time"><?php _e ( 'End Time', 'events-manager'); ?></label>
 		<input id="end-time" class="em-time-input em-time-end" type="text" size="8" maxlength="8" name="event_end_time" value="<?php echo $EM_Event->end()->i18n($hours_format); ?>" />
-		<label class="description" for="end-time"><?php esc_html_e( 'HH:MM (24 hour format)', 'events-manager')?></label>
+		<?php if($hours_format == 'H:i') : ?>
+			<br /><label class="description" for="end-time"><?php esc_html_e( 'HH:MM (24 hour format)', 'events-manager')?></label>
+		<?php endif; ?>
 	</div>
-	<div class="input-full">
-		<input type="checkbox" id="em-recurrence-checkbox" name="recurring" value="1" <?php if($EM_Event->is_recurring()) echo 'checked' ?> /> <label for="em-recurrence-checkbox"><?php _e('This is a recurring event.', 'events-manager'); ?></label> 
+	<?php if( get_option('dbem_timezone_enabled') ): ?>
+	<div class="em-timezone input-full">
+		<label for="event-timezone"><?php esc_html_e('Timezone', 'events-manager'); ?></label>
+		<select id="event-timezone" name="event_timezone" aria-describedby="timezone-description">
+			<?php echo wp_timezone_choice( $EM_Event->get_timezone()->getName(), get_user_locale() ); ?>
+		</select>
 	</div>
+	<?php endif; ?>
 	<div class="em-recurring-text input-left">
 		<p>
 			<label for="recurrence-frequency"><?php _e ( 'Repeats', 'events-manager'); ?></label>
@@ -74,7 +88,16 @@ $admin_recurring = is_admin() && $EM_Event->is_recurring();
 			</select>
 			<label for="monthly-selector"><?php _e('of each month','events-manager'); ?></label>
 		</p>
+	</div>
+	<div class="em-recurring-text input-left">
+		<p class="em-duration-range">
+			<?php echo "<label for='end-days'>" . sprintf(__('Each event spans %s day(s)','events-manager'), '<input id="end-days" type="text" size="3" maxlength="3" name="recurrence_days" value="'. $EM_Event->recurrence_days .'" />'); 
+			?>
+		</p>
 		
+	</div>
+	<div class="em-recurring-text input-right">
+		<p class="em-range-description"><em><?php _e( 'For a recurring event, a one day event will be created on each recurring date within this date range.', 'events-manager'); ?></em></p>
 	</div>
 	<script type="text/javascript">
 	//<![CDATA[
