@@ -20,28 +20,32 @@ $required = apply_filters('em_required_html','<i>*</i>');
 
 	<div class="em-time-entry input-left">
 		<label for="start-time"><?php _e ( 'Start Time', 'events-manager'); ?></label>
-		<input id="start-time" type="text" size="8" maxlength="8" name="event_start_time" value="<?php echo $EM_Event->start()->i18n($hours_format); ?>" />
-		<label class="description" for="start-time"><?php esc_html_e( 'HH:MM (24 hour format)', 'events-manager')?></label>
+		<input id="start-time" class="em-time-input em-time-start" type="text" size="8" maxlength="8" name="event_start_time" value="<?php echo $EM_Event->start()->format($hours_format); ?>" />
+		<?php if($hours_format == 'H:i') : ?>
+			<br /><label class="description" for="start-time"><?php esc_html_e( 'HH:MM (24 hour format)', 'events-manager')?></label>
+		<?php endif; ?>
 	</div>
 	<div class="em-time-entry input-right">
 		<label for="end-time"><?php _e ( 'End Time', 'events-manager'); ?></label>
-		<input id="end-time" class="em-time-input em-time-end" type="text" size="8" maxlength="8" name="event_end_time" value="<?php echo $EM_Event->end()->i18n($hours_format); ?>" />
-		<label class="description" for="end-time"><?php esc_html_e( 'HH:MM (24 hour format)', 'events-manager')?></label>
+		<input id="end-time" class="em-time-input em-time-end" type="text" size="8" maxlength="8" name="event_end_time" value="<?php echo $EM_Event->end()->format($hours_format); ?>" />
+		<?php if($hours_format == 'H:i') : ?>
+			<br /><label class="description" for="end-time"><?php esc_html_e( 'HH:MM (24 hour format)', 'events-manager')?></label>
+		<?php endif; ?>
 	</div>
+	<?php if( get_option('dbem_timezone_enabled') ): ?>
+	<div class="input-full em-timezone">
+		<label for="event-timezone"><?php esc_html_e('Timezone', 'events-manager'); ?></label>
+		<select id="event-timezone" name="event_timezone" aria-describedby="timezone-description">
+			<?php echo wp_timezone_choice( $EM_Event->get_timezone()->getName(), get_user_locale() ); ?>
+		</select>
+	</div>
+	<?php endif; ?>
+	<p id='event-date-explanation' class="description">
+	<?php esc_html_e( 'This event spans every day between the beginning and end date, with start/end times applying to each day.', 'events-manager'); ?>
+	</p>
 	<script type="text/javascript">
 	//<![CDATA[
 	jQuery(document).ready( function($) {
-		$('#em-recurrence-checkbox').change(function(){
-			if( $('#em-recurrence-checkbox').is(':checked') ){
-				$('.em-recurring-text').show();
-				$('.em-event-text').hide();
-			}else{
-				$('.em-recurring-text').hide();
-				$('.em-event-text').show();						
-			}
-		});
-		$('#em-recurrence-checkbox').trigger('change');
-
 		$('#em-time-all-day').change(function(){
 			if( $('#em-time-all-day').is(':checked') ){
 				$('.em-time-entry').hide();
