@@ -39,7 +39,6 @@ Changelog
 - Bugfix: Update event submission form template and dependencies to reflect parent plugin changes
 	- Adjust Google maps display
 	- Add location type fields to event submission form
-	- TODO Add option for private event URL
 
 ### 2.9.2
 - Bugfix: Target wpautop removal in ACF fields more precisely
