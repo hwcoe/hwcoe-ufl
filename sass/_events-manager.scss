@@ -73,7 +73,6 @@
 		clear:both;
 		margin-bottom: 10px; 
 	}
-
 	label {
 		font-weight: 700;
 		font-size: inherit;
@@ -105,6 +104,12 @@
 			background-color: $orange;	
 		}
 	}
+	.required {
+		color: $red;
+		margin-left: 4px;
+	}
+}
+#event-form {
 	.inside {
 		padding-right: 16px;
 	}
@@ -130,23 +135,15 @@
 			padding-right: 16px;
 		}
 	}
-	.required {
-		color: $red;
-		margin-left: 4px;
+	.em-location-type {
+		border-top:none;
+		padding-top:0;
 	}
 }
 #em-location-data .em-location-map-container {
 	width:auto;
 	float:none;
 }
-// .em-location-fields, .em-location-map-container {
-// 	width: 100%;
-// 	display: inline-block;
-// 	@include breakFirst(medium){
-// 		width: 50%;
-// 		float:left;
-// 	}
-// }
 .time-picker {
 	li {
 		&:before {

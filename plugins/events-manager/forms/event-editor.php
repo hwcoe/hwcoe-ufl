@@ -63,7 +63,6 @@ if( !empty($_REQUEST['success']) ){
 		</div>
 
 		<?php if( get_option('dbem_locations_enabled') ): ?>
-			<!-- <h3 class="event-form-where"><?php esc_html_e( 'Location', 'events-manager'); ?></h3> -->
 			<div class="inside event-form-where">
 				<?php em_locate_template('forms/event/location.php',true); ?>
 			</div>
@@ -84,6 +83,10 @@ if( !empty($_REQUEST['success']) ){
 				<?php if(get_option('dbem_categories_enabled')) { em_locate_template('forms/event/categories-public.php',true); }  ?>
 			</div>
 		</div>
+
+		<?php 
+		// Template customization - removed image upload
+		?>
 		
 		<?php if( get_option('dbem_rsvp_enabled') && $EM_Event->can_manage('manage_bookings','manage_others_bookings') ) : ?>
 		<!-- START Bookings -->
@@ -96,11 +99,13 @@ if( !empty($_REQUEST['success']) ){
 		
 		<?php do_action('em_front_event_form_footer', $EM_Event); ?>
 	</div>
+	<p class="submit">
 	    <?php if( empty($EM_Event->event_id) ): ?>
-	    <input type='submit' class='button' value='<?php echo esc_attr(sprintf( __('Submit %s','events-manager'), __('Event','events-manager') )); ?>' />
+	    <input type='submit' class='button-primary' value='<?php echo esc_attr(sprintf( __('Submit %s','events-manager'), __('Event','events-manager') )); ?>' />
 	    <?php else: ?>
-	    <input type='submit' class='button' value='<?php echo esc_attr(sprintf( __('Update %s','events-manager'), __('Event','events-manager') )); ?>' />
+	    <input type='submit' class='button-primary' value='<?php echo esc_attr(sprintf( __('Update %s','events-manager'), __('Event','events-manager') )); ?>' />
 	    <?php endif; ?>
+	</p>
 	<input type="hidden" name="event_id" value="<?php echo $EM_Event->event_id; ?>" />
 	<input type="hidden" name="_wpnonce" value="<?php echo wp_create_nonce('wpnonce_event_save'); ?>" />
 	<input type="hidden" name="action" value="event_save" />
