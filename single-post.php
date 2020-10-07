@@ -7,6 +7,22 @@
  * @package HWCOE_UFL
  */
 get_header(); ?>
+<?php 
+	$custom_meta = get_post_meta( get_the_ID() );
+	$post_hero = ( isset($custom_meta['post_hero_image']) )? $custom_meta['post_hero_image'][0]:NULL;
+	if ( has_post_thumbnail() && $post_hero ):
+		add_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
+		$hero_image_height = ( isset( $custom_meta['hero_image_height']) )? $custom_meta['hero_image_height'][0] : '';
+		$shortcode = sprintf( '[ufl-landing-page-hero headline="%s" image="%d" image_height="%s"]%s[/ufl-landing-page-hero]', 
+			get_the_title(),
+			get_post_thumbnail_id(),
+            $hero_image_height,
+			''
+		);
+		echo do_shortcode( $shortcode );
+		remove_filter( 'the_title', 'hwcoe_ufl_title', 10, 2 );
+	endif;
+?>
 
 <main id="main" class="container main-content">
 <div class="row">

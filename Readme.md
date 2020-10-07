@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 3.0.0
+- Add hero image option to posts
+
 ### 2.9.3
 - Bugfix: Update password input field styles and Events Manager form field styles
 - Add Events Manager single event template

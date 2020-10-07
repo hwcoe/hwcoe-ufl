@@ -1,23 +1,6 @@
 {
     "key": "group_561c4f6c2306d",
     "title": "Post Options",
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
-    "description": "",
     "fields": [
         {
             "key": "field_561c516e24e1e",
@@ -43,7 +26,7 @@
             "label": "Hide Featured Image",
             "name": "hide_featured_image",
             "type": "true_false",
-            "instructions": "Hides the featured image from single post view.",
+            "instructions": "Hides the featured image from single post view in the content area.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -83,7 +66,77 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_5f7e13a0ac255",
+            "label": "Post Hero Image",
+            "name": "post_hero_image",
+            "type": "true_false",
+            "instructions": "Displays the featured image as a hero image header.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f7e16fc2722a",
+            "label": "Hero Image Height",
+            "name": "hero_image_height",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5f7e13a0ac255",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "large": "Large",
+                "medium": "Medium",
+                "half": "Small"
+            },
+            "default_value": "large",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
-    "modified": 1529584804
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1602099480
 }

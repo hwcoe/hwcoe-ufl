@@ -1806,7 +1806,7 @@
         "featured_image",
         "send-trackbacks"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1579019475
+    "modified": 1599686678
 }
