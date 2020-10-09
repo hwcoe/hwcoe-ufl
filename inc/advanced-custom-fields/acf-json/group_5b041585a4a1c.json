@@ -276,6 +276,25 @@
                                     "max_height": "",
                                     "max_size": "",
                                     "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5f807fe90e9ae",
+                                    "label": "Image Caption",
+                                    "name": "image_caption",
+                                    "type": "text",
+                                    "instructions": "Add an optional image caption.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 }
                             ]
                         }
@@ -1808,5 +1827,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1599686678
+    "modified": 1602256934
 }

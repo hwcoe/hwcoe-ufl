@@ -33,6 +33,7 @@ Changelog
 ---------
 ### 3.0.0
 - Add hero image option to posts
+- Add optional caption to home page Featured Story images
 
 ### 2.9.3
 - Bugfix: Update password input field styles and Events Manager form field styles
