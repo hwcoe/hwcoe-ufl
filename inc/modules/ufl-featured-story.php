@@ -62,7 +62,7 @@ $stories = array();
 					<div class="featured-story-content-wrap col-md-6 col-md-offset-1">
 					<?php $story_count = 1; foreach( $stories as $story): ?>
 						<?php if( 1 === $story_count ): ?>
-						<div class="featured-story active article-xxx">
+						<div class="featured-story active">
 							<h2 data-index="<?php echo esc_attr($story_count); ?>"><?php echo $story['title']; ?> 
 							<?php if ( $story['tagline'] !== ''): ?>
 								<a href="<?php echo esc_url( $story['link'] ); ?>" aria-label="Read '<?php echo esc_attr( $story['title'] ); ?>'" class="read-more"><?php echo esc_html($story['tagline']); ?></a>
