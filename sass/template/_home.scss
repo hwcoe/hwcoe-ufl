@@ -514,13 +514,15 @@
 		min-height:350px;
 		@include breakFirst(large){
 			margin:20px 0 0 0;
-			width: 39%;
 			margin-right:11.666666%;
 		}
 		&.one {
 			@include breakFirst(large){
 				margin:20px 11.666666% 0 0;
 				width: 40%;
+			}
+			@include breakFirst(wide){
+				width:39%;
 			}
 		}
 		&.two {
@@ -530,11 +532,15 @@
 				position: relative;
 				margin-right:0;
 			}
+			@include breakFirst(wide){
+				width:39%;
+				margin-right: 2%;
+			}
 		}
 		&.three {
 			@include breakFirst(large){
 				margin-top:20px;
-				width:80%
+				width:80%;
 			}	
 		}
 	}
@@ -551,12 +557,7 @@
 			}
 		}
 	}
-	.secondary-featured-story {
-		.one & {
-			@include breakFirst(large){
-				min-height: 400px;
-				height: 400px;
-			}
-		}
+	.secondary-featured-copy ul h2 {
+		font: 500 16px/20px $fontFamily;	
 	}
 }
