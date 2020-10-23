@@ -42,14 +42,11 @@ $stories = array();
 		  );
 		  array_push( $stories, $story );
 		?>
-		  <!-- <div class="featured-story-img" style="background-image:url(<?php echo esc_url($featured_image); ?>)"></div> -->
-
-		<div class="featured-story-img" style="background-image:url(<?php echo esc_url($featured_image); ?>)">
+		<figure class="featured-story-img" style="background-image:url(<?php echo esc_url($featured_image); ?>)">
 			<?php if ( $story['caption'] !== ''): ?>
-				<div class="featured-img-caption"><?php echo esc_html($story['caption']); ?></div>
+				<figcaption class="featured-img-caption"><?php echo esc_html($story['caption']); ?></figcaption>
 			<?php endif; ?>
-	  	</div>
-
+	  </figure>
   <?php endwhile // have_rows ?>
 <?php endif // have_rows ?>
   </div><!-- ./featured-story-img-wrap -->
