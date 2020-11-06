@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 3.x.x
+-
+
 ### 3.0.0
 - Add hero image option to posts
 - Add optional caption to home page Featured Story images

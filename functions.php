@@ -320,5 +320,16 @@ function acf_wysiwyg_remove_wpautop() {
 }
 add_action('acf/init', 'acf_wysiwyg_remove_wpautop');
 
+// custom the_content filter with wpautop - needed?
+// http://www.billerickson.net/code/duplicate-the_content-filters/
+global $wp_embed;
+add_filter( 'hwcoe_the_content', array( $wp_embed, 'run_shortcode' ), 8 );
+add_filter( 'hwcoe_the_content', array( $wp_embed, 'autoembed'     ), 8 );
+add_filter( 'hwcoe_the_content', 'wptexturize'        );
+add_filter( 'hwcoe_the_content', 'convert_chars'      );
+add_filter( 'hwcoe_the_content', 'wpautop'            );
+add_filter( 'hwcoe_the_content', 'shortcode_unautop'  );
+add_filter( 'hwcoe_the_content', 'do_shortcode'       );
+
 // END Advanced custom fields
 
