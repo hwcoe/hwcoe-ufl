@@ -31,8 +31,10 @@ Documentation
 
 Changelog
 ---------
-### 3.x.x
--
+### 3.0.1
+- Update allowed HTML and scripts in selected ACF WYSIWYG fields
+- Add content module specific class names to modules that don't already have them (to allow CSS targeting) 
+- Update styles for Gravity Forms to inline inserted `<br>` and `<p>` tags in ufl-content module
 
 ### 3.0.0
 - Add hero image option to posts

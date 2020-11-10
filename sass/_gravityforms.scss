@@ -46,3 +46,14 @@
 		}
 	}
 }
+.gform_wrapper {
+	// restyle inserted <p> and <br> tags in content module
+	.ufl-content & {
+		br {
+			display: none;
+		}
+		p {
+			display: inline;
+		}
+	}
+}
