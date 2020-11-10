@@ -14,7 +14,7 @@
 
 <?php if( $headline != '' || $content != '' || $img_markup != ''): ?>
 <!-- ufl-content-image module -->
-<div class="container">
+<div class="container ufl-content-image">
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="row">

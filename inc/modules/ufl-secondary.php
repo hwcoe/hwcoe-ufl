@@ -3,7 +3,7 @@
 	$headline = get_sub_field( 'headline' );
 ?>
 <!-- ufl-secondary module -->
-<div class="breaker" <?php echo $background_img; ?>>
+<div class="breaker ufl-secondary" <?php echo $background_img; ?>>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">

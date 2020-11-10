@@ -31,7 +31,7 @@ foreach( $pages as $page ): ?>
 	}
 ?>
 <!-- ufl-sub-page-list module -->
-<div class="container">
+<div class="container sub-page-list">
 	<div class="row">
 		<div class="col-sm-12 col-md-11">
 			<div class="row">

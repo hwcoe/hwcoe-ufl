@@ -310,7 +310,7 @@ add_shortcode('ufl-content-image-right', 'hwcoe_ufl_content_image_right');
 function hwcoe_ufl_content_block( $atts, $content = null ) {
 	ob_start();
 	?>
-	<div class="container">
+	<div class="container ufl-content">
 		<div class="row">
 			<div class="col-sm-12 content-block">
 				<?php echo wpautop( wp_kses_post( do_shortcode( $content ) ) ); ?>

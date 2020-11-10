@@ -67,7 +67,7 @@
 	$content_box_copy .= '</div>';
 ?>
 <!-- ufl-category-content module -->
-<div class="content-box-module" <?php echo $anchor; ?>>
+<div class="content-box-module ufl-category-content" <?php echo $anchor; ?>>
 	<div class="container">
 		<div class="row">
 			<?php if( 'right' == get_sub_field( 'image_position' ) ): ?>
