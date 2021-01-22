@@ -434,6 +434,14 @@ function hwcoe_ufl_breaker_cards($atts, $content = NULL ) {
 }
 add_shortcode('ufl-breaker-cards', 'hwcoe_ufl_breaker_cards');
 
+/**
+ * Add Float Clearing Block
+ * 
+ * Example [clear]
+ * @param  array $atts Shortcode attributes
+ * @return string Shortcode output
+ */
+
 function hwcoe_ufl_clear_floats($atts, $content = null) {
 	extract(shortcode_atts(array(
 				'autop' => '1',
