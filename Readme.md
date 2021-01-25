@@ -33,6 +33,7 @@ Changelog
 ---------
 ### 3.0.2
 - Add documentation to `[clear]` shortcode
+- Add [ufl-card] shortcode
 
 ### 3.0.1
 - Update allowed HTML and scripts in selected ACF WYSIWYG fields

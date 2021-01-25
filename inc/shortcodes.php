@@ -10,6 +10,8 @@
  *	[ufl-content-block][/ufl-content-block]
  *	[ufl-image-right-quote][/ufl-image-right-quote]
  *	[ufl-breaker-cards][/ufl-breaker-cards]
+ *  [clear]
+ *  [ufl-card][/ufl-card]
  *
  * @package HWCOE_UFL
  */
@@ -131,7 +133,7 @@ function hwcoe_ufl_landing_hero($atts, $content = NULL ) {
 					 <div class="col-sm-10 col-sm-offset-1">
 						  <?php echo wpautop( wp_kses_post( $content ) ); ?>
 						  <?php if ( !empty($button_text) ){ 
-						  	if ( strtolower($button_text) == "learn more" || strtolower($button_text) == "read more" ) {
+							if ( strtolower($button_text) == "learn more" || strtolower($button_text) == "read more" ) {
 								$button_label = "Read More: " . esc_html($headline);
 							} else {
 								$button_label = esc_html($button_text);	
@@ -183,12 +185,12 @@ function hwcoe_ufl_breaker($atts, $content = NULL ) {
 						  <?php echo wpautop( wp_kses_post( $content ) ); ?>
 						  
 						  <?php if ( !$hide_button || !empty( $button_text ) ){ 
-						  	  	if ( strtolower($button_text) == "learn more" || strtolower($button_text) == "read more" ) {
+								if ( strtolower($button_text) == "learn more" || strtolower($button_text) == "read more" ) {
 									$button_label = "Read More: " . esc_html($headline);
 								} else {
 									$button_label = esc_html($button_text);	
 								}				
-						  	?>
+							?>
 						  <a href="<?php echo esc_url( $button_link ); ?>" class="btn btn--white" aria-label="<?php echo $button_label; ?>"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
 						  <?php } ?>
 					 </div>
@@ -453,3 +455,65 @@ function hwcoe_ufl_clear_floats($atts, $content = null) {
 	return $float_clear;
 }
 add_shortcode('clear', 'hwcoe_ufl_clear_floats');
+
+ /**
+ * Add Card
+ * 
+ * Example [ufl-card][/ufl-card]
+ * @param  array $atts Shortcode attributes
+ * @param  string [$content = ''] Content between shortcode tags
+ * @return string shortcode output
+ */
+
+ function hwcoe_ufl_card($atts, $content = NULL ) {
+	extract( shortcode_atts( 
+		array(
+			'headline' => '',
+			'image' => '',
+			// 'show_button' => 1,
+			'button_text' => '',
+			'button_link' => '#',
+		), $atts )
+	);
+	
+	// Support either image ID or image url
+	$image = ( is_numeric( $image ) )? wp_get_attachment_image_src( $image, 'large' ) : array($image);
+
+	// Shortcode callbacks must return content, so use output buffering
+	ob_start();
+	?>
+	<div class="col-sm-12 col-md-4">
+		<div class="card">
+			<?php if (!empty($image[0])) { ?>
+				<p><img src="<?php echo esc_url( $image[0] ); ?>" alt="<?php echo esc_html($headline) ?>" class="alignnone"></p>
+			<?php } ?>
+			
+			<div class="card-body">
+				<?php if ( !empty( $headline ) ){
+					echo '<h2>' . esc_html($headline) . '</h2>';
+				} ?>
+
+				<?php echo wpautop( wp_kses_post( $content ) ); ?>
+
+				<?php if ( !empty( $button_text ) ){ 
+					if ( strtolower($button_text) == "learn more" || strtolower($button_text) == "read more" ) {
+						$button_label = "Read More: " . esc_html($headline);
+					} else {
+						$button_label = esc_html($button_text);	
+					}				
+				?>
+				<p style="text-align: center;">
+					<a href="<?php echo esc_url( $button_link ); ?>" class="btn" aria-label="<?php echo $button_label; ?>"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
+				</p>
+				<?php } ?>
+				<!-- <p style="text-align: center;"><a class="btn" href="#">A button</a></p> -->
+			</div><!-- card-body -->
+		</div><!-- card -->
+	</div><!-- col-sm-12 col-md-4 -->
+
+	 <?php 
+	return ob_get_clean();
+
+
+ }
+ add_shortcode('ufl-card', 'hwcoe_ufl_card');
