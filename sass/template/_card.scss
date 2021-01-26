@@ -1,27 +1,26 @@
 .card {
 	background: $white;
 	background: transparentize($white,.1);
-	// padding: 10px;
+	padding: 15px;
 	margin: 0 0 20px 0;
-	// text-align: center;
-	line-height: 28px;
+	font-size: 14px;
+	line-height: 18px;
 	img {
-		// margin-bottom: 10px;
+		margin: 0 0 15px;
 	}
-	h2 {
+	h2, h3, h4, h5, h6 {
 	  font-size: 18px;
 	  line-height: 22px;
 	}
-	p {
+	p, ul, ol {
 		font-size: 14px;
-		line-height: 16px;
+		line-height: 18px;
 	}
-	ul, ol {
-		text-align: left;
-		font-size: 12px;
+	ul li, ol li {
+		margin: 0;
 	}
 }
 .card-body {
-	padding:16px;
+	padding:0 5px;
 }
 

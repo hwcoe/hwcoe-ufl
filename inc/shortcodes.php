@@ -485,7 +485,7 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 	<div class="col-sm-12 col-md-4">
 		<div class="card">
 			<?php if (!empty($image[0])) { ?>
-				<p><img src="<?php echo esc_url( $image[0] ); ?>" alt="<?php echo esc_html($headline) ?>" class="alignnone"></p>
+				<img src="<?php echo esc_url( $image[0] ); ?>" alt="<?php echo esc_html($headline) ?>" class="alignnone">
 			<?php } ?>
 			
 			<div class="card-body">
@@ -503,7 +503,7 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 					}				
 				?>
 				<p style="text-align: center;">
-					<a href="<?php echo esc_url( $button_link ); ?>" class="btn" aria-label="<?php echo $button_label; ?>"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
+					<a href="<?php echo esc_url( $button_link ); ?>" class="btn" aria-label="<?php echo $button_label; ?>"><?php echo esc_html( $button_text ); ?></a>
 				</p>
 				<?php } ?>
 				<!-- <p style="text-align: center;"><a class="btn" href="#">A button</a></p> -->
