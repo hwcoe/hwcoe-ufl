@@ -484,9 +484,18 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 	?>
 	<div class="col-sm-12 col-md-4">
 		<div class="card">
-			<?php if (!empty($image[0])) { ?>
-				<img src="<?php echo esc_url( $image[0] ); ?>" alt="<?php echo esc_html($headline) ?>" class="alignnone">
-			<?php } ?>
+			<?php 
+
+			if (!empty($image[0])) {
+				$link = ( !empty($button_text) )? esc_url( $button_link ) : false;
+				$link_before = ( $link )? '<a href="' . $link . '">' : '';
+				$link_after = ( $link )? '</a>' : '';
+
+				echo $link_before;
+				echo '<img src="' . esc_url( $image[0] ) . '" alt="' . esc_html($headline) . '" class="alignnone">';
+				echo $link_after;
+			}
+			?>
 			
 			<div class="card-body">
 				<?php if ( !empty( $headline ) ){
