@@ -12,12 +12,21 @@
 	  font-size: 18px;
 	  line-height: 22px;
 	}
+	h3 {
+		font-family: "gentona", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
 	p, ul, ol {
 		font-size: 14px;
 		line-height: 18px;
+		margin-bottom: 10px;
 	}
 	ul li, ol li {
 		margin: 0;
+	}
+	.btn {
+		font-size: 14px;
+		padding: 10px 15px;
+		width:100%;
 	}
 }
 .card-body {

@@ -470,9 +470,9 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 		array(
 			'headline' => '',
 			'image' => '',
-			// 'show_button' => 1,
 			'button_text' => '',
 			'button_link' => '#',
+			'new_window' => 0,
 		), $atts )
 	);
 	
@@ -496,17 +496,18 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 				<?php echo wpautop( wp_kses_post( $content ) ); ?>
 
 				<?php if ( !empty( $button_text ) ){ 
-					if ( strtolower($button_text) == "learn more" || strtolower($button_text) == "read more" ) {
-						$button_label = "Read More: " . esc_html($headline);
+					$new_window = filter_var($new_window, FILTER_VALIDATE_BOOLEAN) ? 'target="_blank"' : '';
+					
+					if ( !empty( $headline ) ) {
+						$button_label = $button_text . ": " . $headline;
 					} else {
-						$button_label = esc_html($button_text);	
+						$button_label = $button_text;	
 					}				
 				?>
 				<p style="text-align: center;">
-					<a href="<?php echo esc_url( $button_link ); ?>" class="btn" aria-label="<?php echo $button_label; ?>"><?php echo esc_html( $button_text ); ?></a>
+					<a href="<?php echo esc_url( $button_link ); ?>" class="btn" <?php echo $new_window; ?> aria-label="<?php echo esc_html($button_label); ?>"><?php echo esc_html( $button_text ); ?></a>
 				</p>
 				<?php } ?>
-				<!-- <p style="text-align: center;"><a class="btn" href="#">A button</a></p> -->
 			</div><!-- card-body -->
 		</div><!-- card -->
 	</div><!-- col-sm-12 col-md-4 -->
