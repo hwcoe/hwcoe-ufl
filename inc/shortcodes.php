@@ -486,9 +486,11 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 		<div class="card">
 			<?php 
 
+			$link = ( !empty($button_text) )? esc_url( $button_link ) : false;
+			$new_window = filter_var($new_window, FILTER_VALIDATE_BOOLEAN) ? 'target="_blank"' : '';
+
 			if (!empty($image[0])) {
-				$link = ( !empty($button_text) )? esc_url( $button_link ) : false;
-				$link_before = ( $link )? '<a href="' . $link . '">' : '';
+				$link_before = ( $link )? '<a href="' . $link . '" ' . $new_window . '>' : '';
 				$link_after = ( $link )? '</a>' : '';
 
 				echo $link_before;
@@ -504,9 +506,9 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 
 				<?php echo wpautop( wp_kses_post( $content ) ); ?>
 
-				<?php if ( !empty( $button_text ) ){ 
-					$new_window = filter_var($new_window, FILTER_VALIDATE_BOOLEAN) ? 'target="_blank"' : '';
-					
+				<?php 
+				// if ( !empty( $button_text ) ){ 
+				if ($link) {
 					if ( !empty( $headline ) ) {
 						$button_label = $button_text . ": " . $headline;
 					} else {
@@ -514,7 +516,7 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 					}				
 				?>
 				<p style="text-align: center;">
-					<a href="<?php echo esc_url( $button_link ); ?>" class="btn" <?php echo $new_window; ?> aria-label="<?php echo esc_html($button_label); ?>"><?php echo esc_html( $button_text ); ?></a>
+					<a href="<?php echo esc_url( $link ); ?>" class="btn" <?php echo $new_window; ?> aria-label="<?php echo esc_html($button_label); ?>"><?php echo esc_html( $button_text ); ?></a>
 				</p>
 				<?php } ?>
 			</div><!-- card-body -->
