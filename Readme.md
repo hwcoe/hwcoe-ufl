@@ -31,7 +31,7 @@ Documentation
 
 Changelog
 ---------
-### 3.0.2
+### 3.2.0
 - Add documentation to `[clear]` shortcode
 - Add [ufl-card] shortcode
 

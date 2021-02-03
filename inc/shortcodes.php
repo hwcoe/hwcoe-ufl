@@ -494,7 +494,7 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 				$link_after = ( $link )? '</a>' : '';
 
 				echo $link_before;
-				echo '<img src="' . esc_url( $image[0] ) . '" alt="' . esc_html($headline) . '" class="alignnone">';
+				echo '<img src="' . esc_url( $image[0] ) . '" alt="' . esc_html($headline) . '" class="img-responsive">';
 				echo $link_after;
 			}
 			?>
@@ -507,7 +507,6 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 				<?php echo wpautop( wp_kses_post( $content ) ); ?>
 
 				<?php 
-				// if ( !empty( $button_text ) ){ 
 				if ($link) {
 					if ( !empty( $headline ) ) {
 						$button_label = $button_text . ": " . $headline;
@@ -525,7 +524,5 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 
 	 <?php 
 	return ob_get_clean();
-
-
  }
  add_shortcode('ufl-card', 'hwcoe_ufl_card');
