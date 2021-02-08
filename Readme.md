@@ -31,9 +31,13 @@ Documentation
 
 Changelog
 ---------
+### 3.2.1
+- Make the `button_link` rather than `button_text` attribute enable the button in `[ufl-card]` shortcode
+- Add default text to `button_text` in `[ufl-card]` shortcode
+
 ### 3.2.0
 - Add documentation to `[clear]` shortcode
-- Add [ufl-card] shortcode
+- Add `[ufl-card]` shortcode
 
 ### 3.0.1
 - Update allowed HTML and scripts in selected ACF WYSIWYG fields

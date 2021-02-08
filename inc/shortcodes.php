@@ -470,8 +470,8 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 		array(
 			'headline' => '',
 			'image' => '',
-			'button_text' => '',
-			'button_link' => '#',
+			'button_text' => 'Learn More',
+			'button_link' => '',
 			'new_window' => 0,
 		), $atts )
 	);
@@ -486,7 +486,7 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 		<div class="card">
 			<?php 
 
-			$link = ( !empty($button_text) )? esc_url( $button_link ) : false;
+			$link = ( !empty($button_link) )? esc_url( $button_link ) : false;
 			$new_window = filter_var($new_window, FILTER_VALIDATE_BOOLEAN) ? 'target="_blank"' : '';
 
 			if (!empty($image[0])) {
