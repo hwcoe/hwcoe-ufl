@@ -7,6 +7,7 @@ jQuery(function($){
 	 * UFL Audience Cookies
 	 * Requires js.cookie.js
 	 */
+
 	function ufl_audience_preference_set_html(ufl_cookie) {
 		if (ufl_cookie) {
 			ufl_audience_html_url = $('.audience-link[data-ufl-audience-preference="'+ufl_cookie+'"]').attr('href');
@@ -113,7 +114,7 @@ jQuery(function($){
 					featured.children('span.category-tag').html(shuffledBios[i].affiliation);
 				}
 			});
-			if(window.innerWidth < 992){
+			if($(window).width() < 992){
 				$('.hor-scroll-el').css({'height':'','width':''});
 				$('.hor-scroll-wrap').each(function(){
 					$horHeight = 0;
@@ -403,8 +404,8 @@ jQuery(function($){
 
 	// Homepage feature bio wrap
 	function bioSize(){
-		$activeWidth = 370;
-		if($(window).width() > 1220){
+		$activeWidth = 420;
+		if($('.feature-bio-wrap .container').css('max-width') === '1170px'){
 			$activeWidth = 570;
 		}
 		$('.feature-bio-wrap').each(function(){
@@ -420,7 +421,8 @@ jQuery(function($){
 			});
 		});
 	}
-	if($(window).width() > 992){
+	// if($(window).width() >= 992){
+	if($('.feature-bio-wrap .container').css('max-width') === '970px' || $('.feature-bio-wrap .container').css('max-width') === '1170px') {
 		$('.bio:first').addClass('active');
 
 		// Resize bios
@@ -431,7 +433,7 @@ jQuery(function($){
 	  $this = $(this);
 	  $bioWrap = $this.closest('.feature-bio-wrap');
 
-		if($('.feature-bios .bio.velocity-animating',$bioWrap).length || $(window).width() < 767){
+		if($('.feature-bios .bio.velocity-animating',$bioWrap).length || $(window).width() < 768){
 			return;
 		}
 	  if(!$this.hasClass('active')){
@@ -568,7 +570,9 @@ jQuery(function($){
 	});
 
 	// Equal height horizontal scroll
-	if($(window).width() < 992){
+
+	// if($(window).width() < 992){
+	if($('.feature-bio-wrap .container').css('max-width') === '750px'){
 		horScrollSize();
 	}
 
@@ -608,12 +612,14 @@ jQuery(function($){
 	// Debounced window resize listener
 	$(window).smartresize(function(){
 		$windowWidth = $(window).width();
-		if($windowWidth > 767){
+		
+		// if($('.feature-bios .bio.velocity-animating',$bioWrap).length || $(window).width() < 767){
+		if($('.feature-bio-wrap .container').css('max-width') === '970px' || $('.feature-bio-wrap .container').css('max-width') === '1170px') {
 			// Resize bios on window resize
 			bioSize();
 		}
 
-		if($windowWidth >= 992){
+		if($('.feature-bio-wrap .container').css('max-width') === '970px' || $('.feature-bio-wrap .container').css('max-width') === '1170px') {
 			// Resize hor-scroll-wrap elements
 			$('.hor-scroll-el').css({'height':''});
 		} else {
