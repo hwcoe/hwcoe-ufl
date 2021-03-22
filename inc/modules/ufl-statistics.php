@@ -10,12 +10,15 @@
 ?>
 <?php if( have_rows( 'statistics' ) ): ?>
 	<?php while ( have_rows( 'statistics' ) ) : the_row(); ?>
-	<?php if( get_sub_field( 'background_image' ) ):?>
-		<style>
-			.stat-count-<?php echo $stat_count; ?>:hover { background-image:url(<?php esc_url( the_sub_field( 'background_image' ) ); ?>); } 
-		</style>
+	<?php 
+		if( get_sub_field( 'background_image' ) ): 
+		$background_image = get_sub_field( 'background_image' );
+	?>
+		<!-- <style>
+			.stat-count-<?php echo $stat_count; ?>:hover { background-image:url(<?php echo esc_url( $background_image ); ?>); } 
+		</style> -->
 	<?php endif // background_image ?>
-	<div class="stat-block-wrap stat-count-<?php echo $stat_count; ?> hor-scroll-el col-sm-<?php esc_attr( the_sub_field( 'columns' ) ); ?>">
+	<div id="<?php echo esc_url( $background_image ); ?>" class="stat-block-wrap stat-count-<?php echo $stat_count; ?> hor-scroll-el col-sm-<?php esc_attr( the_sub_field( 'columns' ) ); ?>">
 					<div class="stat-block">
 						<div class="stat">
 						<h3><?php esc_html_e( the_sub_field( 'statistic_value' ) ); ?></h3>

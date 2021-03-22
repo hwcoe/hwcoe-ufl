@@ -40,6 +40,7 @@ get_header();
 						*/
 						?>
 						<?php if( get_row_layout() == 'statistics_module' ): ?>
+
 							<?php include( HWCOE_UFL_INC_DIR . '/ufl-statistics.php' ); ?>
 						<?php endif // statistics_module ?>
 
