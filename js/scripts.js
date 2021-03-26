@@ -604,10 +604,7 @@ jQuery(function($){
 				var $bgImage = $(this).prev('#background-image').text();
 				var $statCount = $(this).attr("class").match(/stat-count[\w-]*\b/);
 				var $breaker = $(this).closest('.stat-breaker').attr('class').match(/breaker-count-\d+$/);
-				console.log('breaker: ' + $breaker);
-				console.log('statcount: ' + $statCount);
-				console.log('bgImage: '+ $bgImage);
-			
+				
 				$('head').append("<style>." + $breaker + " ." + $statCount + ":hover { background-image:url(" + $bgImage + "); } </style>");
 			}
 			
