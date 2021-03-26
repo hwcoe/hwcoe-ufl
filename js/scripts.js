@@ -590,41 +590,30 @@ jQuery(function($){
 	}
 
 	// Stats hover background image
-	// var $statBreakers = $('.stat-breaker');
-	// console.log($statBreakers);
-	// if ($statBreakers.length) {
-	// 	for (i=1; i<4; i++) {
-	// 		$statBreakers.addClass('breaker-count-'+i);
-	// 		console.log("Number of index = " + i);
-
-	// 		console.log("Number of breakers = " + $statBreakers);
-	// 	}
-	// }
 	function statsBg(){
+		// index .stat-breaker elements for CSS cascade
 		$('.stat-breaker').each(function(index){
 			var $statBreaker = $(this);
 			var $breakerCount = index;
 			$statBreaker.addClass('breaker-count-'+ $breakerCount);
 		});
-		// for each stat-count
-		$( "[class*='stat-count']" ).each ( function ($breakerCount) {
-			var $bgImage = $(this).attr('id');
-			// var breakerCount = 1; // get parent breaker-count class number
-		    var elClasses = $( this ).attr ( 'class' ).split ( ' ' );
-		    for ( var index in elClasses ) {
-		        if ( elClasses[index].match ( /^stat-count-\d+$/ ) ) {
-		            var statCount = elClasses[index].split ( 'count-' )[1];
-		            $('head').append("<style>.breaker-count-" + $breakerCount + " .stat-count-" + statCount + ":hover { background-image:url(" + $bgImage + "); } </style>");
-		            // $('head').append("<style>.breaker-count-1 .stat-count-" + statCount + ":hover { background-image:url(" + $bgImage + "); } </style>");
-		            break;
-		        }
-		    }
+
+		// apply background image on hover
+		$( ".stat-block-wrap" ).each ( function () {
+			if ($(this).prev('#background-image').length > 0){
+				var $bgImage = $(this).prev('#background-image').text();
+				var $statCount = $(this).attr("class").match(/stat-count[\w-]*\b/);
+				var $breaker = $(this).closest('.stat-breaker').attr('class').match(/breaker-count-\d+$/);
+				console.log('breaker: ' + $breaker);
+				console.log('statcount: ' + $statCount);
+				console.log('bgImage: '+ $bgImage);
+			
+				$('head').append("<style>." + $breaker + " ." + $statCount + ":hover { background-image:url(" + $bgImage + "); } </style>");
+			}
+			
 		} );
 	}
 	statsBg();
-	
-		
-
 	
 
 	// Stat wrap offscreen listener
