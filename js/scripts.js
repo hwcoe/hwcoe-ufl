@@ -605,7 +605,9 @@ jQuery(function($){
 				var $statCount = $(this).attr("class").match(/stat-count[\w-]*\b/);
 				var $breaker = $(this).closest('.stat-breaker').attr('class').match(/breaker-count-\d+$/);
 				
-				$('head').append("<style>." + $breaker + " ." + $statCount + ":hover { background-image:url(" + $bgImage + "); } </style>");
+				$('head').append('<style>.' + $breaker + ' .' + $statCount + ":hover { background-image:url(" + $bgImage + "); } </style>");
+
+
 			}
 			
 		} );
