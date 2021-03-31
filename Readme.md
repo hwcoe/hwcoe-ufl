@@ -33,7 +33,7 @@ Changelog
 ---------
 ### 3.2.2
 - Adjust profile layout at medium screen widths
-- Allow display of 1 or 2 profile items
+- Bugfix: differentiate background image rollover between multiple instances of statistics modules on a page
 
 ### 3.2.1
 - Make the `button_link` rather than `button_text` attribute enable the button in `[ufl-card]` shortcode
