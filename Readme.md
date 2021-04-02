@@ -31,6 +31,10 @@ Documentation
 
 Changelog
 ---------
+### 3.3.0
+- Add .extra-emphasis class for extra emphasis on inline text beyond `<strong>` or `<em>` 
+- Remove .embed-wrapper for iframes with class .issuu
+
 ### 3.2.2
 - Adjust profile layout at medium screen widths
 - Bugfix: differentiate background image rollover between multiple instances of statistics modules on a page

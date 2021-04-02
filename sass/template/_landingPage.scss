@@ -195,7 +195,7 @@
 	margin-bottom: 50px;
 	@include breakFirst(large){
 		margin-bottom: 100px;
-		padding: 100px 0;
+		padding: 50px 0;
 	}
 }
 .img-callout-wrap {
@@ -206,7 +206,7 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
 		@include breakFirst(large){
-			margin-top: 150px;
+			margin-top: 70px;
 			margin-bottom:0;
 		}
 	}

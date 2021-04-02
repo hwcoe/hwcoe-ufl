@@ -744,8 +744,8 @@ jQuery(function($){
 	});
 
 	// Responsive embeds
-	// Styled wrapper div around all iframes except Gravity Forms ajax
-	$( 'iframe').not('[id*="gform_ajax"]').each(function() {
+	// Styled wrapper div around all iframes except Gravity Forms ajax and issuu 
+	$('iframe').not('[id*="gform_ajax"], [class*="issuu"]').each(function(){
 		$(this).wrap("<div class=\"embed-wrapper\"></div>");
 	});
 
