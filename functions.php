@@ -264,6 +264,27 @@ define( "HWCOE_UFL_INC_DIR", get_template_directory() . "/inc/modules" );
  * All additional functionality should be defined here
  */
 
+// Register ACF blocks for WP block editor
+
+add_action('acf/init', 'hwcoe_ufl_acf_init_block_types');
+
+function hwcoe_ufl_acf_init_block_types() {
+	if( function_exists( 'acf_register_block_type' )){
+		// register a card block.
+        acf_register_block_type(array(
+            'name'              => 'card',
+            'title'             => __('Card'),
+            'description'       => __('A custom card block.'),
+            'render_template'   => get_template_directory() . '/template-parts/blocks/card/card.php',
+            'category'          => 'design',
+            'mode' 				=> 'edit',
+            'icon'              => 'dashicons-index-card',
+            'keywords'          => array( 'card' ),
+        ));
+	}
+
+}
+
 // Add field groups programmatically for Page and Slider options
 if( function_exists( 'acf_add_local_field_group' )){
 	require get_template_directory() . '/inc/advanced-custom-fields/field-groups.php';
