@@ -482,7 +482,7 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 	// Shortcode callbacks must return content, so use output buffering
 	ob_start();
 	?>
-	<div class="col-sm-12 col-md-4">
+	<div class="col-sm-12 col-md-4 card-wrapper">
 		<div class="card">
 			<?php 
 
@@ -499,7 +499,6 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 			}
 			?>
 			
-			<div class="card-body">
 				<?php if ( !empty( $headline ) ){
 					echo '<h2>' . esc_html($headline) . '</h2>';
 				} ?>
@@ -518,7 +517,7 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 					<a href="<?php echo esc_url( $link ); ?>" class="btn" <?php echo $new_window; ?> aria-label="<?php echo esc_html($button_label); ?>"><?php echo esc_html( $button_text ); ?></a>
 				</p>
 				<?php } ?>
-			</div><!-- card-body -->
+			
 		</div><!-- card -->
 	</div><!-- col-sm-12 col-md-4 -->
 

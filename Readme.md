@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 3.4.0
+- Add custom "Card" block 
+
 ### 3.3.0
 - Add .extra-emphasis class for extra emphasis on inline text beyond `<strong>` or `<em>` 
 - Remove .embed-wrapper for iframes with class .issuu

@@ -6,7 +6,7 @@
 	font-size: 14px;
 	line-height: 18px;
 	img {
-		margin: 0 0 15px;
+		// margin: 0 0 15px;
 	}
 	h2, h3, h4, h5, h6 {
 	  font-size: 18px;
@@ -31,5 +31,22 @@
 }
 .card-body {
 	padding:0 5px;
+}
+.entry-content .card h2 {
+	  margin-top:0px;
+}
+.entry-content h2 + div.card-block,
+.entry-content h2 + div.card-wrapper {
+	margin-top:0;
+}
+
+// Card block specific styles
+.card-block {
+	.wp-block-image {
+		margin-bottom:0;
+		.aligncenter {
+			margin:0;
+		}
+	}
 }
 

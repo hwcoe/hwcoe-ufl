@@ -34,7 +34,7 @@ $new_window = get_field('card_link_new_window') ?: 'Open in new window';
 
 ?>
 
-<div class="col-sm-12 col-md-4" id="<?php echo esc_attr($id); ?>">
+<div class="col-sm-12 col-md-4 card-wrapper" id="<?php echo esc_attr($id); ?>">
 	<div class="<?php echo esc_attr($className); ?>">
 
     <div class="card-image">

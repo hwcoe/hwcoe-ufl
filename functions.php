@@ -271,16 +271,31 @@ add_action('acf/init', 'hwcoe_ufl_acf_init_block_types');
 function hwcoe_ufl_acf_init_block_types() {
 	if( function_exists( 'acf_register_block_type' )){
 		// register a card block.
-        acf_register_block_type(array(
-            'name'              => 'card',
-            'title'             => __('Card'),
-            'description'       => __('A custom card block.'),
-            'render_template'   => get_template_directory() . '/template-parts/blocks/card/card.php',
-            'category'          => 'design',
-            'mode' 				=> 'edit',
-            'icon'              => 'dashicons-index-card',
-            'keywords'          => array( 'card' ),
-        ));
+		acf_register_block_type(array(
+			'name'              => 'card',
+			'title'             => __('Card'),
+			'description'       => __('A custom card block.'),
+			'render_template'   => get_template_directory() . '/template-parts/blocks/card/card.php',
+			'category'          => 'design',
+			'mode' 					=> 'edit',
+			'icon'              => 'dashicons-index-card',
+			'keywords'          => array( 'card' ),
+		));
+		acf_register_block_type( array(
+			'title'				=> __( 'Card with InnerBlocks', 'hwcoe-ufl' ),
+			'name'				=> 'card_innerblocks',
+			'description'       => __('A custom card block.'),
+			'render_template'	=> get_template_directory() . '/template-parts/blocks/card/card-innerblocks.php',
+			'category'          => 'design',
+			'mode'				=> 'preview',
+			'keywords'          => array( 'card' ),
+			'supports'			=> [
+				'align'		=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 		=> true,
+			]
+		));
 	}
 
 }
@@ -337,7 +352,7 @@ add_action('acf/init', 'hwcoe_ufl_acf_init');
 // Remove WPAUTOP from ACF TinyMCE Editor by default, so that we can use complex shortcodes in content fields
 // WPAUTOP is reinstated in some areas
 function acf_wysiwyg_remove_wpautop() {
-    remove_filter('acf_the_content', 'wpautop' );
+	remove_filter('acf_the_content', 'wpautop' );
 }
 add_action('acf/init', 'acf_wysiwyg_remove_wpautop');
 
