@@ -7,6 +7,7 @@
 	line-height: 18px;
 	img {
 		// margin: 0 0 15px;
+		margin: 0 0 15px 0;
 	}
 	h2, h3, h4, h5, h6 {
 	  font-size: 18px;
@@ -46,6 +47,26 @@
 		margin-bottom:0;
 		.aligncenter {
 			margin:0;
+		}
+	}
+	.wp-block-button__link {
+		border: 3px solid $orangeDark;
+		border-radius: 0;
+		// cursor: pointer;
+		// display: inline-block;
+		font: 700 14px/1 $fontFamily;
+		letter-spacing: 2px;
+		padding: 10px 15px;
+		text-transform: uppercase;
+		white-space: normal;
+		text-decoration: none;
+		color: $orangeDark;
+		background-color: transparent;
+		width:100%;
+		&:hover, &:active, &:focus {
+			background: $orange;
+			color: $white;
+			transition: all 0.3s ease;
 		}
 	}
 }

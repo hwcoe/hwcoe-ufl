@@ -31,7 +31,7 @@ if( !empty( $block['anchor'] ) )
 $template = array(
 	array('core/image', array(
 		'align' => 'center',
-		'url' => 'https://www.eng.ufl.edu/wp-content/uploads/2021/01/rhines-webinar-card-header.jpg',
+		'url' => 'https://www.eng.ufl.edu/wp-content/uploads/2021/05/card-header-placeholder.jpg',
 		'alt' => '',
 	)),
 	array('core/heading', array(
@@ -43,11 +43,9 @@ $template = array(
     )),    
     array( 'core/button', array(
         'url' => '#',
-		'text' => 'Button text here',
+		'text' => 'Edit Button Text and URL',
 		'linkTarget' => '_blank',
 		'borderRadius' => 0,
-		'backgroundColor' => 'none',
-		'textColor' => '#bc581a',
     )),
 
 );
