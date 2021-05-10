@@ -1,12 +1,7 @@
 <?php
 
 /**
- * Card Block Template.
- *
- * @param   array $block The block settings and attributes.
- * @param   string $content The block inner HTML (empty).
- * @param   bool $is_preview True during AJAX preview.
- * @param   (int|string) $post_id The post ID this block is saved to.
+ * Card Block Template with InnerBlocks support.
  */
 
 // Create id attribute allowing for custom "anchor" value.
@@ -43,7 +38,7 @@ $template = array(
     )),    
     array( 'core/button', array(
         'url' => '#',
-		'text' => 'Edit Button Text and URL',
+		'text' => 'Edit Button Text and Link URL',
 		'linkTarget' => '_blank',
 		'borderRadius' => 0,
     )),
@@ -58,4 +53,3 @@ $template = array(
 	echo '</div>';
 	?>
 </div>
-
