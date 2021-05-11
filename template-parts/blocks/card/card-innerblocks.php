@@ -48,6 +48,7 @@ $template = array(
 
 <div class="col-sm-12 col-md-4 card-block" id="<?php echo esc_attr($id); ?>">
     <?php	
+	// echo '<div id="' . esc_attr($id) . '" class="' . join( ' ', $classes ) . '"' . $anchor . '>';
 	echo '<div class="' . join( ' ', $classes ) . '"' . $anchor . '>';
 		echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $template ) ) . '" />';
 	echo '</div>';

@@ -29,20 +29,6 @@
 		padding: 10px 15px;
 		width:100%;
 	}
-}
-.card-body {
-	padding:0 5px;
-}
-.entry-content .card h2 {
-	  margin-top:0px;
-}
-.entry-content h2 + div.card-block,
-.entry-content h2 + div.card-wrapper {
-	margin-top:0;
-}
-
-// Card block specific styles
-.card-block {
 	.wp-block-image {
 		margin-bottom:0;
 		.aligncenter {
@@ -70,4 +56,44 @@
 		}
 	}
 }
+.card-body {
+	padding:0 5px;
+}
+.entry-content .card h2 {
+	  margin-top:0px;
+}
+.entry-content h2 + div.card-block,
+.entry-content h2 + div.card-wrapper {
+	margin-top:0;
+}
+
+// Card block specific styles
+// .card-block {
+// 	.wp-block-image {
+// 		margin-bottom:0;
+// 		.aligncenter {
+// 			margin:0;
+// 		}
+// 	}
+// 	.wp-block-button__link {
+// 		border: 3px solid $orangeDark;
+// 		border-radius: 0;
+// 		// cursor: pointer;
+// 		// display: inline-block;
+// 		font: 700 14px/1 $fontFamily;
+// 		letter-spacing: 2px;
+// 		padding: 10px 15px;
+// 		text-transform: uppercase;
+// 		white-space: normal;
+// 		text-decoration: none;
+// 		color: $orangeDark;
+// 		background-color: transparent;
+// 		width:100%;
+// 		&:hover, &:active, &:focus {
+// 			background: $orange;
+// 			color: $white;
+// 			transition: all 0.3s ease;
+// 		}
+// 	}
+// }
 

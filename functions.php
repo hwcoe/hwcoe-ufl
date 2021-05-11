@@ -271,33 +271,22 @@ add_action('acf/init', 'hwcoe_ufl_acf_init_block_types');
 function hwcoe_ufl_acf_init_block_types() {
 	if( function_exists( 'acf_register_block_type' )){
 		// register a card block.
-		acf_register_block_type(array(
-			'name'              => 'card',
-			'title'             => __('Card'),
-			'description'       => __('A custom card block.'),
-			'render_template'   => get_template_directory() . '/template-parts/blocks/card/card.php',
-			'category'          => 'design',
-			'mode' 					=> 'edit',
-			'icon'              => 'dashicons-index-card',
-			'keywords'          => array( 'card' ),
-		));
 		acf_register_block_type( array(
 			'title'				=> __( 'Card with InnerBlocks', 'hwcoe-ufl' ),
 			'name'				=> 'card_innerblocks',
-			'description'       => __('A custom card block.'),
+			'description'       => __('A custom card block with InnerBlocks support.'),
 			'render_template'	=> get_template_directory() . '/template-parts/blocks/card/card-innerblocks.php',
 			'category'          => 'design',
 			'mode'				=> 'preview',
 			'keywords'          => array( 'card' ),
 			'supports'			=> [
-				'align'		=> false,
+				'align'		=> true,
 				'anchor'		=> true,
 				'customClassName'	=> true,
 				'jsx' 		=> true,
 			]
 		));
 	}
-
 }
 
 // Add field groups programmatically for Page and Slider options
