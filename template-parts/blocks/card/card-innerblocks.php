@@ -23,6 +23,9 @@ $anchor = '';
 if( !empty( $block['anchor'] ) )
 	$anchor = ' id="' . sanitize_title( $block['anchor'] ) . '"';
 
+// Load custom field values.
+$card_width = get_field('card_width');
+
 $template = array(
 	array('core/image', array(
 		'align' => 'center',
@@ -46,9 +49,11 @@ $template = array(
 );
 ?>
 
-<div class="col-sm-12 col-md-4 card-block" id="<?php echo esc_attr($id); ?>">
+<?php // adjust class according to $cardWidth value 
+	 
+?>
+<div class="col-sm-12 col-md-<?php echo $card_width; ?> card-block" id="<?php echo esc_attr($id); ?>">
     <?php	
-	// echo '<div id="' . esc_attr($id) . '" class="' . join( ' ', $classes ) . '"' . $anchor . '>';
 	echo '<div class="' . join( ' ', $classes ) . '"' . $anchor . '>';
 		echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $template ) ) . '" />';
 	echo '</div>';
