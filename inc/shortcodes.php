@@ -16,6 +16,21 @@
  * @package HWCOE_UFL
  */
  
+// utility function to remove unwanted <p> tags within shortcodes
+// see https://stackoverflow.com/questions/13510131/remove-empty-p-tags-from-wordpress-shortcodes-via-a-php-functon#answer-49019912
+function custom_filter_shortcode_text($text = "") {
+	// Replace all the poorly formatted P tags that WP adds by default.
+	$tags = array("<p>", "</p>");
+	$text = str_replace($tags, "\n", $text);
+
+	// Remove any BR tags
+	$tags = array("<br>", "<br/>", "<br />");
+	$text = str_replace($tags, "", $text);
+
+	// Add back in the P and BR tags again, remove empty ones
+	return apply_filters("the_content", $text);
+}
+
  /**
  * Add Double Image with Content
  * 
@@ -503,7 +518,12 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 					echo '<h2>' . esc_html($headline) . '</h2>';
 				} ?>
 
-				<?php echo wpautop( wp_kses_post( $content ) ); ?>
+				<?php 
+				$content = custom_filter_shortcode_text($content);
+				// echo wpautop( wp_kses_post( $content ) ); 
+				echo wp_kses_post( $content ); 
+				
+				?>
 
 				<?php 
 				if ($link) {
@@ -518,8 +538,8 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 				</p>
 				<?php } ?>
 			
-		</div><!-- card -->
-	</div><!-- col-sm-12 col-md-4 -->
+		</div>
+	</div>
 
 	 <?php 
 	return ob_get_clean();
