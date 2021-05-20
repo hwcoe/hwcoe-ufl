@@ -33,6 +33,9 @@ Changelog
 ---------
 ### 3.4.0
 - Add custom "Card" block 
+- Add proportional width attribute to `[ufl-card]` shortcode
+- Add utility function to remove extraneous `<p>` and `<br>` tags from inside shortcodes
+- Keep empty `<p>` tags from displaying on the front end
 
 ### 3.3.0
 - Add .extra-emphasis class for extra emphasis on inline text beyond `<strong>` or `<em>` 

@@ -330,7 +330,9 @@ function hwcoe_ufl_content_block( $atts, $content = null ) {
 	<div class="container ufl-content">
 		<div class="row">
 			<div class="col-sm-12 content-block">
-				<?php echo wpautop( wp_kses_post( do_shortcode( $content ) ) ); ?>
+				<?php 
+					echo wpautop( wp_kses_post( do_shortcode( custom_filter_shortcode_text( $content ) ) ) ); 
+				?>
 			</div>
 		</div>
 	</div>
@@ -483,6 +485,7 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
  function hwcoe_ufl_card($atts, $content = NULL ) {
 	extract( shortcode_atts( 
 		array(
+			'cards_per_row' => "3",
 			'headline' => '',
 			'image' => '',
 			'button_text' => 'Learn More',
@@ -491,13 +494,31 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 		), $atts )
 	);
 	
+	// Proportional width of card
+	switch($cards_per_row){
+		case "3":
+			$grid_width = "4";
+			break;
+		case "1":
+			$grid_width = "12";
+			break;
+		case "2":
+			$grid_width = "6";
+			break;
+		case "4":
+			$grid_width = "3";
+			break;
+		default:
+			$grid_width = "4";
+	}
+
 	// Support either image ID or image url
 	$image = ( is_numeric( $image ) )? wp_get_attachment_image_src( $image, 'large' ) : array($image);
 
 	// Shortcode callbacks must return content, so use output buffering
 	ob_start();
 	?>
-	<div class="col-sm-12 col-md-4 card-wrapper">
+	<div class="col-sm-12 col-md-<?php echo $grid_width; ?> card-wrapper">
 		<div class="card">
 			<?php 
 
@@ -520,9 +541,7 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 
 				<?php 
 				$content = custom_filter_shortcode_text($content);
-				// echo wpautop( wp_kses_post( $content ) ); 
 				echo wp_kses_post( $content ); 
-				
 				?>
 
 				<?php 
@@ -537,7 +556,6 @@ add_shortcode('clear', 'hwcoe_ufl_clear_floats');
 					<a href="<?php echo esc_url( $link ); ?>" class="btn" <?php echo $new_window; ?> aria-label="<?php echo esc_html($button_label); ?>"><?php echo esc_html( $button_text ); ?></a>
 				</p>
 				<?php } ?>
-			
 		</div>
 	</div>
 

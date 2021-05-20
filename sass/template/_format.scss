@@ -149,6 +149,9 @@ blockquote {
 p, ul, ol, dl {
 	margin: 0 0 20px
 }
+p:empty {
+	display:none;
+}
 ul, ol {
 	margin-left: 30px;
 	li {
