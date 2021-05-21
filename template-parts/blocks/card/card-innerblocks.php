@@ -29,7 +29,7 @@ $card_width = get_field('card_width');
 $template = array(
 	array('core/image', array(
 		'align' => 'center',
-		'url' => 'https://www.eng.ufl.edu/wp-content/uploads/2021/05/card-header-placeholder.jpg',
+		'url' => HWCOE_UFL_IMG_DIR . '/card-header-placeholder.jpg',
 		'alt' => '',
 	)),
 	array('core/heading', array(
