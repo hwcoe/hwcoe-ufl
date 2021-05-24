@@ -3,11 +3,11 @@
     "title": "Block: Card",
     "fields": [
         {
-            "key": "field_6092e7aed39c0",
-            "label": "Headline",
-            "name": "card_headline",
-            "type": "text",
-            "instructions": "",
+            "key": "field_609ae24f58f8f",
+            "label": "Card Width",
+            "name": "card_width",
+            "type": "select",
+            "instructions": "Select width of content area that card should take up.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,108 +15,19 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6092e800d39c1",
-            "label": "Image",
-            "name": "card_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
+            "choices": {
+                "3": "25%",
+                "4": "33.3%",
+                "6": "50%",
+                "12": "100%"
             },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_6092e8e5494b2",
-            "label": "Content",
-            "name": "card_content",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_6092e95a494b3",
-            "label": "Button Text",
-            "name": "card_button_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6092e968494b4",
-            "label": "Button URL",
-            "name": "card_button_url",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_6092e985494b5",
-            "label": "Open button link in new window?",
-            "name": "card_link_new_window",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
+            "default_value": 4,
+            "allow_null": 0,
+            "multiple": 0,
             "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -124,7 +35,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/card"
+                "value": "acf\/card-innerblocks"
             }
         ]
     ],
@@ -136,5 +47,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1620668159
+    "modified": 1621871718
 }
