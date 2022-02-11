@@ -31,6 +31,10 @@ Documentation
 
 Changelog
 ---------
+### 3.5.0
+- Update npm dependencies
+
+
 ### 3.4.0
 - Add custom "Card" block 
 - Add proportional width attribute to `[ufl-card]` shortcode
