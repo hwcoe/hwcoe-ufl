@@ -54,7 +54,7 @@
 		color: $orange;
 		font-family: $fontFamily;
 		font-size: 16px;
-		padding: $grid-gutter-width/2;
+		padding: $grid-gutter-width*0.5;
 		background-color: transparent;
 		
 		&:hover, &:active {
@@ -65,7 +65,7 @@
 }
 .events-archive {
 	.tribe-events-event-meta {
-		margin: $grid-gutter-width/2 0;
+		margin: $grid-gutter-width*0.5 0;
 		font-size: 100%;
 		line-height: 30px;
 		font-weight: 500;
@@ -93,7 +93,7 @@
 		background: transparent;
 		border: none;
 		padding: 0;
-		margin: $grid-gutter-width/2 0;
+		margin: $grid-gutter-width*0.5 0;
 		
 		h2 {
 			margin-top: 0;

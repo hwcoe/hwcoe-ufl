@@ -22,7 +22,7 @@ ul.social-nav {
 		}
 	}
 	li:last-of-type {
-		padding-bottom: $grid-gutter-width/2;	
+		padding-bottom: $grid-gutter-width*0.5;	
 	}
 	a {
 		border-color: $white;

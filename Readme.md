@@ -33,7 +33,7 @@ Changelog
 ---------
 ### 3.5.0
 - Update npm dependencies
-
+- Migrate / operator to math.div() in Sass
 
 ### 3.4.0
 - Add custom "Card" block 

@@ -65,7 +65,7 @@ em      { font-style: italic; }
 cite    { font-style: normal; }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 ($baseLineHeight / 2);
+	margin: 0 0 ($baseLineHeight * 0.5);
 	font-family: $headingsFontFamily;
 	font-weight: $headingsFontWeight;
 	line-height: $baseLineHeight;

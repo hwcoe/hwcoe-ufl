@@ -19,7 +19,7 @@
 			position: relative;
 			overflow:hidden;
 			padding: 0 15px 3px 0;
-			margin-bottom: $grid-gutter-width/2;
+			margin-bottom: $grid-gutter-width*0.5;
 		}
 	}
 	.event-info {

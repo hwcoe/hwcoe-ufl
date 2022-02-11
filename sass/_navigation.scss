@@ -251,7 +251,7 @@
 .pagination, .post-navigation {
 	border-top: 5px solid $orange;
 	border-image: url(img/main-menu-hover.png) 25 30 10 20 repeat;
-	padding: $grid-gutter-width/2 0;
+	padding: $grid-gutter-width*0.5 0;
 	margin-bottom: $grid-gutter-width;
 	width: 100%;
 	clear: both;
@@ -265,7 +265,7 @@
 	font-weight: 500;
 	
 	.page-numbers {
-		padding: $grid-gutter-width/4 $grid-gutter-width/2;
+		padding: $grid-gutter-width*0.25 $grid-gutter-width*0.5;
 		display: none;
 		
 		@include breakFirst(medium){
@@ -295,7 +295,7 @@
 .post-navigation {
 	
 	.nav-previous, .nav-next {
-		padding: 0 $grid-gutter-width/4;
+		padding: 0 $grid-gutter-width*0.25;
 		
 		@include breakFirst(medium){
 			width: 45%;
@@ -307,7 +307,7 @@
 		}
 	}
 	.nav-next {
-		padding-top: $grid-gutter-width/2;
+		padding-top: $grid-gutter-width*0.5;
 		
 		@include breakFirst(medium){
 			float: right;

@@ -197,7 +197,7 @@
 				text-align: left;
 			}
 			@media screen and (min-width: $screen-md){
-				padding: $grid-gutter-width*1.5 $grid-gutter-width/4 0 $grid-gutter-width*1.83;
+				padding: $grid-gutter-width*1.5 $grid-gutter-width*0.25 0 $grid-gutter-width*1.83;
 				left: 0;
 				top: 0;
 				height: 100%;
@@ -254,9 +254,9 @@
 			}
 			@media screen and (min-width: $screen-md){
 				padding: $grid-gutter-width  $grid-gutter-width*0.75;
-				left: $grid-gutter-width/2;
+				left: $grid-gutter-width*0.5;
 				top: auto;
-				bottom: $grid-gutter-width/2;
+				bottom: $grid-gutter-width*0.5;
 				width: 60%;
 				height: auto;
 			}

@@ -1,6 +1,6 @@
 .image-right-quote {
 	.quote {
-		padding: $grid-gutter-width/2;
+		padding: $grid-gutter-width*0.5;
 	}
 	
 	@include breakFirst(large){

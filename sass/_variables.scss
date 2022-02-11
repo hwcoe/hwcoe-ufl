@@ -1,18 +1,20 @@
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+@use "sass:math";
+
 $font__text: 'gentonalight', Slabo, sans-serif;
 $font__headings: 'gentona_bookbold', Arial, sans-serif;
 $font__headings_serif: 'quadonmedium', Georgia, serif;
 $font__size: 16;
-$font__size_3xl: 60/$font__size + rem;
-$font__size_2xl: 48/$font__size + rem;
-$font__size_xl: 32/$font__size + rem;
-$font__size_lg: 24/$font__size + rem;
-$font__size_md: 18/$font__size + rem;
-$font__size_sm: 16/$font__size + rem;
-$font__size_xs: 14/$font__size + rem;
-$font__size_xxs: 12/$font__size + rem;
+$font__size_3xl: math.div(60, $font__size) + rem;
+$font__size_2xl: math.div(48, $font__size) + rem;
+$font__size_xl: math.div(32, $font__size) + rem;
+$font__size_lg: math.div(24, $font__size) + rem;
+$font__size_md: math.div(18, $font__size) + rem;
+$font__size_sm: math.div(16, $font__size) + rem;
+$font__size_xs: math.div(14, $font__size) + rem;
+$font__size_xxs: math.div(12, $font__size) + rem;
 
 $grayLight: #999999;
 $blueHighlight: #a6c7ff;

@@ -38,7 +38,7 @@
 	.lcp_post_info {
 		position: absolute;
 		bottom: 0;
-		padding: $grid-gutter-width/2;
+		padding: $grid-gutter-width*0.5;
 	}
 	.lcp_img_bg {
 		margin: -70px 0px 0px -16px;
