@@ -34,6 +34,8 @@ Changelog
 ### 3.5.0
 - Update npm dependencies
 - Migrate / operator to math.div() in Sass
+- Add option to set link text in Secondary Featured Content content blocks
+- Add option to display link as button in Secondary Featured Content content blocks
 
 ### 3.4.0
 - Add custom "Card" block 

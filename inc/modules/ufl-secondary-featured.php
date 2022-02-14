@@ -8,7 +8,11 @@
 <?php if( have_rows('content_1') ): ?>
 	<?php while ( have_rows('content_1') ) : the_row(); ?> 
 	<div class="secondary-featured-block one in-right"> 
-		<?php $story_category = get_sub_field( 'story_category' ); ?>
+		<?php 
+			$story_category = get_sub_field( 'story_category' ); 
+			$story_link_text = get_sub_field('story_link_text');
+			$display_link_as_button = get_sub_field('display_link_as_button');
+		?>
 		<?php if( get_sub_field( 'pull_latest_from_category' ) ): ?>
 			<?php        
 				$args = array(
@@ -29,7 +33,7 @@
 				<div class="secondary-featured-copy">
 					<h2><a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>"><?php echo esc_html(get_the_title( $secondary_story->ID )); ?></a></h2>
 					<p><?php echo wp_kses_post( $excerpt ); ?></p>
-					<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" aria-label="Read '<?php echo esc_attr(get_the_title( $secondary_story->ID )); ?>'" class="read-more">Read more</a>
+					<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" aria-label="Read '<?php echo esc_attr(get_the_title( $secondary_story->ID )); ?>'" class="<?php if( $display_link_as_button ){ echo "btn btn--white"; } else {echo "read-more";} ?>"><?php echo esc_html($story_link_text); ?></a>
 				</div>
 				<a href="<?php echo esc_url(get_category_link( $story_category )); ?>" class="category-tag"><?php echo esc_html(get_cat_name( $story_category )); ?></a>
 			</div>
@@ -44,7 +48,7 @@
 					<?php if (get_sub_field( 'story_excerpt' )):?>
 						<p><?php wp_kses_post( the_sub_field( 'story_excerpt' ) ); ?></p>
 					<?php endif; ?>
-					<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" aria-label="Read '<?php esc_attr(the_sub_field( 'story_title' )) ?>'" class="read-more">Read more</a>
+					<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" aria-label="<?php esc_attr(the_sub_field( 'story_title' )) ?>" class="<?php if( $display_link_as_button ){ echo "btn btn--white"; } else {echo "read-more";} ?>"><?php echo esc_html($story_link_text); ?></a>
 				</div>
 				<a href="<?php echo esc_url(get_category_link( get_sub_field( 'story_category' ) )); ?>" class="category-tag"><?php echo esc_html( get_cat_name( get_sub_field( 'story_category' ) ) ); ?></a>
 			</div>
@@ -83,7 +87,11 @@
 			</div>	
 		<?php else: // $content_type = story ?> 
 			<div class="secondary-featured-block two in-bottom"> 
-			<?php $story_category = get_sub_field( 'story_category' ); ?>
+			<?php 
+				$story_category = get_sub_field( 'story_category' ); 
+				$story_link_text = get_sub_field('story_link_text');
+				$display_link_as_button = get_sub_field('display_link_as_button');
+			?>
 			<?php if( get_sub_field( 'pull_latest_from_category' ) ): ?>
 				<?php        
 					$args = array(
@@ -107,7 +115,7 @@
 					<div class="secondary-featured-copy">
 						<h2><a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>"><?php echo esc_html(get_the_title( $secondary_story->ID )); ?></a></h2>
 						<p><?php echo wp_kses_post($excerpt) ?></p>
-						<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" aria-label="Read '<?php echo esc_attr(get_the_title( $secondary_story->ID )); ?>'" class="read-more">Read more</a>
+						<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" aria-label="<?php echo esc_attr(get_the_title( $secondary_story->ID )); ?>" class="<?php if( $display_link_as_button ){ echo "btn btn--white"; } else {echo "read-more";} ?>"><?php echo esc_html($story_link_text); ?></a>
 					</div>
 					<a href="<?php echo esc_url(get_category_link( $story_category )); ?>" class="category-tag"><?php echo esc_html(get_cat_name( $story_category )); ?></a>
 				</div>
@@ -122,7 +130,7 @@
 					<?php if (get_sub_field( 'story_excerpt' )):?>
 						<p><?php wp_kses_post(the_sub_field( 'story_excerpt' )); ?></p>
 					<?php endif; ?>
-					<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" aria-label="Read <?php esc_attr(the_sub_field( 'story_title' )) ?>" class="read-more">Read more</a>
+					<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" aria-label="<?php esc_attr(the_sub_field( 'story_title' )) ?>" class="<?php if( $display_link_as_button ){ echo "btn btn--white"; } else {echo "read-more";} ?>"><?php echo esc_html($story_link_text); ?></a>
 					</div>
 					<a href="<?php echo esc_url(get_category_link( get_sub_field( 'story_category' ) )); ?>" class="category-tag"><?php echo esc_html(get_cat_name( get_sub_field( 'story_category' ) )); ?></a>
 				</div>
@@ -160,9 +168,13 @@
 					<?php esc_attr( the_sub_field( 'twitter_embed_code' ) ); ?>
 				</div>
 			</div>	
-		<?php else: ?>
+		<?php else: // $content_type === story ?> 
 			<div class="secondary-featured-block three" style="background: transparent;">
-			<?php $story_category = get_sub_field( 'story_category' ); ?>
+			<?php 
+				$story_category = get_sub_field( 'story_category' ); 
+				$story_link_text = get_sub_field('story_link_text');
+				$display_link_as_button = get_sub_field('display_link_as_button');
+			?>
 			<?php if( get_sub_field( 'pull_latest_from_category' ) ): ?>
 				<?php        
 					$args = array(
@@ -185,7 +197,7 @@
 
 						<h2><a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>"><?php echo get_the_title( $secondary_story->ID ); ?></a></h2>
 						<p><?php echo wp_kses_post($excerpt) ?></p>
-						<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" aria-label="Read '<?php echo esc_attr(get_the_title( $secondary_story->ID )); ?>'" class="read-more">Read more</a>
+						<a href="<?php echo esc_url( get_permalink( $secondary_story->ID ) ); ?>" aria-label="<?php echo esc_attr(get_the_title( $secondary_story->ID )); ?>" class="<?php if( $display_link_as_button ){ echo "btn btn--white"; } else {echo "read-more";} ?>"><?php echo esc_html($story_link_text); ?></a>
 					</div>
 					<a href="<?php echo esc_url(get_category_link( $story_category )); ?>" class="category-tag"><?php echo esc_html(get_cat_name( $story_category )); ?></a>
 				</div>
@@ -199,7 +211,7 @@
 						<?php if (get_sub_field( 'story_excerpt' )):?>
 							<p><?php wp_kses_post(the_sub_field( 'story_excerpt' )); ?></p>
 						<?php endif; ?>
-						<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" aria-label="Read '<?php esc_attr(the_sub_field( 'story_title' )) ?>'" class="read-more">Read more</a>
+						<a href="<?php esc_url( the_sub_field( 'story_link' ) ); ?>" aria-label="<?php esc_attr(the_sub_field( 'story_title' )) ?>" class="<?php if( $display_link_as_button ){ echo "btn btn--white"; } else {echo "read-more";} ?>"><?php echo esc_html($story_link_text); ?></a>
 					</div>
 					<a href="<?php echo esc_url(get_category_link( get_sub_field( 'story_category' ) )); ?>" class="category-tag"><?php echo esc_html(get_cat_name( get_sub_field( 'story_category' ) )); ?></a>
 				</div>

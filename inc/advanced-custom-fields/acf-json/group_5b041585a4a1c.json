@@ -448,6 +448,44 @@
                                             "placeholder": ""
                                         },
                                         {
+                                            "key": "field_620a66d95f2b2",
+                                            "label": "Story Link Text",
+                                            "name": "story_link_text",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "Read More",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": 50
+                                        },
+                                        {
+                                            "key": "field_620a67415f2b3",
+                                            "label": "Display Link as Button",
+                                            "name": "display_link_as_button",
+                                            "type": "true_false",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0,
+                                            "ui": 0,
+                                            "ui_on_text": "",
+                                            "ui_off_text": ""
+                                        },
+                                        {
                                             "key": "field_5b041587370d1",
                                             "label": "Story Background Image",
                                             "name": "story_background_image",
@@ -830,6 +868,60 @@
                                             },
                                             "default_value": "",
                                             "placeholder": ""
+                                        },
+                                        {
+                                            "key": "field_620a6f564d230",
+                                            "label": "Story Link Text",
+                                            "name": "story_link_text",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_5b0415881087d",
+                                                        "operator": "==",
+                                                        "value": "story"
+                                                    }
+                                                ]
+                                            ],
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "Read More",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_620a6f7d4d231",
+                                            "label": "Display Link as Button",
+                                            "name": "display_link_as_button",
+                                            "type": "true_false",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_5b0415881087d",
+                                                        "operator": "==",
+                                                        "value": "story"
+                                                    }
+                                                ]
+                                            ],
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0,
+                                            "ui": 0,
+                                            "ui_on_text": "",
+                                            "ui_off_text": ""
                                         }
                                     ],
                                     "min": "",
@@ -1171,6 +1263,60 @@
                                             },
                                             "default_value": "",
                                             "placeholder": ""
+                                        },
+                                        {
+                                            "key": "field_620a7979cdc0f",
+                                            "label": "Story Link Text",
+                                            "name": "story_link_text",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_5b045e7c417b3",
+                                                        "operator": "==",
+                                                        "value": "story"
+                                                    }
+                                                ]
+                                            ],
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "Read More",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_620a799ccdc10",
+                                            "label": "Display Link as Button",
+                                            "name": "display_link_as_button",
+                                            "type": "true_false",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_5b045e7c417b3",
+                                                        "operator": "==",
+                                                        "value": "story"
+                                                    }
+                                                ]
+                                            ],
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0,
+                                            "ui": 0,
+                                            "ui_on_text": "",
+                                            "ui_off_text": ""
                                         }
                                     ],
                                     "min": "",
@@ -1827,5 +1973,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1602256934
+    "show_in_rest": 0,
+    "modified": 1644853781
 }
