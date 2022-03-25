@@ -83,6 +83,9 @@ function hwcoe_ufl_customize_css() {
 	// Custom css for sidenav
 	if ( $collapse_sidebar_nav ) {
 		$custom_css  .= '.sidenav .page_item_has_children .children {display: none;} ';	
+		// $custom_css  .= '.sidenav .page_item_has_children.current_page_item .children .children {display:none;} ';
+		// $custom_css  .= '.sidenav .page_item_has_children.current_page_item ~ .page_item_has_children .children {display:none;} ';
+		// $custom_css  .= '.sidenav .page_item_has_children.current_page_item .children {display: block;} ';
 	}
 	
 	 wp_add_inline_style( 'hwcoe-ufl-style', $custom_css );

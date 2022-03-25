@@ -194,10 +194,12 @@
 }
 
 /* Sidebar Navigation */
-.sidenav .page_item_has_children.current_page_item .children,
-.sidenav .page_item_has_children.current_page_ancestor .children {
+.sidenav .page_item_has_children.current_page_item > .children,
+// .sidenav .page_item_has_children.current_page_ancestor .children
+.sidenav .page_item_has_children.current_page_ancestor > .children {
 	display: block;	
 }
+
 .sidenav {
 	@extend .big-list;
 	list-style: none;
