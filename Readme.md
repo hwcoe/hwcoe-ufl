@@ -36,6 +36,7 @@ Changelog
 - Migrate / operator to math.div() in Sass
 - Add option to set link text in Secondary Featured Content content blocks
 - Add option to display link as button in Secondary Featured Content content blocks
+- When Collapse Sidebar Navigation is enabled, hide nested menus in sidenav unless parent is selected
 
 ### 3.4.0
 - Add custom "Card" block 
