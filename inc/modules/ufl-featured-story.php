@@ -62,7 +62,7 @@ $stories = array();
 						<div class="featured-story active">
 							<h2 data-index="<?php echo esc_attr($story_count); ?>"><?php echo $story['title']; ?> 
 							<?php if ( $story['tagline'] !== ''): ?>
-								<a href="<?php echo esc_url( $story['link'] ); ?>" aria-label="Read '<?php echo esc_attr( $story['title'] ); ?>'" class="read-more"><?php echo esc_html($story['tagline']); ?></a>
+								<a href="<?php echo esc_url( $story['link'] ); ?>" aria-label="Read '<?php echo esc_attr( $story['title'] ); ?>'" id="featured-story-<?php echo esc_attr($story_count); ?>" class="read-more"><?php echo esc_html($story['tagline']); ?></a>
 							<?php endif; ?>
 							</h2>
 							<a href="<?php echo esc_url( get_category_link( $story['category'] ) ); ?>" class="category-tag"><?php echo esc_html(get_cat_name( $story['category'] )); ?></a>
@@ -71,7 +71,7 @@ $stories = array();
 						<div data-number="<?php echo esc_attr($story_count); ?>" class="featured-story">
 							<h2 data-index="<?php echo esc_attr($story_count); ?>"><?php echo esc_html($story['title']); ?> 
 							<?php if ( $story['tagline'] !== ''): ?>
-								<a href="<?php echo esc_url( $story['link'] ); ?>" aria-label="Read '<?php echo esc_attr($story['title']); ?>'" class="read-more"><?php echo esc_html($story['tagline']); ?></a>
+								<a href="<?php echo esc_url( $story['link'] ); ?>" aria-label="Read '<?php echo esc_attr($story['title']); ?>'"  id="featured-story-<?php echo esc_attr($story_count); ?>" class="read-more"><?php echo esc_html($story['tagline']); ?></a>
 							<?php endif; ?>
 							</h2>
 							<a href="<?php echo esc_url( get_category_link( $story['category']) ); ?>" class="category-tag"><?php echo esc_html(get_cat_name( $story['category'] )); ?></a>

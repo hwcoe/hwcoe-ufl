@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 3.6.0
+- Add IDs to home page template content links for event tracking
+
 ### 3.5.0
 - Update npm dependencies
 - Migrate / operator to math.div() in Sass
