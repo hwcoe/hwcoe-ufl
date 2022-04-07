@@ -34,7 +34,7 @@
 								$button_label = $button_text;
 							}
 						?>
-							<a href="<?php echo esc_url( $button_link ); ?>" aria-label="<?php echo esc_attr( $button_label ); ?>" class="btn btn--white"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
+							<a href="<?php echo esc_url( $button_link ); ?>" aria-label="<?php echo esc_attr( $button_label ); ?>" class="btn btn--white secondary-link"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
 					<?php endwhile // have_rows ?>
 				<?php endif // have_rows ?>
 			</div>

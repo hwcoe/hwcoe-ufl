@@ -26,7 +26,7 @@
 					$button_label = $button_text;
 				}
 
-				$featured_bio_copy .= '<a href="' . esc_url( get_sub_field( 'button_url' ) ) . '" class="btn btn--white" aria-label="' . $button_label . '">' . $button_text . '<span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' . HWCOE_UFL_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span></a>';
+				$featured_bio_copy .= '<a href="' . esc_url( get_sub_field( 'button_url' ) ) . '" class="btn btn--white profile-link-'. $profile_count . '" aria-label="' . $button_label . '">' . $button_text . '<span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' . HWCOE_UFL_IMG_DIR . '/spritemap.svg#arw-right"></use></svg></span></a>';
 		 	}
 		 	if ( get_sub_field( 'profile_type' ) ) {
 				$featured_bio_copy .=   '<span class="category-tag orange">' . esc_html( get_sub_field( 'profile_type' )) . '</span>';
@@ -53,7 +53,7 @@
 						$button_label = $button_text;
 					}
 				?>
-				<a href="<?php esc_url( the_sub_field( 'button_url' ) ); ?>" class="btn btn--white" aria-label="<?php echo $button_label; ?>"><?php echo $button_text; ?> <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
+				<a href="<?php esc_url( the_sub_field( 'button_url' ) ); ?>" class="btn btn--white profile-link-<?php echo $profile_count; ?>" aria-label="<?php echo $button_label; ?>"><?php echo $button_text; ?> <span class="arw-right icon-svg"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo HWCOE_UFL_IMG_DIR; ?>/spritemap.svg#arw-right"></use></svg></span></a>
 				<?php endif // include_button ?>
 				<?php if ( get_sub_field( 'profile_type' ) ) : ?>
 					<span class="category-tag orange"><?php esc_html_e( the_sub_field( 'profile_type' ) ); ?></span>
