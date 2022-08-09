@@ -15,7 +15,7 @@
 			<a href="http://www.ufl.edu/" class="logo icon-svg" aria-label="Visit the main University of Florida website">
 				<svg>
 					<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#logo-uf"></use>
-					<span class="visuallyhidden">University of Florida</span>
+					<span class="screen-reader-text">University of Florida</span>
 				</svg>
 			</a>
 			<h1 class="screen-reader-title">
@@ -62,11 +62,13 @@
 					<span class="icon-svg icon-menu">
 						<svg>
 							<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#menu"></use>
+							<span class="screen-reader-text">Open</span>
 						</svg>
 					</span>
 					<span class="icon-svg icon-close">
 						<svg>
 							<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#close"></use>
+							<span class="screen-reader-text">Close</span>
 						</svg>
 					</span>
 				</a>
@@ -82,11 +84,13 @@
 				<span class="icon-svg icon-menu">
 					<svg>
 						<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#menu"></use>
+						<span class="screen-reader-text">Open</span>
 					</svg>
 				</span>
 				<span class="icon-svg icon-close" role="button">
 					<svg>
 						<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#close"></use>
+						<span class="screen-reader-text">Close</span>
 					</svg>
 				</span>
 			</a>

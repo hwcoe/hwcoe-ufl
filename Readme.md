@@ -33,6 +33,7 @@ Changelog
 ---------
 ### 3.7.0
 - Packages security update
+- CSS updates for improved accessibility
 
 ### 3.6.0
 - Add IDs to home page template content links for event tracking

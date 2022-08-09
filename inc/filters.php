@@ -34,7 +34,7 @@ function hwcoe_ufl_archive_title( $title ){
 		$icon = get_template_directory_uri();
 		$icon .= "/img/spritemap.svg#feed";
 		$title = sprintf( __( '%s', 'hwcoe-ufl' ), single_cat_title( '', false ) );
-		$title .= sprintf('<a href="%s" class="icon-svg icon-feed"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%s"></use></svg></a>', get_category_feed_link( $queried_obj->term_id ), $icon, $title );
+		$title .= sprintf('<a href="%s" class="icon-svg icon-feed"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%s"></use></svg><span class="visuallyhidden">%s</span></a>', get_category_feed_link( $queried_obj->term_id ), $icon, $title );
 	}
 	else {
 		$title = str_replace( __('Archives: ', 'hwcoe-ufl'), '', $title);
