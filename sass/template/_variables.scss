@@ -47,7 +47,8 @@ $serifFontFamily:				"quadon", "Georgia", serif !default;
 
 $baseFontSize:          18px !default;
 $baseFontFamily:        $fontFamily !default;
-$baseLineHeight:        26px !default;
+// $baseLineHeight:        26px !default;
+$baseLineHeight:        1.5 !default;
 
 $headingsFontFamily:    inherit !default;
 $headingsFontWeight:    bold !default;
