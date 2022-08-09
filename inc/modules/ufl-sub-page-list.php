@@ -45,7 +45,7 @@ foreach( $pages as $page ): ?>
 			<?php endif // show_thumb ?>
 					<h2><a href="<?php echo esc_url($link); ?>"><?php echo esc_html($title); ?></a></h2>
 					<div class="normal"><?php echo wp_kses_post($content); ?>
-						<a class="read-more" aria-label="<?php echo esc_attr($title); ?>" href="<?php echo esc_url($link); ?>">Read More</a>
+						<a class="read-more" aria-label="Read More: <?php echo esc_attr($title); ?>" href="<?php echo esc_url($link); ?>">Read More</a>
 					</div>
 			<?php if( $list_children ): ?>
 				<?php 
