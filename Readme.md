@@ -32,7 +32,7 @@ Documentation
 Changelog
 ---------
 ### 3.7.0
-- Packages security update
+- NPM packages updated
 - CSS updates for improved accessibility
 
 ### 3.6.0

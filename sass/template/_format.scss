@@ -72,9 +72,6 @@ h1, h2, h3, h4, h5, h6 {
 	color: $headingsColor;
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
 }
-h1,
-h2,
-h3 { line-height: $baseLineHeight * 2; }
 
 h1 {
 	color: $blue;
@@ -109,7 +106,6 @@ h2 {
 	}
 }
 h3 {
-	// color: #005496;
 	color: $blue;
 	font: 500 24px/36px $serifFontFamily;
 	letter-spacing: 1px;
