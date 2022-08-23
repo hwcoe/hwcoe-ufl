@@ -68,7 +68,7 @@
 
 // form templates
 
-#event-form, .em-booking-form, .em-booking-login-form {
+#event-form, .em-booking-form, .em-login-form {
 	h2, h3 {
 		clear:both;
 		margin-bottom: 10px; 
@@ -108,6 +108,30 @@
 		color: $red;
 		margin-left: 4px;
 	}
+}
+.em-login-content {
+	background-color: $white;
+	padding: 1em;
+}
+@include breakFirst(large){
+	.em-event-booking-form {
+		display: flex;
+	}
+	.em-booking-form {
+		order: 1;
+	}
+
+	.em-login {
+		order: 2;
+		margin-left: 2em;
+	}
+	// .em-login-content {
+	// 	background-color: #eeeeee;
+	// 	padding: 1em;
+	// }
+}
+.em-login-buttons, .em-login-rememberme, .em-login-links {
+	margin: 10px 0;
 }
 #event-form {
 	.inside {
@@ -151,8 +175,11 @@
 		}
 	}
 }
+.em-login {
+
+}
 div.em-booking-login label {
-	width:auto;
+	// width:auto;
 }
 #em_wp-submit {
 	margin: 10px 10px 10px 0;
