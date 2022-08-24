@@ -68,7 +68,7 @@
 
 // form templates
 
-#event-form, .em-booking-form, .em-login-form {
+.event-form, .em-booking-form, .em-login-form {
 	h2, h3 {
 		clear:both;
 		margin-bottom: 10px; 
@@ -113,6 +113,9 @@
 	background-color: $white;
 	padding: 1em;
 }
+.em-recurrence-interval {
+	width: 3em !important;
+}
 @include breakFirst(large){
 	.em-event-booking-form {
 		display: flex;
@@ -133,9 +136,16 @@
 .em-login-buttons, .em-login-rememberme, .em-login-links {
 	margin: 10px 0;
 }
-#event-form {
+.em.em-event-editor section, .em.em-location-editor section {
+	margin-bottom: 10px;
+	padding-right: 16px;
+}
+.em.em-event-editor .event-extra-details {
+	margin-top: 10px;
+}
+.event-form {
 	.inside {
-		padding-right: 16px;
+		// padding-right: 16px;
 	}
 
 	.input-full, .input-left, .input-right {
