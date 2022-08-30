@@ -9,7 +9,7 @@ $id = rand();
 <!-- START recurrence postbox -->
 <div id="em-form-with-recurrence-<?php echo $id; ?>" class="em event-form-with-recurrence event-form-when">
 	<div class="input-full">
-		<input type="checkbox" id="em-recurrence-checkbox-<?php echo $id; ?>" class="em-recurrence-checkbox" name="recurring" value="1" <?php if($EM_Event->is_recurring()) echo 'checked' ?> > <label for="em-recurrence-checkbox"><?php _e('This is a recurring event.', 'events-manager'); ?></label> 
+		<input type="checkbox" id="em-recurrence-checkbox-<?php echo $id; ?>" class="em-recurrence-checkbox" name="recurring" value="1" <?php if($EM_Event->is_recurring()) echo 'checked' ?> > <label for="em-recurrence-checkbox-<?php echo $id; ?>"><?php _e('This is a recurring event.', 'events-manager'); ?></label> 
 	</div>
 	<?php
 		$with_recurring = true;
