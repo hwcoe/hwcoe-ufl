@@ -34,6 +34,7 @@ Changelog
 ### 3.7.0
 - NPM packages updated
 - CSS updates for improved accessibility
+- Events Manager template updates
 
 ### 3.6.0
 - Add IDs to home page template content links for event tracking

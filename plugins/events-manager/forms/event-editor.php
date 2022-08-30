@@ -58,7 +58,7 @@ $id = rand(); // not related to searches, so we'll just add an ID for good pract
 				</div>
 			</section>
 
-			<section class="event-form-when  <?php echo $template; ?>">
+			<section class="event-form-when <?php echo $template; ?>">
 				<?php
 					if( empty($EM_Event->event_id) && $EM_Event->can_manage('edit_recurring_events','edit_others_recurring_events') && get_option('dbem_recurrence_enabled') ){
 						em_locate_template('forms/event/when-with-recurring.php',true);
