@@ -9,7 +9,8 @@ body {
 	font-family: $baseFontFamily;
 	font-size: ($baseFontSize - 2px);
 	font-weight: 100;
-	line-height: $baseLineHeight;
+	// line-height: $baseLineHeight;
+	line-height: 26px;
 	margin: 0;
 	padding-top: 90px;
 	@include breakFirst(medium) {
@@ -573,7 +574,6 @@ img {
 	@extend h3;
 	color: $blueLight;
 	font-size: 18px;
-	line-height: 26px;
 	margin-bottom: 30px;
 	@include breakFirst(medium){
 		font: 500 24px/36px $serifFontFamily;

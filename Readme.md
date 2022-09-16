@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 3.7.1
+- Bugfix: Fixed SCSS variable $baseLineHeight change causing primary nav to be inaccessible in certain cases
+
 ### 3.7.0
 - NPM packages updated
 - CSS updates for improved accessibility
