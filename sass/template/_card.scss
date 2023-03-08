@@ -3,23 +3,24 @@
 	background: transparentize($white,.1);
 	padding: 15px;
 	margin: 0 0 20px 0;
-	font-size: 14px;
-	line-height: 18px;
+	font-size: 16px;
+	line-height: 20px;
+	box-shadow: 0px 2px 5px 0px	rgba(0, 0, 0, 0.4);
 	img {
 		// margin: 0 0 15px;
 		margin: 0 0 15px 0;
 	}
 	h2, h3, h4, h5, h6 {
-	  font-size: 18px;
-	  line-height: 22px;
+	  font-size: 22px;
+	  line-height: 26px;
 	}
 	h3 {
 		font-family: "gentona", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
 	p, ul, ol {
-		font-size: 14px;
-		line-height: 18px;
-		margin-bottom: 10px;
+		// font-size: 14px;
+		// line-height: 18px;
+		margin-bottom: 20px;
 	}
 	ul li, ol li {
 		margin: 0;
@@ -29,31 +30,15 @@
 		padding: 10px 15px;
 		width:100%;
 	}
-	.wp-block-image {
-		margin-bottom:0;
+	.wp-block-image, .wp-block-cover {
+		// margin-bottom:0;
+		margin: -15px -15px 10px -15px;
 		.aligncenter {
 			margin:0;
 		}
 	}
-	.wp-block-button__link {
-		border: 3px solid $orangeDark;
+	.wp-block-button__link { 
 		border-radius: 0;
-		// cursor: pointer;
-		// display: inline-block;
-		font: 700 14px/1 $fontFamily;
-		letter-spacing: 2px;
-		padding: 10px 15px;
-		text-transform: uppercase;
-		white-space: normal;
-		text-decoration: none;
-		color: $orangeDark;
-		background-color: transparent;
-		width:100%;
-		&:hover, &:active, &:focus {
-			background: $orange;
-			color: $white;
-			transition: all 0.3s ease;
-		}
 	}
 }
 .card-body {
@@ -61,39 +46,38 @@
 }
 .entry-content .card h2 {
 	  margin-top:0px;
+	  word-break: keep-all;
+	  overflow-wrap: normal;
 }
 .entry-content h2 + div.card-block,
 .entry-content h2 + div.card-wrapper {
 	margin-top:0;
 }
+.card--linked {
+	color: inherit;
+	font-weight: inherit !important;
+	text-decoration:inherit !important;
+	&:hover, &:focus, &:active {
+		color: inherit;
+	}
+}
+.card--flex {
+	align-self: stretch;
+	// flex: 1 auto;
+	width: 90%;
+	flex: 0 0 auto;
+	@include breakFirst(medium) {
+		flex: 0 1 calc(33% - 0.5em);
+		// width: auto;
+	}	
+}
+.card-row {
+	@include breakTo(medium) {
+		width:100%;
+		justify-content: center !important;
+	}	
 
-// Card block specific styles
-// .card-block {
-// 	.wp-block-image {
-// 		margin-bottom:0;
-// 		.aligncenter {
-// 			margin:0;
-// 		}
-// 	}
-// 	.wp-block-button__link {
-// 		border: 3px solid $orangeDark;
-// 		border-radius: 0;
-// 		// cursor: pointer;
-// 		// display: inline-block;
-// 		font: 700 14px/1 $fontFamily;
-// 		letter-spacing: 2px;
-// 		padding: 10px 15px;
-// 		text-transform: uppercase;
-// 		white-space: normal;
-// 		text-decoration: none;
-// 		color: $orangeDark;
-// 		background-color: transparent;
-// 		width:100%;
-// 		&:hover, &:active, &:focus {
-// 			background: $orange;
-// 			color: $white;
-// 			transition: all 0.3s ease;
-// 		}
-// 	}
-// }
+}
+
+
 

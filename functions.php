@@ -289,6 +289,12 @@ function hwcoe_ufl_acf_init_block_types() {
 	}
 }
 
+add_action( 'init', 'register_acf_blocks', 5 );
+function register_acf_blocks() {
+    register_block_type( get_template_directory() . '/blocks/card' );
+}
+
+
 // Add field groups programmatically for Page and Slider options
 if( function_exists( 'acf_add_local_field_group' )){
 	require get_template_directory() . '/inc/advanced-custom-fields/field-groups.php';

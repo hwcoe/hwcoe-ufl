@@ -31,6 +31,11 @@ Documentation
 
 Changelog
 ---------
+### 3.7.2 (or 3.8.0)
+- TODO: look into changing form legend styling to remove additional style rules (text-transform, color) - format.scss
+- Update to card styling
+- Add animated border button
+
 ### 3.7.1
 - Bugfix: Fixed SCSS variable $baseLineHeight change causing primary nav to be inaccessible in certain cases
 
