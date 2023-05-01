@@ -734,18 +734,10 @@ form {
 	.row {
 		margin-bottom: 30px;
 	}
-	legend {
-		color: $blueLight;
-		font-size: 24px;
-		font-weight: 500;
-		line-height: 36px;
-		text-transform: uppercase;
-	}
 	input[type='text'], input[type='password'], textarea {
 		background: $white;
 		display: inline-block;
-		font: 500 20px/1 $serifFontFamily;
-		letter-spacing: 1px;
+		font: 500 20px/1 $fontFamily;
 		margin: 0 -2px;
 		vertical-align: top;
 		width: 100%;
@@ -773,7 +765,7 @@ form {
 .styled-select {
 	color: transparentize($grayDark,.4);
 	cursor: pointer;
-	font: 500 20px/1.2 $serifFontFamily;
+	font: 500 20px/1.2 $fontFamily;
 	position: relative;
 	width: 100%;
 	&:hover, &:focus {
