@@ -109,14 +109,6 @@ function hwcoe_ufl_scripts() {
 	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/inc/bootstrap/css/bootstrap.min.css', array(), null);
 	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/inc/bootstrap/js/bootstrap.min.js', array('jquery'), null, true);
 	
-	wp_register_script( 'ie_html5shiv', get_template_directory_uri(). '/js/html5shiv.min.js', array(), null );
-	wp_enqueue_script( 'ie_html5shiv');
-	wp_script_add_data( 'ie_html5shiv', 'conditional', 'lt IE 9' );
-	
-	wp_register_script( 'ie_respond', get_template_directory_uri() . '/js/respond.min.js', array(), null );
-	wp_enqueue_script( 'ie_respond');
-	wp_script_add_data( 'ie_respond', 'conditional', 'lt IE 9' );
-	
 	// PrettyPhoto
 	wp_enqueue_style( 'prettyPhoto', get_template_directory_uri() . '/inc/prettyPhoto/css/prettyPhoto.css', array(), null );
 	wp_enqueue_script( 'prettyPhoto', get_template_directory_uri() . '/inc/prettyPhoto/js/jquery.prettyPhoto.js', array('jquery'), null, true );
@@ -353,3 +345,18 @@ add_action('acf/init', 'acf_wysiwyg_remove_wpautop');
 
 // END Advanced custom fields
 
+// omit twitter script on oEmbeds since we've added it in scripts.js
+// https://www.geekwire.com/devblog/remove-duplicate-twitter-widgets-js-script-from-oembed-endpoint-html-when-your-site-template-already-includes-it/
+
+function omit_twitter_script($provider, $url, $args) {
+    //get the hostname of the oEmbed endpoint provider being called
+    $host = parse_url($provider, PHP_URL_HOST);
+    //check to see that hostname is twitter.com
+    if (strpos($host, 'twitter.com') !== false) {
+      //adding ?omit_script=true to oEmbed endpoint call stops the returned HTML from containing widgets.js
+        $provider = add_query_arg('omit_script', 'true', $provider);
+    }
+    //return the $provider URL so the oEmbed can be fetched
+    return $provider;
+}
+add_filter('oembed_fetch_url', 'omit_twitter_script', 10, 3);
