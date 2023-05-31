@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 3.8.1 
+- Update dependencies
+
 ### 3.8.0
 - Update to card styling
 - Add animated border buttons

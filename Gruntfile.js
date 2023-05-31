@@ -73,12 +73,10 @@ module.exports = function(grunt){
 		 */
 		 postcss: {
 			options: {
-				map: {
-					inline: false	
-				},
-				processors: [
-					require('autoprefixer')
-				]
+				map: true,
+				    processors: [
+				      require('autoprefixer')()
+				    ]
 			},
 			// prefix all css files in the project root
 			dist: {
@@ -112,6 +110,6 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('@lodder/grunt-postcss');
 	grunt.registerTask('default',['watch']);
 };
