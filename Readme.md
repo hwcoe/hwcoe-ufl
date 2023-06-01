@@ -33,6 +33,7 @@ Changelog
 ---------
 ### 3.8.1 
 - Update dependencies
+- Deregister/disable unused scripts
 
 ### 3.8.0
 - Update to card styling
