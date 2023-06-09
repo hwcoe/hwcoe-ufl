@@ -34,6 +34,9 @@ Changelog
 ### 3.8.1 
 - Update dependencies
 - Deregister/disable unused scripts
+- Update Google Analytics Account Number label in Customizer
+- Change source for font files from webadmin.ufl.edu to eng.ufl.edu
+- Limit application of div.embed-wrapper to iframes with src=youtube or vimeo
 
 ### 3.8.0
 - Update to card styling

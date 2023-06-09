@@ -459,10 +459,12 @@ strong {
 		margin-bottom: $grid-gutter-width;
 	}
 }
-
 .archive {
 	.entry-title {
 		@extend .article-post-title;
 		font-size: 28px;
 	}
+}
+.issuuembed {
+	width:100% !important;
 }

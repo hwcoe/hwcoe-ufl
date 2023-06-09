@@ -744,8 +744,8 @@ jQuery(function($){
 	});
 
 	// Responsive embeds
-	// Styled wrapper div around all iframes except Gravity Forms ajax and issuu 
-	$('iframe').not('[id*="gform_ajax"], [class*="issuu"]').each(function(){
+	// Styled wrapper div around all iframes with src containing youtube or vimeo 
+	$('iframe[src*="youtube"],[src*="vimeo"]').each(function() {
 		$(this).wrap("<div class=\"embed-wrapper\"></div>");
 	});
 
