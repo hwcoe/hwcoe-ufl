@@ -202,8 +202,8 @@ function hwcoe_ufl_customize_register( $wp_customize ) {
 		),
 	));
 	$wp_customize->add_control( 'analytics_acct', array(
-		'label' => __('Google Analytics Account Number', 'hwcoe-ufl'),
-		'description' => __("(e.g., 'UA-xxxxxxx-x' or 'UA-xxxxxxx-xx' )", 'hwcoe-ufl'),
+		'label' => __('Google Analytics Measurement ID', 'hwcoe-ufl'),
+		'description' => __("e.g., 'G-XXXXXXXXXX'", 'hwcoe-ufl'),
 		'section' => 'theme_options_general',
 		'type' => 'text',
 	));
