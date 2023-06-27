@@ -24,6 +24,7 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', 'page' );
 			endwhile; // End of the loop. 
 		?>
+
 		<?php
 					echo "<h3>Non Default Page template</h3>";
 					echo "<ul>";
@@ -38,9 +39,11 @@ get_header(); ?>
 								'page-templates/container-landing.php', 
 								'page-templates/container-no-sidebar.php', 
 								'page-templates/container-right-sidebar.php', 
-								'page-templates/home-page.php','membersonly.php', 
+								'page-templates/home-page.php',
+								'page-templates/membersonly.php', 
 								'page-templates/no-container-landing.php',
-								'page-templates/options-output.php'
+								'page-templates/options-output.php',
+								'page-templates/staff.php'
 								)
 							)
 						)
@@ -92,6 +95,88 @@ get_header(); ?>
 							'compare' => '!='
 							),
 						),
+					];
+					$pages = get_posts( $args );
+					foreach ( $pages as $page ) {
+						echo '<a href="' . get_permalink( $page ) . '">'.get_the_title( $page ).'</a><br />';
+					}
+					echo "</ul>";
+
+				?>
+				<?php
+					echo "<h3>Page with Full width content container</h3>";
+					echo "<ul>";
+					$args = [
+						'post_type' => 'page',
+						'posts_per_page' => -1,
+						'meta_query' => array(
+							array(
+							'key'     => 'full_width_content_container',
+							'value'   => true
+							)
+						)
+					];
+					$pages = get_posts( $args );
+					foreach ( $pages as $page ) {
+						echo '<a href="' . get_permalink( $page ) . '">'.get_the_title( $page ).'</a><br />';
+					}
+					echo "</ul>";
+
+				?>
+				<?php
+					echo "<h3>Post with hidden featured image</h3>";
+					echo "<ul>";
+					$args = [
+						'post_type' => 'post',
+						'posts_per_page' => -1,
+						'meta_query' => array(
+							array(
+							'key'     => 'hide_featured_image',
+							'value'   => true
+							)
+						)
+					];
+					$pages = get_posts( $args );
+					foreach ( $pages as $page ) {
+						echo '<a href="' . get_permalink( $page ) . '">'.get_the_title( $page ).'</a><br />';
+					}
+					echo "</ul>";
+
+				?>
+
+				<?php
+					echo "<h3>Post with full width featured image in single post view</h3>";
+					echo "<ul>";
+					$args = [
+						'post_type' => 'post',
+						'posts_per_page' => -1,
+						'meta_query' => array(
+							array(
+							'key'     => 'full_width_featured_image',
+							'value'   => true
+							)
+						)
+					];
+					$pages = get_posts( $args );
+					foreach ( $pages as $page ) {
+						echo '<a href="' . get_permalink( $page ) . '">'.get_the_title( $page ).'</a><br />';
+					}
+					echo "</ul>";
+
+				?>
+
+				<?php
+					echo "<h3>Post with featured image as hero</h3>";
+					echo "<ul>";
+					$args = [
+						'post_type' => 'post',
+						'posts_per_page' => -1,
+						'meta_query' => array(
+							array(
+							'key'     => 'post_hero_image',
+							'value'   => true
+							)
+						)
 					];
 					$pages = get_posts( $args );
 					foreach ( $pages as $page ) {

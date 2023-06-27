@@ -31,6 +31,10 @@ Documentation
 
 Changelog
 ---------
+### 3.8.2 
+- Update options-output.php template with Staff Listing page template, ACF field custom meta options
+- Update dependencies
+
 ### 3.8.1 
 - Update dependencies
 - Deregister/disable unused scripts
