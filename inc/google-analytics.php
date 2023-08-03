@@ -6,12 +6,11 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $opt_analytics_acct; ?>"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '<?php echo $opt_analytics_acct; ?>', {'cookie_domain': 'eng.ufl.edu'});
 
-  gtag('config', '<?php echo $opt_analytics_acct; ?>');
 </script>
-
 
 <?php endif; ?>
