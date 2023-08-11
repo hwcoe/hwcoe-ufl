@@ -34,6 +34,7 @@ Changelog
 ### 3.8.2 
 - Update options-output.php template with Staff Listing page template, ACF field custom meta options
 - Update dependencies
+- Change domain for Google Analytics cookies from default (ufl.edu) to eng.ufl.edu
 
 ### 3.8.1 
 - Update dependencies

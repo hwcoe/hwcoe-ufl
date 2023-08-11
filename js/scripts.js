@@ -29,20 +29,9 @@ jQuery(function($){
 			ufl_audience_preference_set_html(ufl_audience_preference);
 		});
 	}
+
+	/* Stats */
 	
-	/*
-	 * UFL Site Alert Cookies
-	 * Requires js.cookie.js 
-	 */
-	// function ufl_site_alert_cookie() {
-	// 	var ufl_site_alert_cookie = Cookies.get('ufl_site_alert_cookie');
-	// 	if (ufl_site_alert_cookie === 'hide') {
-	// 		$('.emergency-modal-wrap').hide();
-	// 	}
-	// 	$('.emergency-modal-wrap .emergency-modal-close').click(function(e) {
-	// 		Cookies.set('ufl_site_alert_cookie', 'hide', { expires: 1 });
-	// 	});
-	// }
 	function arrayShuffler(o) {
 		for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 		return o;
@@ -488,25 +477,6 @@ jQuery(function($){
 		}
 	});
 
-	// Position emergecy modal on smaller screens
-	// if($('.emergency-modal').outerHeight() + parseInt($('.emergency-modal').css('margin-top')) < $(window).height() - $('.header').height()){
-	// 	$('.emergency-modal-wrap').addClass('fixed');
-	// }
-
-	// // Close emergency modal
-	// $('.emergency-modal-close').on('click',function(e){
-	// 	e.preventDefault();
-	// 	$('.emergency-modal-wrap').velocity(
-	// 		{
-	// 			opacity: 0,
-	// 			duration: 200
-	// 		},{
-	// 			complete: function(){
-	// 				$('.emergency-modal-wrap').remove();
-	// 			}
-	// 	});
-	// });
-
 	// Bio hover effects
 	$(document).on('mouseenter','.bio',function(){
 		if(Modernizr.touch === false && $(window).width() > 767){
@@ -802,7 +772,6 @@ jQuery(function($){
 	if(jQuery().prettyPhoto) {
 		lightBox(); 
 	}
-
 
 	// twitter oEmbed script
 	// https://developer.twitter.com/en/docs/twitter-for-websites/javascript-api/guides/set-up-twitter-for-websites
