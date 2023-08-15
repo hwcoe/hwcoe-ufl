@@ -94,7 +94,6 @@ function hwcoe_ufl_sidebar_navigation($post) {
 	'post_status'  => 'publish',
 	'show_date'    => '',
 	'sort_column'  => 'menu_order, post_title',
-	'sort_order'   => '',
 	'title_li'     => '',
 	'walker'       => new Walker_Page
   );

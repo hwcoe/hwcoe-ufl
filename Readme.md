@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 3.8.3
+- Bugfix: remove sort_order arg from hwcoe_ufl_sidebar_navigation function to prevent reversing display of sidebar menu links
+
 ### 3.8.2 
 - Update options-output.php template with Staff Listing page template, ACF field custom meta options
 - Update dependencies
