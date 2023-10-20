@@ -31,6 +31,13 @@ Documentation
 
 Changelog
 ---------
+### 3.8.4
+- Update Twitter logo to X
+- Add Billion Dreams font
+- Update Smooth Scrolling script to add header offset on anchor links that go to different pages
+- Add option to make entire card block a link
+- Add card--animated styles and update margin and padding in card elements
+
 ### 3.8.3
 - Bugfix: remove sort_order arg from hwcoe_ufl_sidebar_navigation function to prevent reversing display of sidebar menu links
 

@@ -6,10 +6,6 @@
 	font-size: 16px;
 	line-height: 20px;
 	box-shadow: 0px 2px 5px 0px	rgba(0, 0, 0, 0.4);
-	img {
-		// margin: 0 0 15px;
-		margin: 0 0 15px 0;
-	}
 	h2, h3, h4, h5, h6 {
 	  font-size: 22px;
 	  line-height: 26px;
@@ -17,10 +13,13 @@
 	h3 {
 		font-family: "gentona", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
-	p, ul, ol {
-		// font-size: 14px;
-		// line-height: 18px;
-		margin-bottom: 20px;
+	p, ul, ol, h2, h3, h4 {
+		&:last-child {
+			margin-bottom:0;
+		}
+		&:first-of-type {
+		  	margin-top:15px;
+		}
 	}
 	ul li, ol li {
 		margin: 0;
@@ -31,16 +30,24 @@
 		width:100%;
 	}
 	.wp-block-image, .wp-block-cover {
-		// margin-bottom:0;
 		margin: -15px -15px 10px -15px;
 		.aligncenter {
 			margin:0;
+		}
+		&:last-child {
+			margin-bottom:-15px;
+		}	
+	}
+	.wp-block-cover {
+		p {
+			margin-top:0;
 		}
 	}
 	.wp-block-button__link { 
 		border-radius: 0;
 	}
 }
+
 .card-body {
 	padding:0 5px;
 }
@@ -49,6 +56,16 @@
 	  word-break: keep-all;
 	  overflow-wrap: normal;
 }
+.entry-content .card-block h2 {
+	// margin-top:0px;
+}
+// h2 directly below image in card
+.entry-content .card img + h2,
+.entry-content .card a + h2, {
+	margin-top:10px;
+}
+
+// card directly below h2
 .entry-content h2 + div.card-block,
 .entry-content h2 + div.card-wrapper {
 	margin-top:0;
@@ -61,23 +78,10 @@
 		color: inherit;
 	}
 }
-.card--flex {
-	align-self: stretch;
-	// flex: 1 auto;
-	width: 90%;
-	flex: 0 0 auto;
-	@include breakFirst(medium) {
-		flex: 0 1 calc(33% - 0.5em);
-		// width: auto;
-	}	
+.card--animated {
+	transition:transform 300ms ease-in-out;
 }
-.card-row {
-	@include breakTo(medium) {
-		width:100%;
-		justify-content: center !important;
-	}	
-
+.card--animated:hover {
+	transform: translateY(-10px);
+	transform: scale(1.1);
 }
-
-
-
