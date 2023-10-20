@@ -378,7 +378,7 @@ function hwcoe_ufl_customize_register( $wp_customize ) {
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'twitter_url', array(
-		'label' => __('Twitter URL', 'hwcoe-ufl'),
+		'label' => __('X (formerly Twitter) URL', 'hwcoe-ufl'),
 		'description' => __("", 'hwcoe-ufl'),
 		'section' => 'theme_options_social',
 		'type' => 'text',

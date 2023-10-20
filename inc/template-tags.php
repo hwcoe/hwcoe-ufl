@@ -181,7 +181,7 @@ function hwcoe_ufl_global_parent_organization(){
 function hwcoe_ufl_socialnetworks() {
 	$social_networks = array(
 		'facebook' => 'Facebook',
-		'twitter' => 'Twitter',
+		'twitter' => 'X (formerly Twitter)',
 		'youtube' => 'YouTube',
 		'linkedin' => 'LinkedIn',
 		'instagram' => 'Instagram',
