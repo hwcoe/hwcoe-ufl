@@ -31,7 +31,7 @@ Documentation
 
 Changelog
 ---------
-### 3.8.4
+### 3.9.0
 - Update Twitter logo to X
 - Add Billion Dreams font
 - Update Smooth Scrolling script to add header offset on anchor links that go to different pages

@@ -38,7 +38,6 @@ body {
 		background:none;
 	}
 }
-
 .bg-texture {
 	background-image: url(img/bg-texture.png)
 }
@@ -106,11 +105,13 @@ h2 {
 		line-height: 36px;
 	}
 }
+
 h3 {
 	color: $blue;
 	font: 500 24px/36px $serifFontFamily;
 	letter-spacing: 1px;
 }
+
 h4 {
 	color: $blueLight;
 	font-size: 24px;
@@ -197,6 +198,13 @@ img {
 	&.m-bottom {
 		margin-bottom: 20px;
 	}
+}
+// .entry-content p.display, h2.display, h3.display {
+.entry-content .display {
+	font-family: "Billion Dreams";
+	text-transform: unset;
+	letter-spacing: -2px;
+	line-height: 0.8;
 }
 .size-auto, 
 .size-full,
