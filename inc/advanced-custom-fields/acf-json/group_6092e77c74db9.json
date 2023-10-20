@@ -6,6 +6,7 @@
             "key": "field_609ae24f58f8f",
             "label": "Card Width",
             "name": "card_width",
+            "aria-label": "",
             "type": "select",
             "instructions": "Select width of content area that card should take up.",
             "required": 0,
@@ -28,6 +29,51 @@
             "return_format": "value",
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_63ef9e85baf92",
+            "label": "Card Linked",
+            "name": "card_linked",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Select to make the entire card a link. With this option enabled, you will need to delete buttons and other links within the card to avoid conflicts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_63ef9ea2baf93",
+            "label": "Card URL",
+            "name": "card_linked_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63ef9e85baf92",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -36,6 +82,13 @@
                 "param": "block",
                 "operator": "==",
                 "value": "acf\/card-innerblocks"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/card"
             }
         ]
     ],
@@ -47,5 +100,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1621871718
+    "show_in_rest": 0,
+    "modified": 1697205805
 }
