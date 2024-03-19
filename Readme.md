@@ -31,9 +31,12 @@ Documentation
 
 Changelog
 ---------
+### 3.9.1
+- Bugfix: check if DONOTCACHEPAGE constant is already set in members only template
+
 ### 3.9.0
 - Update Twitter logo to X
-- Add Billion Dreams font
+- Add Billion Dreams font and display css class
 - Update Smooth Scrolling script to add header offset on anchor links that go to different pages
 - Add option to make entire card block a link
 - Add card--animated styles and update margin and padding in card elements

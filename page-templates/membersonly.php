@@ -6,7 +6,9 @@
  *
  */
 if ( ufl_check_page_visitor_level( $post->ID ) > 0 ) { 
-  define( 'DONOTCACHEPAGE', 1 ); 
+  if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+    define( 'DONOTCACHEPAGE', 1 ); 
+  }
 }
 get_header(); ?>
 

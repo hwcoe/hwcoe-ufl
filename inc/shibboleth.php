@@ -98,7 +98,6 @@ function ufl_check_authorized_user($postid) {
 			break;
 		case '1':
 			if ( is_user_logged_in() ) {
-				//define( 'DONOTCACHEPAGE', 1 );
 				return true;
 			} else {
 				return false;
@@ -106,7 +105,6 @@ function ufl_check_authorized_user($postid) {
 			break;
 		case '2':
 			if ( ufl_check_shibboleth_auth($postid) ) {
-				//define( 'DONOTCACHEPAGE', 1 );
 				return true;
 			} else {
 				return false;
