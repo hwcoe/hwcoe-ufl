@@ -31,6 +31,9 @@ Documentation
 
 Changelog
 ---------
+### 3.9.2
+- Replace unlicensed font Quadon with Gentona
+
 ### 3.9.1
 - Bugfix: check if DONOTCACHEPAGE constant is already set in members only template
 - Bump postcss from 8.4.27 to 8.4.31

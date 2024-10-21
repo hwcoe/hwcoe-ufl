@@ -5,7 +5,8 @@
 
 $font__text: 'gentonalight', Slabo, sans-serif;
 $font__headings: 'gentona_bookbold', Arial, sans-serif;
-$font__headings_serif: 'quadonmedium', Georgia, serif;
+$font__headings_serif: 'gentona_bookbold', Arial, sans-serif;
+// $font__headings_serif: 'quadonmedium', Georgia, serif;
 $font__size: 16;
 $font__size_3xl: math.div(60, $font__size) + rem;
 $font__size_2xl: math.div(48, $font__size) + rem;
