@@ -199,13 +199,7 @@ img {
 		margin-bottom: 20px;
 	}
 }
-// .entry-content p.display, h2.display, h3.display {
-.entry-content .display {
-	font-family: "Billion Dreams";
-	text-transform: unset;
-	letter-spacing: -2px;
-	line-height: 0.8;
-}
+
 .size-auto, 
 .size-full,
 .size-large,
@@ -339,7 +333,7 @@ img {
 	button, a {
 		position:relative;
 		display: inline-block;
-		font-family: "gentona", Helvetica, Arial, sans-serif;
+		font-family: var(--semi-bold-sans), Helvetica, Arial, sans-serif;
 		font-weight:500;
 		font-size:24px;
 		line-height:28px;
@@ -438,7 +432,7 @@ img {
 		text-decoration: none !important;
 		background: transparent;
 		display: inline-block;
-		font-family: "gentona", Helvetica, Arial, sans-serif;
+		font-family: var(--semi-bold-sans), Helvetica, Arial, sans-serif;
 		font-weight:500;
 		font-style: italic;
 		color: #000;

@@ -42,9 +42,20 @@ $zUI: 									1000;
 
 // TYPOGRAPHY
 // -------------------------
-$fontFamily:					"gentona", Helvetica, Arial, sans-serif !default;
-// $serifFontFamily:				"quadon", "Georgia", serif !default;
-$serifFontFamily:					"gentona", Helvetica, Arial, sans-serif !default;
+:root {
+  --light-weight-sans: "IBM Plex light";
+  --book-weight-sans: "IBM Plex regular";
+  --medium-weight-sans: "IBM Plex medium";
+  --medium-italic-sans: "IBM Plex medium italic";
+  --semi-bold-sans: "IBM Plex semibold";
+  --book-bold-sans: "IBM Plex bold";
+  --bold-italic-sans: "IBM Plex bold italic";
+  --extrabold-italic-sans: "IBM Plex bold italic";
+  
+  // --serif-font: "Source Serif";
+}
+$fontFamily:					"IBM Plex regular", Helvetica, Arial, sans-serif !default;
+$serifFontFamily:					"IBM Plex regular", Helvetica, Arial, sans-serif !default;
 
 $baseFontSize:          18px !default;
 $baseFontFamily:        $fontFamily !default;

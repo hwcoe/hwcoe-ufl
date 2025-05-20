@@ -3,82 +3,58 @@ UF Branding Fonts
 ----------------------------*/
 
 @font-face {
-  font-family: "Billion Dreams";
-  src: url("https://www.eng.ufl.edu/fonts/BillionDreams.eot");
-  src: url("https://www.eng.ufl.edu/fonts/BillionDreams.eot?#iefix") format("embedded-opentype"), 
-     url("https://www.eng.ufl.edu/fonts/BillionDreams.woff") format("woff"), 
-     url("https://www.eng.ufl.edu/fonts/BillionDreams.ttf") format("truetype"), 
-     url("https://www.eng.ufl.edu/fonts/BillionDreams.svg#BillionDreams") format("svg");
+  font-display: swap;
+  font-family: "IBM Plex bold italic";
+  src: url(https://www.eng.ufl.edu/fonts//IBMPlexSans-BoldItalic.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "gentona";
-  src: url("https://www.eng.ufl.edu/fonts/gentona_light-webfont.eot");
-  src: url("https://www.eng.ufl.edu/fonts/gentona_light-webfont.eot?#iefix") format("embedded-opentype"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_light-webfont.woff") format("woff"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_light-webfont.ttf") format("truetype"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_light-webfont.svg#gentona") format("svg");
-  font-weight: 100;
+  font-display: swap;
+  font-family: "IBM Plex regular";
+  src: url(https://www.eng.ufl.edu/fonts//IBMPlexSans-Regular.ttf) format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "gentona";
-  src: url("https://www.eng.ufl.edu/fonts/gentona_light_italic-webfont.eot");
-  src: url("https://www.eng.ufl.edu/fonts/gentona_light_italic-webfont.eot?#iefix") format("embedded-opentype"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_light_italic-webfont.woff") format("woff"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_light_italic-webfont.ttf") format("truetype"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_light_italic-webfont.svg#gentona") format("svg");
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: "gentona";
-  src: url("https://www.eng.ufl.edu/fonts/gentona_medium-webfont.eot");
-  src: url("https://www.eng.ufl.edu/fonts/gentona_medium-webfont.eot?#iefix") format("embedded-opentype"), 
-	   url("https://www.eng.ufl.edu/fonts/gentona_medium-webfont.woff") format("woff"), 
-	   url("https://www.eng.ufl.edu/fonts/gentona_medium-webfont.ttf") format("truetype"), 
-	   url("https://www.eng.ufl.edu/fonts/gentona_medium-webfont.svg#gentona") format("svg");
-  font-weight: 500;
+  font-display: swap;
+  font-family: "IBM Plex bold";
+  src: url(https://www.eng.ufl.edu/fonts//IBMPlexSans-Bold.ttf) format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "gentona";
-  src: url("https://www.eng.ufl.edu/fonts/gentona_medium_italic-webfont.eot");
-  src: url("https://www.eng.ufl.edu/fonts/gentona_medium_italic-webfont.eot?#iefix") format("embedded-opentype"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_medium_italic-webfont.woff") format("woff"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_medium_italic-webfont.ttf") format("truetype"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_medium_italic-webfont.svg#gentonalight") format("svg");
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: "gentona";
-  src: url("https://www.eng.ufl.edu/fonts/gentona_extrabold-webfont.eot");
-  src: url("https://www.eng.ufl.edu/fonts/gentona_extrabold-webfont.eot?#iefix") format("embedded-opentype"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_extrabold-webfont.woff") format("woff"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_extrabold-webfont.ttf") format("truetype"), 
-     url("https://www.eng.ufl.edu/fonts/gentona_extrabold-webfont.svg#gentona") format("svg");
-  font-weight: 700;
+  font-display: swap;
+  font-family: "IBM Plex italic";
+  src: url(https://www.eng.ufl.edu/fonts//IBMPlexSans-Italic.ttf) format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "gentona";
-  src: url("https://www.eng.ufl.edu/fonts/gentona_heavy-webfont.eot");
-  src: url("https://www.eng.ufl.edu/fonts/gentona_heavy-webfont.eot?#iefix") format("embedded-opentype"), 
-	   url("https://www.eng.ufl.edu/fonts/gentona_heavy-webfont.woff") format("woff"), 
-	   url("https://www.eng.ufl.edu/fonts/gentona_heavy-webfont.ttf") format("truetype"), 
-	   url("https://www.eng.ufl.edu/fonts/gentona_heavy-webfont.svg#gentona") format("svg");
-  font-weight: 800;
+  font-display: swap;
+  font-family: "IBM Plex light";
+  src: url(https://www.eng.ufl.edu/fonts//IBMPlexSans-Light.ttf) format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "gentona";
-  src: url("https://www.eng.ufl.edu/fonts/gentona_heavy_italic-webfont.eot");
-  src: url("https://www.eng.ufl.edu/fonts/gentona_heavy_italic-webfont.eot?#iefix") format("embedded-opentype"), 
-	   url("https://www.eng.ufl.edu/fonts/gentona_heavy_italic-webfont.woff") format("woff"), 
-	   url("https://www.eng.ufl.edu/fonts/gentona_heavy_italic-webfont.ttf") format("truetype"), 
-	   url("https://www.eng.ufl.edu/fonts/gentona_heavy_italic-webfont.svg#gentona") format("svg");
-  font-weight: 800;
-  font-style: italic;
-}	
+  font-display: swap;
+  font-family: "IBM Plex medium";
+  src: url(https://www.eng.ufl.edu/fonts//IBMPlexSans-Medium.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex medium italic";
+  src: url(https://www.eng.ufl.edu/fonts//IBMPlexSans-MediumItalic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex semibold";
+  src: url(https://www.eng.ufl.edu/fonts//IBMPlexSans-SemiBold.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

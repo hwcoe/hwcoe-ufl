@@ -93,8 +93,7 @@
 	input[type="submit"], input.button {
 		border: 3px solid $orange;
 		cursor: pointer;
-		font: 700 16px/1 "gentona", "Georgia", serif;
-		letter-spacing: 2px;
+		font-family: var(--book-bold-sans), Helvetica, Arial, sans-serif;
 		padding: 15px 20px;
 		text-transform: uppercase;	
 		background-color: transparent;

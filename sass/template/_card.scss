@@ -11,7 +11,7 @@
 	  line-height: 26px;
 	}
 	h3 {
-		font-family: "gentona", Helvetica, Arial, sans-serif;
+		font-family: var(--semi-bold-sans), Helvetica, Arial, sans-serif;
 	}
 	p, ul, ol, h2, h3, h4 {
 		&:last-child {
