@@ -31,6 +31,10 @@ Documentation
 
 Changelog
 ---------
+### 3.9.3
+- Update fonts to UF branding fonts
+- Update dependencies
+
 ### 3.9.2
 - Replace unlicensed font Quadon with Gentona
 - Update dependencies

@@ -35,15 +35,31 @@ get_header(); ?>
 							array(
 							'key'     => '_wp_page_template',
 							'value'   => array(
-								'page-templates/blank.php', 
-								'page-templates/container-landing.php', 
-								'page-templates/container-no-sidebar.php', 
-								'page-templates/container-right-sidebar.php', 
-								'page-templates/home-page.php',
-								'page-templates/membersonly.php', 
-								'page-templates/no-container-landing.php',
-								'page-templates/options-output.php',
-								'page-templates/staff.php'
+								// 'page-templates/blank.php', 
+								// 'page-templates/container-landing.php', 
+								// 'page-templates/container-no-sidebar.php', 
+								// 'page-templates/container-right-sidebar.php', 
+								// 'page-templates/home-page.php',
+								// 'page-templates/membersonly.php', 
+								// 'page-templates/no-container-landing.php',
+								// 'page-templates/options-output.php',
+								// 'page-templates/staff.php',
+								'page-templates/career-fair-landing.php',
+								'page-templates/event-info-year.php',
+								'page-templates/event-info-co-closed.php',
+								'page-templates/event-info-co-display.php',
+								'page-templates/event-info-co-marketing.php',
+								'page-templates/event-info-co-open.php',
+								'page-templates/event-info-date.php',
+								'page-templates/event-info-date-comma.php',
+								'page-templates/event-info-display-name.php',
+								'page-templates/event-info-end-time.php',
+								'page-templates/event-info-location.php',
+								'page-templates/event-info-location-simple.php',
+								'page-templates/event-info-semester.php',
+								'page-templates/event-info-start-time.php',
+								'page-templates/event-info-stud-closed.php',
+								'page-templates/event-info-stud-open.php'
 								)
 							)
 						)
@@ -51,6 +67,28 @@ get_header(); ?>
 					$pages = get_posts( $args );
 					foreach ( $pages as $page ){
 						echo '<li><a href="' . get_permalink( $page ) . '">'.get_the_title( $page ).'</a></li>';
+					}
+					echo "</ul>";
+				?>
+				<?php
+				echo "<h3>Non Default Post template</h3>";
+					echo "<ul>";
+					$args = [
+						'post_type' => 'post',
+						'posts_per_page' => -1,
+						'meta_query' => array(
+							array(
+							'key'     => '_wp_page_template',
+							'value'   => array(
+								'single-post-newsletter.php',
+								'single-post-company.php'
+								)
+							)
+						)
+					];
+					$posts = get_posts( $args );
+					foreach ( $posts as $post ){
+						echo '<li><a href="' . get_permalink( $post ) . '">'.get_the_title( $post ).'</a></li>';
 					}
 					echo "</ul>";
 				?>
